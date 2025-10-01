@@ -2,12 +2,168 @@
 
 Interactive mapping project documenting historical appeals during the Estado Novo period in Rio de Janeiro, related to expropriations for the construction of Avenida Presidente Vargas.
 
+## 📋 Table of Contents
+
+- [📊 Project Overview](#-project-overview)
+  - [🏗️ Project Architecture](#️-project-architecture)
+  - [📊 Data Flow](#-data-flow)
+  - [🗺️ How the Web Application Works](#️-how-the-web-application-works)
+  - [📁 Data Structure](#-data-structure)
+  - [🎯 What It Does](#-what-it-does)
+  - [👥 Authors](#-authors)
+- [📚 Documentation](#-documentation)
+  - [🎯 Choose Your Path](#-choose-your-path)
+  - [📖 Web Application Documentation](#-web-application-documentation)
+- [🚀 Quick Start - Web Deployment](#-quick-start---web-deployment)
+  - [Local Development](#local-development)
+  - [Deploy to Production](#deploy-to-production)
+- [📁 Project Structure](#-project-structure)
+- [🗺️ Web Application Features](#️-web-application-features)
+- [💻 Development Setup](#-development-setup)
+  - [Python Environment (Data Processing)](#python-environment-data-processing)
+  - [Web Application](#web-application)
+- [📦 Deployment Options](#-deployment-options)
+- [🔧 Technologies](#-technologies)
+  - [Frontend](#frontend)
+  - [Backend/Processing](#backendprocessing)
+  - [Infrastructure](#infrastructure)
+- [📊 Data Sources](#-data-sources)
+- [🎯 Usage Examples](#-usage-examples)
+  - [View the Web Map](#view-the-web-map)
+  - [Process New Data](#process-new-data)
+  - [Update QGIS Project](#update-qgis-project)
+- [🚀 Deployment Workflow](#-deployment-workflow)
+  - [Recommended Professional Workflow](#recommended-professional-workflow)
+- [📈 Performance](#-performance)
+- [🔒 Security](#-security)
+- [📄 License](#-license)
+- [🤝 Contributing](#-contributing)
+- [📧 Support](#-support)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📚 Additional Resources](#-additional-resources)
+
 ## 📊 Project Overview
 
-This project consists of:
-- **Geospatial data processing** (Python/GeoPandas)
-- **QGIS mapping** (`.qgz` project file)
-- **Professional web application** (Interactive online map)
+This is a **historical mapping project** that documents appeals (apelos) during the Estado Novo period in Rio de Janeiro, specifically related to expropriations for the construction of Avenida Presidente Vargas.
+
+### 🏗️ **Project Architecture**
+
+The project has **three main components**:
+
+1. **Data Processing Pipeline** (Python/GeoPandas)
+2. **QGIS Desktop Mapping** (`.qgz` project file)
+3. **Interactive Web Application** (TypeScript/Vite)
+
+### 📊 **Data Flow**
+
+```
+Raw KML Data → Python Processing → Clean GeoJSON → Web Application
+```
+
+1. **Raw Data**: Historical KML files containing appeal locations and documents
+2. **Processing**: Python notebook (`00_processing_KML.ipynb`) converts and cleans the data
+3. **Output**: Clean GeoJSON files with structured appeal information
+4. **Web App**: Interactive map displays the processed data
+
+### 🗺️ **How the Web Application Works**
+
+The web app (`web/src/main.ts`) is built with:
+
+- **MapLibre GL JS**: Open-source mapping library
+- **TypeScript**: Type-safe development
+- **Vite**: Fast build tool and dev server
+- **MapTiler**: Professional map tiles
+
+**Key Features:**
+- **Interactive clustering**: Points cluster at lower zoom levels for better performance
+- **Detailed popups**: Click markers to see appeal information and links to original documents
+- **Layer control**: Toggle different data layers (appeals, neighborhoods)
+- **Responsive design**: Works on desktop and mobile
+- **Professional UI**: Modern, accessible interface
+
+### 📁 **Data Structure**
+
+The processed data includes:
+
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "properties": {
+        "Name": "R. Sen. Furtado, 61",
+        "Description": "Lavanderia Confiança - desapropriação...",
+        "Link": "https://drive.google.com/file/d/..."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-43.2187139, -22.9119948, 0.0]
+      }
+    }
+  ]
+}
+```
+
+### 🎯 **What It Does**
+
+1. **Loads geospatial data** from GeoJSON files
+2. **Displays interactive map** centered on Rio de Janeiro
+3. **Shows appeal locations** as clustered points
+4. **Provides detailed information** when clicking markers
+5. **Links to original documents** (Google Drive links)
+6. **Allows layer toggling** for different data types
+
+This is essentially a **digital humanities project** that makes historical research data accessible through an interactive web interface, allowing users to explore the spatial distribution of appeals during a significant period in Rio de Janeiro's urban development.
+
+### 👥 **Authors**
+
+- **Francesca Dalmagro Martinelli** - Research and GIS Analysis
+  - Email: arq.francesca.martinelli@gmail.com
+
+- **Cristofer Antoni Souza Costa** - Development and Data Processing
+  - Email: cristofercosta@yahoo.com.br
+
+## 📚 Documentation
+
+Complete guides for all skill levels:
+
+| Document | Description | Audience |
+|----------|-------------|----------|
+| **[DOCUMENTATION.md](DOCUMENTATION.md)** | Complete technical reference | Developers |
+| **[USER_GUIDE.md](USER_GUIDE.md)** | How to use the interactive map | End Users |
+| **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** | Fast command lookup | All Users |
+| **[DEPLOYMENT.md](DEPLOYMENT.md)** | Detailed deployment guide | DevOps |
+| **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** | One-page deploy reference | Developers |
+| **[START_HERE.md](START_HERE.md)** | New user onboarding guide | Beginners |
+
+### 🎯 **Choose Your Path:**
+
+**👋 New to the project?** → Start with [START_HERE.md](START_HERE.md)
+
+**🗺️ Want to use the map?** → Read [USER_GUIDE.md](USER_GUIDE.md)
+
+**💻 Need to deploy?** → Follow [DEPLOYMENT.md](DEPLOYMENT.md)
+
+**🔧 Developer setup?** → Check [DOCUMENTATION.md](DOCUMENTATION.md)
+
+**⚡ Quick commands?** → Use [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
+
+### 📖 **Web Application Documentation:**
+
+| Document | Description | Audience |
+|----------|-------------|----------|
+| **[web/README.md](web/README.md)** | Web app overview and setup | Web Developers |
+| **[web/QUICK_START.md](web/QUICK_START.md)** | Fast web app setup | Developers |
+| **[web/DEVELOPER_GUIDE.md](web/DEVELOPER_GUIDE.md)** | Development workflow | Developers |
+| **[web/ARCHITECTURE.md](web/ARCHITECTURE.md)** | Technical architecture | Architects |
+| **[web/API_REFERENCE.md](web/API_REFERENCE.md)** | API documentation | Developers |
+
+**Quick Links:**
+- 🚀 [Quick Start](#quick-start---web-deployment)
+- 🗺️ [Use the Map](USER_GUIDE.md)
+- 📖 [Full Documentation](DOCUMENTATION.md)
+- ⚡ [Quick Reference](QUICK_REFERENCE.md)
+- 🌐 [Web App Docs](web/README.md)
 
 ## 🚀 Quick Start - Web Deployment
 
@@ -116,10 +272,7 @@ npm run dev
 
 - **Apelos (Appeals)**: Digitized from historical documents
 - **Rio de Janeiro Base Layers**: DATA.RIO municipal data
-  - Neighborhoods (Bairros)
-  - Schools (Escolas)
-  - Streets (Logradouros)
-  - Blocks (Quadras)
+  - Filtered Neighborhoods (Bairros Filtrados)
 
 ## 🎯 Usage Examples
 
@@ -179,14 +332,6 @@ git push origin feature/my-update
 - CSP headers configured
 - No sensitive data in frontend
 - Regular dependency updates
-
-## 👥 Authors
-
-- **Francesca Dalmagro Martinelli** - Research and GIS Analysis
-  - Email: arq.francesca.martinelli@gmail.com
-
-- **Cristofer Antoni Souza Costa** - Development and Data Processing
-  - Email: cristofercosta@yahoo.com.br
 
 ## 📄 License
 

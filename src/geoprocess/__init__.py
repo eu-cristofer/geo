@@ -32,6 +32,41 @@ def convert_kml_to_geojson(kml_path, geojson_path):
         raise
 
 
+def save_geojson_pretty(gdf, output_path, indent=2):
+    """
+    Save a GeoDataFrame to a GeoJSON file with pretty print formatting.
+    
+    Parameters:
+        gdf (GeoDataFrame): The GeoDataFrame to save
+        output_path (str): Path where to save the GeoJSON file
+        indent (int): Number of spaces for indentation (default: 2)
+    
+    Returns:
+        GeoDataFrame: The original GeoDataFrame
+    
+    Examples:
+        >>> # Save with default 2-space indentation
+        >>> geo.save_geojson_pretty(gdf, "output.geojson")
+        
+        >>> # Save with 4-space indentation
+        >>> geo.save_geojson_pretty(gdf, "output.geojson", indent=4)
+    """
+    try:
+        # Convert GeoDataFrame to GeoJSON dict
+        geojson_dict = json.loads(gdf.to_json())
+        
+        # Write with pretty formatting
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(geojson_dict, f, indent=indent, ensure_ascii=False)
+        
+        print(f"✅ Success! Saved pretty GeoJSON to '{output_path}'")
+        return gdf
+        
+    except Exception as e:
+        print(f"❌ An error occurred during pretty save: {e}")
+        raise
+
+
 
 
 def get_clean_text(html_text):
@@ -125,53 +160,28 @@ def point_in_feature(point, feature, point_crs=None, feature_crs=None):
     return feature_geom.contains(point_geom)
 
 
-def find_containing_feature(point, features_gdf, return_index=False):
+def get_centroids(gdf, target_crs='EPSG:4326'):
     """
-    Find which feature(s) contain a given point from a GeoDataFrame.
+    Get accurate centroids by converting to projected CRS first.
     
     Parameters:
-        point: Can be one of:
-            - tuple/list of (longitude, latitude) or (x, y)
-            - shapely Point object
-            - GeoDataFrame/GeoSeries with a single point geometry
-        features_gdf (GeoDataFrame): GeoDataFrame with polygon geometries to check against.
-        return_index (bool): If True, return the index(es) instead of the row(s).
+        gdf (GeoDataFrame): GeoDataFrame to get centroids from
+        target_crs (str): Target CRS for output centroids (default: 'EPSG:4326')
     
     Returns:
-        GeoDataFrame or Index: Features that contain the point, or their indices if return_index=True.
-        Returns empty GeoDataFrame/Index if no features contain the point.
+        GeoSeries: Centroids in the target CRS
     
     Examples:
-        >>> # Find which neighborhood contains a point
-        >>> neighborhood = find_containing_feature((-43.1729, -22.9068), neighborhoods_gdf)
-        >>> print(neighborhood['BAIRRO'].values[0])
+        >>> centroids = geo.get_centroids(filtro_bairros)
+        >>> for label, x, y in zip(filtro_bairros.nome, centroids.x, centroids.y):
+        >>>     ax.text(x, y, label)
     """
-    from shapely.geometry import Point
+    # Convert to projected CRS for accurate centroid calculation
+    projected_crs = 'EPSG:3857'  # Web Mercator
+    gdf_projected = gdf.to_crs(projected_crs)
+    centroids_projected = gdf_projected.geometry.centroid
     
-    # Convert point to GeoDataFrame for consistent CRS handling
-    if isinstance(point, (tuple, list)):
-        point_geom = Point(point[0], point[1])
-        point_gdf = gpd.GeoDataFrame(geometry=[point_geom], crs=features_gdf.crs)
-    elif isinstance(point, (gpd.GeoDataFrame, gpd.GeoSeries)):
-        point_gdf = gpd.GeoDataFrame(geometry=[point.geometry.iloc[0] if isinstance(point, gpd.GeoDataFrame) else point.iloc[0]], crs=point.crs)
-    else:
-        point_gdf = gpd.GeoDataFrame(geometry=[point], crs=features_gdf.crs)
+    # Convert centroids to target CRS
+    centroids_target = centroids_projected.to_crs(target_crs)
     
-    # Ensure same CRS
-    if point_gdf.crs != features_gdf.crs:
-        point_gdf = point_gdf.to_crs(features_gdf.crs)
-    
-    # Use spatial join to find containing features
-    result = gpd.sjoin(point_gdf, features_gdf, how='left', predicate='within')
-    
-    if len(result) > 0 and 'index_right' in result.columns:
-        containing_indices = result['index_right'].dropna().unique()
-        if return_index:
-            return features_gdf.index[features_gdf.index.isin(containing_indices)]
-        else:
-            return features_gdf.loc[containing_indices]
-    
-    if return_index:
-        return pd.Index([])
-    else:
-        return features_gdf.iloc[0:0]  # Return empty GeoDataFrame with same structure
+    return centroids_target

@@ -1,82 +1,1280 @@
 {
-"type": "FeatureCollection",
-"name": "apelos_clean",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "Name": "R. Sen. Furtado, 61 ", "Description": "Rua Senador Furtado, 61 - Lavanderia Confiança - desapropriação de terrenos para prolongamento da Rua Comandante Cordeiro de Faria (Maracanã)", "Link": "https://drive.google.com/file/d/1nl5NmTJdxfeG-fVAWZW2P7dbLYg_p_q1/view" }, "geometry": { "type": "Point", "coordinates": [ -43.2187139, -22.9119948, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Sen. Euzébio, 230", "Description": "Rua Senador Euzebio, 230 - Desapropriação de imóvel em leilão", "Link": "https://drive.google.com/file/d/1rEHdw7LUlLHgACLp5FggeCAT7uhR22B3/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.201796723769483, -22.90824323573527, 5.664315368314159 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Sen. Dantas, 24", "Description": "Rua Senador Dantas, 24 - Desapropriação - proprietária pede maior indenização", "Link": "https://drive.google.com/file/d/1oFmKNjLscw7-SIVQ-R_hNu8u2zzLCLFR/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.1774299, -22.9108414, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Chile, 11", "Description": "Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação", "Link": "https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view" }, "geometry": { "type": "Point", "coordinates": [ -43.176578359088381, -22.906210007966429, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Chile, 15", "Description": "Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação", "Link": "https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view" }, "geometry": { "type": "Point", "coordinates": [ -43.17657426237723, -22.90626538241429, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Senador Euzébio, 79", "Description": "Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita indenização por mudança devido a abertura da Av. Presidente Vargas Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita resolução caso de indenização", "Link": "https://drive.google.com/file/d/1UvY1n_4MVQS_omrxJ1IjTiJu-FDPK0Uz/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.193315466799177, -22.905741100750269, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Senador Euzébio, 17", "Description": "Rua Senador Euzebio, 17 - Tipografia - Aron Bergman apresenta recibo para ressarcimento de desmontagem e instalações do seu negócio", "Link": "https://drive.google.com/file/d/1aj9e_BN6H0D2dzpCuCdoaa85z-xnN_bB/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.191559895276022, -22.905187422947471, -0.000000000707324 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Quitanda, 131", "Description": "Rua da Quitanda, 131 - Banco - sobre desapropriação", "Link": "https://drive.google.com/file/d/17z47xO_MI7yjez6Ja2Wtjzjz6P8fEFYf/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.178123046524647, -22.90126411192271, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "R. General Caldwell, 103", "Description": "Rua General Caldwell, 103 - Barbearia e residência - Antonio Teixeira de Azevedo Junior implora por indenização após ser desapropriado Obs: A numeração não aparece em nenhum PA, mas foi conjecturada a sua localização através dos outros lotes e da foto. Rua General Caldwell, 103 - Antonio Teixeira de Azevedo Junior - barbeiro reclamante indenização por mudança", "Link": "https://drive.google.com/file/d/1-EihdHGhg3BcTeCbaslYOMdFzmj9hMFo/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.192735845131423, -22.905721317784771, 3.938565020038935 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. dos Democráticos, 392", "Description": "Carta de Abrigo do Cristo Redentor pede indenização prévia sobre obras da Av. Brasil (corta o terreno do suplicante)", "Link": "https://drive.google.com/file/d/1WM9YVmUXk9k7soj47IA8cpAKf04OK_hE/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.258064288047237, -22.87336177269599, 8.468442718221883 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Senador Euzébio, 5", "Description": "Rua Senador Euzebio, 5 - Barbearia - Alberto de Souza Trindade solicita indenização de mobiliário", "Link": "https://drive.google.com/file/d/1b8VE4mLrLfk4cgk0r9-duRlIiSVQ-VI6/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.191223576024022, -22.905065443375591, 4.138814034940306 ] } },
-{ "type": "Feature", "properties": { "Name": "Pç. da República, 197", "Description": "Praça da República, 197 - Pritaneu Militar - desapropriação e cessão à prefeitura para abertura da Av. Pres. Vargas Eurico G. Dutra solicita cessão de terrenos na Rua Santa Luzia. Sugere permuta de imóvel à Praça da República 197, junto à nova Av. Pres. Vargas", "Link": "https://drive.google.com/file/d/10ayie0r0j1_2Zi3SAxapy4p5jcw663u2/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.190838270997801, -22.905592633933828, 4.897998612090387 ] } },
-{ "type": "Feature", "properties": { "Name": "Tv. Dom Manuel, 18-20", "Description": "Travessa D. Manoel, 18 e 20 - Alfredo Elias, sírio, solicita prazo para desocupar imóvel desapropriado", "Link": "https://drive.google.com/file/d/1HVhEEcs1denpPLw-4_PPAXW8Laq-kKiL/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.172312308565672, -22.90530754567785, 5.269046624511697 ] } },
-{ "type": "Feature", "properties": { "Name": "R. São Pedro, 280", "Description": "Rua de S. Pedro, 280 - prédio deixado em testamento por Francisca Candida Peçanha a ser desapropriado - Irmandade solicita pagamento do valor máximo", "Link": "https://drive.google.com/file/d/1ZspEJC5iLFGqv9WzlaOBun4HzhN8P9-l/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.185323193362827, -22.9029366900082, 4.381494087465705 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Senador Euzébio, 65", "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas", "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.192901804266619, -22.905602736875281, 4.06583649444912 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Visconde de Itaúna, 56", "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas", "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.192443993249483, -22.90576830916385, 4.040512710784377 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Senador Euzébio, 51", "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas", "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.19254232103291, -22.905479417083281, 3.943240530606464 ] } },
-{ "type": "Feature", "properties": { "Name": "Pç. Lopes Trovão", "Description": "Pedido de transferência do Mercado do Peixe da Praça Lopes Trovão entre Av. Tomé de Souza e Rua Uruguaiana para outro local", "Link": "https://drive.google.com/file/d/1gNDg6zqk29ayC1snRoa-v1aOxpqInL_7/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.182064244256452, -22.902304571570301, 3.75353876211121 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Senador Euzébio, 82", "Description": "Senador Euzebio, 82 - Pedro Saulle - proprietário do prédio pede revisão do processo de desapropriação Mais informações sobre Pedro Saulle: autorização da desapropriação com valor em 1941: Indeferimento de pedido em 1941:", "Link": "https://drive.google.com/file/d/1EoRtJP4midTp4v5hB461jOaYyWHaTzV5/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.193322658145981, -22.905543305314861, 3.618367859921965 ] } },
-{ "type": "Feature", "properties": { "Name": "R. São José, 59", "Description": "Rua de S. José, 59 - J. Ribeiro dos Santos - Livraria Jacinto Editora pede para locar o imóvel número 57 a ser demolido", "Link": "https://drive.google.com/file/d/1LAz5PvO5iEaI-0HmbLTfMe8HyxQxzqF5/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.175844709425547, -22.905549211224081, 6.823783114224282 ] } },
-{ "type": "Feature", "properties": { "Name": "R. São Pedro, 319", "Description": "Rua de São Pedro, 319 pede para estender prazo de desapropriação. A. Rodrigues de Sá, pequeno fabricante de vassouras", "Link": "https://drive.google.com/file/d/1ZgclX_OKRBOWK6D7GPfiLEnOV8_Snq76/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.186019807796399, -22.90327821441841, 4.421685780529129 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Carmo Neto, 70", "Description": "Rua Carmo Neto, 70 pede execução da desapropriação - Proprietário Miguel Moreira", "Link": "https://drive.google.com/file/d/1-hvMzNim4HrTuo_s2Cp8TgVcn2tPZU6O/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.201162513087937, -22.907032790753931, 3.740121898599595 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Santa Luzia, 576", "Description": "Rua Santa Luzia, 576 - Edifícios Vitória aceita avaliação do imóvel de Elvira Carvalho de Andrade Bastos Rua Santa Luzia, 576 - Elvira Carvalho de Andrade bastos (Edifícios Vitoria) - revisão do valor acordado para desapropriação", "Link": "https://drive.google.com/file/d/1xXYZIKei98oSiBlAuWYdkrPXhbhqDZ5F/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.172630434098551, -22.909747784478551, 6.465559526126459 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 24-26", "Description": "Banco Borges Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões", "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177378364479857, -22.901578774873339, 2.734514931172607 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 28", "Description": "Banco Central Brasileiro Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões", "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177482685031819, -22.901610486561871, 2.807028942310972 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 30", "Description": "Banco do Comércio e Indústria do Rio de Janeiro Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões", "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177556861666289, -22.90163089396091, 2.818021261152255 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 32", "Description": "Banco Aliança do Rio de Janeiro Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões", "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177633450739513, -22.901654777072348, 2.852390674485101 ] } },
-{ "type": "Feature", "properties": { "Name": "R. do Lavradio, 97", "Description": "Rua do Lavradio, 97 - Grande Oriente do Brasil (maçonaria) pede troca de terreno desapropriado por novo na Av. Pres. Vargas Rua do Lavradio, 97 - Grande Oriente do Brasil (maçonaria) recorre a Getúlio Vargas após indeferimento da prefeitura sobre desapropriação Não demolido", "Link": "https://drive.google.com/file/d/12otjU5ecY2O4Bf0giscp3ZHQodODCB6c/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.182715026391669, -22.910693808818241, 7.003017367311804 ] } },
-{ "type": "Feature", "properties": { "Name": "Pç. da República, 231", "Description": "Praça da República, 231 - Manoel Brandão representado pelo procurador Ricardo de Miranda Ribeiro sobre desaparecimento do termo de concordância da avaliação do imóvel", "Link": "https://drive.google.com/file/d/1c21eAtpgt-3AkkowXL9-zhgySd6vQDpE/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.191193503532773, -22.904260665635899, 4.73751538064448 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Maria Eugênia, 44", "Description": "Rua Maria Eugenia, 44 - não consegue vender imóvel pois fica em área a ser desapropriada", "Link": "https://drive.google.com/file/d/1Fy4nY2KfhUOWPXTz2NTfFTiAQ10wgMFR/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.199962427186279, -22.957807530299281, 17.591854256681369 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Carlos Peixoto, 44", "Description": "Av. Carlos Peixoto, 44 - Alexandre Candido da Silva pede que lhe seja doado o material resultante da demolição do seu prédio", "Link": "https://drive.google.com/file/d/14xPjPY_2t_M63ppXmRA9caR4sxPVENdU/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177815256815151, -22.95709402835308, 7.753701158136543 ] } },
-{ "type": "Feature", "properties": { "Name": "Pç. Floriano Peixoto, 85 a 89", "Description": "J. C. Miranda & Cia Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Igreja que ficava ao lado:", "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176618237993722, -22.909562968662229, 7.061560032181604 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 9-A", "Description": "Preche & Paschoal Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176717869239667, -22.909417096491751, 7.056788799430196 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 5", "Description": "Gonçalves & Ferreira Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.17664907360907, -22.90948724203637, 7.056783901917441 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 9-B", "Description": "Maurício Cruz & Cia Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176776418545607, -22.909361789397408, 7.056785760765436 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 11", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176839729055139, -22.909286860513959, 7.056773010539422 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 13", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176907001031758, -22.90921893935586, 7.056787062241963 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 17", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176969480514629, -22.909146728505441, 7.056784975635574 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 37", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177329805721911, -22.908775046682319, 6.907010103487233 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 44", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177414401988592, -22.908692703071139, 6.902247461895548 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 45", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177475214456642, -22.908629089206809, 6.824981788251718 ] } },
-{ "type": "Feature", "properties": { "Name": "R. 13 de Maio, 47", "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição", "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.177561422146709, -22.908542010583361, 6.812607062263661 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 136-142", "Description": "Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada", "Link": "https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.181469703532393, -22.902922246144701, 4.909899162081777 ] } },
-{ "type": "Feature", "properties": { "Name": "R. General Câmara, 165", "Description": "Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada", "Link": "https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.181641741328427, -22.902428816758849, 4.991131553688886 ] } },
-{ "type": "Feature", "properties": { "Name": "Lg. de São Francisco", "Description": "Apelo para não ser desapropriada a área do Parc Royal após incêndio", "Link": "https://drive.google.com/file/d/1BFQzX7bgZ7Vv1natd_i3HuK9jn-w0A_a/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.18046009899647, -22.905263292913911, 5.772667923537562 ] } },
-{ "type": "Feature", "properties": { "Name": "Ig. de São Pedro dos Clérigos", "Description": "Carta da Irmandade com sugestões relativas à transferência da Igreja de São Pedro", "Link": "https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.180111774364001, -22.90137649753057, 3.148303779314663 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Rêgo Barros, 86", "Description": "Rua Rego Barros, 86 - Alvaro Barbosa (português, homem pobre) pede agilizar indenização", "Link": "https://drive.google.com/file/d/1OwNonBJOiGffyVzsZg_SRVAjFJL5atps/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.1960901596483, -22.903735644396619, 8.748312875570768 ] } },
-{ "type": "Feature", "properties": { "Name": "R. São Pedro, 84", "Description": "Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde Leite de Aguiar pede ajuda a Vargas sobre demolição do seu negócio Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde (Cremilde) Leite de Aguiar - demolição e encerramento do processo", "Link": "https://drive.google.com/file/d/1OjDGlZy9iZEePAicYJHm6pS0E5HI201Q/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.179615728508679, -22.901094599603319, 6.933870703171438 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Constituição, 45", "Description": "Rua da Constituição, 45/57 - propõe cessão de parte do terreno para não desapropriar", "Link": "https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.185252631132947, -22.907078347312979, 5.927657650857872 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Constituição, 57", "Description": "Rua da Constituição, 45/57 - propõe cessão de parte do terreno para não desapropriar", "Link": "https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.185633314012961, -22.90710605773177, 5.897752154887657 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 11", "Description": "Rua da Alfândega 11 - Banco Francês e Italiano para a América do Sul", "Link": "https://drive.google.com/file/d/1HrB8e2aL9KnhRgFWsAkshMV89QYPh4q9/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.176957176862643, -22.901495703878471, 2.526993865251799 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Assembléia, 2 a 8", "Description": "Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação", "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.174978329711948, -22.904149777619971, 4.085395926820552 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Misericórdia, 2", "Description": "Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação", "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.17480156836973, -22.904001238319129, 4.268297593636456 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 250-250A", "Description": "Rua da Alfândega, 250 e 250-A - Luiz Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno", "Link": "https://drive.google.com/file/d/16kXlQtgZPxYv4WkxLPM2EvtZJLTnJ2Eb/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.184462457963548, -22.90389011361664, 5.20234649433637 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Alfândega, 274-276", "Description": "Rua da Alfândega, 274 e 276 - Faride Kather Oebbe Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno", "Link": "https://drive.google.com/file/d/1FbMamLSf4PrzGS3yYmtlOfBafelh-F7h/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.184893604001971, -22.904013101577899, 5.431728990552132 ] } },
-{ "type": "Feature", "properties": { "Name": "Praia de São Cristóvão, 270", "Description": "Viúva de J. Vicente da Costa, com negócio de marmorista situado à Praia de São Cristóvão nº 270, pede auxílio para mudança após desapropriação para construção da variante Rio-Petrópolis", "Link": "https://drive.google.com/file/d/1NdID_SU0O0d1BkwYZKODP5mFNj_F8eUH/view" }, "geometry": { "type": "Point", "coordinates": [ -43.219129053797978, -22.88904920894343, 5.374694292777004 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Presidente Vargas, 496 / R. São Pedro, 114", "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Muda-se para a Rua Sacadura Cabral, 167.", "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view" }, "geometry": { "type": "Point", "coordinates": [ -43.180535017091103, -22.901386499304419, 4.453923260724968 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Presidente Vargas, 491 / R. General Câmara, 111", "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Muda-se para a Rua do Costa, 106 (Rua Alexandre Mackenzie )", "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view" }, "geometry": { "type": "Point", "coordinates": [ -43.180076395965663, -22.901859236161211, 4.603933064947485 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Presidente Vargas, 522 / R. São Pedro, 122", "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 118", "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view" }, "geometry": { "type": "Point", "coordinates": [ -43.180819135089443, -22.901477748649, 5.513709237449715 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Presidente Vargas, 542 / R. São Pedro 128", "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 118", "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view" }, "geometry": { "type": "Point", "coordinates": [ -43.180990497115197, -22.90153260867714, 4.86219767643302 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Presidente Vargas, 528 e 534 / R. São Pedro, 124-126", "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Muda-se para a Rua Teófilo Otoni, quadra 8B, Lote 11, de acordo com o PA 3022. Pedido de licença para a construção numero 220.226. Depósito vai para armazém na Rua Gonzaga Bastos, 109.", "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view" }, "geometry": { "type": "Point", "coordinates": [ -43.180904998276603, -22.901509172275539, 5.553777781126112 ] } },
-{ "type": "Feature", "properties": { "Name": "R. José Clemente, 67", "Description": "Rua José Clemente, 67 - Dias e Irmãos - pedem para estender o prazo para desapropriação", "Link": "https://drive.google.com/file/d/1XV-2C2MTEqSFQM3XPk7I05bB-YVrB07n/view" }, "geometry": { "type": "Point", "coordinates": [ -43.223323616645409, -22.88870869829832, 4.144748888146486 ] } },
-{ "type": "Feature", "properties": { "Name": "R. São Francisco Xavier, 576", "Description": "Rua São Francisco Xavier, 576 - Maria Antonia de Carvalho pedem para não demolir barracão", "Link": "https://drive.google.com/file/d/1ZohGr8yT6RhRGTYrWy-QvpdmxouzyHa7/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.237974850909247, -22.910233125070441, 12.32122085784202 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Miguel Couto, 92", "Description": "Rua Miguel Couto, 92 - Oficina gráfica da Escola Aeronautica - concessão de prazo para a demolição Rua Miguel Couto, 92 - Escola de Aeronautica - solicita dilatar prazo para demolição, sendo concedido", "Link": "https://drive.google.com/file/d/1WVskyEb-Q9D7UTzbVxVUeZAnXSHoSZ4N/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.180242203199391, -22.90103731219342, 10.57130559455285 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Marechal Trompowsky, 31", "Description": "Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais", "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.246001769435409, -22.936081580155271, 29.471316678548849 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Marechal Trompowsky, 32", "Description": "Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais", "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.24571899937542, -22.936129443148729, 28.586958349683371 ] } },
-{ "type": "Feature", "properties": { "Name": "R. da Passagem , 252", "Description": "Rua da Passagem, 252 - Moradores de edifício pedem para adiar demolição", "Link": "https://drive.google.com/file/d/1k29AU5HDPzlhEjqK4DfcWQoJ3aV0-5EJ/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.178322863384849, -22.955774363251759, 6.239070200912029 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Primeiro de Março, 88", "Description": "Rua Primeiro de Março, 88 - João Guilbaud reclama valor de desapropriação, apelando ao presidente Vargas", "Link": "https://drive.google.com/file/d/1n0K0wksKl15TVLH1AtseWojYPdX8G3sB/view" }, "geometry": { "type": "Point", "coordinates": [ -43.176808709747419, -22.90040748540747, 2.205061672825723 ] } },
-{ "type": "Feature", "properties": { "Name": "R. General Pedra, 367", "Description": "Rua General Pedra, 367 - fábrica de calçados do turco José Jorge Primo - cidadão faz denúncia sobre alto valor indenizado", "Link": "https://drive.google.com/file/d/1_QIIZMlgFcQzGo95JjeSDz-LOalS5j6y/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.202197003454273, -22.90710283367865, 3.685969909086246 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Groairas, 36", "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá", "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.267175408288423, -22.9150323496042, 56.664892290833293 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Groairas, 29-31", "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá", "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.267345825003687, -22.916165391460559, 97.319895054622449 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Groairas, 34", "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá", "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.267176320025818, -22.915133879998791, 54.395294169923261 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Groairas, 38", "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá", "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.267174394056703, -22.91492144292652, 48.502288706466587 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Leopoldino Bastos, 78", "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá", "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.266433274087547, -22.914843081799361, 27.422826785274729 ] } },
-{ "type": "Feature", "properties": { "Name": "R. Leopoldino Bastos, 80", "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá", "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing" }, "geometry": { "type": "Point", "coordinates": [ -43.266448871747983, -22.914964943786991, 27.011059882771359 ] } }
-]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "0",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Sen. Furtado, 61 ",
+        "Description": "Rua Senador Furtado, 61 - Lavanderia Confiança - desapropriação de terrenos para prolongamento da Rua Comandante Cordeiro de Faria (Maracanã)",
+        "Link": "https://drive.google.com/file/d/1nl5NmTJdxfeG-fVAWZW2P7dbLYg_p_q1/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.2187139,
+          -22.9119948,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "1",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Sen. Euzébio, 230",
+        "Description": "Rua Senador Euzebio, 230 - Desapropriação de imóvel em leilão",
+        "Link": "https://drive.google.com/file/d/1rEHdw7LUlLHgACLp5FggeCAT7uhR22B3/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.20179672376948,
+          -22.90824323573527,
+          5.664315368314159
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Sen. Dantas, 24",
+        "Description": "Rua Senador Dantas, 24 - Desapropriação - proprietária pede maior indenização",
+        "Link": "https://drive.google.com/file/d/1oFmKNjLscw7-SIVQ-R_hNu8u2zzLCLFR/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1774299,
+          -22.9108414,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Chile, 11",
+        "Description": "Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação",
+        "Link": "https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17657835908838,
+          -22.90621000796643,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Chile, 15",
+        "Description": "Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação",
+        "Link": "https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17657426237723,
+          -22.90626538241429,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 79",
+        "Description": "Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita indenização por mudança devido a abertura da Av. Presidente Vargas Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita resolução caso de indenização",
+        "Link": "https://drive.google.com/file/d/1UvY1n_4MVQS_omrxJ1IjTiJu-FDPK0Uz/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19331546679918,
+          -22.90574110075027,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 17",
+        "Description": "Rua Senador Euzebio, 17 - Tipografia - Aron Bergman apresenta recibo para ressarcimento de desmontagem e instalações do seu negócio",
+        "Link": "https://drive.google.com/file/d/1aj9e_BN6H0D2dzpCuCdoaa85z-xnN_bB/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19155989527602,
+          -22.90518742294747,
+          -7.073241992117119e-10
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Quitanda, 131",
+        "Description": "Rua da Quitanda, 131 - Banco - sobre desapropriação",
+        "Link": "https://drive.google.com/file/d/17z47xO_MI7yjez6Ja2Wtjzjz6P8fEFYf/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17812304652465,
+          -22.90126411192271,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 103",
+        "Description": "Rua General Caldwell, 103 - Barbearia e residência - Antonio Teixeira de Azevedo Junior implora por indenização após ser desapropriado Obs: A numeração não aparece em nenhum PA, mas foi conjecturada a sua localização através dos outros lotes e da foto. Rua General Caldwell, 103 - Antonio Teixeira de Azevedo Junior - barbeiro reclamante indenização por mudança",
+        "Link": "https://drive.google.com/file/d/1-EihdHGhg3BcTeCbaslYOMdFzmj9hMFo/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19273584513142,
+          -22.90572131778477,
+          3.938565020038935
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. dos Democráticos, 392",
+        "Description": "Carta de Abrigo do Cristo Redentor pede indenização prévia sobre obras da Av. Brasil (corta o terreno do suplicante)",
+        "Link": "https://drive.google.com/file/d/1WM9YVmUXk9k7soj47IA8cpAKf04OK_hE/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.25806428804724,
+          -22.87336177269599,
+          8.468442718221883
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 5",
+        "Description": "Rua Senador Euzebio, 5 - Barbearia - Alberto de Souza Trindade solicita indenização de mobiliário",
+        "Link": "https://drive.google.com/file/d/1b8VE4mLrLfk4cgk0r9-duRlIiSVQ-VI6/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19122357602402,
+          -22.90506544337559,
+          4.138814034940306
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 197",
+        "Description": "Praça da República, 197 - Pritaneu Militar - desapropriação e cessão à prefeitura para abertura da Av. Pres. Vargas Eurico G. Dutra solicita cessão de terrenos na Rua Santa Luzia. Sugere permuta de imóvel à Praça da República 197, junto à nova Av. Pres. Vargas",
+        "Link": "https://drive.google.com/file/d/10ayie0r0j1_2Zi3SAxapy4p5jcw663u2/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1908382709978,
+          -22.90559263393383,
+          4.897998612090387
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "type": "Feature",
+      "properties": {
+        "Name": "Tv. Dom Manuel, 18-20",
+        "Description": "Travessa D. Manoel, 18 e 20 - Alfredo Elias, sírio, solicita prazo para desocupar imóvel desapropriado",
+        "Link": "https://drive.google.com/file/d/1HVhEEcs1denpPLw-4_PPAXW8Laq-kKiL/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17231230856567,
+          -22.90530754567785,
+          5.269046624511697
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 280",
+        "Description": "Rua de S. Pedro, 280 - prédio deixado em testamento por Francisca Candida Peçanha a ser desapropriado - Irmandade solicita pagamento do valor máximo",
+        "Link": "https://drive.google.com/file/d/1ZspEJC5iLFGqv9WzlaOBun4HzhN8P9-l/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18532319336283,
+          -22.9029366900082,
+          4.381494087465705
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 65",
+        "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas",
+        "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19290180426662,
+          -22.90560273687528,
+          4.06583649444912
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 56",
+        "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas",
+        "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19244399324948,
+          -22.90576830916385,
+          4.040512710784377
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 51",
+        "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas",
+        "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19254232103291,
+          -22.90547941708328,
+          3.943240530606464
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. Lopes Trovão",
+        "Description": "Pedido de transferência do Mercado do Peixe da Praça Lopes Trovão entre Av. Tomé de Souza e Rua Uruguaiana para outro local",
+        "Link": "https://drive.google.com/file/d/1gNDg6zqk29ayC1snRoa-v1aOxpqInL_7/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18206424425645,
+          -22.9023045715703,
+          3.75353876211121
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 82",
+        "Description": "Senador Euzebio, 82 - Pedro Saulle - proprietário do prédio pede revisão do processo de desapropriação Mais informações sobre Pedro Saulle: autorização da desapropriação com valor em 1941: Indeferimento de pedido em 1941:",
+        "Link": "https://drive.google.com/file/d/1EoRtJP4midTp4v5hB461jOaYyWHaTzV5/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19332265814598,
+          -22.90554330531486,
+          3.618367859921965
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São José, 59",
+        "Description": "Rua de S. José, 59 - J. Ribeiro dos Santos - Livraria Jacinto Editora pede para locar o imóvel número 57 a ser demolido",
+        "Link": "https://drive.google.com/file/d/1LAz5PvO5iEaI-0HmbLTfMe8HyxQxzqF5/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17584470942555,
+          -22.90554921122408,
+          6.823783114224282
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 319",
+        "Description": "Rua de São Pedro, 319 pede para estender prazo de desapropriação. A. Rodrigues de Sá, pequeno fabricante de vassouras",
+        "Link": "https://drive.google.com/file/d/1ZgclX_OKRBOWK6D7GPfiLEnOV8_Snq76/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1860198077964,
+          -22.90327821441841,
+          4.421685780529129
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Carmo Neto, 70",
+        "Description": "Rua Carmo Neto, 70 pede execução da desapropriação - Proprietário Miguel Moreira",
+        "Link": "https://drive.google.com/file/d/1-hvMzNim4HrTuo_s2Cp8TgVcn2tPZU6O/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.20116251308794,
+          -22.90703279075393,
+          3.740121898599595
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Santa Luzia, 576",
+        "Description": "Rua Santa Luzia, 576 - Edifícios Vitória aceita avaliação do imóvel de Elvira Carvalho de Andrade Bastos Rua Santa Luzia, 576 - Elvira Carvalho de Andrade bastos (Edifícios Vitoria) - revisão do valor acordado para desapropriação",
+        "Link": "https://drive.google.com/file/d/1xXYZIKei98oSiBlAuWYdkrPXhbhqDZ5F/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17263043409855,
+          -22.90974778447855,
+          6.465559526126459
+        ]
+      }
+    },
+    {
+      "id": "23",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 24-26",
+        "Description": "Banco Borges Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17737836447986,
+          -22.90157877487334,
+          2.734514931172607
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 28",
+        "Description": "Banco Central Brasileiro Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17748268503182,
+          -22.90161048656187,
+          2.807028942310972
+        ]
+      }
+    },
+    {
+      "id": "25",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 30",
+        "Description": "Banco do Comércio e Indústria do Rio de Janeiro Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17755686166629,
+          -22.90163089396091,
+          2.818021261152255
+        ]
+      }
+    },
+    {
+      "id": "26",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 32",
+        "Description": "Banco Aliança do Rio de Janeiro Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17763345073951,
+          -22.90165477707235,
+          2.852390674485101
+        ]
+      }
+    },
+    {
+      "id": "27",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. do Lavradio, 97",
+        "Description": "Rua do Lavradio, 97 - Grande Oriente do Brasil (maçonaria) pede troca de terreno desapropriado por novo na Av. Pres. Vargas Rua do Lavradio, 97 - Grande Oriente do Brasil (maçonaria) recorre a Getúlio Vargas após indeferimento da prefeitura sobre desapropriação Não demolido",
+        "Link": "https://drive.google.com/file/d/12otjU5ecY2O4Bf0giscp3ZHQodODCB6c/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18271502639167,
+          -22.91069380881824,
+          7.003017367311804
+        ]
+      }
+    },
+    {
+      "id": "28",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 231",
+        "Description": "Praça da República, 231 - Manoel Brandão representado pelo procurador Ricardo de Miranda Ribeiro sobre desaparecimento do termo de concordância da avaliação do imóvel",
+        "Link": "https://drive.google.com/file/d/1c21eAtpgt-3AkkowXL9-zhgySd6vQDpE/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19119350353277,
+          -22.9042606656359,
+          4.73751538064448
+        ]
+      }
+    },
+    {
+      "id": "29",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Maria Eugênia, 44",
+        "Description": "Rua Maria Eugenia, 44 - não consegue vender imóvel pois fica em área a ser desapropriada",
+        "Link": "https://drive.google.com/file/d/1Fy4nY2KfhUOWPXTz2NTfFTiAQ10wgMFR/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19996242718628,
+          -22.95780753029928,
+          17.59185425668137
+        ]
+      }
+    },
+    {
+      "id": "30",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Carlos Peixoto, 44",
+        "Description": "Av. Carlos Peixoto, 44 - Alexandre Candido da Silva pede que lhe seja doado o material resultante da demolição do seu prédio",
+        "Link": "https://drive.google.com/file/d/14xPjPY_2t_M63ppXmRA9caR4sxPVENdU/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17781525681515,
+          -22.95709402835308,
+          7.753701158136543
+        ]
+      }
+    },
+    {
+      "id": "31",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. Floriano Peixoto, 85 a 89",
+        "Description": "J. C. Miranda & Cia Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Igreja que ficava ao lado:",
+        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17661823799372,
+          -22.90956296866223,
+          7.061560032181604
+        ]
+      }
+    },
+    {
+      "id": "32",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 9-A",
+        "Description": "Preche & Paschoal Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17671786923967,
+          -22.90941709649175,
+          7.056788799430196
+        ]
+      }
+    },
+    {
+      "id": "33",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 5",
+        "Description": "Gonçalves & Ferreira Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17664907360907,
+          -22.90948724203637,
+          7.056783901917441
+        ]
+      }
+    },
+    {
+      "id": "34",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 9-B",
+        "Description": "Maurício Cruz & Cia Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17677641854561,
+          -22.90936178939741,
+          7.056785760765436
+        ]
+      }
+    },
+    {
+      "id": "35",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 11",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17683972905514,
+          -22.90928686051396,
+          7.056773010539422
+        ]
+      }
+    },
+    {
+      "id": "36",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 13",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17690700103176,
+          -22.90921893935586,
+          7.056787062241963
+        ]
+      }
+    },
+    {
+      "id": "37",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 17",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17696948051463,
+          -22.90914672850544,
+          7.056784975635574
+        ]
+      }
+    },
+    {
+      "id": "38",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 37",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17732980572191,
+          -22.90877504668232,
+          6.907010103487233
+        ]
+      }
+    },
+    {
+      "id": "39",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 44",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17741440198859,
+          -22.90869270307114,
+          6.902247461895548
+        ]
+      }
+    },
+    {
+      "id": "40",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 45",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17747521445664,
+          -22.90862908920681,
+          6.824981788251718
+        ]
+      }
+    },
+    {
+      "id": "41",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. 13 de Maio, 47",
+        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
+        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17756142214671,
+          -22.90854201058336,
+          6.812607062263661
+        ]
+      }
+    },
+    {
+      "id": "42",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 136-142",
+        "Description": "Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada",
+        "Link": "https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18146970353239,
+          -22.9029222461447,
+          4.909899162081777
+        ]
+      }
+    },
+    {
+      "id": "43",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 165",
+        "Description": "Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada",
+        "Link": "https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18164174132843,
+          -22.90242881675885,
+          4.991131553688886
+        ]
+      }
+    },
+    {
+      "id": "44",
+      "type": "Feature",
+      "properties": {
+        "Name": "Lg. de São Francisco",
+        "Description": "Apelo para não ser desapropriada a área do Parc Royal após incêndio",
+        "Link": "https://drive.google.com/file/d/1BFQzX7bgZ7Vv1natd_i3HuK9jn-w0A_a/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18046009899647,
+          -22.90526329291391,
+          5.772667923537562
+        ]
+      }
+    },
+    {
+      "id": "45",
+      "type": "Feature",
+      "properties": {
+        "Name": "Ig. de São Pedro dos Clérigos",
+        "Description": "Carta da Irmandade com sugestões relativas à transferência da Igreja de São Pedro",
+        "Link": "https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.180111774364,
+          -22.90137649753057,
+          3.148303779314663
+        ]
+      }
+    },
+    {
+      "id": "46",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Rêgo Barros, 86",
+        "Description": "Rua Rego Barros, 86 - Alvaro Barbosa (português, homem pobre) pede agilizar indenização",
+        "Link": "https://drive.google.com/file/d/1OwNonBJOiGffyVzsZg_SRVAjFJL5atps/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1960901596483,
+          -22.90373564439662,
+          8.748312875570768
+        ]
+      }
+    },
+    {
+      "id": "47",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 84",
+        "Description": "Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde Leite de Aguiar pede ajuda a Vargas sobre demolição do seu negócio Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde (Cremilde) Leite de Aguiar - demolição e encerramento do processo",
+        "Link": "https://drive.google.com/file/d/1OjDGlZy9iZEePAicYJHm6pS0E5HI201Q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17961572850868,
+          -22.90109459960332,
+          6.933870703171438
+        ]
+      }
+    },
+    {
+      "id": "48",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Constituição, 45",
+        "Description": "Rua da Constituição, 45/57 - propõe cessão de parte do terreno para não desapropriar",
+        "Link": "https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18525263113295,
+          -22.90707834731298,
+          5.927657650857872
+        ]
+      }
+    },
+    {
+      "id": "49",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Constituição, 57",
+        "Description": "Rua da Constituição, 45/57 - propõe cessão de parte do terreno para não desapropriar",
+        "Link": "https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18563331401296,
+          -22.90710605773177,
+          5.897752154887657
+        ]
+      }
+    },
+    {
+      "id": "50",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 11",
+        "Description": "Rua da Alfândega 11 - Banco Francês e Italiano para a América do Sul",
+        "Link": "https://drive.google.com/file/d/1HrB8e2aL9KnhRgFWsAkshMV89QYPh4q9/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17695717686264,
+          -22.90149570387847,
+          2.526993865251799
+        ]
+      }
+    },
+    {
+      "id": "51",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Assembléia, 2 a 8",
+        "Description": "Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação",
+        "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17497832971195,
+          -22.90414977761997,
+          4.085395926820552
+        ]
+      }
+    },
+    {
+      "id": "52",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Misericórdia, 2",
+        "Description": "Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação",
+        "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17480156836973,
+          -22.90400123831913,
+          4.268297593636456
+        ]
+      }
+    },
+    {
+      "id": "53",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 250-250A",
+        "Description": "Rua da Alfândega, 250 e 250-A - Luiz Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno",
+        "Link": "https://drive.google.com/file/d/16kXlQtgZPxYv4WkxLPM2EvtZJLTnJ2Eb/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18446245796355,
+          -22.90389011361664,
+          5.20234649433637
+        ]
+      }
+    },
+    {
+      "id": "54",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 274-276",
+        "Description": "Rua da Alfândega, 274 e 276 - Faride Kather Oebbe Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno",
+        "Link": "https://drive.google.com/file/d/1FbMamLSf4PrzGS3yYmtlOfBafelh-F7h/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18489360400197,
+          -22.9040131015779,
+          5.431728990552132
+        ]
+      }
+    },
+    {
+      "id": "55",
+      "type": "Feature",
+      "properties": {
+        "Name": "Praia de São Cristóvão, 270",
+        "Description": "Viúva de J. Vicente da Costa, com negócio de marmorista situado à Praia de São Cristóvão nº 270, pede auxílio para mudança após desapropriação para construção da variante Rio-Petrópolis",
+        "Link": "https://drive.google.com/file/d/1NdID_SU0O0d1BkwYZKODP5mFNj_F8eUH/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.21912905379798,
+          -22.88904920894343,
+          5.374694292777004
+        ]
+      }
+    },
+    {
+      "id": "56",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 496 / R. São Pedro, 114",
+        "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Muda-se para a Rua Sacadura Cabral, 167.",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1805350170911,
+          -22.90138649930442,
+          4.453923260724968
+        ]
+      }
+    },
+    {
+      "id": "57",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 491 / R. General Câmara, 111",
+        "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Muda-se para a Rua do Costa, 106 (Rua Alexandre Mackenzie )",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18007639596566,
+          -22.90185923616121,
+          4.603933064947485
+        ]
+      }
+    },
+    {
+      "id": "58",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 522 / R. São Pedro, 122",
+        "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 118",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18081913508944,
+          -22.901477748649,
+          5.513709237449715
+        ]
+      }
+    },
+    {
+      "id": "59",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 542 / R. São Pedro 128",
+        "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 118",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1809904971152,
+          -22.90153260867714,
+          4.86219767643302
+        ]
+      }
+    },
+    {
+      "id": "60",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 528 e 534 / R. São Pedro, 124-126",
+        "Description": "Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Muda-se para a Rua Teófilo Otoni, quadra 8B, Lote 11, de acordo com o PA 3022. Pedido de licença para a construção numero 220.226. Depósito vai para armazém na Rua Gonzaga Bastos, 109.",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1809049982766,
+          -22.90150917227554,
+          5.553777781126112
+        ]
+      }
+    },
+    {
+      "id": "61",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. José Clemente, 67",
+        "Description": "Rua José Clemente, 67 - Dias e Irmãos - pedem para estender o prazo para desapropriação",
+        "Link": "https://drive.google.com/file/d/1XV-2C2MTEqSFQM3XPk7I05bB-YVrB07n/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.22332361664541,
+          -22.88870869829832,
+          4.144748888146486
+        ]
+      }
+    },
+    {
+      "id": "62",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Francisco Xavier, 576",
+        "Description": "Rua São Francisco Xavier, 576 - Maria Antonia de Carvalho pedem para não demolir barracão",
+        "Link": "https://drive.google.com/file/d/1ZohGr8yT6RhRGTYrWy-QvpdmxouzyHa7/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.23797485090925,
+          -22.91023312507044,
+          12.32122085784202
+        ]
+      }
+    },
+    {
+      "id": "63",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Miguel Couto, 92",
+        "Description": "Rua Miguel Couto, 92 - Oficina gráfica da Escola Aeronautica - concessão de prazo para a demolição Rua Miguel Couto, 92 - Escola de Aeronautica - solicita dilatar prazo para demolição, sendo concedido",
+        "Link": "https://drive.google.com/file/d/1WVskyEb-Q9D7UTzbVxVUeZAnXSHoSZ4N/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18024220319939,
+          -22.90103731219342,
+          10.57130559455285
+        ]
+      }
+    },
+    {
+      "id": "64",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Marechal Trompowsky, 31",
+        "Description": "Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais",
+        "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.24600176943541,
+          -22.93608158015527,
+          29.47131667854885
+        ]
+      }
+    },
+    {
+      "id": "65",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Marechal Trompowsky, 32",
+        "Description": "Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais",
+        "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.24571899937542,
+          -22.93612944314873,
+          28.58695834968337
+        ]
+      }
+    },
+    {
+      "id": "66",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Passagem , 252",
+        "Description": "Rua da Passagem, 252 - Moradores de edifício pedem para adiar demolição",
+        "Link": "https://drive.google.com/file/d/1k29AU5HDPzlhEjqK4DfcWQoJ3aV0-5EJ/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17832286338485,
+          -22.95577436325176,
+          6.239070200912029
+        ]
+      }
+    },
+    {
+      "id": "67",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Primeiro de Março, 88",
+        "Description": "Rua Primeiro de Março, 88 - João Guilbaud reclama valor de desapropriação, apelando ao presidente Vargas",
+        "Link": "https://drive.google.com/file/d/1n0K0wksKl15TVLH1AtseWojYPdX8G3sB/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17680870974742,
+          -22.90040748540747,
+          2.205061672825723
+        ]
+      }
+    },
+    {
+      "id": "68",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Pedra, 367",
+        "Description": "Rua General Pedra, 367 - fábrica de calçados do turco José Jorge Primo - cidadão faz denúncia sobre alto valor indenizado",
+        "Link": "https://drive.google.com/file/d/1_QIIZMlgFcQzGo95JjeSDz-LOalS5j6y/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.20219700345427,
+          -22.90710283367865,
+          3.685969909086246
+        ]
+      }
+    },
+    {
+      "id": "69",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Groairas, 36",
+        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.26717540828842,
+          -22.9150323496042,
+          56.66489229083329
+        ]
+      }
+    },
+    {
+      "id": "70",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Groairas, 29-31",
+        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.26734582500369,
+          -22.91616539146056,
+          97.31989505462245
+        ]
+      }
+    },
+    {
+      "id": "71",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Groairas, 34",
+        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.26717632002582,
+          -22.91513387999879,
+          54.39529416992326
+        ]
+      }
+    },
+    {
+      "id": "72",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Groairas, 38",
+        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.2671743940567,
+          -22.91492144292652,
+          48.50228870646659
+        ]
+      }
+    },
+    {
+      "id": "73",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Leopoldino Bastos, 78",
+        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.26643327408755,
+          -22.91484308179936,
+          27.42282678527473
+        ]
+      }
+    },
+    {
+      "id": "74",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Leopoldino Bastos, 80",
+        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.26644887174798,
+          -22.91496494378699,
+          27.01105988277136
+        ]
+      }
+    }
+  ]
 }
