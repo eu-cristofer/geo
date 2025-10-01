@@ -5,7 +5,7 @@ import type { FeatureCollection } from 'geojson';
 
 // MapTiler API key - Get your free key at https://www.maptiler.com/cloud/
 // For production, use environment variables
-const MAPTILER_KEY = import.meta.env.VITE_MAPTILER_KEY || 'get_your_own_OpIi9ZULNHzrESv6T2N4';
+const MAPTILER_KEY = import.meta.env.VITE_MAPTILER_KEY || '';
 
 // Map configuration
 const MAP_CONFIG = {
@@ -16,7 +16,7 @@ const MAP_CONFIG = {
 };
 
 class ApelosMap {
-  private map: maplibregl.Map;
+  private map!: maplibregl.Map;
   private popup: maplibregl.Popup;
 
   constructor() {
@@ -25,6 +25,23 @@ class ApelosMap {
       closeOnClick: false,
       maxWidth: '400px',
     });
+
+    // Check if MapTiler key is available
+    if (!MAPTILER_KEY) {
+      console.error('MapTiler API key not found! Set VITE_MAPTILER_KEY environment variable.');
+      document.getElementById('info')!.innerHTML = `
+        <div class="error">
+          <h3>⚠️ Configuração Necessária</h3>
+          <p>A chave de API do MapTiler não foi configurada.</p>
+          <ol style="text-align: left; margin-top: 1rem;">
+            <li>Obtenha uma chave gratuita em <a href="https://www.maptiler.com/cloud/" target="_blank">maptiler.com</a></li>
+            <li>Configure a variável de ambiente <code>VITE_MAPTILER_KEY</code></li>
+            <li>Reconstrua a aplicação</li>
+          </ol>
+        </div>
+      `;
+      return;
+    }
 
     this.map = new maplibregl.Map({
       container: 'map',
@@ -53,8 +70,9 @@ class ApelosMap {
 
   private async loadData(): Promise<void> {
     try {
-      // Load GeoJSON data
-      const response = await fetch('/data/apelos_clean.geojson');
+      // Load GeoJSON data - use relative path that works with base path
+      const basePath = import.meta.env.BASE_URL || '/';
+      const response = await fetch(`${basePath}data/apelos_clean.geojson`);
       const data: FeatureCollection = await response.json();
 
       // Add source
