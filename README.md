@@ -125,45 +125,38 @@ This is essentially a **digital humanities project** that makes historical resea
 
 ## 📚 Documentation
 
-Complete guides for all skill levels:
-
-| Document | Description | Audience |
-|----------|-------------|----------|
-| **[DOCUMENTATION.md](DOCUMENTATION.md)** | Complete technical reference | Developers |
-| **[USER_GUIDE.md](USER_GUIDE.md)** | How to use the interactive map | End Users |
-| **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** | Fast command lookup | All Users |
-| **[DEPLOYMENT.md](DEPLOYMENT.md)** | Detailed deployment guide | DevOps |
-| **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** | One-page deploy reference | Developers |
-| **[START_HERE.md](START_HERE.md)** | New user onboarding guide | Beginners |
+Complete guides for all skill levels - now organized in the `docs/` folder:
 
 ### 🎯 **Choose Your Path:**
 
-**👋 New to the project?** → Start with [START_HERE.md](START_HERE.md)
+**👋 New to the project?** → Start with [docs/user-guides/quick-start.md](docs/user-guides/quick-start.md)
 
-**🗺️ Want to use the map?** → Read [USER_GUIDE.md](USER_GUIDE.md)
+**🗺️ Want to use the map?** → Read [docs/user-guides/user-guide.md](docs/user-guides/user-guide.md)
 
-**💻 Need to deploy?** → Follow [DEPLOYMENT.md](DEPLOYMENT.md)
+**💻 Need to deploy?** → Follow [docs/deployment/deployment-guide.md](docs/deployment/deployment-guide.md)
 
-**🔧 Developer setup?** → Check [DOCUMENTATION.md](DOCUMENTATION.md)
+**🔧 Developer setup?** → Check [docs/developer-guides/complete-documentation.md](docs/developer-guides/complete-documentation.md)
 
-**⚡ Quick commands?** → Use [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
+**⚡ Quick commands?** → Use [docs/reference/quick-reference.md](docs/reference/quick-reference.md)
 
-### 📖 **Web Application Documentation:**
+### 📖 **Documentation Hub:**
 
-| Document | Description | Audience |
-|----------|-------------|----------|
-| **[web/README.md](web/README.md)** | Web app overview and setup | Web Developers |
-| **[web/QUICK_START.md](web/QUICK_START.md)** | Fast web app setup | Developers |
-| **[web/DEVELOPER_GUIDE.md](web/DEVELOPER_GUIDE.md)** | Development workflow | Developers |
-| **[web/ARCHITECTURE.md](web/ARCHITECTURE.md)** | Technical architecture | Architects |
-| **[web/API_REFERENCE.md](web/API_REFERENCE.md)** | API documentation | Developers |
+| Category | Documents | Purpose |
+|----------|-----------|---------|
+| **[docs/user-guides/](docs/user-guides/)** | 2 docs | End-user instructions |
+| **[docs/developer-guides/](docs/developer-guides/)** | 3 docs | Technical development |
+| **[docs/deployment/](docs/deployment/)** | 3 docs | Production deployment |
+| **[docs/reference/](docs/reference/)** | 2 docs | Quick lookup |
+| **[docs/api/](docs/api/)** | 1 doc | Technical reference |
+
+**📚 [Complete Documentation Index](docs/README.md)** - Your central hub for all documentation
 
 **Quick Links:**
 - 🚀 [Quick Start](#quick-start---web-deployment)
-- 🗺️ [Use the Map](USER_GUIDE.md)
-- 📖 [Full Documentation](DOCUMENTATION.md)
-- ⚡ [Quick Reference](QUICK_REFERENCE.md)
-- 🌐 [Web App Docs](web/README.md)
+- 🗺️ [Use the Map](docs/user-guides/user-guide.md)
+- 📖 [Full Documentation](docs/developer-guides/complete-documentation.md)
+- ⚡ [Quick Reference](docs/reference/quick-reference.md)
+- 🌐 [Documentation Hub](docs/README.md)
 
 ## 🚀 Quick Start - Web Deployment
 
@@ -186,7 +179,7 @@ npm install -g vercel
 vercel
 ```
 
-**See full deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md)
+**See full deployment guide:** [docs/deployment/deployment-guide.md](docs/deployment/deployment-guide.md)
 
 ## 📁 Project Structure
 
@@ -248,7 +241,7 @@ npm run dev
 | **GitHub Pages** | ⭐⭐ Medium | Free | Simple hosting |
 | **Docker/VPS** | ⭐⭐⭐ Advanced | $5+/mo | Full control |
 
-**Detailed instructions:** See [DEPLOYMENT.md](DEPLOYMENT.md)
+**Detailed instructions:** See [docs/deployment/deployment-guide.md](docs/deployment/deployment-guide.md)
 
 ## 🔧 Technologies
 
@@ -384,4 +377,4 @@ cd web && docker-compose up -d
 jupyter notebook process.ipynb
 ```
 
-For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+For detailed deployment instructions, see [docs/deployment/deployment-guide.md](docs/deployment/deployment-guide.md).
