@@ -352,6 +352,13 @@ class ApelosMap {
           `).join('')}
         </div>
         <div class="layer-control-actions">
+          <button id="sidebar-toggle-btn" class="sidebar-toggle-btn" title="Mostrar/Ocultar painel lateral">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h18v18H3zM9 9h6v6H9z"/>
+              <path d="M21 3v18M3 3v18"/>
+            </svg>
+            <span class="toggle-text">Ocultar Painel</span>
+          </button>
           <button id="fit-to-features-btn" class="fit-to-features-btn" title="Ajustar zoom para mostrar todos os dados">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -387,6 +394,12 @@ class ApelosMap {
       });
     });
 
+    // Sidebar toggle button handler
+    const sidebarToggleBtn = controlDiv.querySelector('#sidebar-toggle-btn') as HTMLButtonElement;
+    sidebarToggleBtn.addEventListener('click', () => {
+      this.toggleSidebar();
+    });
+
     // Fit to features button handler
     const fitToFeaturesBtn = controlDiv.querySelector('#fit-to-features-btn') as HTMLButtonElement;
     fitToFeaturesBtn.addEventListener('click', () => {
@@ -406,6 +419,30 @@ class ApelosMap {
         this.map.setLayoutProperty(id, 'visibility', visibility);
       }
     });
+  }
+
+  private toggleSidebar(): void {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('#sidebar-toggle-btn') as HTMLButtonElement;
+    const toggleText = toggleBtn.querySelector('.toggle-text') as HTMLElement;
+    
+    if (!sidebar || !toggleBtn || !toggleText) return;
+
+    const isHidden = sidebar.classList.toggle('hidden');
+    
+    // Update button text and icon
+    if (isHidden) {
+      toggleText.textContent = 'Mostrar Painel';
+      toggleBtn.title = 'Mostrar painel lateral';
+    } else {
+      toggleText.textContent = 'Ocultar Painel';
+      toggleBtn.title = 'Ocultar painel lateral';
+    }
+
+    // Trigger map resize after transition completes
+    setTimeout(() => {
+      this.map.resize();
+    }, 300);
   }
 
   private getLayerIds(baseId: string): string[] {

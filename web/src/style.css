@@ -42,6 +42,20 @@ body {
   flex-direction: column;
   z-index: 1;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar.hidden {
+  width: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.sidebar.hidden .sidebar-header,
+.sidebar.hidden .info-panel,
+.sidebar.hidden .sidebar-footer {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .sidebar-header {
@@ -404,6 +418,40 @@ body {
   padding-top: 0.75rem;
   border-top: 1px solid var(--border-color);
   margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.sidebar-toggle-btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.sidebar-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.sidebar-toggle-btn svg {
+  flex-shrink: 0;
 }
 
 .fit-to-features-btn {
