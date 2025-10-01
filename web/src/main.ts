@@ -150,7 +150,7 @@ class ApelosMap {
 
   private setupInteractions(): void {
     // Click on cluster to zoom
-    this.map.on('click', 'clusters', (e) => {
+    this.map.on('click', 'clusters', async (e) => {
       const features = this.map.queryRenderedFeatures(e.point, {
         layers: ['clusters'],
       });
@@ -160,15 +160,18 @@ class ApelosMap {
       const clusterId = features[0].properties?.cluster_id;
       const source = this.map.getSource('apelos') as maplibregl.GeoJSONSource;
 
-      source.getClusterExpansionZoom(clusterId, (err, zoom) => {
-        if (err || !features[0].geometry || features[0].geometry.type !== 'Point') return;
+      if (features[0].geometry?.type !== 'Point') return;
 
+      try {
+        const zoom = await source.getClusterExpansionZoom(clusterId);
         this.map.easeTo({
           center: features[0].geometry.coordinates as [number, number],
           zoom: zoom || 14,
           duration: 500,
         });
-      });
+      } catch (err) {
+        console.error('Error expanding cluster:', err);
+      }
     });
 
     // Show popup on point click
