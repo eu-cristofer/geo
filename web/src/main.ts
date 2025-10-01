@@ -1,6 +1,13 @@
+// Import MapLibre GL JS for interactive web mapping
 import maplibregl from 'maplibre-gl';
+
+// Import MapLibre GL's default CSS for map styling
 import 'maplibre-gl/dist/maplibre-gl.css';
+
+// Import custom application styles
 import './style.css';
+
+// Import the GeoJSON FeatureCollection type for type safety
 import type { FeatureCollection } from 'geojson';
 
 // MapTiler API key - Get your free key at https://www.maptiler.com/cloud/
@@ -51,6 +58,9 @@ class ApelosMap {
   private map!: maplibregl.Map;
   private popup: maplibregl.Popup;
   private layerStates: Map<string, boolean> = new Map();
+  private layerControlElement: HTMLElement | null = null;
+  private isDragging = false;
+  private dragOffset = { x: 0, y: 0 };
 
   constructor() {
     this.popup = new maplibregl.Popup({
@@ -109,11 +119,15 @@ class ApelosMap {
 
   private async loadAllLayers(): Promise<void> {
     const basePath = import.meta.env.BASE_URL || '/';
+    const allFeatures: any[] = [];
 
     for (const layer of LAYERS) {
       try {
         const response = await fetch(`${basePath}data/${layer.file}`);
         const data: FeatureCollection = await response.json();
+
+        // Collect all features for bounding box calculation
+        allFeatures.push(...data.features);
 
         // Add source
         if (layer.type === 'point' && layer.id === 'apelos') {
@@ -153,6 +167,11 @@ class ApelosMap {
       } catch (error) {
         console.error(`Error loading layer ${layer.name}:`, error);
       }
+    }
+
+    // Fit map to all features after all layers are loaded
+    if (allFeatures.length > 0) {
+      this.fitMapToFeatures(allFeatures);
     }
   }
 
@@ -332,10 +351,23 @@ class ApelosMap {
             </label>
           `).join('')}
         </div>
+        <div class="layer-control-actions">
+          <button id="fit-to-features-btn" class="fit-to-features-btn" title="Ajustar zoom para mostrar todos os dados">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Ajustar Zoom
+          </button>
+        </div>
       </div>
     `;
 
     document.getElementById('map')!.appendChild(controlDiv);
+    this.layerControlElement = controlDiv;
+
+    // Make the control draggable
+    this.makeDraggable(controlDiv);
 
     // Toggle control visibility
     const toggleBtn = controlDiv.querySelector('.layer-control-toggle') as HTMLButtonElement;
@@ -353,6 +385,12 @@ class ApelosMap {
         const layerId = target.dataset.layerId!;
         this.toggleLayer(layerId, target.checked);
       });
+    });
+
+    // Fit to features button handler
+    const fitToFeaturesBtn = controlDiv.querySelector('#fit-to-features-btn') as HTMLButtonElement;
+    fitToFeaturesBtn.addEventListener('click', () => {
+      this.fitMapToAllLoadedFeatures();
     });
   }
 
@@ -488,6 +526,189 @@ class ApelosMap {
       <div class="info-description">${description}</div>
       ${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="info-link">Acessar documento original →</a>` : ''}
     `;
+  }
+
+  private fitMapToFeatures(features: any[]): void {
+    if (features.length === 0) return;
+
+    // Calculate bounding box from all features
+    const bounds = this.calculateBoundingBox(features);
+    
+    if (bounds) {
+      // Fit the map to the calculated bounds with some padding
+      this.map.fitBounds(bounds, {
+        padding: { top: 50, bottom: 50, left: 50, right: 50 },
+        duration: 1000, // Smooth animation
+        maxZoom: 15, // Don't zoom too close
+      });
+    }
+  }
+
+  private calculateBoundingBox(features: any[]): maplibregl.LngLatBounds | null {
+    if (features.length === 0) return null;
+
+    let minLng = Infinity;
+    let maxLng = -Infinity;
+    let minLat = Infinity;
+    let maxLat = -Infinity;
+
+    features.forEach(feature => {
+      if (!feature.geometry) return;
+
+      const coordinates = this.extractCoordinates(feature.geometry);
+      coordinates.forEach(coord => {
+        const [lng, lat] = coord;
+        minLng = Math.min(minLng, lng);
+        maxLng = Math.max(maxLng, lng);
+        minLat = Math.min(minLat, lat);
+        maxLat = Math.max(maxLat, lat);
+      });
+    });
+
+    // Check if we have valid bounds
+    if (minLng === Infinity || maxLng === -Infinity || minLat === Infinity || maxLat === -Infinity) {
+      return null;
+    }
+
+    return new maplibregl.LngLatBounds([minLng, minLat], [maxLng, maxLat]);
+  }
+
+  private extractCoordinates(geometry: any): number[][] {
+    const coordinates: number[][] = [];
+
+    switch (geometry.type) {
+      case 'Point':
+        coordinates.push(geometry.coordinates);
+        break;
+      case 'LineString':
+      case 'MultiPoint':
+        coordinates.push(...geometry.coordinates);
+        break;
+      case 'Polygon':
+      case 'MultiLineString':
+        geometry.coordinates.forEach((ring: number[][]) => {
+          coordinates.push(...ring);
+        });
+        break;
+      case 'MultiPolygon':
+        geometry.coordinates.forEach((polygon: number[][][]) => {
+          polygon.forEach((ring: number[][]) => {
+            coordinates.push(...ring);
+          });
+        });
+        break;
+    }
+
+    return coordinates;
+  }
+
+  private fitMapToAllLoadedFeatures(): void {
+    const allFeatures: any[] = [];
+
+    // Collect all features from loaded sources
+    LAYERS.forEach(layer => {
+      const source = this.map.getSource(layer.id) as maplibregl.GeoJSONSource;
+      if (source && source._data) {
+        const data = source._data as FeatureCollection;
+        if (data && data.features) {
+          allFeatures.push(...data.features);
+        }
+      }
+    });
+
+    if (allFeatures.length > 0) {
+      this.fitMapToFeatures(allFeatures);
+    } else {
+      console.warn('No features found to fit map to');
+    }
+  }
+
+  private makeDraggable(element: HTMLElement): void {
+    const header = element.querySelector('.layer-control-header') as HTMLElement;
+    if (!header) return;
+
+    // Add cursor style to indicate draggability
+    header.style.cursor = 'move';
+    header.style.userSelect = 'none';
+
+    // Mouse events
+    header.addEventListener('mousedown', (e) => this.startDrag(e));
+    document.addEventListener('mousemove', (e) => this.drag(e));
+    document.addEventListener('mouseup', () => this.endDrag());
+
+    // Touch events for mobile
+    header.addEventListener('touchstart', (e) => this.startDrag(e), { passive: false });
+    document.addEventListener('touchmove', (e) => this.drag(e), { passive: false });
+    document.addEventListener('touchend', () => this.endDrag());
+  }
+
+  private startDrag(e: MouseEvent | TouchEvent): void {
+    if (!this.layerControlElement) return;
+
+    this.isDragging = true;
+    const rect = this.layerControlElement.getBoundingClientRect();
+    
+    let clientX: number;
+    if (e instanceof MouseEvent) {
+      clientX = e.clientX;
+    } else {
+      clientX = e.touches[0].clientX;
+    }
+
+    this.dragOffset.x = clientX - rect.left;
+    this.dragOffset.y = (e instanceof MouseEvent ? e.clientY : e.touches[0].clientY) - rect.top;
+
+    // Prevent default to avoid text selection
+    e.preventDefault();
+    
+    // Add dragging class for visual feedback
+    this.layerControlElement.classList.add('dragging');
+  }
+
+  private drag(e: MouseEvent | TouchEvent): void {
+    if (!this.isDragging || !this.layerControlElement) return;
+
+    let clientX: number;
+    let clientY: number;
+    
+    if (e instanceof MouseEvent) {
+      clientX = e.clientX;
+      clientY = e.clientY;
+    } else {
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
+      e.preventDefault(); // Prevent scrolling on mobile
+    }
+
+    const mapContainer = this.map.getContainer();
+    const mapRect = mapContainer.getBoundingClientRect();
+    
+    // Calculate new position
+    let newLeft = clientX - this.dragOffset.x;
+    let newTop = clientY - this.dragOffset.y;
+
+    // Constrain to map bounds
+    const controlRect = this.layerControlElement.getBoundingClientRect();
+    const maxLeft = mapRect.width - controlRect.width;
+    const maxTop = mapRect.height - controlRect.height;
+
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+    newTop = Math.max(0, Math.min(newTop, maxTop));
+
+    // Update position
+    this.layerControlElement.style.left = `${newLeft}px`;
+    this.layerControlElement.style.top = `${newTop}px`;
+    this.layerControlElement.style.right = 'auto';
+  }
+
+  private endDrag(): void {
+    if (!this.isDragging) return;
+    
+    this.isDragging = false;
+    
+    if (this.layerControlElement) {
+      this.layerControlElement.classList.remove('dragging');
+    }
   }
 
 }
