@@ -43,6 +43,7 @@ jobs:
         run: |
           mkdir -p web/public/data
           cp processed_data/apelos_clean.geojson web/public/data/
+          cp processed_data/filtro_bairros.geojson web/public/data/
         
       - name: Type check
         working-directory: ./web
