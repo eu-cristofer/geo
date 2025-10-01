@@ -1,0 +1,31 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoprocess"
+version = "0.1.0"
+authors = [
+    { name = "Francesca Dalmagro Martinelli", email = "arq.francesca.martinelli@gmail.com" },
+    { name = "Cristofer Antoni Souza Costa", email = "cristofercosta@yahoo.com.br" },
+]
+description = "A simple tool to process geospatial data."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "geopandas",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/geoprocess-converter"
+"Bug Tracker" = "https://github.com/yourusername/geoprocess-converter/issues"
+
+[project.scripts]
+geoprocess = "geoprocess.cli:main"

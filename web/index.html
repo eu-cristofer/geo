@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mapeamento histórico dos apelos durante o Estado Novo - Rio de Janeiro" />
+    <meta name="keywords" content="Rio de Janeiro, Estado Novo, Av. Presidente Vargas, desapropriação, história" />
+    <meta name="author" content="Francesca Dalmagro Martinelli, Cristofer Antoni Souza Costa" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Estado Novo - Mapeamento dos Apelos" />
+    <meta property="og:description" content="Mapa interativo dos apelos de desapropriação no Rio de Janeiro durante o Estado Novo" />
+    
+    <title>Estado Novo - Mapeamento dos Apelos</title>
+    
+    <link rel="preconnect" href="https://api.maptiler.com">
+  </head>
+  <body>
+    <div id="app">
+      <div id="map"></div>
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <h1>Estado Novo</h1>
+          <h2>Mapeamento dos Apelos</h2>
+        </div>
+        <div id="info" class="info-panel">
+          <p>Clique em um ponto no mapa para ver os detalhes</p>
+        </div>
+        <div class="sidebar-footer">
+          <p class="credits">
+            Pesquisa: Francesca Dalmagro Martinelli & Cristofer Antoni Souza Costa
+          </p>
+        </div>
+      </div>
+      <div id="legend" class="legend">
+        <h3>Legenda</h3>
+        <div class="legend-item">
+          <span class="legend-symbol"></span>
+          <span>Pontos de Apelos</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

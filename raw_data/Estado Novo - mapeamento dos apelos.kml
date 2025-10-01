@@ -1,0 +1,1565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="1HI7fVSmr-0LEd4nzfX1hczi5D3sTuGbA">
+	<name>Estado Novo - mapeamento dos apelos</name>
+	<gx:CascadingStyle kml:id="__managed_style_2487F1837A3AD025CA44">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=fbc02d&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_16853243C13AD025CA44">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=fbc02d&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_01034221873AD025CA44">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_16853243C13AD025CA44</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2487F1837A3AD025CA44</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0EF2E4C18E375040D74A">
+		<name>R. Sen. Furtado, 61 </name>
+		<description><![CDATA[<div>Rua Senador Furtado, 61 - Lavanderia Confiança - desapropriação de terrenos para prolongamento da Rua Comandante Cordeiro de Faria (Maracanã)<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1nl5NmTJdxfeG-fVAWZW2P7dbLYg_p_q1/view">drive.google.com/file/d/1nl5NmTJdxfeG-fVAWZW2P7dbLYg_p_q1/view</a><br></div>]]></description>
+		<gx:mid>/g/11cs7nt6h5</gx:mid>
+		<gx:fid>0x997e56050ee3b1:0x88bea5c658352d25</gx:fid>
+		<LookAt>
+			<longitude>-43.2187139</longitude>
+			<latitude>-22.9119948</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>963.9805845052223</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>-43.2187139,-22.9119948,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C5A83B82637755EEA87">
+		<name>R. Sen. Euzébio, 230</name>
+		<description><![CDATA[<div>Rua Senador Euzebio, 230 - Desapropriação de imóvel em leilão<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1rEHdw7LUlLHgACLp5FggeCAT7uhR22B3/view?usp=sharing">https://drive.google.com/file/d/1rEHdw7LUlLHgACLp5FggeCAT7uhR22B3/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.20213292012393</longitude>
+			<latitude>-22.9088545308478</latitude>
+			<altitude>4.34648863689574</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999999746</gx:fovy>
+			<range>920.9531030726794</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.20179672376948,-22.90824323573527,5.664315368314159</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F015F22D4377578FF6B">
+		<name>R. Sen. Dantas, 24</name>
+		<description><![CDATA[<div>Rua Senador Dantas, 24 - Desapropriação - proprietária pede maior indenização<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1oFmKNjLscw7-SIVQ-R_hNu8u2zzLCLFR/view?usp=sharing">https://drive.google.com/file/d/1oFmKNjLscw7-SIVQ-R_hNu8u2zzLCLFR/view?usp=sharing</a><br></div>]]></description>
+		<gx:mid>/g/11csfyln42</gx:mid>
+		<gx:fid>0x997f61892b96c7:0x1a796ed519a726e5</gx:fid>
+		<LookAt>
+			<longitude>-43.1774299</longitude>
+			<latitude>-22.9108414</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>963.9897006570128</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>-43.1774299,-22.9108414,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="007CB198BC387189EC30">
+		<name>R. Chile, 11</name>
+		<snippet></snippet>
+		<description><![CDATA[<div>Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação<br></div><div><br></div><div><a href="https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view">https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17666797385228</longitude>
+			<latitude>-22.90666872954397</latitude>
+			<altitude>0</altitude>
+			<heading>347.7675398198173</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>174.6785660591318</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17657835908838,-22.90621000796643,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00CD1E24A9387183D280">
+		<name>R. Chile, 15</name>
+		<description><![CDATA[<div>Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação<br></div><div><br></div><div><a href="https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view">https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17666797385228</longitude>
+			<latitude>-22.90666872954397</latitude>
+			<altitude>0</altitude>
+			<heading>347.7675398198173</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>174.6785660591318</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17657426237723,-22.90626538241429,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00090DDC653871A1B0A6">
+		<name>R. Senador Euzébio, 79</name>
+		<description><![CDATA[<div>Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita indenização por mudança devido a abertura da Av. Presidente Vargas<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UvY1n_4MVQS_omrxJ1IjTiJu-FDPK0Uz/view?usp=sharing">https://drive.google.com/file/d/1UvY1n_4MVQS_omrxJ1IjTiJu-FDPK0Uz/view?usp=sharing</a>&nbsp;<br></div><div><br></div><div>Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita resolução caso de indenização<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1uN4BPcm8CWwmUhhrgCAz7WTpQUqajjA9/view?usp=sharing">https://drive.google.com/file/d/1uN4BPcm8CWwmUhhrgCAz7WTpQUqajjA9/view?usp=sharing</a><br></div><div><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19334011175907</longitude>
+			<latitude>-22.90635062381026</latitude>
+			<altitude>-1.414648398423424e-09</altitude>
+			<heading>347.7736616874952</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>398.7236448482474</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUUc2RFp0VnlVWlpYVExGaWl4ZFdMMTVZQXRYRWx4a1ozbDJndTREODZiMml6anBUbWV4bHpZNThYamo4VlppcnRNbThUMmRzQ1RaYStqUGk5NzVxdlI4RVY3a014TDlPY0xqd2FDVkJ4b0NXUEZDZHlOSTd2cG5YanVlaWdub2hwODl1YlZZVGQ4NCszRzBRcUpXZUhaUXo4bUZxd2JMak9TUmNCVHdtQnBsOWdWVHJ3QjhkK2ZkcHI2b1AvaDhXd0pMd2h2MnYxb2tHaGhISysxRytGb2N0UHU5cEk0NUd1Q0pIa1U0OEFvbG10RG85VlIyUGY5dXUzVlNzSFZBVXc9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGR7cg2zzmvXg7DDyaHnmbwldHpjiI4L_WUGzCyXO1GpV_UeLckPGbQFjviQNJ8o975pxympzFV0mFJxmNTXGwmmIK_Zo6dnO4DpQLQ14uuw5z--GhyiM3q3DWaDLKxmvxdDEMmw8knKhQJFWpixJQicUtinf4YIrn5F7mihnpvQTaZY7hnbWsOPRHQw7CYK1bZhYVRDUeMqLCNEVhQPAESjZz1UVNQUhfsBGUUpW3XYGdGOtmeSanbEWvIBptNNSyIsezvVthWedk7g?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19331546679918,-22.90574110075027,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0749F411933871A8CFE8">
+		<name>R. Senador Euzébio, 17</name>
+		<description><![CDATA[<div>Rua Senador Euzebio, 17 - Tipografia - Aron Bergman apresenta recibo para ressarcimento de desmontagem e instalações do seu negócio<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1aj9e_BN6H0D2dzpCuCdoaa85z-xnN_bB/view?usp=sharing">https://drive.google.com/file/d/1aj9e_BN6H0D2dzpCuCdoaa85z-xnN_bB/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19160597354252</longitude>
+			<latitude>-22.90568874627969</latitude>
+			<altitude>0</altitude>
+			<heading>347.7739558402719</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>615.9319042442534</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU2pxSTltekE2ZDVzWk5rQXZOV1h0di91S25TODdVWGdKWlhlbGVmVGIrendQM0dNN3doNGM1eFFmR21USzdoaUlTdmtkOVZhUWZxMDBEc08ybE01bkhOT2FkRnkrZTBoYzdiVENPQXRES2xkOFM2QlhlSy9BT2JVTUIvV1NXNWNiUURTZnhCUlU4RkMyVWFYLzR6TFZLL3NJSy9xQzRzOFhBU05EazFIb0k5cFdDTDcxSnRZT1MvTEUrVis2RzU4TWhsa1hmVG9ENU1YdVdtYXowT2ZNRzZIQVlTT0JPcHBUWDZwV0tEeEdkd1FLb2JEcnVxcHhDdkNNYjhFcldHeWc9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRXboUnTh_KkRRp461uov9b-uuG6eX19C5UsRP0H-tYTm_xXfZiTQTbfKBFLvnHUwjcawLlcJmEwygdOlFyH_1NvEN5luQ4-DnVrg5MA3hoiNc11Rf8vRW02d-SzbBJTO6dgLDBY4RqZtsm24kSRBNNkr2o5svfBU8yi4XXmmGIrVwOnddxGHrvNO6JN_gdFy8dIUN4jW600HqGb7MsqjeeVn39OLYvCPsdTh_CwiQARVBOxvfj0rJ6X4PD8PwmIV5UQimemu413goK?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19155989527602,-22.90518742294747,-7.073241992117119e-10</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="05910308E33871CCF801">
+		<name>R. da Quitanda, 131</name>
+		<description><![CDATA[<div>Rua da Quitanda, 131 - Banco - sobre desapropriação<br></div><div><br></div><div><a href="https://drive.google.com/file/d/17z47xO_MI7yjez6Ja2Wtjzjz6P8fEFYf/view?usp=sharing">https://drive.google.com/file/d/17z47xO_MI7yjez6Ja2Wtjzjz6P8fEFYf/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17829010076237</longitude>
+			<latitude>-22.90129553685049</latitude>
+			<altitude>0</altitude>
+			<heading>359.9999523050699</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>148.5557456631503</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17812304652465,-22.90126411192271,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02C4C9787239CF1D51B1">
+		<name>R. General Caldwell, 103</name>
+		<description><![CDATA[<div>Rua General Caldwell, 103 - Barbearia e residência - Antonio Teixeira de Azevedo Junior implora por indenização após ser desapropriado<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1-EihdHGhg3BcTeCbaslYOMdFzmj9hMFo/view?usp=sharing">https://drive.google.com/file/d/1-EihdHGhg3BcTeCbaslYOMdFzmj9hMFo/view?usp=sharing</a><br></div><div><br></div><div>Obs: A numeração não aparece em nenhum PA, mas foi conjecturada a sua localização através dos outros lotes e da foto.<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua General Caldwell, 103 - Antonio Teixeira de Azevedo Junior - barbeiro reclamante indenização por mudança</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1q-v4C8cHw_xetz5ptT2i8l1yZJU6SzLb/view?usp=sharing">https://drive.google.com/file/d/1q-v4C8cHw_xetz5ptT2i8l1yZJU6SzLb/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19226285782837</longitude>
+			<latitude>-22.90689703783933</latitude>
+			<altitude>5.248481510105936</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99972196554227</gx:fovy>
+			<range>773.5514515283285</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVGdvVXJCMGxUanJ2d1NSNmhheFdVMDhMQ3YycUNPeDQ4NURuMFVLMVhsQmF6WXdodjQyL2ZPVHlEN1ZtUW1PeEFPR1VQYVMxUUxnWmkvOU5sbWFubWRDTW5zdlNnTFJkbmtYYU9ZMjN1eE9xYmZFeTNNM3I3RXVRb2VYb1lobXVaSTFBTW9YaWRSaUE5U1ZMZXJkVjRVT2Qwem1GSktCQVQxWjV4WWJqeDZlM3pJOEpYWDg0M21Bd1R3MzRHKy9BRE45MW5Ob21FMUVqN0RiVXo5V2lIVkVtc285aHMwYkg4YjNrOFpXUUZNSjhObTZnazRvMWlSTVRBc1hyN25kWHc9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRGFljtmL9lnQzG05tgAZaHbALod5XRRC7bVflr8NmluZAj-KOh89lialNbanv9GaM1xaAzNjEwOb0GK4_BbsaaG1SusWyqLZDxB4p9oOLTrdX96p94ZjBycQRmkuDz-z5QWKSGjyOfWpJZfCY8w_YiWSIKxWutC0SZCoYeyvL8tuDmky3u1gSkkG7r1nBBgiPPgDyvnKULzykO47GJ8x0Mue-AgupWT2ekpczNLem0TDzWdp_SlKWX3zpg8JePv14XxTYsJYNtNksl?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19273584513142,-22.90572131778477,3.938565020038935</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BE92E7FBD39D0328D46">
+		<name>Av. dos Democráticos, 392</name>
+		<description><![CDATA[<div>Carta de Abrigo do Cristo Redentor pede indenização prévia sobre obras da Av. Brasil (corta o terreno do suplicante)<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1WM9YVmUXk9k7soj47IA8cpAKf04OK_hE/view?usp=sharing">https://drive.google.com/file/d/1WM9YVmUXk9k7soj47IA8cpAKf04OK_hE/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.25728995143287</longitude>
+			<latitude>-22.87352298645411</latitude>
+			<altitude>16.53090630898188</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1207.644246385462</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.25806428804724,-22.87336177269599,8.468442718221883</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0CC3F7CC7639D0353658">
+		<name>R. Senador Euzébio, 5</name>
+		<description><![CDATA[<div>Rua Senador Euzebio, 5 - Barbearia - Alberto de Souza Trindade solicita indenização de mobiliário<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1b8VE4mLrLfk4cgk0r9-duRlIiSVQ-VI6/view?usp=sharing">https://drive.google.com/file/d/1b8VE4mLrLfk4cgk0r9-duRlIiSVQ-VI6/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19124278457443</longitude>
+			<latitude>-22.90411290572663</latitude>
+			<altitude>5.049317401793152</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1044.312630801141</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVDk2R0E1ZmZseU5tQ3pLSVY2Ti9sYXVDWE0vRkdvUU4zWDhqOG4zZHpmYlpIL1J1ZnJESHBJaHN3K3VYVHgzekNoanA0WWsyRkQzMXBwNXBGYzhGZWNkTjFqZmZsa29GODFmQTJYZzZrWHZOU2tTbzB6YkRQUk1QRWFBcmxLSkpJSi8ybFYyZXdlWE5kNHkyR3MvelFubVE3UEwzWDQ1Qno0RzQzWVpabjl4SGUyMjM2eStuRFlFZnlRUHN2aXlxV1ZRMTJJUDlsUzJXZ3ZmU2J6SXJLNkhoYzZSY29EajUyT2RlMFZuU1I1YlBlUGFkRkNQU2xxVW9JM3NGcXRoS0U9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQKfQxMwEelHsjg-UBeHr4GyD0nWsZNNHzwwwziv1VrrxlImM1KKDeikKGQNnhRe9uNp0es5KdudTKyX0SYGTFoO-UUWpJyybpPC1O3DjHHjjQwJQnQTTP7tHJU3BQYu_JoeyEP0kFlhLRuinHBYHPV-wRjy3suul_3wxa9Pfd5JEMAOPAb6JEUSaqmo4VsptlPf8OGxRFnCXmq14OiUcUiA_StY7SjMZpuSjhXlDwNBWK8Jo7jJyB1axah-gXYuli2A9KjCxwpOnDu?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19122357602402,-22.90506544337559,4.138814034940306</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="03938BA51F39D056E448">
+		<name>Pç. da República, 197</name>
+		<description><![CDATA[<div>Praça da República, 197 - Pritaneu Militar - desapropriação e cessão à prefeitura para abertura da Av. Pres. Vargas<br></div><div><br></div><div><a href="https://drive.google.com/file/d/10ayie0r0j1_2Zi3SAxapy4p5jcw663u2/view?usp=sharing">https://drive.google.com/file/d/10ayie0r0j1_2Zi3SAxapy4p5jcw663u2/view?usp=sharing</a><br></div><div><br></div><div>Eurico G. Dutra solicita cessão de terrenos na Rua Santa Luzia. Sugere permuta de imóvel à Praça da República 197, junto à nova Av. Pres. Vargas<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1-CgPHIPbny4YRs1Gz53ETyb3wLw9tlBN/view?usp=sharing">https://drive.google.com/file/d/1-CgPHIPbny4YRs1Gz53ETyb3wLw9tlBN/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19098724893625</longitude>
+			<latitude>-22.90552751947143</latitude>
+			<altitude>4.931354265746548</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>241.2087898075334</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU0RRNk43UnRHNlJmcHY2Ym9qdVFONHZVVm5DTnB3TFlXMXFPNXJkMitqaVB4ODFFV3NGVEFMd3VhelEzT1J6VXNkaDVtaHlxNDZWQVRDS1oxWHNORDJYcXFLOU9iVUlFcHFvaUVvNHF2T3ZFRXBCMGRjaTBHT1RiWXRKMEYya2xpbnBaanhBM3hTWWE4eWczWldoWDQ4dTM0Ym8yajRNRlk2Q2JZYWJvN2g4T2liR29kZ1JkZk56WHlZMVpDYnluZVF1Z0w3dUhhWUxpM3hnV1RxVzNsSXpObmh4M1VLRFVTTHpVaDdoS2xnT2RlTU11SzRoMldXQUl0SXVjYTV4MzQ9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQubw36QgrGEjzZvn39JegArkl-4QOIBHpVGXz2Ha-qt0fh5LNQSDx5d3Rc4ip7aBc7bGdsFoKWh8aJX-QW0RMv0A3udp3iKZ4GP2GiFbawfHA1G8zYCr-lShAdFB3fjSjf0JdY7HpfesVXB62EzeSRNfA2LtB8CzSwQLEhdkO_XxupTR8wfP0fnhh2-EHGXujaIgLR--yKlBH_XKMKJq83wDRxv_N0pSfhxiXSZeICsgUzlpH9wC_MdGfM4XZWO0m0AGhJTIy7xfSM?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.1908382709978,-22.90559263393383,4.897998612090387</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01D901C06139D4CC9B2C">
+		<name>Tv. Dom Manuel, 18-20</name>
+		<description><![CDATA[<div>Travessa D. Manoel, 18 e 20 - Alfredo Elias, sírio, solicita prazo para desocupar imóvel desapropriado<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1HVhEEcs1denpPLw-4_PPAXW8Laq-kKiL/view?usp=sharing">https://drive.google.com/file/d/1HVhEEcs1denpPLw-4_PPAXW8Laq-kKiL/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17247660944464</longitude>
+			<latitude>-22.90520135970961</latitude>
+			<altitude>4.870437402128267</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>140.5796844255929</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUXN2ZXhLRGJ6Vk40Z0ZXNUhyZkNLMTBET0tCdThoeDhIUGFPZGVHa3lSQm5nTHlkQmVxQzBxZURQbmdobFF1WjdkN3REa1RQamNwTnVRRFZmWEZtazN2M2MvYWVnZjdGZjFoQnkyRngxUkpqRHFFSjc4b1JTdG81Rjg3M012UThQRnM0UFJMeEV4b29MK2FBWkxGWlVpeEZjekJvK1pKOHQ0OEN4L0J4WlBaQXVvTVBkV0V2UmN6dUxEelFRRkxOMUlzSTBFekRaWHlsWTFxZFhjMnR1bHBJdWtnUGt4c1l3Q3A3QW43TVlJQ3A1d01QRnY0ejV4MXJqbmxJaXAzdFk9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGTu6a_0e4nDlV1Poir7sfyeHt8fwWl6f7wbT_FYznHtCbF1RYCXkJeDspxYj4GNOF2z_mHwuvKYnCNOjmbJk54Py_hiUKDm4c2CKxUvCjLBwVqXsA0lOvymhh-YudOUb9eMAwStTuKoq5OitJke_-uJk895hBMWjIM6hG_KJHWhQtQMhzPW5UJQI_mz6Gt5qv070k4vCTrHZ1L4cOeC5vca8cDh_PcN2yI51W_2INS6bNwIhqoR2Gcs1lCj2GaGEipjVGDosMj-T9pd?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17231230856567,-22.90530754567785,5.269046624511697</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0348CEB86C39D4E07687">
+		<name>R. São Pedro, 280</name>
+		<description><![CDATA[<div>Rua de S. Pedro, 280 - prédio deixado em testamento por Francisca Candida Peçanha a ser desapropriado - Irmandade solicita pagamento do valor máximo<br></div><div><br></div><div><a href="https://drive.google.com/file/d/1ZspEJC5iLFGqv9WzlaOBun4HzhN8P9-l/view?usp=sharing">https://drive.google.com/file/d/1ZspEJC5iLFGqv9WzlaOBun4HzhN8P9-l/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18553495210567</longitude>
+			<latitude>-22.90299520957598</latitude>
+			<altitude>4.643323593110189</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>203.4082807684899</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18532319336283,-22.9029366900082,4.381494087465705</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BFDDBFB7A39D4E5451B">
+		<name>R. Senador Euzébio, 65</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing">https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19330934825083</longitude>
+			<latitude>-22.90537880880685</latitude>
+			<altitude>4.332433833444911</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>297.6466382677609</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUUZMZTNMN21EWFpLUGJqRFZ0Z0pQQ09sbzZlS2s2czNsV0VyR3pta1dQODk2MjQwRGZpTGtTK3A2TGpNaGNHdG9XL2I5RXVLRFNTbkM4K042bFFNSG5KZFdmTEZ2T3JQT2RQcndoUkQ5OHFCTmZqQzZhS0hydGE0RW5UZ1Y4NnVSS2NodTNzN1hYbktkT2prRk5GZkg1cGR4Sit5VWNwalVZR2lLWlFBalhHbGJZRklnNTNablF3b3NxbkJDcThHdVhVb3lGSXZFTzNxSGJ1TVczMjBYVlFmRWlIVFBtR3pnc1FXVlZzOTFoR1VVTVNOMkZtRFErQ0ZlUkFCQTRpeTQ9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGR-s2iZaI-MN0r0Ei7eoNA53nuNuRcTTJqVHQbiYHWdMG44PUWSnUMDvARDxm-dgIoBFvDViLOn5hKeK2Z8RPMneDiqsCFNISWFFRRAklpX9hvHfFvl_zv0reY9geYjJlX-zXQ76ub8H0FUjYJEpipXhEpcbHAFhrjFfGCC6rVtvKTIyFASMBRpHLU3CxdBERiTVGF0819oaKLc8eH-hM4axSfh4B9ZAV0fZb1XfXD63s-v28QuGFjB-kkirp9FJioadwuvQTRzBb8p?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVG5ONGxVaERmY3RYaW1NdUZMOGdOeS9ZTis3c0dzQW1GUjNLd3U1c3U1c1FXaEQycXQ2QjB4ZkttVTZuUHdOUmJMUlBrM2V0aCs1VjZaci9IWmsvQmZZczdMeVNCR0hYV2tnbGxBMGoreVdPOUZUMVV2UmRhWnZPbFpsUmhQS2o0NG5mSEoxbXV4eWZveFNycG9rR0lJS2YyS2lET3VuT3NTUm9iK0pEOUdPb1YzR3pCek9tTk1jdWFzc3BZcHJXWGVBMVZzeHBoT0N3VUE2WlFyK3NJZkh2TzJFVzV2cjlZMmdDRzc5TE4vbDVLZVQ3N3QzblJPUXljOGlTcFB1blk9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGS6LiyHrsQaOwRoQJ3VKW42yZtspTyYBLtZISURL1ZPb9HenVfoa8yb6Xz7PrHK9KHjqFN3oKXM1NxdNPAjfGGR5E-DydTIEDxACr-pjFdcZqYsgrGtTBlkL4eSqrjqHR6l7ogNC6IFrbpp95y4PLL6pR8rOw702Rw7oUdUTzjCEdNOG7sqZytnARSglcnY7SUAfVn8my0fa66RtqvusazmZ0STtXUrvI2-J4js-AEVH-2t-tYvqnA839kkpSlqfSvX-BExDTbwN915?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU3pIR05DbVlESmlhcHFnSDZVT3FjeTVDTkYrS21NbFhWa2U1M2ZHTVVQdE42MHIySjdJcWpVeVQrZ0NLWHdlMFlwM2EzK1VpWE5DYXNZVFhnOGFDRTIwc3JMS1ZPZ2tTQm5MSnlCN3B0MVBla0tQazc1c1o0RHIxRWNFc2dyWGJvQUhVeUdkSVh5blpDS2FBQlBpbjZXSlR2bCtTZmVKRU9GRjkySW5iMnZ1MGJIdzI4R0lGMkpEUkVYQWwxVVlGRXFuQUlZY0hDbllwR2grVUI0bWxXV2lTL09RTytUSUZqRlBDYW91djI0eUZWalg4MVFhaDhsemdQbFJKNEgrTlU9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQ44hV_s83YRx_kh-8If3aRFonITSt_PD6x1L178A8c7hG08ynIpA788XjdY7yzHKvps_0A8kBj69zv6oYRIW9C2tDu0UGv-HD7eYZ36QymYj48CXvpBGzQPGqiPRutUCBcjhgI-psXc1ar_crKxhikdFkuSqbISoAXFveGCNvB8nWP4leEYPW4v215SScPFQShzBzxH68NACxBwILRF91mwPWPcVALgrsbye2Xwh9E5NggdhZvjcdpogzXi_mqUBi4vNz-SQOyV0se?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVFdYYW1ocjFiSGViekdNRldJNW5xTjVyMmttaUJwM3hyTDFPZ1NhNEJ6SFRkSlg0RGJmVER4ZEh5bHR5bmdscCtadmtrYmFWZlFlY0FRNmw4WnBwc3VVOWFydmFnSDV0dGN3emhwTGJoc3VXQTdQclJHNEFzZGJVNmdQN1VUVmdtL09HazFFNnBna0hPTHh2aXV6dE5KL3VNa3Nad3hmaUg2eEN5SDJ1NGJUYUJVck5SQmRmdE1GSnY3d3BwNTdpcEpkeE83ejJJWXBJSWxHbjdHNlNFOURkQWpKRTRQb1RjNXJnWTZPYUZWZFhzMkhFUkpxZFBsbm84ZFhSZU96Wjg9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGTmG2eXJiTAIO4Vww4V_MD0WUS84azKjO1J8GWQ82igmOA2MKrdL36U8bUJnJMGhyw22avF-d45ndeR6W6gq9rBScOM7vUc5xyap9t3ofbHXyfjyh5H4pPYUz3TYnBsvUGdBu_K0NMb299D5qLWVjMEtZ3v52G0uEmehSbUjSnQONgttRUy1bi9b1n0FP1Y78PeDndm6Cyx7AMDhdCgXe0cg3aJL1z2MmPm3bIwfPWp1lCYSACMth7iq0IE_V4UnrmOSBBmgdS4Yuh9?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUTgrd2FjQkM0V1Z4NnVCM1hucldJNzM4NTdPUVJDWkRuVjdDWkFLcWNDOXhGRXNnQnk4cWFENVovNHNkbUxPVHBIdkppem9sTnB0Q0cwZTY0R3QyWkQzNjU1Mk1TeUc1U2Y2SEZRL0hMaFV0VjMxVjh2ZWZVRmlyVnphVTNQaU1PcGt6S1Y1VnNSMmc2MzBCdThpcXNZa1BPdWZhUGhNbStNakx6WVV6aU5MZ1dXWEZFZHZCNlFEN3dYc3pWamh4bkhFZlYyM1owQnlESXY5bmRSRFVBaWRPZDVXc0pPRFQ1S3NVSHVQandpNVUrYUpobjI0dnVGMytRTndhMzA0K009_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQ3VbBlavJqj1sJIsPSaR70Tx7vO3ZiSq1A4C1DUo2Ygcuk108VAYdjohx5pcvXrlbIpyAa2oSzBhKsDY-AiOwBNUGUo-oegnCjdUEmcVMOsbGEalg5oFiqhqUpXc_m--a6f3F-Vs3ievk1QR07KfIkE-C4VR5lEuJ504yzLR8po6W6jSNDRepyZiBpMz2uodxLWM_4Tyauf8CPnMlgqHS9zcL0v8AWt81q0XIQeNApjpICbtdNgBu6IW4smRRc1IHKDP6Xql3Hs77v?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVGdWUTRycXFtYVlsREVzcTRYR2VQU25UdHFKOHYyMEhaT2ExV0lRS1ltTGx5SWMvelhFWmkzaDZydDhBVjdVeUMyR1BRMHpVMnJ0anBqRDhRbFY0eGJTSllLdVk2SnFtTCtsamFTaTZraEl4WWFrSlMwZmpCTEZZVHNiL3hTNkhKaHhsc2N5em9KL0pZOEljU0xwTHQ0NENDYVJHeDJudjZOWXdGYU5LWkdPbDRpVzhyeTVSYVlRdGtRb1dNZkk5UGtieVIvanl0ZnBRNXgvOGh4L2lnT2NhTTFVSXRxVHJSMjVTK01LSmxCVFFQRmRLYlg3bnBjNzhqVmdPa3NhS2s9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQdCxmGB3f0aA8CjhL0cvMDLOAAizbJ8vqwTPxx9mvITHASkX5iCxxJ8yn5HF6uAmxB2MaNTWwucoQP3SzgJr3yWQ1VY0wsUF6Q_OHn16iDNByleIgNtOt2rAmfj_ozOHO2ShK0lZ3QzGJkNAE_QzDkkMkS7KVuhk8-CSD3ERM8kvvT4f4Gv6oneMgS95g5yjizrTfYwzESLEB8a2fPeIZlfrHVUm-PSGW2r__aa7gWJ88tms1tLain59XF2CMmpVWqBkWUHSfcnG7c?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19290180426662,-22.90560273687528,4.06583649444912</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0E97EC0EA039D50E86FC">
+		<name>R. Visconde de Itaúna, 56</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing">https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.1925327901141</longitude>
+			<latitude>-22.90580818418753</latitude>
+			<altitude>3.894724780412817</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>352.4339403447812</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUUZzNkFtMXE1T0lJUXJ2V1RvUDJHdEFGdU5Xczhic29iblF4MkdaWW1wYlhrdTVmN0ZLWlBZclB3eEpMVHFnWjJXSHNBcU1lWGgrdVRTblhnTmVlZXVjSjRsVjczOGpKaUJGQTlRRmc2Q2ZpUnpoUkFkSjlMeWRkdURRZ01wQkFJaEozVXJOWmZ3NGdlM0wxLzhmZ0FEbzJaVk9BVG1oVHNrSmV0SDBqZjVuT2pQUU9zbkh6Y2ljRUppaFJGTkNzZjZOUXRoUE0wYnlNYWtqbmNNVFlZVnBNUENXeTZRN20xRjduTHZ5Vnlya016THJEalVCczUvRzJQcVQ4d011Vzg9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGSew6Pou6WpjxfQ6VhZ6MWsBFSfl67BUNRzFZHO2wcEJuIJ4svYqEBWSlcKPb6yWe14ZAU6HiZFVYMW06y62dY5qiaB657L2mfRuILbMdy9Abw6-UfazXza2XEIWcItkF1oJMPhrpcI0z-r9khBYyCAhDm4qynuvx_lFrjVp5hiLHmknFs7nzKV1eILnCNNABOW1kjYWphIt09wQGy7ka1MQe73Lbuo4yTYx_RAxSamqZq_-YTBxx466zyetBuPNU9UPQpiNBOy5tMA?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUTg4NUlUSHg0djZHK01ENnBJbGtheTc2bnpMTGFSb2tzZmJHbTBIeVVyYXlUS0lSMGJuQk5oOXIraFpxbUJpUWUwR0UzOWcvUzZrU2RTSEJSNzFTZXZ5WkpWS2NvajI1a3hBSFlUOW1BTHBua1VnQTBPTm03S3ZoNmlDay9YaDVXMXRTd3ZKTFZaZ3Z0QTVSTUJmYkZEaUF0TE52ZFlSM0ZydHhXWms5cDFDSi9NaWlXc2VKZEsxSlZaQU9KSnp1OURhSFhWYzFacVV5a2ZMMFVNMmRWQ0c4eGd6Y2M1WTJFTzRORHdHVGV5MGFaT1FQN3dJNFRub1RZdmJRSEhreVE9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGT0vke1_Bazlv_jvbnrVTNwRM-fS5z0tk7IjXXDy3E1LOedw9LupimO-KNGOx5zZ0L0eADop-d4X--AnqWc219T2i1AsziYu7CME9TRDa_A9Ci3E4lnKu2dRlJWUBHfIWWiagIHGMuRDzKfOsJcgm79ojJ6Gp8U0pmcv_P7hLPOIWVLXeU_5OZfU0I0CfVoLXglbHR_5ZGbDnAroRWJgX3i0fdXTTv-jCcCIcyw_MKTuIAjXzSjhnh05NY9FCVw19-dPhoX1QDoX3pT?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU2dKTXRDK1VpZ0F5MlFJTkFnMkoyNFNkcHVNdC9VQ1JJK1hscTBKMUovc2pNUTFCSTY1a3NMS0sxV1A0Y1pZYWRmaHVJcmJYa056emxZTVRSU2pPdjhLQkozd3UrNnRrL0hGQ2xIKytpblBMVktzZ2RjMGlFUEtRc3lWR3lLME1IN0JnMmZvZFRweUlqODJ3RHQ4cFk0VnUxcEYyZUVJQlpkb1VLYWoxdUtXb1JrNkxGTngrMS9HOEQzN2pjT0tCREdJTVV4bURVanZFUUU3K3ZtVmMrbm0xZmV2Wm5mZlZIU2ozZ3dBR2FxTmMxeDUxQzZCMWc3Z01JY2MyWTlXMHc9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGT_GRINzkv98GRJsprBn7rCR-yJ0aGZWkxTCVCpIdJVgbkhNkNDx9UEC_C-An8v4Q7WKPCqcRiqxJcXNqkfCKCPL0Vmmk2fkwv6HahHYbOYadbkPauaVo1LJPZz4xSdFf97el37bq_JzVfjICQ3d2iyzfbVNxxi50-nwu4sLtv9AVBapimUHspdfNXoH2zwpYTY5LohHfh9tH5G12RRFd3mwqFQr8hnWPW7GBX31N6Wyi7djqVoIdAIc-BoBzAct5ZBCcQ_9svcqBah?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19244399324948,-22.90576830916385,4.040512710784377</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="07F421E44739D51FD854">
+		<name>R. Senador Euzébio, 51</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing">https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19253665106961</longitude>
+			<latitude>-22.90568898488425</latitude>
+			<altitude>3.889513434983527</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>225.0015985016217</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUXc0OGE4S0RmL2RLVklmbTRvbGVtVkxxamc4YVJLU2JkSFpDc05jMjR6TEhnNGx2Q3lseklTRm5qRWxYNFlCTTZxMTVIQ3Vxd0p5QUVLbTFNMXVkL0VhWkt0MjhvcWdEUkRnL29BR2hKU1ZRZHJSSDAzSmxEUUY0Nm41Yzd3SWhOTFhvMENvKzdwelQyMzA5ODBxUjhkeEZvR0R5anlhOURSeVFyL1RFV0ZsQWpQakwvVmZNMVNVdWcyL21VSnRIeGgydjkyL3BncVZKSDhxSW9jRFczd0RqS3NPN1VoTHpyaExoNGJxeVBLT1lIOExVbktjdkkydWZSWlM4TTh5R0U9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQQBXpxE2NVH-_XL10KU-otULziskN2V1UOoWyPSirGBLsFrLx5rGU_Z5AtIg64smwqruMhx6PoqCyX2-SrxswxmlBXBS_h5V7DJ4JjuPxWW86kgHtUYlRnQ95z9En3J69XWCeyASYpMyBqHUoYzZFrZ-Eb6iFDe-LgYoz9EaS1iVPuVSmVw2qHrMD_fbIFaQjWmgO3XLcYBi88rbM03nfg4KTf-rhqWb30IgD1_AIL_7duhfFTlNTS7pOWufZ0YZOoxknepZyqtOv6?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUnBVR0FCNDFUMDBPeHhHYmE1ejBvUVFOMFJvOGdzNDRReHlaYnZIZG5ZcnJqS1FkcGRKU1ZOUlVMS2s0dy92ZGljNTQ3UWRFSVJ6WW5UelloYVUyRWFGelFmdm52UW8xSEhGbWFsVm9hNzloZTJVR0tyb09Cb3k0clFmQjcxK2dRcHNPUE9qODBhM0JNVnQyU05zUDJoaVZkM2I3N3JyZk9XckdhRHlQL3NlMUo2cHRZQXRxRUlpQ01xcGVBZ0NuOTc2QXd4bjF0ZmZoQytlS2IyTUJaQzJNbytQQjkrL0s1U28rNk01YUJJNmRiL29rOTVVM3hGS0c4Y3d6V0NWNUE9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQsgqA26yebqz84OKudPfNSPr1EPNVZeDNlVyL8bnxyD9ro8ILcTWwHYRD8_bQZrizNBBpwr4HSF6NSKV_wplbf4GqYAwG6-G-_vuxmA3sKT9tfG-W1TazR06Cmh4I-2u2dxVt8w8UF7k907kTw4lhZCv_0g_abGLt-yuWyhMW4xaR60WC9phSPPdy9UxkRBiGDYu6CZrqfBWLW1wAvCz9aErVDdRAXjcwOiz-pWkSFkWuffIFg_tNR8BdKk8jVXKLy_CKaZq1kLjIs?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUjVrbGc0L3ZEQ2ZIbm5Sc2E4VXVFQy81YittUVR0MEpDU1JXQ1pRVkdUSk9EalRyTlBxUTZQWmxlb2c3b2V3dWN2bzU1QXBBbk1zajlMM3p1TnA1azhrdGJDMmN4bUhqdVlNWURIWlJubUlXR1k2WHk1NDEvbWp1V3ZHUTBFWEpSdjdLd2paL0tHTllBWWkvTXMyNEcweFh6amUraW94NGlwWjRNWFluakd4aFhiVm1tNk5hQUVsRXV4WFU0S3dVc0ZDOU5IZG01bjllbE5hUldKKzVwYUVlVExvbzUxZmI0OWxpRlVNTkYvaTd5aTJGbDV2NmVSYXBGQTZYV3dnbDg9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGTB-YFmG48zZfuNj_2HJ7uwInXs9TaEqRe951JcHewtUcJdZSVE409vUK3h0s1-KzUjALQtawMNUB9hU_p9DHA5mnb7Iaqy51oPy2WnAWDKxoTvV1rTL6yr_GrFg81ElqjNmgSxlMqm69t8DrhWRM7ZSu3qRMBQLjwPxmCCAJKm1rfPFL74ad20VOUViogel1Ybcp2XOAo3XXOcUemsxdPurGVgQ5ECcrox53ShhtslQ_BK7Ty_NDyDT-Ksw_fOSPRoUB-GfJyUCHGK?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19254232103291,-22.90547941708328,3.943240530606464</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0658DF10E939D52B4366">
+		<name>Pç. Lopes Trovão</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Pedido de transferência do Mercado do Peixe da Praça Lopes Trovão entre Av. Tomé de Souza e Rua Uruguaiana para outro local</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1gNDg6zqk29ayC1snRoa-v1aOxpqInL_7/view?usp=sharing">https://drive.google.com/file/d/1gNDg6zqk29ayC1snRoa-v1aOxpqInL_7/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18214966982205</longitude>
+			<latitude>-22.90220872951644</latitude>
+			<altitude>2.906821556271606</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>348.4591211201769</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18206424425645,-22.9023045715703,3.75353876211121</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="002EAFFD7F39D531DE83">
+		<name>R. Senador Euzébio, 82</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Senador Euzebio, 82 - Pedro Saulle - proprietário do prédio pede revisão do processo de desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1EoRtJP4midTp4v5hB461jOaYyWHaTzV5/view?usp=sharing">https://drive.google.com/file/d/1EoRtJP4midTp4v5hB461jOaYyWHaTzV5/view?usp=sharing</a><br></div><div><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(68, 71, 70); color: rgb(68, 71, 70); letter-spacing: 0.2px; text-align: left; background-color: rgb(255, 255, 255); float: none; display: inline;"><span class="font" style="font-family: &quot;Google Sans&quot;, Roboto, sans-serif;"><span class="size" style="font-size: 14px;">Mais informações sobre Pedro Saulle:</span></span></span><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(68, 71, 70); color: rgb(68, 71, 70); letter-spacing: 0.2px; text-align: left; background-color: rgb(255, 255, 255); float: none; display: inline;"><span class="font" style="font-family: &quot;Google Sans&quot;, Roboto, sans-serif;"><span class="size" style="font-size: 14px;">autorização da desapropriação com valor em 1941:&nbsp;</span></span></span><a href="https://www.google.com/url?q=https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib%3D116408%26pesq%3D%2522Pedro%2520saulle%2522%26pasta%3Dano%2520194%26hf%3Dmemoria.bn.gov.br%26pagfis%3D13188&amp;sa=D&amp;source=editors&amp;ust=1755022916199400&amp;usg=AOvVaw31fG9s0m8HB2sPU3QsQtrw" target="_blank" style="font-style: normal; font-variant-caps: normal; font-weight: 400; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; color: rgb(11, 87, 208); font-family: &quot;Google Sans&quot;, Roboto, sans-serif; font-size: 14px; letter-spacing: 0.2px; text-align: left;">https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=116408&amp;pesq=%22Pedro%20saulle%22&amp;pasta=ano%20194&amp;hf=memoria.bn.gov.br&amp;pagfis=13188</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(68, 71, 70); color: rgb(68, 71, 70); letter-spacing: 0.2px; text-align: left; background-color: rgb(255, 255, 255); float: none; display: inline;"><span class="font" style="font-family: &quot;Google Sans&quot;, Roboto, sans-serif;"><span class="size" style="font-size: 14px;">Indeferimento de pedido em 1941:&nbsp;</span></span></span><a href="https://www.google.com/url?q=https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib%3D116408%26pesq%3D%2522Pedro%2520saulle%2522%26pasta%3Dano%2520194%26hf%3Dmemoria.bn.gov.br%26pagfis%3D13936&amp;sa=D&amp;source=editors&amp;ust=1755022916199442&amp;usg=AOvVaw0MrWkeSu6D90rzo7IvsX98" target="_blank" style="font-style: normal; font-variant-caps: normal; font-weight: 400; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; color: rgb(11, 87, 208); font-family: &quot;Google Sans&quot;, Roboto, sans-serif; font-size: 14px; letter-spacing: 0.2px; text-align: left;">https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=116408&amp;pesq=%22Pedro%20saulle%22&amp;pasta=ano%20194&amp;hf=memoria.bn.gov.br&amp;pagfis=13936</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19346297220848</longitude>
+			<latitude>-22.90532305285338</latitude>
+			<altitude>4.725381833817924</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99967631130649</gx:fovy>
+			<range>453.3227854939469</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUTQxSE5xMWFlZTg2R1EveDVWZWZKRDRpMmJsS3owaWF5aTl1eTVvNE41TWk0ODY5ODhRZjArQjFPSDl0ZmdrSm8wOUQxZ1BJaU5Rb3JJQXRlczNjRVkvNEhnVnNCTGxQYlVhN2xhamdXL0M0TWZZZ1dIS2NRVHIwY3NZdjJacnRqdGRoM1BabVVyN0xkNDNRWTRtNTJzM2VsOFRtSUZsdVRYdzZOOTZMRHFIbTBBUHdFSmpZRjBYa2czSmFLZTh5cWFNbmNjWjZBZ2JyYUpkMzI0d2puckZha2tFN0dDT0lrRkpGYUhRSFhLb2N3dGFDdFI5alNLSmNheENhR2dyWFU9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGSaeLSZdLa0zeO8VRcS8NxCAqkbPw_x_JfUZkAuKL94K_COsfPiXYtW2FdkyvusIAo_6126Pp4AZR_ivBcDWqZ0Q701aGyWa5gMgqYSv_4m6CUl8anN7q1BawBkGxgztRX2bTbrqNpEaOTfruN7Zejqv4Ps66Pl18SS5dV2byhG85PB7e-b93ZgCJ6ZJEt7Cwx-s957kq2wDwQGOvsQFgz6DGRUEewyX8lt8rXvMOsoevTIpZW3NdpPZ5Q1wRXvho_4ywPba_bjx7xy?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19332265814598,-22.90554330531486,3.618367859921965</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C3BD47AFD39D5464568">
+		<name>R. São José, 59</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua de S. José, 59 - J. Ribeiro dos Santos - Livraria Jacinto Editora pede para locar o imóvel número 57 a ser demolido</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1LAz5PvO5iEaI-0HmbLTfMe8HyxQxzqF5/view?usp=sharing">https://drive.google.com/file/d/1LAz5PvO5iEaI-0HmbLTfMe8HyxQxzqF5/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17602944968191</longitude>
+			<latitude>-22.9055272768641</latitude>
+			<altitude>5.698556126448411</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>219.5605179863196</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUTNsWkIwRjA0WFMxaEd2b0pjYXc1cDhoMEV1YTFwb1REUUZxc2Jmcm1ab3YxTVFqaXZZcUdLallER2Q2eUZTeStsUDhNeVBVSWtDalpibXM3bkFNS21VQjNUd29WbzBObEppemtxTjlSTVkrZXNlczQ2UElaRUNMSjB4bVh0SWJuUXFwa2szVkRBbG1QZFYrMmdwdTNrOGwrNnRlYzg3bWNOMTgrSVNCc2xuUE5iR3dndGE2dENPMmhNcVY5YzRQTmZ3bGh0OStweWZaMjgvUHB5WUtsM3dBT3ZVRXQwS1RNcDVDYjNFTTVqb2ladC9ibGt4OWtNUnM0SmRVMTM2MUk9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRRABzhpEhW7w9sIDoaGAWMdotXOyKjxxt4jnOtz2nNtiIvRYLpttx7jQzOweKhXcV8Ot0IdOvKmsCMvbonaSo6sT8fQofiljsBTBW8MTPJmvVXFXpKub2WZAzVMEl1OAYh4Rj3fxYDdOPFnJG9OFUooHzjZrq9Vf4LutOuE4zkve_Xrx1d_YSxpIXCyVkDBPOolhCmGMrN8_XOAbFAKtbIavo1L_xbxu_HE6KIaeDZg8NDMw4SxVovHpREMtYJLak6zaF_q-S026vp?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU1d5MWpJZ2Y0N2I3OUtRV2tpbmZTU1RVY0h3ZlFGU0YrVWplakgxWVVLV2VXb2U2cHZ2d21aMUFQYVh3RktDRjdKUDl3YjZQalExRXhIZHE1ZVpuMDlVanJJNGZ3eC80UEhQQWx2YkRhUE54Zmk0dXpHZE9DZXp0NUhZMjF3NmVJRlhpZ3R0UXlvVzFROVl1RTVxT1N4am1GUHF3Nk4zSUdaTGRPZ1lRSlQ3OCtFRVdTZVoxWWp2bXZoTlpnVG1TRTQyem5mdThnZW1CTk13OWR0STR6Szh3UnlQRE5SZXdJa0QrZHNSQUdqNW5aMEgvUlA3K1hMbTlFU2FnVHpxNkE9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQlVI8Tp_6oT-t_oWERSJSGkoVt0hh79y5r-i3TWfvnPHG8WTEVNw-UqO1UKA31KARg0uFqEO91pFHbvy7kFmodOz0Z0Locs7MvJ6rRXxMhrhgDIFHfdzv7NyDfX5oJNtWqiTr5uw6sKUa9vDekZL9QdcleQjOG5gMN7P1dfghsQZZDcLMGxlGU6vZZijKlnnsTX5bW4IFeDMU2GjDd9jjYylhGAbz-Nd8Wu9IdQWqytj8SnIukDmk5vni7FNnpwuEoG533r6RVH4hB?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUjhZQ3AvdTEreXFRcjVHNUhVaFV0MVZtbDFXLzhOV1hyK0Y2a3JQZTBVRkwvemJVSXJlTkxkOU1waWo3WVRPekhERVhQbDFSd0ovbzNsTTdKU3FwYnJLNm14dEJ4bWZWSnhsNitSZVBUQmJoc0dtNEpDRUh3QkNiNFRwUnRsdDNjS1hsMDVNTlNlUlRzbnV6MFZjcVFaWjZaalBjSzgyajVEQ0ZlY1JrU2w4aXE1VlE1MXlOVUVNdXM5WnZIT1oxbFIwZ3Q1UUdpd2NEMUxpMDF0VjN4VG5BVDBHcFJyZk9Ta3JnZW1ORUpxVGlwVUduQTZFWWx1L2FiNW9FcHFpRWs9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQTjZdrlg0Jk9UplIxr998hKA8pwKkUNM1479IMDajq6z6UWoFlPUwtykoSSmo01G7REwSeCgluyWcqvkpxW-8zBO-Cirxc7QJZCpHEY1F9oUpuMwrgRrdP_RO_ic_RzY5EdaU80-CKIqM85KSWzl4JOX2zgSZfEJPihH6UJi4Tmkdsz__MBV-TE3kwSUx05cXFT8yjzJCeZYBxfvOC0gHAFR7EdgwSxEfvPU1oTvsVpAiqM-5cpuj9hi5IgGDJx5ym9huz8RoE1KVe?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17584470942555,-22.90554921122408,6.823783114224282</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0FEC15320039D56E47E8">
+		<name>R. São Pedro, 319</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua de São Pedro, 319 pede para estender prazo de desapropriação. A. Rodrigues de Sá, pequeno fabricante de vassouras</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1ZgclX_OKRBOWK6D7GPfiLEnOV8_Snq76/view?usp=sharing">https://drive.google.com/file/d/1ZgclX_OKRBOWK6D7GPfiLEnOV8_Snq76/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.1860859649922</longitude>
+			<latitude>-22.90320925428162</latitude>
+			<altitude>4.545703057178814</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>552.4475372006419</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUVViaGx5MXhvOHhBUzlyUCtXNFlTUUxLYnhsTng3WUwxVWk3eC82dUtJUmpkeDlHdElERHdpc0V0R0UyN0ZzTXVpMnRTbUxFODYxN1VyRzU1SHlLelh5TUhsaWVCdUlxV2pnRFJ3U1BIZ2thK1ZWUnpTT0xqZHlady90QmhiZG1XOW1TM2k0YUpEZlc3Y0tYQkx0UTdpamFTcEVLMkMyaWxYUDJqaDVQT296UndkVDYzb2Ztb0NPTytydmFUU0dJOUpVQ2lGbVlldmZvUjNQWjJEdlEzbnl2QWJFdm50SGhHdFJYU2NCeWxUQnFZaENsTmk1UGVxZ1FPTEIrUTBMazg9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGSBMqU9ba0fH-DZTWnQeLbMA_X-IHj2xGsm4t3gn4PXoGSc7zb4vxUdowpKux7jWylK0KAnpEl4WpejFgD5pEMakPd_0q4hk5MoAWtCo8xNQy8a_I2nx-YoYNnpha7PDbKfgYWeVSeHi1z-XIBJPd0AL6seb4PoQxc6dvogVkILST1ZPCGMykcY6iMfb5gXNwRY2_l2KLyYrxyJlrx8ZjHUvgliuM81u9v8-BW1dthutyDrvRd_wgiM7-pEi_xt3h4L9A5bETVRTtME?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.1860198077964,-22.90327821441841,4.421685780529129</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C6372BEC539F31CB53F">
+		<name>R. Carmo Neto, 70</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Carmo Neto, 70 pede execução da desapropriação - Proprietário Miguel Moreira</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1-hvMzNim4HrTuo_s2Cp8TgVcn2tPZU6O/view?usp=sharing">https://drive.google.com/file/d/1-hvMzNim4HrTuo_s2Cp8TgVcn2tPZU6O/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.20173608551258</longitude>
+			<latitude>-22.90677006881593</latitude>
+			<altitude>3.661741677239287</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99973257659934</gx:fovy>
+			<range>386.9044541510085</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.20116251308794,-22.90703279075393,3.740121898599595</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C26268C7639F3252BD3">
+		<name>R. Santa Luzia, 576</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Santa Luzia, 576 - Edifícios Vitória aceita avaliação do imóvel de Elvira Carvalho de Andrade Bastos</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1xXYZIKei98oSiBlAuWYdkrPXhbhqDZ5F/view?usp=sharing">https://drive.google.com/file/d/1xXYZIKei98oSiBlAuWYdkrPXhbhqDZ5F/view?usp=sharing</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua Santa Luzia, 576 - Elvira Carvalho de Andrade bastos (Edifícios Vitoria) - revisão do valor acordado para desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1HyM5-PIuNej_mjECqrvu8ph5Okywri6n/view?usp=sharing">https://drive.google.com/file/d/1HyM5-PIuNej_mjECqrvu8ph5Okywri6n/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17281716519575</longitude>
+			<latitude>-22.90962241284955</latitude>
+			<altitude>6.476227976778056</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.9999999827716</gx:fovy>
+			<range>108.3927899514856</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17263043409855,-22.90974778447855,6.465559526126459</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0D7900E79C39F410B174">
+		<name>R. da Alfândega, 24-26</name>
+		<description><![CDATA[<div>Banco Borges<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing">https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17710141862988</longitude>
+			<latitude>-22.90162142053299</latitude>
+			<altitude>2.57997446647602</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999998277161</gx:fovy>
+			<range>269.8906518184594</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUk1DL2RkaDJBcTR3UFh1RldwMXhoaGM1dEV2TkVoUWhDbkVuV2hmVHo2R2Foc21PaExpZFhwcFpvNytGL0pzVGpLV1JucjhlamFyb1JoSGxSN093enUyeU12OUl1WWhyN1VrR2I0N2RSYjc3UTNERkJ5aUZvZVNTelRpT0xkQzRqbUpMakUwTWFlNkNIUTU5Wng5RDhqWUo2L1FvMzhta0VEUUo4YzJzUVZaMGg2VnJNaVZkYmdJRGxaR3Q0Qm52aE9ZeGk3Y09HZE1QemxSVlpOYThqTzFTK0hYUE90Q1BUWEJ4cVhHUm0vYng5enFRZTYzRjl5cTlFZm9tWkozRHc9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQcFKqfNCBBn8tjLh5RJzSORP9L6bzG4aKrX4ptyva7980LXilfbJwzZNnjYqdh51Y11Ke7u30hy2x3yujQxoRrWZnwvf72IONYipi7T7OZuaqxEGxy_EEU1spCNac8ZFBUnJ9vRY6Xl6bFkqxcHmK-TQ_97P0yGKRVX8Fm_APxb4YpzdnniT6VVnhhHca-egLCbEpvKK1ReKYW6Qv3QFy4dq9CCiDhLdZDaT2kzhQ-KyUcrXOEZwJmCLWH9SyXI4PUKjrKPi7XEix3?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUjJKdE0xZHB3ZWdraURLajQ4R1VTUXlnUTVTYzlBbGtNcVdXY0xuTmIraEN1RTBsbGZFUFFNSlU4b1gxc2V3M3JJU0NhRG1JZHBHc2FmL3Q3OVhwSzBubWJzUGF1L2thaHV6SG5HZ3g0aHY1ek1HYTJmT3dQZlRwRTh1a2Y4UzNwc2RmUHlCTGlnU0hLTjZWQi91NnF4cXdZQXZ1V05rMmFNTDU1T1ZCenlLeXVtOEpSRGJSRjhuSlhJQk9qZDhybFF5bVR0Tm43TGNGQ1pMcU5KajhIKzJGdFZYbmExTm4xWUhPUGtreUtocGo1c2V2WUFTa201VTE5SEFnTldoZ1U9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGTMHCF1a4rLLHL1WFdnDpQbeSxXFt5HXiJw3r7ckpo_QRHP1S8IWLUv5QpqeNjXqEDr4XCL94R2MmK2TOv2rOukk_e71YqET_srrMRVMaSbUCmGlGd9MIBXDQ9NzmlxkSR3ZtXPuHGHn-dZzWpI8cqgm69_WVeXPrnSAzS7ER-GTmVkxwsE4pU1C9-f_NiK2zRLXJ4PsCaz7PPtkxpuwkqLJk-UUnpJ1cNHOKvXNv2uSjSROaOS9JXo-0arueI68EE51N6DurHuW7PQ?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17737836447986,-22.90157877487334,2.734514931172607</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="009334BDFC39F411F544">
+		<name>R. da Alfândega, 28</name>
+		<description><![CDATA[<div>Banco Central Brasileiro<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing">https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17746340113881</longitude>
+			<latitude>-22.90162248597996</latitude>
+			<altitude>2.758053974612822</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999998277161</gx:fovy>
+			<range>39.5301402884661</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUUZpdWZ0dFlIYys5VE5ENjhadUhBeFQzRmRRZVlPbmpxT3lvS09LYWh6VnNwa0JIUzZ5L1pibHR6RGFUR00rSVZ4aktjL1QzSVJVZkJ5ZFdVU1F2K05pNUJEd0JNQnBjWk11cVRpME1CUk91bjQ1cUM3dUZhNXQvZVJHZW5iRXAzbEk1eEo2M2diWjRsMjRlSVZUNEZDeVlSWnhabURURFZaQVY3Y2E0S2dEd2kxTG91U0hvSFZaL0hmMUxrRG1Pb0F5ZjM1U0h4MGlTelh1TXhESEJNV3VFREhLblE1dytPenZVNTZZc2hlMFF5WFBKaTZpRkdUU2lyR3Frc3JXMHM9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQi6hy-x2YXxkqdwWyQx7F95r3ATW2qjfEKdzx3_heMDlYVsokkUI05yW5VrDMTIJkcRTXw_-Mdov-EGgXlcu1Y-7uHQ1UVzvt4tSWhbC0S_ChXo6uE5whIUex_MLbW2dt5ZKR2Gvi2T4GTSI9H7ktl2SJFvipA9jtXGK5Br_51iWQwUoAyKYGoZv9enYbM31uOjxZhMQSt20OKdb9voIcEbXuxJnE9us2T4iCM2CjzOi12e0Ekd7BtWp5Vt4CYHGNuCh-I7OzJ6Qh1?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17748268503182,-22.90161048656187,2.807028942310972</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="035B80875039F41233FF">
+		<name>R. da Alfândega, 30</name>
+		<description><![CDATA[<div>Banco do Comércio e Indústria do Rio de Janeiro<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing">https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17746340113881</longitude>
+			<latitude>-22.90162248597996</latitude>
+			<altitude>2.758053974612822</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999998277161</gx:fovy>
+			<range>39.5301402884661</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUStqdFJmVVF4ZWVwc2dMdXhnR001a0EveWx4UXlUOHZCMFhJUlBpMlEyZUVlbXBZTjVtRDR3eE11cjRyekU2MEVjeWlGYzhkdXFtRWlZWlBUTlhmVThpWDFaV3BjbnhsNk9SbnNCVXdaT0tlbnJsM3JicUlxWVdwSGhuaGl2VlN2dTJ2UlRxbHpaRkp2R3RHTzFndGtMRXNvKzRLQ3B2TW1Kblp3Qk5peDRtM2JpdHl2Q0gwZlo1NmdocHppOFdaRFFYS1ViWkRsRnRDdy9DbFNEVlpPRVpYQUpFWVdIVGhVSmRMY2dUeG4xNVBIeDlKeEd6dnp4V0x5TUl1OEJyN1E9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGS4dF7rIdLE0PLX5fAGYTcSThXT8jtwUOtl2xqI0mtpelQOH4b2jym61CV8bzwIArT9sFZIr6UTvHYMlarf3s0OguMxsygAHVBmN4AhrLyTgSeLsThD_1T0_pi5wIrPTjFlMtiCjxKIS3RCAb17YsIujJGcpLurKWPthWGHmz0lKFlHV2IrSIRPnyM8X3_P9igaqhVWkA_AcZ39oUa264LXgiBUkqpUgB_BYCtBxDGW5tWkcEhSdNcjhU77c-ugy9I4AeenLcRybHJH?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17755686166629,-22.90163089396091,2.818021261152255</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01EBF6A22739F412723E">
+		<name>R. da Alfândega, 32</name>
+		<description><![CDATA[<div>Banco Aliança do Rio de Janeiro<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing">https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17746288349144</longitude>
+			<latitude>-22.90162240026233</latitude>
+			<altitude>2.756940909447865</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999998277161</gx:fovy>
+			<range>39.70603509000739</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVHcveGtrUzlnSm1RMGFCWWJoMXl5ZHVZeHVhbzVWcjZrUUdoNmV2QW9qeUliU0I3VjRmS3Y4cjNwbHdoSnZmZ1BuUUZEbEdiQWtJRHUxOFdOVXdWejE4Y01OVEdQSUtuNGxzZ2dKaGhDWFBCSmE1N1U4N3YwMU14RXhmN1haK2xpS3RUd2o5MzBUbzBQNXQ0WE9Yb0JPVUxzdy91eGd0QjYrcjQ5azhSNDB1aXpPNzBmTnlFK3JWQWZoL2JQWGhwRUllU0cvKytpZWJBUldIMzJIQUNHYXJXZ3QrT0s3dVdDbjV3NEMrbS9iSnl5eldndCtEbDFEcmNUVk12aXA3NHM9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRFL1yh9UjZvNGKhlGFylNA_obX9AP6e6MuA1IGfvoc_75aQkmavoVf6C1HK1zb19GSLS3BGCDtcuIfA7gAzhmuLQCAZMgPx_ycjnFRko3r6ksbZvdH-8lwc26VctpMiP0ptstVJ9AR5om4V0hPrB714HP0ZZZkMBVFSwU6PFS3qKSJ3EhfTg6Ex8qgYYIiuXokatMXgBOiRjm9Lcoyp-FvhyedoQsqD0Yj0Jt1jgfFd_hUB_K_OY6SiP5tfBidXHxE0fTf0sAgzjWR?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17763345073951,-22.90165477707235,2.852390674485101</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01C0C7F1D639F4216CC1">
+		<name>R. do Lavradio, 97</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua do Lavradio, 97 - Grande Oriente do Brasil (maçonaria) pede troca de terreno desapropriado por novo na Av. Pres. Vargas</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/12otjU5ecY2O4Bf0giscp3ZHQodODCB6c/view?usp=sharing">https://drive.google.com/file/d/12otjU5ecY2O4Bf0giscp3ZHQodODCB6c/view?usp=sharing</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua do Lavradio, 97 - Grande Oriente do Brasil (maçonaria) recorre a Getúlio Vargas após indeferimento da prefeitura sobre desapropriação</span></span></span><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><a href="https://drive.google.com/file/d/1qrEocifauEnTy1WnjECSIfB6quWegnJr/view?usp=sharing">https://drive.google.com/file/d/1qrEocifauEnTy1WnjECSIfB6quWegnJr/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div><div><br></div><div>Não demolido<br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18274769795008</longitude>
+			<latitude>-22.91069794677912</latitude>
+			<altitude>6.874326144695719</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999999964</gx:fovy>
+			<range>129.742406816149</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18271502639167,-22.91069380881824,7.003017367311804</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B1DFC52E639F4325BCC">
+		<name>Pç. da República, 231</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Praça da República, 231 - Manoel Brandão representado pelo procurador Ricardo de Miranda Ribeiro sobre desaparecimento do termo de concordância da avaliação do imóvel</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1c21eAtpgt-3AkkowXL9-zhgySd6vQDpE/view?usp=sharing">https://drive.google.com/file/d/1c21eAtpgt-3AkkowXL9-zhgySd6vQDpE/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19107950292732</longitude>
+			<latitude>-22.9047840344545</latitude>
+			<altitude>4.476951449164841</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999999964</gx:fovy>
+			<range>583.8499858244177</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUU9nVmp1aHB4NHQrRjFYekZ2YzdCYnJQQ1hwWGg0SmNsL0pqQUtQVkVQdCtJZFJzRGRRdEowU2ozZFNKZjNWTHQ0dXo0MEJWZUhEdGthR1ZkTWFDU09ETXE2UmFFMVJxVWhKbm83M2oxb0Z4YWNGSFhKMGlBVGN4OUp4TW9IMWlJSW5TUS9nRXovbnhWeXBJREJGN2dzdHVXRjk0akIvbTNoWXRkYWNtcDNTZ0duU2JNeWdGL2RlTk1idjFzRlhsQlhWQUFZMDJyNm1DV25kZTNIWTlmWmNxdzR0cSt5djl0YzFTbkVIQnBBbFVjTksvUWExdmtmLzF0eWsyaDU2ekk9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGSrRZjVx66U8ktEvu7DoyQveq3b7YLbYaI9WMewh_s8ES2JPqL4LhnfGwfT3vXA4_G-tHAbMozp9k9KtDBtZ5ynCTiZXWt2XRrWD0DL-YJoM4huYr2pNVBUjgnyn40Gl4Zh5fT93j1B5lxXhfsR282PNiextO0c93K-h0ZckigGXCqgUSQcMl8i-eEDwFOKfCLkarW44YKnOJHyM8yhOYYyk4M7H0vhPBs8BqFY5ktK6VV8LGsAtrx3etmJUwbGDKYIcUhZFg1hyKPz?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUStyZlhwTzk5dko3bTF0Ky9ZRnd3NHNBL05welFkK2Z2TkdpWEFDS0ZnLzNLS0NudkMxdUdKZkxFSHFqeU5IK1JCcDRwZ2pZV1laMVhzU3ZtNjRGWVFVZW02dW5KdThrNkJpMkh4VnpueXFieVYxa0FSK2M4OWYvRmhod2RiVVgyWmpCbnJWdmpmc21EYWdQTVVwMkJYNTZVc21RYzU4S0RhL2pjcnRoWnFMMDRRUE45OGpOTlhTQnJobEswbXd6ZGpTNno1ZjJuNEJzUmxZaktBWDZ4WlJ1Mnp4dEg4bG1aSE91azhmdHpocnVUYjZuZU1XanVKS012V1JvbE5vM1U9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQFyFAyVfIzzw1bAxumz9QuI2PeH9C2hRzyf54sqH8Zty34NHp5lpsfoh2i3Hc0e34iGc9IsV2nGaja3xE1yprwwn2004rGkcRD4QF28ooIDMIcAydZHc48FgcEXrKAP8tOjdgJEEuXwMO-5jz-c-Bllh1jAuiHxPDVqWAAUaALb_yiJ2eRosXt4p9f0D8tmoDJHjNhAsG80xNNIvFUlWUmxzpyqsY2gGWy1yTSVZWGglWz62qlKCB4yXjEUIvg5VpGM1vyh_OW7s1c?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.19119350353277,-22.9042606656359,4.73751538064448</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A37D93E7A39F4392EF6">
+		<name>R. Maria Eugênia, 44</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Maria Eugenia, 44 - não consegue vender imóvel pois fica em área a ser desapropriada</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1Fy4nY2KfhUOWPXTz2NTfFTiAQ10wgMFR/view?usp=sharing">https://drive.google.com/file/d/1Fy4nY2KfhUOWPXTz2NTfFTiAQ10wgMFR/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.20002507129251</longitude>
+			<latitude>-22.95780208256011</latitude>
+			<altitude>18.39018652910867</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>109.6168337400741</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.19996242718628,-22.95780753029928,17.59185425668137</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00A9955D3E39F43B2040">
+		<name>Av. Carlos Peixoto, 44</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Av. Carlos Peixoto, 44 - Alexandre Candido da Silva pede que lhe seja doado o material resultante da demolição do seu prédio</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14xPjPY_2t_M63ppXmRA9caR4sxPVENdU/view?usp=sharing">https://drive.google.com/file/d/14xPjPY_2t_M63ppXmRA9caR4sxPVENdU/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17767074975285</longitude>
+			<latitude>-22.95714947075452</latitude>
+			<altitude>5.986712876793982</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>295.6583015514843</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17781525681515,-22.95709402835308,7.753701158136543</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0D4A17867B39F452638C">
+		<name>Pç. Floriano Peixoto, 85 a 89</name>
+		<description><![CDATA[<div>J. C. Miranda &amp; Cia<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação</span></span></span><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div><div><a href="https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing">https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing</a><br></div><div><br></div><div>Igreja que ficava ao lado:&nbsp;<a href="https://acervos.ims.com.br/portals/#/detailpage/77598">https://acervos.ims.com.br/portals/#/detailpage/77598</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.1767838801902</longitude>
+			<latitude>-22.90924547618239</latitude>
+			<altitude>7.061555512379972</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>293.9769289611286</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17661823799372,-22.90956296866223,7.061560032181604</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00BC5B569839F4570DAC">
+		<name>R. 13 de Maio, 9-A</name>
+		<description><![CDATA[<div>Preche &amp; Paschoal<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing">https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17662056564947</longitude>
+			<latitude>-22.90948250074605</latitude>
+			<altitude>7.056783688305533</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>38.52296350268716</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17671786923967,-22.90941709649175,7.056788799430196</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="041F2707D239F458B9FB">
+		<name>R. 13 de Maio, 5</name>
+		<description><![CDATA[<div>Gonçalves &amp; Ferreira<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing">https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17662056564947</longitude>
+			<latitude>-22.90948250074605</latitude>
+			<altitude>7.056783688305533</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>38.52296350268716</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17664907360907,-22.90948724203637,7.056783901917441</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="059CF9AA4639F4590BEE">
+		<name>R. 13 de Maio, 9-B</name>
+		<description><![CDATA[<div>Maurício Cruz &amp; Cia<br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing">https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17662070965025</longitude>
+			<latitude>-22.90948252344219</latitude>
+			<altitude>7.056783669915103</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>38.28710825160215</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17677641854561,-22.90936178939741,7.056785760765436</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0CC7977C9F39F45F4457">
+		<name>R. 13 de Maio, 11</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17691573365995</longitude>
+			<latitude>-22.90919109725291</latitude>
+			<altitude>7.056793368744523</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>146.9454468561526</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17683972905514,-22.90928686051396,7.056773010539422</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="099B0BFF7939F4607AAC">
+		<name>R. 13 de Maio, 13</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17691795341661</longitude>
+			<latitude>-22.90918663997245</latitude>
+			<altitude>7.056764949872846</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>163.5246618093879</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17690700103176,-22.90921893935586,7.056787062241963</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="001E997DB439F460CEDB">
+		<name>R. 13 de Maio, 17</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.1769179534281</longitude>
+			<latitude>-22.90918663994075</latitude>
+			<altitude>7.056764949872846</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>163.5246502205882</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17696948051463,-22.90914672850544,7.056784975635574</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0DEFE36ED139F462FC2C">
+		<name>R. 13 de Maio, 37</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17738541486803</longitude>
+			<latitude>-22.90884960460496</latitude>
+			<altitude>6.907012291948305</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>230.7523085667708</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17732980572191,-22.90877504668232,6.907010103487233</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08323BE00B39F4638299">
+		<name>R. 13 de Maio, 44</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17747476525781</longitude>
+			<latitude>-22.9087099734621</latitude>
+			<altitude>6.886484058840939</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>170.7974564132928</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17741440198859,-22.90869270307114,6.902247461895548</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="086AC1937439F463B736">
+		<name>R. 13 de Maio, 45</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17750119038727</longitude>
+			<latitude>-22.90857920343596</latitude>
+			<altitude>6.824972979236142</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>91.51828658800696</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17747521445664,-22.90862908920681,6.824981788251718</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00291ADBB939F463F007">
+		<name>R. 13 de Maio, 47</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing">https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17748845982717</longitude>
+			<latitude>-22.908587953275</latitude>
+			<altitude>6.825001600402539</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031958391003</gx:fovy>
+			<range>106.4268312073909</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17756142214671,-22.90854201058336,6.812607062263661</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0E86E1E1913A73E301BB">
+		<name>R. da Alfândega, 136-142</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada</span></span></span><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><a href="https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing">https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18166882947153</longitude>
+			<latitude>-22.90291932879445</latitude>
+			<altitude>5.61192007362084</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.999790911858</gx:fovy>
+			<range>504.7280586275883</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18146970353239,-22.9029222461447,4.909899162081777</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08A1510FF53A73E6DF5C">
+		<name>R. General Câmara, 165</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing">https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18166882929981</longitude>
+			<latitude>-22.90293105526077</latitude>
+			<altitude>5.556539019188511</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.999790911858</gx:fovy>
+			<range>504.783499445257</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18164174132843,-22.90242881675885,4.991131553688886</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="061B34D3263A830FA3C4">
+		<name>Lg. de São Francisco</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Apelo para não ser desapropriada a área do Parc Royal após incêndio</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1BFQzX7bgZ7Vv1natd_i3HuK9jn-w0A_a/view?usp=sharing">https://drive.google.com/file/d/1BFQzX7bgZ7Vv1natd_i3HuK9jn-w0A_a/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18039705748124</longitude>
+			<latitude>-22.9051826392656</latitude>
+			<altitude>5.670730646018982</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031418787286</gx:fovy>
+			<range>261.7017973662587</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18046009899647,-22.90526329291391,5.772667923537562</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04338B86683A83161581">
+		<name>Ig. de São Pedro dos Clérigos</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Carta da Irmandade com sugestões relativas à transferência da Igreja de São Pedro</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing">https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18062180746723</longitude>
+			<latitude>-22.90144792376297</latitude>
+			<altitude>4.357219622079789</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00031418787286</gx:fovy>
+			<range>399.5916402645527</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU1I1WTFibG5iaXNuSTM5K2hrZDZ1Tyt5R0x5eGNwRDY1eFJYNDI0THpwMHFYT0djM05FdERVODJKYm1YKzlCdUNLRWVUWWlJTzR6dm05Q0J5WC9tci9pKzM3Zm9Fbkl4Z2RjcnMvK1dmWDNyRU5KTmJZOEhFQjhiQ0J3Uk1uMElqUVFiQldhMWx2VldZMUVndmJDL3djeGhRaHI5d0ZxVjJnbjhwL2VOS2dMdHhhV3JJbG4vc1NyS2xkUUM3Vlg2OHMxY3RHaktxaEh5NW45enFveGhPR0xNdXdRSXJaOFZMZ0RqZFRyNVJsZHViMkpJYWpnOXBKTTdZK2NaL0VjdVU9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRvO-_adH0WiJy7BJ8syX-RGid0eKAjCNUXIsOam5UszEGVGkuEyDYku1ok0ThM1I4BYMfjGbhl2gNAI1VZw_Ar9mTzZb5gkm_Ev3kMjVRwiGsjYx8GKQU_SqYsecnhT77eRClaBx2ZXDg2HEBzKlNrD4yMjw0PAELUfJH9frb0e4vOZGjPeHB2l2yTzjv4TBvRw7KTjkm3SwwO_aKP3vvNaylcpjdejXCAeinYPmYjXGh-0vYGL2AZNb3UMuPE6i7JKk7ihs_0G2q0?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.180111774364,-22.90137649753057,3.148303779314663</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08A912A13A3A831DF263">
+		<name>R. Rêgo Barros, 86</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua Rego Barros, 86 - Alvaro Barbosa (português, homem pobre) pede agilizar indenização</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1OwNonBJOiGffyVzsZg_SRVAjFJL5atps/view?usp=sharing">https://drive.google.com/file/d/1OwNonBJOiGffyVzsZg_SRVAjFJL5atps/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.19601627908554</longitude>
+			<latitude>-22.9036543234781</latitude>
+			<altitude>8.006863695879026</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99974821168233</gx:fovy>
+			<range>199.4630361606687</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.1960901596483,-22.90373564439662,8.748312875570768</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="050F054BB53A8323D338">
+		<name>R. São Pedro, 84</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde Leite de Aguiar pede ajuda a Vargas sobre demolição do seu negócio</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1OjDGlZy9iZEePAicYJHm6pS0E5HI201Q/view?usp=sharing">https://drive.google.com/file/d/1OjDGlZy9iZEePAicYJHm6pS0E5HI201Q/view?usp=sharing</a><br></div><div><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde (Cremilde) Leite de Aguiar - demolição e encerramento do processo</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1GfPDJsTTewGiNdJtLut2rpSBFPBQckJX/view?usp=sharing">https://drive.google.com/file/d/1GfPDJsTTewGiNdJtLut2rpSBFPBQckJX/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17962011020979</longitude>
+			<latitude>-22.90103900853355</latitude>
+			<altitude>8.788439032217838</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99974821168233</gx:fovy>
+			<range>63.17270836619174</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17961572850868,-22.90109459960332,6.933870703171438</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09EB677F773A8346DF88">
+		<name>R. da Constituição, 45</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Constituição, 45/57 - propõe cessão de parte do terreno para não desapropriar</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing">https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18524225162629</longitude>
+			<latitude>-22.90704344988259</latitude>
+			<altitude>5.975028932106765</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999997325211</gx:fovy>
+			<range>164.6660658674591</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18525263113295,-22.90707834731298,5.927657650857872</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F8A8245E83A834847EC">
+		<name>R. da Constituição, 57</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Constituição, 45/57 - propõe cessão de parte do terreno para não desapropriar</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing">https://drive.google.com/file/d/1lXJXaaGtYCfHTrwJQydNw7munJT8Vv5t/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18560778947074</longitude>
+			<latitude>-22.90714801377731</latitude>
+			<altitude>5.879536744593357</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999761522</gx:fovy>
+			<range>69.85472914001548</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18563331401296,-22.90710605773177,5.897752154887657</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0EB072901C3A834D8CD7">
+		<name>R. da Alfândega, 11</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua da Alfândega 11 - Banco Francês e Italiano para a América do Sul</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1HrB8e2aL9KnhRgFWsAkshMV89QYPh4q9/view?usp=sharing">https://drive.google.com/file/d/1HrB8e2aL9KnhRgFWsAkshMV89QYPh4q9/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17734123695448</longitude>
+			<latitude>-22.90139962023616</latitude>
+			<altitude>2.729759443457873</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999761522</gx:fovy>
+			<range>169.5726477639255</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17695717686264,-22.90149570387847,2.526993865251799</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02A1207C963A845EC4F0">
+		<name>R. da Assembléia, 2 a 8</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing">https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17491307116441</longitude>
+			<latitude>-22.90406241478142</latitude>
+			<altitude>3.846862654365177</altitude>
+			<heading>306.8966134669864</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>149.5488359378396</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHU2VaeEZHemxRanMzU09WM2RnaHZRdnMxQjhCcW9MeUlNVHZHczJzd3NQRUtTMmtYdDMvWjA3eXNOeGxjcUdDb25iREdaSUgwdCtvbEFMNUhqbWUvN0x3V0VMZkRHc2tNK3BlbzJjL01MWkhMWmlwbkM5eFJYVDlSeC9NLzVBbFR0aktCWVdVUkt2djVweEs4bUpuSnlrcHpzWTRhYklQaDhqV2lmQTQrMU5nU0Vja0dPL250VWorNzYzK3JIV2hja1JuL1lTb28zSFF6TUpnQlkycTNoZVJOQWZRcmljaUVsZGlCeWRqZ1pQUWh2TE9UbnJ4bWJUU0UyTm90aHAxdTQ9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGTwdWuVS0rrMNsuDrOtKS2qSnDmtgpLp5zdYp7zqAw6DGJzkm9EcwH_QyDmKm_jGW0sqw174HFF5wuJobKhKdpBiHtn_t-bz824cowzmIiaH2scJkNDFem_wnyUqDCEFoESqGthP--zHNn4h8GJq0aD7FmrO1W_6EcctTCEYse5osuO8VoHGxIWVrykGhpSmiMcna8fw5VyRUaDvGiQPv7ob_dJ3fiEBs8ptYOnxDLA1IckWsfqEKnifUadj3ZjV_qCM44eFWOzdOx1?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17497832971195,-22.90414977761997,4.085395926820552</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="055CA308173A84602E03">
+		<name>R. da Misericórdia, 2</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing">https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing</a><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17489336647186</longitude>
+			<latitude>-22.90422001935486</latitude>
+			<altitude>4.027714613067584</altitude>
+			<heading>306.8959507399316</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>332.0133164288563</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17480156836973,-22.90400123831913,4.268297593636456</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="05311B1D933A846CCB14">
+		<name>R. da Alfândega, 250-250A</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua da Alfândega, 250 e 250-A - Luiz Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/16kXlQtgZPxYv4WkxLPM2EvtZJLTnJ2Eb/view?usp=sharing">https://drive.google.com/file/d/16kXlQtgZPxYv4WkxLPM2EvtZJLTnJ2Eb/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18446436767542</longitude>
+			<latitude>-22.90387647988299</latitude>
+			<altitude>5.201779350476254</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>155.8780125278099</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18446245796355,-22.90389011361664,5.20234649433637</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0EE9D64E5C3A84714DF8">
+		<name>R. da Alfândega, 274-276</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua da Alfândega, 274 e 276 - Faride Kather Oebbe Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1FbMamLSf4PrzGS3yYmtlOfBafelh-F7h/view?usp=sharing">https://drive.google.com/file/d/1FbMamLSf4PrzGS3yYmtlOfBafelh-F7h/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18476888147802</longitude>
+			<latitude>-22.903885000259</latitude>
+			<altitude>5.402681395371305</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>203.6294182439815</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18489360400197,-22.9040131015779,5.431728990552132</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0FD837AE123A8E14831E">
+		<name>Praia de São Cristóvão, 270</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Viúva de J. Vicente da Costa, com negócio de marmorista situado à Praia de São Cristóvão nº 270, pede auxílio para mudança após desapropriação para construção da variante Rio-Petrópolis</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1NdID_SU0O0d1BkwYZKODP5mFNj_F8eUH/view">https://drive.google.com/file/d/1NdID_SU0O0d1BkwYZKODP5mFNj_F8eUH/view</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.21960491313801</longitude>
+			<latitude>-22.89025693043126</latitude>
+			<altitude>6.34613022160141</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00027752334417</gx:fovy>
+			<range>1456.201934444398</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.21912905379798,-22.88904920894343,5.374694292777004</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0EAFEC42983A92640A06">
+		<name>Av. Presidente Vargas, 496 / R. São Pedro, 114</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126)</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view">https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view</a><br></div><div><br></div><div>Muda-se para a Rua Sacadura Cabral, 167.<br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18043182985312</longitude>
+			<latitude>-22.90142120640724</latitude>
+			<altitude>3.269447787651332</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>108.9185506153626</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.1805350170911,-22.90138649930442,4.453923260724968</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="036EB30DF03A926999C4">
+		<name>Av. Presidente Vargas, 491 / R. General Câmara, 111</name>
+		<description><![CDATA[<div><span><span><span>Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126)</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view">https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view</a><br></div><div><br></div><div>Muda-se para a Rua do Costa, 106 (Rua Alexandre Mackenzie &nbsp;<a href="https://machadodeassis.net/referencia/rua-do-costa/62432">https://machadodeassis.net/referencia/rua-do-costa/62432</a>&nbsp;)<br></div>]]></description>
+		<LookAt>
+			<longitude>-43.1798161610294</longitude>
+			<latitude>-22.90173937339816</latitude>
+			<altitude>5.617649045972355</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>252.5407121537137</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18007639596566,-22.90185923616121,4.603933064947485</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06ADD7AC603A926E3FEB">
+		<name>Av. Presidente Vargas, 522 / R. São Pedro, 122</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126)</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view">https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view</a><br></div><div><br></div><div><br></div><div>Mudou-se para R. Barão de São Felix, 118<br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18068370901457</longitude>
+			<latitude>-22.9013677003844</latitude>
+			<altitude>7.016397312744164</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>152.0101695130506</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18081913508944,-22.901477748649,5.513709237449715</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="062EE61B7E3A927293C8">
+		<name>Av. Presidente Vargas, 542 / R. São Pedro 128</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126)</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view">https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view</a><br></div><div><br></div><div>Mudou-se para R. Barão de São Felix, 118<br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18111397734365</longitude>
+			<latitude>-22.90149999009514</latitude>
+			<altitude>5.864732023294687</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>287.1742803714369</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.1809904971152,-22.90153260867714,4.86219767643302</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="062FBDB52D3A92755B70">
+		<name>Av. Presidente Vargas, 528 e 534 / R. São Pedro, 124-126</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126)</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view">https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view</a><br></div><div><br></div><div><br></div><div><br></div><div>Muda-se para a Rua Teófilo Otoni, quadra 8B, Lote 11, de acordo com o PA 3022. Pedido de licença para a construção numero 220.226.<br></div><div><br></div><div>Depósito vai para armazém na Rua Gonzaga Bastos, 109.<br></div>]]></description>
+		<LookAt>
+			<longitude>-43.1810143792692</longitude>
+			<latitude>-22.90140327114999</latitude>
+			<altitude>7.833780956473147</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>347.7304405739051</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.1809049982766,-22.90150917227554,5.553777781126112</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="087B5FF1A03A97A6D518">
+		<name>R. José Clemente, 67</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua José Clemente, 67 - Dias e Irmãos - pedem para estender o prazo para desapropriação</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1XV-2C2MTEqSFQM3XPk7I05bB-YVrB07n/view">https://drive.google.com/file/d/1XV-2C2MTEqSFQM3XPk7I05bB-YVrB07n/view</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.22343713322149</longitude>
+			<latitude>-22.88876752386419</latitude>
+			<altitude>4.42309720777315</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>771.9243376980739</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.22332361664541,-22.88870869829832,4.144748888146486</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06F36BD6D83A97AA92E8">
+		<name>R. São Francisco Xavier, 576</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua São Francisco Xavier, 576 - Maria Antonia de Carvalho pedem para não demolir barracão</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1ZohGr8yT6RhRGTYrWy-QvpdmxouzyHa7/view?usp=sharing">https://drive.google.com/file/d/1ZohGr8yT6RhRGTYrWy-QvpdmxouzyHa7/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.23666616115221</longitude>
+			<latitude>-22.91043549020512</latitude>
+			<altitude>12.15534523002084</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>771.3722472813242</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.23797485090925,-22.91023312507044,12.32122085784202</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="061DA442C93AA6E4CB4B">
+		<name>R. Miguel Couto, 92</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua Miguel Couto, 92 - Oficina gráfica da Escola Aeronautica - concessão de prazo para a demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1WVskyEb-Q9D7UTzbVxVUeZAnXSHoSZ4N/view?usp=sharing">https://drive.google.com/file/d/1WVskyEb-Q9D7UTzbVxVUeZAnXSHoSZ4N/view?usp=sharing</a><br></div><div><br></div><div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua Miguel Couto, 92 - Escola de Aeronautica - solicita dilatar prazo para demolição, sendo concedido</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1DDX1xBIiWvp4Bqa-qN0lVKl-zQ0jhD-p/view?usp=sharing">https://drive.google.com/file/d/1DDX1xBIiWvp4Bqa-qN0lVKl-zQ0jhD-p/view?usp=sharing</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.18005515800255</longitude>
+			<latitude>-22.90115419826584</latitude>
+			<altitude>6.4402846015881</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>164.5837622121326</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.18024220319939,-22.90103731219342,10.57130559455285</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04C4B73D183AA6EFFB33">
+		<name>R. Marechal Trompowsky, 31</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing">https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.24607675400269</longitude>
+			<latitude>-22.93611076469466</latitude>
+			<altitude>30.79876473504505</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>140.3021790284583</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.24600176943541,-22.93608158015527,29.47131667854885</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="083E9EF4633AA6F1BCD1">
+		<name>R. Marechal Trompowsky, 32</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing">https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.245869550414</longitude>
+			<latitude>-22.93618173012825</latitude>
+			<altitude>28.73668148106654</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>202.2746412062043</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.24571899937542,-22.93612944314873,28.58695834968337</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F63A151BD3AA6FF1020">
+		<name>R. da Passagem , 252</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua da Passagem, 252 - Moradores de edifício pedem para adiar demolição</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1k29AU5HDPzlhEjqK4DfcWQoJ3aV0-5EJ/view?usp=sharing">https://drive.google.com/file/d/1k29AU5HDPzlhEjqK4DfcWQoJ3aV0-5EJ/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17823514971683</longitude>
+			<latitude>-22.95581264362885</latitude>
+			<altitude>6.312585023450287</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>144.8679690927384</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.17832286338485,-22.95577436325176,6.239070200912029</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="078B944CC13AA7066656">
+		<name>R. Primeiro de Março, 88</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family:Avenir, Arial"><span class="size" style="font-size:10pt">Rua Primeiro de Março, 88 - João Guilbaud reclama valor de desapropriação, apelando ao presidente Vargas</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1n0K0wksKl15TVLH1AtseWojYPdX8G3sB/view">https://drive.google.com/file/d/1n0K0wksKl15TVLH1AtseWojYPdX8G3sB/view</a><br></div><div><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.17676693704598</longitude>
+			<latitude>-22.90059887427086</latitude>
+			<altitude>2.270942263232283</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>348.8436606711548</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUXdKSlgwYkFSdGJDeHc0alF2UVkxZFM0bitlZnZwUUxsZUNIcDdxODFFUWx4Q3N4bFpJODRoSE0xc3lKdFZHWGdRQ0hKODlZcUdTV2FLdk5pWm5peEZsOGt6cEtLUHlCSWt2M2lmWHI1YzYzaFZBM21sM2tNaWhPWlpReDlzOE8zNEgrdE9WbC9EbmdJeXFqMHB4dWpCZm8ybERPMnY3bnVaWHJrYWRzdmxEVWZ3bHM3U2RKcWQ1VEFWZDk1NlJqc1ZNSk1EcXhRUFhLNERqb3lPWXg2MkVEVHRxQXNOdGJDTlJLQ0JaNGd6VGFnTjEvd3VPZzR6cWF1TnZJZWFCV1E9_0">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRF-rbeoGuVZ62HoT5XtfsPYTTZefBLRV0V8T89qx8W0tlNS9c6ZB-UC-QYVfugG2rf38Pxny4qw-wdPoJlVBXJlgjt6l5J6KiG4sxF-auyaNGpqm8SPWCHBUMhH0TwJ-o4bVXOKtC_kVHHTTEh_6g5HBfiMVhR7Nl18nVis7wyBMKTwvL75Rd5a2E_W7NRSQFZV-f-OoqZtLh84mxevrZ0YMyUOMmfrQv7NkAaHe_2-F9OhkNZQ5gWSXpuRcnD7LUxuqkrETUWIwiD?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+			<gx:Image kml:id="hosted_image_QUtjcnhHUnV2ZUl3dC8vK0VDK0JzMkxwWTgya1NXVTBEOHVpK3BrV0FMZklSVlhjOHdLbGVyVmdVUlZUWXFrbmEvSlZwanc1S0t1TnM0dUVYZVFROGFhUVJ2YlRQYnNBT1FncXh3cjQ2UExERXZ3YTJINGVVMVlXYndmejNkMmU2QURUUmJjREtUT0poeDFidzhTUnpXYlB3TUNBY0RPN2l6eForRXlRaHVQV3dlb1d2dU5hQ3lzOGJlSEtTV05naW9mdGV6S1pTM05KWUxjQ2FFSStRc3lVcmJTTEZOdWJjZDBWNEZDdVZZY0x6eitndENSdVlYT1lITXpZZk1qSDdhSGg3Ukk9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGQsqP_eXkg6EagflIyW6cBIocoaqvFTU_A-i4QzwU-4ikwcbORLdNyqYCr5if8Et1lB_c9m8RUVpDBxuHgnbDz7IOh-AAKxHwULo_rILMBcX9zMUH9MgU3B-DVu2b4eG8rlLPUM18EqrlEKrtjmPUnN9OgsaFRzaXtD-dotjBI0AF_hQKAbMLqFCR-SArvcTQSG3uFcoYSC-uTTm06oUvYE-ZFg5-bbIJjlWG1TmT0e4dgkYEyg63YQQtQSDODcvvHUjO0A7cqB3lYm?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.17680870974742,-22.90040748540747,2.205061672825723</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A5DC2FDFF3AA8508174">
+		<name>R. General Pedra, 367</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua General Pedra, 367 - fábrica de calçados do turco José Jorge Primo - cidadão faz denúncia sobre alto valor indenizado</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1_QIIZMlgFcQzGo95JjeSDz-LOalS5j6y/view?usp=sharing">https://drive.google.com/file/d/1_QIIZMlgFcQzGo95JjeSDz-LOalS5j6y/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.20223780687181</longitude>
+			<latitude>-22.90723159902556</latitude>
+			<altitude>3.677544537667026</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>239.828494232861</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<gx:Carousel>
+			<gx:Image kml:id="hosted_image_QUtjcnhHVGZ5L1dkNkFjSDBnV1MzVzJwV2VnREdJTnovWnI2ZVFxL3RJRjkybm8wOE9HaEY3dnEvWTBkMkMweEYyWXVaRGZGNTljZU9rOXJiZHBOMWZEZ2MzbDcwQzJYRmJSWC9HNktzSERRcGtkWk8wUmZTZlBQY3NFWU9qTE43bERYYVZRM016REJFTnNlbHQ5TVdhU2ZJK1dScGJiODhIbTJvay9iVHhjY1llbTVDYytsblRIYVd0OXZ1SC9qN2ttRC9Sb085RFh3b0Zlb1JNdkRXdnNHZTJpY3ArU1hGWWxKdmRnQTRsT2kwMzVXTXBpcFA0cWFUQkJNbU1mSWZCZkZMOEU9">
+				<gx:imageUrl>https://earth.usercontent.google.com/hostedimage/e/*/4AKcrxGRTXBCvTkhdxoF-jo6BxgJ86gtWhxWdQauP-LPSuQYvaAIe08NTBZ9et2_HByzuFS5UL2r4bgQc8PlfVfSMWS5TwoMN3jwXADZkiFc894h8r0GB_ZePxMQ_ExRD815VUoJd5v6Aw61YjbqJqylgpkKOPcOFEOe5aZby2jZJNqKWItsptlaegm61qiz7WGOJtN_d6r9iOKGscFgdgE922NkJav0QxCbSuaOvJwpYoqgAiUoUW29hluodA35sWHWa8kpdXbSBybM3F1WF?authuser=1&amp;fife=s{size}</gx:imageUrl>
+			</gx:Image>
+		</gx:Carousel>
+		<Point>
+			<coordinates>-43.20219700345427,-22.90710283367865,3.685969909086246</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B12D4CC8F3AA857DA16">
+		<name>R. Groairas, 36</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing">https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.26706171641284</longitude>
+			<latitude>-22.91520611532559</latitude>
+			<altitude>60.23769492706761</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>474.3998453789392</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.26717540828842,-22.9150323496042,56.66489229083329</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="05B8A917383AA8593AA1">
+		<name>R. Groairas, 29-31</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing">https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.26731046394141</longitude>
+			<latitude>-22.91606225250259</latitude>
+			<altitude>89.62196985001864</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>215.5197353139374</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.26734582500369,-22.91616539146056,97.31989505462245</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A2194F9D23AA85A1929">
+		<name>R. Groairas, 34</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing">https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.26701106828015</longitude>
+			<latitude>-22.91509133527939</latitude>
+			<altitude>56.95670405834333</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>216.1937167257202</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.26717632002582,-22.91513387999879,54.39529416992326</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04D2EB4E1A3AA85B05A3">
+		<name>R. Groairas, 38</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing">https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.26713210049604</longitude>
+			<latitude>-22.91490078444448</latitude>
+			<altitude>48.91611148636513</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>202.9581949665226</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.2671743940567,-22.91492144292652,48.50228870646659</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="044D7518B43AA85BB4B1">
+		<name>R. Leopoldino Bastos, 78</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing">https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.26626861225915</longitude>
+			<latitude>-22.91330270662345</latitude>
+			<altitude>27.37104844845558</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>386.8563374547375</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.26643327408755,-22.91484308179936,27.42282678527473</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="088D70F0863AA85CA223">
+		<name>R. Leopoldino Bastos, 80</name>
+		<description><![CDATA[<div><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;">Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá</span></span></span><br></div><div><br></div><div><a href="https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing">https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing</a><span style="font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span class="font" style="font-family: Avenir, Arial;"><span class="size" style="font-size: 10pt;"></span></span></span><br></div>]]></description>
+		<LookAt>
+			<longitude>-43.26628311940497</longitude>
+			<latitude>-22.91341213345653</latitude>
+			<altitude>27.81667798630815</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>176.0965393661172</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_01034221873AD025CA44</styleUrl>
+		<Point>
+			<coordinates>-43.26644887174798,-22.91496494378699,27.01105988277136</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
