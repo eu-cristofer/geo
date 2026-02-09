@@ -59,7 +59,7 @@ This interactive map displays historical appeals (apelos) from the Estado Novo p
 **Navigation Controls (Top Right):**
 - ➕ Zoom in button
 - ➖ Zoom out button
-- 🧭 Compass (reset bearing)
+- 🧭 Compass (reset bearing to north)
 - ⛶ Fullscreen toggle
 
 **Scale Bar (Bottom Right):**

@@ -56,8 +56,16 @@ The project has **three main components**:
 
 ### 📊 **Data Flow**
 
-```
-Raw KML Data → Python Processing → Clean GeoJSON → Web Application
+```mermaid
+graph LR
+    A["🗂️ Raw KML Data"] -->|Process| B["🐍 Python Processing<br/>GeoPandas"]
+    B -->|Export| C["📊 Clean GeoJSON"]
+    C -->|Load| D["🗺️ Web Application<br/>MapLibre GL JS"]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#e8f5e9
 ```
 
 1. **Raw Data**: Historical KML files containing appeal locations and documents
@@ -120,7 +128,7 @@ This is essentially a **digital humanities project** that makes historical resea
 - **Francesca Dalmagro Martinelli** - Research and GIS Analysis
   - Email: arq.francesca.martinelli@gmail.com
 
-- **Cristofer Antoni Souza Costa** - Development and Data Processing
+- **Cristofer Antoni Souza Costa** - Web Development and Data Processing
   - Email: cristofercosta@yahoo.com.br
 
 ## 📚 Documentation
