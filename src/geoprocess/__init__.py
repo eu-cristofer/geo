@@ -12,9 +12,84 @@ import json
 
 __version__ = "0.1.0"
 
+def get_kml_colors(kml_path):
+    """
+    Extracts the color for each placemark from a KML file.
+    Returns a dictionary mapping placemark names to their color codes.
+    """
+    import xml.etree.ElementTree as ET
+    tree = ET.parse(kml_path)
+    root = tree.getroot()
+    
+    # Strip namespaces for easier querying
+    for elem in root.iter():
+        if '}' in elem.tag:
+            elem.tag = elem.tag.split('}', 1)[1]
+            
+    style_maps = {}
+    for sm in root.findall('.//StyleMap'):
+        sm_id = sm.get('id')
+        for pair in sm.findall('.//Pair'):
+            key = pair.find('key')
+            if key is not None and key.text == 'normal':
+                styleUrl = pair.find('styleUrl')
+                if styleUrl is not None:
+                    style_maps['#'+sm_id] = styleUrl.text
+
+    styles = {}
+    # Find styles in CascadingStyle
+    for cst in root.findall('.//CascadingStyle'):
+        cst_id = None
+        for k, v in cst.attrib.items():
+            if k.endswith('id'):
+                cst_id = v
+                break
+        if cst_id:
+            icon = cst.find('.//IconStyle/Icon/href')
+            if icon is not None and 'color=' in icon.text:
+                color = icon.text.split('color=')[1].split('&')[0]
+                styles['#'+cst_id] = color
+            else:
+                color_tag = cst.find('.//IconStyle/color')
+                if color_tag is not None:
+                    styles['#'+cst_id] = color_tag.text
+
+    # Find standalone Styles
+    for st in root.findall('.//Style'):
+        st_id = st.get('id')
+        if st_id:
+            icon = st.find('.//IconStyle/Icon/href')
+            if icon is not None and 'color=' in icon.text:
+                color = icon.text.split('color=')[1].split('&')[0]
+                styles['#'+st_id] = color
+            else:
+                color_tag = st.find('.//IconStyle/color')
+                if color_tag is not None:
+                    styles['#'+st_id] = color_tag.text
+                    
+    colors = {}
+    for pm in root.findall('.//Placemark'):
+        name_elem = pm.find('name')
+        name = name_elem.text if name_elem is not None else None
+        
+        s_url = pm.find('styleUrl')
+        color = None
+        if s_url is not None:
+            url = s_url.text
+            if url in style_maps:
+                url = style_maps[url]
+            if url in styles:
+                color = styles[url]
+                
+        if name and color:
+            colors[name] = color
+            
+    return colors
+
 def convert_kml_to_geojson(kml_path, geojson_path):
     """
     Reads features from a KML file and exports them to a GeoJSON file.
+    Extracts placemark colors from KML styling as well.
     """
     if not os.path.exists(kml_path):
         raise FileNotFoundError(f"Error: Input file not found at '{kml_path}'")
@@ -24,6 +99,14 @@ def convert_kml_to_geojson(kml_path, geojson_path):
         fiona.supported_drivers['KML'] = 'r'
         
         gdf = gpd.read_file(kml_path, driver='KML')
+        
+        # Extract colors and map them to the GeoDataFrame
+        try:
+            colors_dict = get_kml_colors(kml_path)
+            gdf['Color'] = gdf['Name'].map(colors_dict)
+        except Exception as e:
+            print(f"⚠️ Could not extract colors from KML: {e}")
+            
         gdf.to_file(geojson_path, driver='GeoJSON')
         print(f"✅ Success! Converted '{kml_path}' to '{geojson_path}'")
         return gdf
