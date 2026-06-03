@@ -1,0 +1,77 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "11",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 24-26",
+        "Description": "Banco Borges Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Color": "1976d2",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17737836447986,
+          -22.90157877487334,
+          2.734514931172607
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 28",
+        "Description": "Banco Central Brasileiro Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Color": "1976d2",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17748268503182,
+          -22.90161048656187,
+          2.807028942310972
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 30",
+        "Description": "Banco do Comércio e Indústria do Rio de Janeiro Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Color": "1976d2",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17755686166629,
+          -22.90163089396091,
+          2.818021261152255
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 32",
+        "Description": "Banco Aliança do Rio de Janeiro Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
+        "Color": "1976d2",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17763345073951,
+          -22.90165477707235,
+          2.852390674485101
+        ]
+      }
+    }
+  ]
+}

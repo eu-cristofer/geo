@@ -1,0 +1,311 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "0",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 79",
+        "Description": "Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita indenização por mudança devido a abertura da Av. Presidente Vargas Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita resolução caso de indenização",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1UvY1n_4MVQS_omrxJ1IjTiJu-FDPK0Uz/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19328789239289,
+          -22.9057234017138,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "1",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 17",
+        "Description": "Rua Senador Euzebio, 17 - Tipografia - Aron Bergman apresenta recibo para ressarcimento de desmontagem e instalações do seu negócio",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1aj9e_BN6H0D2dzpCuCdoaa85z-xnN_bB/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19159849242963,
+          -22.90517513163593,
+          -7.073241992117119e-10
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Quitanda, 131",
+        "Description": "Rua da Quitanda, 131 - Banco - sobre desapropriação",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/17z47xO_MI7yjez6Ja2Wtjzjz6P8fEFYf/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17812304652465,
+          -22.90126411192271,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 103",
+        "Description": "Rua General Caldwell, 103 - Barbearia e residência - Antonio Teixeira de Azevedo Junior implora por indenização após ser desapropriado Obs: A numeração não aparece em nenhum PA, mas foi conjecturada a sua localização através dos outros lotes e da foto. Rua General Caldwell, 103 - Antonio Teixeira de Azevedo Junior - barbeiro reclamante indenização por mudança Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação Reportagem o radical, de 8 mai 1941:",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1-EihdHGhg3BcTeCbaslYOMdFzmj9hMFo/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19274893400543,
+          -22.90570995030989,
+          3.938565020038935
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 5",
+        "Description": "Rua Senador Euzebio, 5 - Barbearia - Alberto de Souza Trindade solicita indenização de mobiliário Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1b8VE4mLrLfk4cgk0r9-duRlIiSVQ-VI6/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19122357602402,
+          -22.90506544337559,
+          4.138814034940306
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 280",
+        "Description": "Rua de S. Pedro, 280 - prédio deixado em testamento por Francisca Candida Peçanha a ser desapropriado - Irmandade solicita pagamento do valor máximo",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1ZspEJC5iLFGqv9WzlaOBun4HzhN8P9-l/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18532319336283,
+          -22.9029366900082,
+          4.381494087465705
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 82",
+        "Description": "Senador Euzebio, 82 - Pedro Saulle - proprietário do prédio pede revisão do processo de desapropriação Mais informações sobre Pedro Saulle: autorização da desapropriação com valor em 1941: Indeferimento de pedido em 1941:",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1EoRtJP4midTp4v5hB461jOaYyWHaTzV5/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19332219725511,
+          -22.9055351399817,
+          3.618367859921965
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 319",
+        "Description": "Rua de São Pedro, 319 pede para estender prazo de desapropriação. A. Rodrigues de Sá, pequeno fabricante de vassouras",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1ZgclX_OKRBOWK6D7GPfiLEnOV8_Snq76/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18609784305617,
+          -22.90330623293307,
+          4.421685780529129
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Carmo Neto, 70",
+        "Description": "Rua Carmo Neto, 70 pede execução da desapropriação - Proprietário Miguel Moreira",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1-hvMzNim4HrTuo_s2Cp8TgVcn2tPZU6O/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.20116251308794,
+          -22.90703279075393,
+          3.740121898599595
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 231",
+        "Description": "Praça da República, 231 - Manoel Brandão representado pelo procurador Ricardo de Miranda Ribeiro sobre desaparecimento do termo de concordância da avaliação do imóvel",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1c21eAtpgt-3AkkowXL9-zhgySd6vQDpE/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19119350353277,
+          -22.9042606656359,
+          4.73751538064448
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 136-142",
+        "Description": "Rua da Alfândega, 136 a 142 - Casa comercial e Rua General Câmara, 165 - pede para ceder parte do terreno à prefeitura e manter o seu negócio na parte não desapropriada",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1sPWVuQOSH9aYOrXxDdm7QqS8voXmvHl8/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18146970353239,
+          -22.9029222461447,
+          4.909899162081777
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 84",
+        "Description": "Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde Leite de Aguiar pede ajuda a Vargas sobre demolição do seu negócio Rua de São Pedro, 84 - Pensão Vegetariana - Crimilde (Cremilde) Leite de Aguiar - demolição e encerramento do processo",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1OjDGlZy9iZEePAicYJHm6pS0E5HI201Q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17961572850868,
+          -22.90109459960332,
+          6.933870703171438
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 11",
+        "Description": "Rua da Alfândega 11 - Banco Francês e Italiano para a América do Sul",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1HrB8e2aL9KnhRgFWsAkshMV89QYPh4q9/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17695717686264,
+          -22.90149570387847,
+          2.526993865251799
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 250-250A",
+        "Description": "Rua da Alfândega, 250 e 250-A - Luiz Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/16kXlQtgZPxYv4WkxLPM2EvtZJLTnJ2Eb/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18446245796355,
+          -22.90389011361664,
+          5.20234649433637
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. da Alfândega, 274-276",
+        "Description": "Rua da Alfândega, 274 e 276 - Faride Kather Oebbe Chaloub pede a não desapropriação de prédios, sugerindo cessão de parte do terreno",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1FbMamLSf4PrzGS3yYmtlOfBafelh-F7h/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18489360400197,
+          -22.9040131015779,
+          5.431728990552132
+        ]
+      }
+    },
+    {
+      "id": "27",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Miguel Couto, 92",
+        "Description": "Rua Miguel Couto, 92 - Oficina gráfica da Escola Aeronautica - concessão de prazo para a demolição Rua Miguel Couto, 92 - Escola de Aeronautica - solicita dilatar prazo para demolição, sendo concedido Gráfica Olimpica Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1WVskyEb-Q9D7UTzbVxVUeZAnXSHoSZ4N/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18024220319939,
+          -22.90103731219342,
+          10.57130559455285
+        ]
+      }
+    },
+    {
+      "id": "28",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Primeiro de Março, 88",
+        "Description": "Rua Primeiro de Março, 88 - João Guilbaud reclama valor de desapropriação, apelando ao presidente Vargas",
+        "Color": "fbc02d",
+        "Link": "https://drive.google.com/file/d/1n0K0wksKl15TVLH1AtseWojYPdX8G3sB/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17680870974742,
+          -22.90040748540747,
+          2.205061672825723
+        ]
+      }
+    }
+  ]
+}

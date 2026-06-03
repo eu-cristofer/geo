@@ -1,0 +1,95 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "22",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 496 / R. São Pedro, 114",
+        "Description": "A. Bebiano e Cia (S. Pedro, 114) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Otto Frensel - A. Bebianno Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas Muda-se para a Rua Sacadura Cabral, 167.",
+        "Color": "66bb6a",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1805350170911,
+          -22.90138649930442,
+          4.453923260724968
+        ]
+      }
+    },
+    {
+      "id": "23",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 491 / R. General Câmara, 111",
+        "Description": "Santos Carneiro e Cia (Gen. Camara, 111) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas Muda-se para a Rua do Costa, 106 (Rua Alexandre Mackenzie )",
+        "Color": "66bb6a",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18007639596566,
+          -22.90185923616121,
+          4.603933064947485
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 522 / R. São Pedro, 122",
+        "Description": "Queiroz e Cia (S. Pedro, 122 e 128) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 18",
+        "Color": "66bb6a",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18081913508944,
+          -22.901477748649,
+          5.513709237449715
+        ]
+      }
+    },
+    {
+      "id": "25",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 542 / R. São Pedro 128",
+        "Description": "C. F. Queiroz e Cia (S. Pedro, 122 e 128) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 118",
+        "Color": "66bb6a",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1809904971152,
+          -22.90153260867714,
+          4.86219767643302
+        ]
+      }
+    },
+    {
+      "id": "26",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Presidente Vargas, 528 e 534 / R. São Pedro, 124-126",
+        "Description": "Casa Fracalanza (S. Pedro, 124 e 126) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Apelo coletivo: Associação Comercial do Rio de Janeiro pede para postergar demolições para abertura da Pres. Vargas (haveria outras 38 assinaturas no documento, mas não localizei ainda... Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas Muda-se para a Rua Teófilo Otoni, quadra 8B, Lote 11, de acordo com o PA 3022. Pedido de licença para a construção numero 220.226. Depósito vai para armazém na Rua Gonzaga Bastos, 109.",
+        "Color": "66bb6a",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1809049982766,
+          -22.90150917227554,
+          5.553777781126112
+        ]
+      }
+    }
+  ]
+}
