@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "geoprocess"
-version = "0.2.0"
+version = "0.3.0"
 authors = [
     { name = "Francesca Dalmagro Martinelli", email = "arq.francesca.martinelli@gmail.com" },
     { name = "Cristofer Antoni Souza Costa", email = "cristofercosta@yahoo.com.br" },
@@ -21,11 +21,12 @@ classifiers = [
 ]
 dependencies = [
     "geopandas",
+    "fiona",
+    "beautifulsoup4",
+    "shapely",
+    "pandas",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/geoprocess-converter"
-"Bug Tracker" = "https://github.com/yourusername/geoprocess-converter/issues"
-
-[project.scripts]
-geoprocess = "geoprocess.cli:main"
+"Homepage" = "https://github.com/eu-cristofer/geo"
+"Bug Tracker" = "https://github.com/eu-cristofer/geo/issues"

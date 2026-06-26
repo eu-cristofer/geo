@@ -19,11 +19,11 @@ echo ""
 # Step 1: Ensure data file is in place
 echo "📁 Step 1: Copying data files..."
 mkdir -p web/public/data
-if [ -f "processed_data/apelos_clean.geojson" ]; then
-    cp processed_data/apelos_clean.geojson web/public/data/
-    echo "✅ Data file copied to web/public/data/"
+if ls processed_data/*.geojson >/dev/null 2>&1; then
+    cp processed_data/*.geojson web/public/data/
+    echo "✅ Data files copied to web/public/data/"
 else
-    echo "⚠️  Warning: apelos_clean.geojson not found in processed_data/"
+    echo "⚠️  Warning: no .geojson files found in processed_data/"
 fi
 echo ""
 
