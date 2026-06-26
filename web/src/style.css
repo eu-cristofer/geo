@@ -437,6 +437,64 @@ body {
   flex-shrink: 0;
 }
 
+.export-png-btn {
+  margin-top: 0.5rem;
+}
+
+/* Basemap Switcher */
+.basemap-section {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.75rem;
+}
+
+.basemap-section-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.basemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  gap: 0.4rem;
+}
+
+.basemap-btn {
+  padding: 0.45rem 0.5rem;
+  background: white;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.basemap-btn:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.basemap-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.labels-toggle {
+  margin-top: 0.5rem;
+}
+
 /* Layer Control Scrollbar */
 .layer-control-content::-webkit-scrollbar {
   width: 6px;

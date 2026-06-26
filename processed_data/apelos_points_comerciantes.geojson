@@ -1,0 +1,1751 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "6",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 56",
+        "Description": "Moyses Segal - Rua Visconde de Itaúna, 56 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19244399324948,
+          -22.90576830916385,
+          4.040512710784377
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 51",
+        "Description": "Jakob Hersz Frachtengarten - Rua Senador Euzébio, 51 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19254232103291,
+          -22.90547941708328,
+          3.943240530606464
+        ]
+      }
+    },
+    {
+      "id": "29",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 211",
+        "Description": "Emilio Lourenço de Souza - Parque Hotel Praça da República, 211 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1910066395584,
+          -22.90503951915962,
+          3.871772220490972
+        ]
+      }
+    },
+    {
+      "id": "30",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 100",
+        "Description": "Jacob Schulman Rua Visconde de Itaúna, 100 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1935956142643,
+          -22.90613865215333,
+          3.628953825254746
+        ]
+      }
+    },
+    {
+      "id": "31",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 126",
+        "Description": "D. Leitão & Cia. Rua General Caldwell, 126 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19284217078023,
+          -22.90587848628363,
+          3.129347381847862
+        ]
+      }
+    },
+    {
+      "id": "32",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 98",
+        "Description": "Inocencio Sampaio - Rua Visconde de Itaúna, 98 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19353762390675,
+          -22.90612211429366,
+          3.35599289131872
+        ]
+      }
+    },
+    {
+      "id": "33",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 49A",
+        "Description": "Rodrigues & Pereira - Rua Senador Euzébio, 49A Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19248704543337,
+          -22.90546152636391,
+          3.879435759893541
+        ]
+      }
+    },
+    {
+      "id": "34",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Passos, 111",
+        "Description": "Laticínios \"Minas & Rio\" Carlos Baptista da Silva / [J]. Santos / - Avenida Passos, 111 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18429150029786,
+          -22.90228752467517,
+          6.232731945153906
+        ]
+      }
+    },
+    {
+      "id": "35",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 70",
+        "Description": "Silva & Gonzaga - Rua Visconde de Itaúna, 70 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19268136737449,
+          -22.90584093615595,
+          3.81043773144575
+        ]
+      }
+    },
+    {
+      "id": "36",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 6",
+        "Description": "Importadora de Metaes Ltda - Rua Visconde de Itaúna, 6 - Bernardino Fernandes de Almeida Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19110289651746,
+          -22.90533574904507,
+          4.148195919459472
+        ]
+      }
+    },
+    {
+      "id": "37",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 203",
+        "Description": "Grisolia Rocco / Laurentino R. Suarez / Maurício N. / H. P. / Pç. da República, 203 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19094439025328,
+          -22.90527783630776,
+          3.976082451867442
+        ]
+      }
+    },
+    {
+      "id": "38",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 29",
+        "Description": "Jayme Furs - Rua Senador Euzébio, 29 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19200350686233,
+          -22.90530376762071,
+          4.119371975946491
+        ]
+      }
+    },
+    {
+      "id": "39",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 64",
+        "Description": "",
+        "Color": "ab47bc",
+        "Link": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19260144346885,
+          -22.90581741727455,
+          3.69016792064802
+        ]
+      }
+    },
+    {
+      "id": "40",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 75",
+        "Description": "Freitag & Grosman - Rua Senador Euzébio 75 e 86 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19319069486564,
+          -22.9056935408518,
+          3.925149583907555
+        ]
+      }
+    },
+    {
+      "id": "41",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 86",
+        "Description": "Freitag & Grosman - Rua Senador Euzébio 75 e 86 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19341620554333,
+          -22.90556584779765,
+          3.679608464411577
+        ]
+      }
+    },
+    {
+      "id": "42",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 61 - 2º andar",
+        "Description": "José Joaquim Pereira L. - Rua São Pedro, 61 - 2º andar Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17866593781653,
+          -22.90080593837478,
+          5.137639322239389
+        ]
+      }
+    },
+    {
+      "id": "43",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 112",
+        "Description": "Mafra A Cª - Rua Visconde de Itaúna, 112 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19396443468545,
+          -22.90625369000009,
+          3.816227290358873
+        ]
+      }
+    },
+    {
+      "id": "44",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Miguel Couto, 62",
+        "Description": "Manoel [Homem] - Rua Miguel Couto, 62 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17968112866435,
+          -22.90192166555708,
+          4.901281203258891
+        ]
+      }
+    },
+    {
+      "id": "45",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 230",
+        "Description": "Abilio Ferreira da Silva Arêas Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18394825512208,
+          -22.90248891253053,
+          6.150574435738758
+        ]
+      }
+    },
+    {
+      "id": "46",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 219",
+        "Description": "Alves Corrêa - Praça da República, 219 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19111885585468,
+          -22.90473596451634,
+          4.584069275217077
+        ]
+      }
+    },
+    {
+      "id": "47",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 223",
+        "Description": "A. A. Gonçalves - Praça da República, 223 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19113752956534,
+          -22.90464827483914,
+          4.600774372929659
+        ]
+      }
+    },
+    {
+      "id": "48",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 209",
+        "Description": "A. Frydmman Izidoro [Carolemann] - Praça da República, 209 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1909814342252,
+          -22.90511597833523,
+          3.970814926506305
+        ]
+      }
+    },
+    {
+      "id": "49",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 50",
+        "Description": "Manoel Francisco dos Santos: Rua Visconde de Itaúna, 50 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19222945257462,
+          -22.90569746907589,
+          4.279871431994879
+        ]
+      }
+    },
+    {
+      "id": "50",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Passos, 111 - Sobreloja",
+        "Description": "B. Teixeira & Filhos - Av. Passos 111 - s/l Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1843144093118,
+          -22.90229068882397,
+          6.169293110030094
+        ]
+      }
+    },
+    {
+      "id": "51",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 199",
+        "Description": "Aurélio Cabral Peixoto - Praça da República, 199 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19086609008237,
+          -22.90549102985573,
+          4.668846859174892
+        ]
+      }
+    },
+    {
+      "id": "52",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 223",
+        "Description": "Domingos F. dos Santos - Rua General Câmara, 223 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18329757197331,
+          -22.90295245671034,
+          4.304457639204411
+        ]
+      }
+    },
+    {
+      "id": "53",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 105",
+        "Description": "P. P. Antonio Pinto de Meirelles - Rua General Caldwell, 105 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19271158957449,
+          -22.90581224455719,
+          3.604153747256396
+        ]
+      }
+    },
+    {
+      "id": "54",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 108",
+        "Description": "Ferreira da Costa - Rua Visconde de Itaúna, 108 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19386475186852,
+          -22.90622115780909,
+          3.733999959557373
+        ]
+      }
+    },
+    {
+      "id": "55",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 7",
+        "Description": "Jacob Zilberman - Rua Senador Euzébio, 7 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19129129457018,
+          -22.9050768099991,
+          4.087058739914269
+        ]
+      }
+    },
+    {
+      "id": "56",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 13",
+        "Description": "[Abrum Landon] - Rua Senador Euzébio, 13 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19150571877439,
+          -22.90514442068007,
+          4.162536453593814
+        ]
+      }
+    },
+    {
+      "id": "57",
+      "type": "Feature",
+      "properties": {
+        "Name": "Av. Passos, 116 - 2ª loja",
+        "Description": "Henrique Pereira - Av. Passos, 166 - 2ª loja Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18404506275361,
+          -22.90226872289836,
+          7.034859741868555
+        ]
+      }
+    },
+    {
+      "id": "58",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 123",
+        "Description": "Ephigenio Augusto Teixeira - Rua Visconde de Itaúna, 123 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19420339918715,
+          -22.90653641108846,
+          3.416771840864639
+        ]
+      }
+    },
+    {
+      "id": "59",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 5 f.",
+        "Description": "W. Scheller Rua Senador Euzébio, 5 - Fundos Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.191217725832,
+          -22.90507471632977,
+          3.990710981537384
+        ]
+      }
+    },
+    {
+      "id": "60",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 114",
+        "Description": "João Grammaro - Rua Visconde de Itaúna, 114 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19399183784,
+          -22.90626119612774,
+          3.811590231349462
+        ]
+      }
+    },
+    {
+      "id": "61",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 99",
+        "Description": "Domingos. A. Silva / Zeck M. M. - Rua General Caldwell, 99 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19278070751081,
+          -22.90561754046611,
+          3.656963980959347
+        ]
+      }
+    },
+    {
+      "id": "62",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 152",
+        "Description": "Costa & Sampaio - Rua General Câmara, 152 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18149234029395,
+          -22.90227844699218,
+          3.549472558996922
+        ]
+      }
+    },
+    {
+      "id": "63",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 213",
+        "Description": "L. & Araujo - Pç. da República, 213 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19104615369559,
+          -22.90493827243384,
+          3.966040411770613
+        ]
+      }
+    },
+    {
+      "id": "64",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 3",
+        "Description": "Raul Junqueira A. - Rua Senador Euzébio, 3 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19114977944062,
+          -22.90503372388461,
+          3.966045241380245
+        ]
+      }
+    },
+    {
+      "id": "65",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 300",
+        "Description": "Antonio Dias Flores - R. São Pedro, 300 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18586588013098,
+          -22.90311113037312,
+          4.615546512046416
+        ]
+      }
+    },
+    {
+      "id": "66",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 97",
+        "Description": "Fernando & Martins - Rua Senador Euzébio, 97 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19371199783542,
+          -22.90586097805218,
+          2.979232791789177
+        ]
+      }
+    },
+    {
+      "id": "67",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 130",
+        "Description": "Barroso & Franco - R. Visconde de Itaúna, 130 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19445831640039,
+          -22.90641361148807,
+          3.174732864553953
+        ]
+      }
+    },
+    {
+      "id": "68",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. Lopes Trovão, 16",
+        "Description": "M. Costa Valério - Pç Lopes Trovão, 16 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18188341990015,
+          -22.90198246051359,
+          1.249287080173982
+        ]
+      }
+    },
+    {
+      "id": "69",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 54",
+        "Description": "Francisco Penna - Rua Visconde de Itaúna, 54 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19236298279108,
+          -22.90574213299004,
+          4.137056498404479
+        ]
+      }
+    },
+    {
+      "id": "70",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 20",
+        "Description": "Petronilho Antonio Salles V. - Rua Visconde de Itaúna, 20 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19144439896124,
+          -22.90543793103138,
+          4.298178258283334
+        ]
+      }
+    },
+    {
+      "id": "71",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 124",
+        "Description": "A. Paes & Filho - Rua Senador Euzébio, 124 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19446605470348,
+          -22.90587179724037,
+          3.965057767285451
+        ]
+      }
+    },
+    {
+      "id": "72",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 25",
+        "Description": "João S. - Rua Senador Euzébio, 25 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19184570650914,
+          -22.9052509641761,
+          4.279871330140194
+        ]
+      }
+    },
+    {
+      "id": "73",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 15",
+        "Description": "Guilherme Casella - Rua Senador Euzébio, 15 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19155355036379,
+          -22.90516084652654,
+          4.203426385984437
+        ]
+      }
+    },
+    {
+      "id": "74",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 122",
+        "Description": "Bastos & Pereira Ld. - Rua General Caldwell, 122 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19288787288289,
+          -22.90572702226803,
+          3.561543497729309
+        ]
+      }
+    },
+    {
+      "id": "75",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 21",
+        "Description": "S. Alves Martins - Rua Senador Euzébio, 21 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1917545785937,
+          -22.90522199027771,
+          4.197846988652032
+        ]
+      }
+    },
+    {
+      "id": "76",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 9",
+        "Description": "L. T. Pinto Leite - Rua Senador Euzébio, 9 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19132872022418,
+          -22.90508499673269,
+          4.043312035425606
+        ]
+      }
+    },
+    {
+      "id": "77",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 129",
+        "Description": "Luiz M. e Comp. Ltda - Rua São Pedro, 129 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18091056161023,
+          -22.9016349060607,
+          2.561474561900907
+        ]
+      }
+    },
+    {
+      "id": "78",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 68",
+        "Description": "Aurelio M. D. - Rua General Câmara, 68 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1785567041921,
+          -22.90135025604211,
+          4.839643458865797
+        ]
+      }
+    },
+    {
+      "id": "79",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 229",
+        "Description": "Borges d'Almeida C. Ltda. - Praça da República, 229 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19119593646462,
+          -22.90444554353447,
+          4.733844154438662
+        ]
+      }
+    },
+    {
+      "id": "80",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 3A",
+        "Description": "Max G. - Rua Senador Euzébio, 3A Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19114522317437,
+          -22.90503971231854,
+          3.966060030114602
+        ]
+      }
+    },
+    {
+      "id": "81",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 5A",
+        "Description": "Sebastião Benedito - Rua Senador Euzébio, 5A Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19122148722559,
+          -22.90506868629937,
+          3.997472979662122
+        ]
+      }
+    },
+    {
+      "id": "82",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 23",
+        "Description": "A. [Mortz] - Rua Senador Euzébio, 23 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19179748200575,
+          -22.90523447194343,
+          4.197854930488141
+        ]
+      }
+    },
+    {
+      "id": "83",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 39",
+        "Description": "J. M. M. - Rua Senador Euzébio, 39 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19210987957423,
+          -22.90533606873824,
+          4.131420428842585
+        ]
+      }
+    },
+    {
+      "id": "84",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 41",
+        "Description": "E. Goldfeld - Rua Senador Euzébio, 41 / Rua Visconde de Itaúna, 44 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19215481157077,
+          -22.90535290238401,
+          4.120586443108647
+        ]
+      }
+    },
+    {
+      "id": "85",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 44",
+        "Description": "E. Goldfeld - Rua Senador Euzébio, 41 / Rua Visconde de Itaúna, 44 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19201060842132,
+          -22.9056278987662,
+          4.043349614145662
+        ]
+      }
+    },
+    {
+      "id": "86",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 47",
+        "Description": "Samuel J. - Rua Senador Euzébio, 47 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19238388608149,
+          -22.90542552289567,
+          4.026101449888706
+        ]
+      }
+    },
+    {
+      "id": "87",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 49",
+        "Description": "Benjamim Bass - Rua Senador Euzébio, 49 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19243489015086,
+          -22.90544308815317,
+          4.022049970437338
+        ]
+      }
+    },
+    {
+      "id": "88",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 53",
+        "Description": "Maj[en] Lewemztein - Rua Senador Euzébio, 53 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19259278837979,
+          -22.9054982836317,
+          3.926441570972647
+        ]
+      }
+    },
+    {
+      "id": "89",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 55",
+        "Description": "Jacob Brunstein - Rua Senador Euzébio, 55 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19264605599113,
+          -22.90550769051813,
+          3.878794444603249
+        ]
+      }
+    },
+    {
+      "id": "90",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 61",
+        "Description": "A. Steinvartz - Rua Senador Euzébio, 61 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19278302257084,
+          -22.9055580803869,
+          3.681086844134998
+        ]
+      }
+    },
+    {
+      "id": "91",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 63",
+        "Description": "Godinho & Pinto - Rua Senador Euzébio, 63 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19280303344041,
+          -22.90556215511618,
+          3.701614659921086
+        ]
+      }
+    },
+    {
+      "id": "92",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 71",
+        "Description": "Francisco [Vandertman] - Rua Senador Euzébio, 71 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19308024887471,
+          -22.9056560234955,
+          3.637122296524813
+        ]
+      }
+    },
+    {
+      "id": "93",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 83",
+        "Description": "Jose[k] J. - Rua Senador Euzébio, 83 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19333649011943,
+          -22.90573833737675,
+          3.854174858764756
+        ]
+      }
+    },
+    {
+      "id": "94",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 89",
+        "Description": "Sonia Griner / Moyses Griner - Rua Senador Euzébio, 89 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1934342787987,
+          -22.90576450333346,
+          3.581941733136751
+        ]
+      }
+    },
+    {
+      "id": "95",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 101",
+        "Description": "Diamante & [Dacllis] - Rua Senador Euzébio, 101 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19379089725232,
+          -22.90588548788858,
+          3.348187660732564
+        ]
+      }
+    },
+    {
+      "id": "96",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 111",
+        "Description": "[Tuegeu e Bourmmoe] - Rua Senador Euzébio, 111 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19403559746198,
+          -22.90596600778013,
+          3.507173179870038
+        ]
+      }
+    },
+    {
+      "id": "97",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 85",
+        "Description": "R. A. [Nuebelman] L. L. - Rua Senador Euzébio, 85 e 87 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19337195274124,
+          -22.90574713916746,
+          3.746186685846522
+        ]
+      }
+    },
+    {
+      "id": "98",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 87",
+        "Description": "R. A. [Nuebelman] L. L. - Rua Senador Euzébio, 85 e 87 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19339374065909,
+          -22.90575270940939,
+          3.662899934761981
+        ]
+      }
+    },
+    {
+      "id": "99",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 123",
+        "Description": "Mauricio Goldberg - Rua Senador Euzébio, 123 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19437331752505,
+          -22.90607609779383,
+          3.27065378248423
+        ]
+      }
+    },
+    {
+      "id": "100",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 125",
+        "Description": "Abrahan Kantes - Rua Senador Euzébio, 125 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19442820961011,
+          -22.90609674627049,
+          3.270618743058049
+        ]
+      }
+    },
+    {
+      "id": "101",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Sant'Anna, 49",
+        "Description": "Manoel F. Pires - Rua Sant'Anna, 49 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19453484403695,
+          -22.90626087391388,
+          3.162354531212479
+        ]
+      }
+    },
+    {
+      "id": "102",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 126",
+        "Description": "Jacob R. - Rua Visconde de Itaúna 126 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19439561184193,
+          -22.90639429086011,
+          2.961561820248197
+        ]
+      }
+    },
+    {
+      "id": "103",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 118",
+        "Description": "P. Israel Messer A. M. Costa - Rua Visconde de Itaúna, 118 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19404399695658,
+          -22.90627761235147,
+          3.798479077600692
+        ]
+      }
+    },
+    {
+      "id": "104",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 102",
+        "Description": "Jacob M. - Rua Visconde de Itaúna, 102 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19368414053336,
+          -22.90616492725081,
+          3.734249639341101
+        ]
+      }
+    },
+    {
+      "id": "105",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 94A",
+        "Description": "Abram [Meller] - Rua Visconde de Itaúna, 94A Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19337713900816,
+          -22.90607250108616,
+          3.017014271985194
+        ]
+      }
+    },
+    {
+      "id": "106",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itauna, 94",
+        "Description": "[Ginoven Zagorodne] - R. Visconde de Itauna, 94 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19337442985719,
+          -22.90607623528511,
+          3.038839932895394
+        ]
+      }
+    },
+    {
+      "id": "107",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 88",
+        "Description": "Julio [P.] - Rua Visconde de Itaúna, 88 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19323246959847,
+          -22.90602626535335,
+          3.038853007075892
+        ]
+      }
+    },
+    {
+      "id": "108",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 84",
+        "Description": "T. C. - Rua Visconde de Itaúna, 84 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19312328870282,
+          -22.90598622676577,
+          3.418190563450449
+        ]
+      }
+    },
+    {
+      "id": "109",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 74",
+        "Description": "Moyses Becker - Rua Visconde de Itaúna, 74 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19290467802629,
+          -22.90591720393334,
+          3.124243186132214
+        ]
+      }
+    },
+    {
+      "id": "110",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 58",
+        "Description": "Jacob Valdov[os] - Rua Visconde de Itaúna, 58 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19249156847498,
+          -22.90578065491343,
+          3.952375870202753
+        ]
+      }
+    },
+    {
+      "id": "111",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 32",
+        "Description": "Miguel Schächter - Rua Visconde de Itaúna, 32 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19175847715263,
+          -22.9055449804239,
+          4.491620989491853
+        ]
+      }
+    },
+    {
+      "id": "112",
+      "type": "Feature",
+      "properties": {
+        "Name": "Rua Visconde de Itaúna, 18",
+        "Description": "A. S. - Rua Visconde de Itaúna, 18 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19139308591504,
+          -22.90541956465728,
+          4.120592190825089
+        ]
+      }
+    },
+    {
+      "id": "113",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 12",
+        "Description": "Jojo Hermano J - A. Giordano - Rua Visconde de Itaúna, 18 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19129018993336,
+          -22.9053872314735,
+          4.044025527491835
+        ]
+      }
+    },
+    {
+      "id": "114",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 31-35",
+        "Description": "Lermer - R. Senador Euzébio, 31-35 / Rua Visconde de Itaúna, 38 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19204770759845,
+          -22.90531638925813,
+          4.120595097927549
+        ]
+      }
+    },
+    {
+      "id": "115",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 38",
+        "Description": "Lermer - R. Senador Euzébio, 31-35 / Rua Visconde de Itaúna, 38 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19188312597312,
+          -22.90558618213679,
+          4.261263496380172
+        ]
+      }
+    },
+    {
+      "id": "116",
+      "type": "Feature",
+      "properties": {
+        "Name": "Pç. da República, 211 - Fundos",
+        "Description": "Antonio Gomes L. - Praça da República, 211 - Fundos Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19101974763873,
+          -22.90504209462525,
+          3.966054073030196
+        ]
+      }
+    },
+    {
+      "id": "117",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Senador Euzébio, 37",
+        "Description": "Inael V. - Rua Senador Euzébio, 37 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19207613965041,
+          -22.90532587328581,
+          4.120592598243828
+        ]
+      }
+    },
+    {
+      "id": "118",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. Visconde de Itaúna, 86",
+        "Description": "H. Palatnic & Cia - Rua Visconde de Itaúna, 86 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19317394814768,
+          -22.90600504639306,
+          3.229089726277659
+        ]
+      }
+    },
+    {
+      "id": "119",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. São Pedro, 325",
+        "Description": "Guilherme Francisco dos Santos - Renato dos Santos - Rua São Pedro, 325 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18633580840859,
+          -22.90337725718955,
+          4.347097374248065
+        ]
+      }
+    },
+    {
+      "id": "120",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 184",
+        "Description": "Joaquim Santos Ferreira - Rua General Câmara, 184 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18294939800037,
+          -22.90274730734774,
+          4.452950203312003
+        ]
+      }
+    },
+    {
+      "id": "121",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 268",
+        "Description": "E. Bonhein & Cia Ltda - Rua General Câmara, 268 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18535731536721,
+          -22.90352189474078,
+          6.216926030500276
+        ]
+      }
+    },
+    {
+      "id": "122",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Câmara, 393",
+        "Description": "Delfim Marques de [Abreu] - Rua General Câmara, 393 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.18776238206451,
+          -22.90444848693594,
+          3.917596331908775
+        ]
+      }
+    },
+    {
+      "id": "123",
+      "type": "Feature",
+      "properties": {
+        "Name": "R. General Caldwell, 120",
+        "Description": "Joaquim Soares Monteiro - Rua General Caldwell, 120 Apelo coletivo: Carta de advogado em defesa dos comerciantes sujeitos à desapropriação",
+        "Color": "ab47bc",
+        "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.19291109176016,
+          -22.90566672875928,
+          3.507204497356282
+        ]
+      }
+    }
+  ]
+}

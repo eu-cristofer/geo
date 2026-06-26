@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "17",
+      "type": "Feature",
+      "properties": {
+        "Name": "Ig. de São Pedro dos Clérigos",
+        "Description": "Carta da Irmandade com sugestões relativas à transferência da Igreja de São Pedro Abaixo-assinado de Manuel Bandeira e outros intelectuais sobre preservação das igrejas na abertura da Pres. Vargas",
+        "Color": "ef5350",
+        "Link": "https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.180111774364,
+          -22.90137649753057,
+          3.148303779314663
+        ]
+      }
+    },
+    {
+      "id": "124",
+      "type": "Feature",
+      "properties": {
+        "Name": "Ig. de Bom Jesus do Calvário",
+        "Description": "Abaixo-assinado de Manuel Bandeira e outros intelectuais sobre preservação das igrejas na abertura da Pres. Vargas",
+        "Color": "ef5350",
+        "Link": "https://drive.google.com/file/d/1fiv7u53gYpP_rbL82bQdb0XaguvG-nJq/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1812668785778,
+          -22.90218058384823,
+          2.992301179302215
+        ]
+      }
+    }
+  ]
+}

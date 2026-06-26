@@ -14,6 +14,36 @@ import type { FeatureCollection } from 'geojson';
 // For production, use environment variables
 const MAPTILER_KEY = import.meta.env.VITE_MAPTILER_KEY || '';
 
+// Single brand color for every feature on the map. This is the dominant
+// yellow used in the original Apelos points (KML "fbc02d"); we now apply it
+// uniformly to points, clusters, and neighborhood polygons.
+const FEATURE_COLOR = '#fbc02d';
+
+// Builds a MapTiler style URL for a given map id, using the shared API key.
+const basemapStyleUrl = (mapId: string): string =>
+  `https://api.maptiler.com/maps/${mapId}/style.json?key=${MAPTILER_KEY}`;
+
+// Curated set of professional basemap backgrounds for the switcher. Labels stay
+// in Portuguese per the project's bilingual convention. The `mapId` is the
+// MapTiler style slug. If a slug is unavailable on the account's plan it can be
+// removed without further changes.
+interface Basemap {
+  id: string;
+  label: string;
+  mapId: string;
+}
+
+const BASEMAPS: Basemap[] = [
+  { id: 'streets', label: 'Ruas', mapId: 'streets-v2' }, // current default
+  { id: 'light', label: 'Claro', mapId: 'dataviz' }, // clean, data-overlay friendly
+  { id: 'dark', label: 'Escuro', mapId: 'dataviz-dark' },
+  { id: 'satellite', label: 'Satélite', mapId: 'hybrid' }, // imagery + labels
+  { id: 'topo', label: 'Topo', mapId: 'topo-v2' },
+  { id: 'toner', label: 'P&B', mapId: 'toner-v2' }, // high-contrast, print
+];
+
+const DEFAULT_BASEMAP = 'streets';
+
 // Map configuration
 const MAP_CONFIG = {
   center: [-43.1895, -22.9068] as [number, number], // Rio de Janeiro center
@@ -37,19 +67,19 @@ const LAYERS: LayerConfig[] = [
   {
     id: 'apelos',
     name: 'Apelos (Appeals)',
-    file: 'apelos_clean.geojson',
+    file: 'apelos_clean_tese.geojson',
     type: 'point',
     visible: true,
-    color: '#C1272D',
+    color: FEATURE_COLOR,
     category: 'main',
   },
   {
     id: 'filtro-bairros',
     name: 'Bairros Filtrados (Filtered Neighborhoods)',
-    file: 'filtro_bairros.geojson',
+    file: 'filtro_bairros_tese.geojson',
     type: 'polygon',
     visible: false,
-    color: '#E8862E',
+    color: FEATURE_COLOR,
     category: 'main',
   },
 ];
@@ -61,6 +91,11 @@ class ApelosMap {
   private layerControlElement: HTMLElement | null = null;
   private isDragging = false;
   private dragOffset = { x: 0, y: 0 };
+  // Parsed GeoJSON kept in memory so data layers can be re-added after a
+  // basemap swap (setStyle wipes all sources/layers).
+  private geojsonCache: Map<string, FeatureCollection> = new Map();
+  private currentBasemap = DEFAULT_BASEMAP;
+  private labelsHidden = false;
 
   constructor() {
     this.popup = new maplibregl.Popup({
@@ -88,11 +123,14 @@ class ApelosMap {
 
     this.map = new maplibregl.Map({
       container: 'map',
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${MAPTILER_KEY}`,
+      style: basemapStyleUrl(BASEMAPS.find(b => b.id === DEFAULT_BASEMAP)!.mapId),
       center: MAP_CONFIG.center,
       zoom: MAP_CONFIG.zoom,
       pitch: MAP_CONFIG.pitch,
       bearing: MAP_CONFIG.bearing,
+      // Required so the WebGL canvas can be read back for PNG export; without
+      // it map.getCanvas().toDataURL() returns a blank image.
+      preserveDrawingBuffer: true,
     });
 
     this.initMap();
@@ -119,60 +157,158 @@ class ApelosMap {
 
   private async loadAllLayers(): Promise<void> {
     const basePath = import.meta.env.BASE_URL || '/';
-    const allFeatures: any[] = [];
 
+    // Fetch and cache each layer's GeoJSON once. The cache lets us re-add the
+    // data layers after a basemap switch without re-fetching.
     for (const layer of LAYERS) {
       try {
         const response = await fetch(`${basePath}data/${layer.file}`);
         const data: FeatureCollection = await response.json();
-
-        // Collect all features for bounding box calculation
-        allFeatures.push(...data.features);
-
-        // Add source
-        if (layer.type === 'point' && layer.id === 'apelos') {
-          // Apelos with clustering
-          this.map.addSource(layer.id, {
-            type: 'geojson',
-            data: data,
-            cluster: true,
-            clusterMaxZoom: 16,
-            clusterRadius: 50,
-          });
-          this.addApelosLayers(layer);
-        } else if (layer.type === 'point') {
-          // Regular points (schools)
-          this.map.addSource(layer.id, {
-            type: 'geojson',
-            data: data,
-          });
-          this.addPointLayer(layer);
-        } else if (layer.type === 'polygon') {
-          // Polygons (neighborhoods)
-          this.map.addSource(layer.id, {
-            type: 'geojson',
-            data: data,
-          });
-          this.addPolygonLayer(layer);
-        } else if (layer.type === 'line') {
-          // Lines (streets)
-          this.map.addSource(layer.id, {
-            type: 'geojson',
-            data: data,
-          });
-          this.addLineLayer(layer);
-        }
-
+        this.geojsonCache.set(layer.id, data);
         console.log(`Loaded layer: ${layer.name} (${data.features.length} features)`);
       } catch (error) {
         console.error(`Error loading layer ${layer.name}:`, error);
       }
     }
 
-    // Fit map to all features after all layers are loaded
+    // Add the cached data to the current style.
+    this.addDataLayers();
+
+    // Fit map to all loaded features.
+    const allFeatures: any[] = [];
+    this.geojsonCache.forEach(data => allFeatures.push(...data.features));
     if (allFeatures.length > 0) {
       this.fitMapToFeatures(allFeatures);
     }
+  }
+
+  // Adds sources + layers from the in-memory cache onto whatever style is
+  // currently loaded. Safe to call again after a basemap swap.
+  private addDataLayers(): void {
+    for (const layer of LAYERS) {
+      const data = this.geojsonCache.get(layer.id);
+      if (!data) continue;
+
+      if (layer.type === 'point' && layer.id === 'apelos') {
+        // Apelos with clustering
+        this.map.addSource(layer.id, {
+          type: 'geojson',
+          data: data,
+          cluster: true,
+          clusterMaxZoom: 16,
+          clusterRadius: 50,
+        });
+        this.addApelosLayers(layer);
+      } else if (layer.type === 'point') {
+        // Regular points (schools)
+        this.map.addSource(layer.id, {
+          type: 'geojson',
+          data: data,
+        });
+        this.addPointLayer(layer);
+      } else if (layer.type === 'polygon') {
+        // Polygons (neighborhoods)
+        this.map.addSource(layer.id, {
+          type: 'geojson',
+          data: data,
+        });
+        this.addPolygonLayer(layer);
+      } else if (layer.type === 'line') {
+        // Lines (streets)
+        this.map.addSource(layer.id, {
+          type: 'geojson',
+          data: data,
+        });
+        this.addLineLayer(layer);
+      }
+    }
+  }
+
+  // Switches the basemap background. setStyle replaces the whole style; the
+  // `transformStyle` callback atomically carries our data sources + layers (with
+  // their current visibility/paint) into the new basemap, so nothing has to be
+  // re-fetched or re-added and there's no flicker. Camera is preserved, and
+  // layer-scoped event listeners survive because layer ids are unchanged. This
+  // avoids relying on the `style.load` event, which is unreliable for re-adding
+  // layers after setStyle in maplibre-gl v4.
+  private switchBasemap(id: string): void {
+    if (id === this.currentBasemap) return;
+    const bm = BASEMAPS.find(b => b.id === id);
+    if (!bm) return;
+
+    this.currentBasemap = id;
+    const dataSourceIds = new Set(LAYERS.map(l => l.id));
+
+    this.map.setStyle(basemapStyleUrl(bm.mapId), {
+      transformStyle: (previous, next) => {
+        if (!previous) return next;
+
+        // Carry over our GeoJSON sources (they embed the data + cluster config).
+        const sources = { ...next.sources };
+        Object.keys(previous.sources).forEach(srcId => {
+          if (dataSourceIds.has(srcId)) sources[srcId] = previous.sources[srcId];
+        });
+
+        // Keep our data layers on top of the new basemap's layers.
+        const dataLayers = previous.layers.filter(
+          l => 'source' in l && typeof l.source === 'string' && dataSourceIds.has(l.source)
+        );
+
+        return { ...next, sources, layers: [...next.layers, ...dataLayers] };
+      },
+    });
+
+    this.updateBasemapButtons();
+
+    // The new basemap re-introduces its own labels; re-hide them if needed once
+    // the style has settled. `idle` fires reliably after the swap completes.
+    if (this.labelsHidden) {
+      this.map.once('idle', () => this.applyLabelVisibility(false));
+    }
+  }
+
+  // Shows/hides basemap text + icon labels without touching our data layers.
+  // Our data sources are excluded so e.g. the apelos cluster counts remain.
+  private applyLabelVisibility(visible: boolean): void {
+    const dataSourceIds = new Set(LAYERS.map(l => l.id));
+    const style = this.map.getStyle();
+    if (!style.layers) return;
+
+    const value = visible ? 'visible' : 'none';
+    style.layers.forEach(l => {
+      if (l.type !== 'symbol') return;
+      if ('source' in l && l.source && dataSourceIds.has(l.source)) return;
+      if (this.map.getLayer(l.id)) {
+        this.map.setLayoutProperty(l.id, 'visibility', value);
+      }
+    });
+  }
+
+  private toggleLabels(hidden: boolean): void {
+    this.labelsHidden = hidden;
+    this.applyLabelVisibility(!hidden);
+  }
+
+  private updateBasemapButtons(): void {
+    if (!this.layerControlElement) return;
+    this.layerControlElement
+      .querySelectorAll('.basemap-btn')
+      .forEach(btn => {
+        const el = btn as HTMLElement;
+        el.classList.toggle('active', el.dataset.basemapId === this.currentBasemap);
+      });
+  }
+
+  // Downloads the current map view as a PNG. Forces a fresh render first so the
+  // captured frame matches what's on screen.
+  private exportPng(): void {
+    this.map.once('render', () => {
+      const link = document.createElement('a');
+      link.download = `apelos-mapa-${Date.now()}.png`;
+      link.href = this.map.getCanvas().toDataURL('image/png');
+      link.click();
+    });
+    this.map.triggerRepaint();
   }
 
   private addApelosLayers(layer: LayerConfig): void {
@@ -183,15 +319,7 @@ class ApelosMap {
       source: layer.id,
       filter: ['has', 'point_count'],
       paint: {
-        'circle-color': [
-          'step',
-          ['get', 'point_count'],
-          '#E8B931',
-          10,
-          '#E8862E',
-          30,
-          layer.color,
-        ],
+        'circle-color': layer.color,
         'circle-radius': [
           'step',
           ['get', 'point_count'],
@@ -234,6 +362,7 @@ class ApelosMap {
       source: layer.id,
       filter: ['!', ['has', 'point_count']],
       paint: {
+        // Uniform brand color for every appeal point (see FEATURE_COLOR).
         'circle-color': layer.color,
         'circle-radius': 8,
         'circle-stroke-width': 2,
@@ -252,6 +381,7 @@ class ApelosMap {
       source: layer.id,
       filter: ['all', ['!', ['has', 'point_count']], ['==', ['get', 'Name'], '']],
       paint: {
+        // Hover halo matches the uniform feature color (see FEATURE_COLOR).
         'circle-color': layer.color,
         'circle-radius': 14,
         'circle-opacity': 0.3,
@@ -351,6 +481,20 @@ class ApelosMap {
             </label>
           `).join('')}
         </div>
+        <div class="basemap-section">
+          <span class="basemap-section-title">Mapa base</span>
+          <div class="basemap-grid">
+            ${BASEMAPS.map(bm => `
+              <button class="basemap-btn ${bm.id === this.currentBasemap ? 'active' : ''}"
+                      data-basemap-id="${bm.id}"
+                      title="${bm.label}">${bm.label}</button>
+            `).join('')}
+          </div>
+          <label class="layer-item labels-toggle">
+            <input type="checkbox" id="hide-labels-checkbox">
+            <span class="layer-name">Ocultar rótulos</span>
+          </label>
+        </div>
         <div class="layer-control-actions">
           <button id="fit-to-features-btn" class="fit-to-features-btn" title="Ajustar zoom para mostrar todos os dados">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -358,6 +502,14 @@ class ApelosMap {
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
             Ajustar Zoom
+          </button>
+          <button id="export-png-btn" class="fit-to-features-btn export-png-btn" title="Exportar a vista atual como imagem PNG">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Exportar PNG
           </button>
         </div>
       </div>
@@ -391,6 +543,27 @@ class ApelosMap {
     const fitToFeaturesBtn = controlDiv.querySelector('#fit-to-features-btn') as HTMLButtonElement;
     fitToFeaturesBtn.addEventListener('click', () => {
       this.fitMapToAllLoadedFeatures();
+    });
+
+    // Basemap switcher handlers
+    const basemapBtns = controlDiv.querySelectorAll('.basemap-btn');
+    basemapBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = (e.currentTarget as HTMLElement).dataset.basemapId;
+        if (id) this.switchBasemap(id);
+      });
+    });
+
+    // Hide-labels toggle handler
+    const hideLabelsCheckbox = controlDiv.querySelector('#hide-labels-checkbox') as HTMLInputElement;
+    hideLabelsCheckbox.addEventListener('change', (e) => {
+      this.toggleLabels((e.target as HTMLInputElement).checked);
+    });
+
+    // Export PNG button handler
+    const exportPngBtn = controlDiv.querySelector('#export-png-btn') as HTMLButtonElement;
+    exportPngBtn.addEventListener('click', () => {
+      this.exportPng();
     });
   }
 
