@@ -10,7 +10,7 @@ import geopandas as gpd
 from bs4 import BeautifulSoup
 import json
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 def get_kml_colors(kml_path):
     """
@@ -241,6 +241,165 @@ def point_in_feature(point, feature, point_crs=None, feature_crs=None):
     
     # Check if point is within feature
     return feature_geom.contains(point_geom)
+
+
+def split_by_color(gdf, color, color_column='Color'):
+    """
+    Split a GeoDataFrame into the features matching a color and the rest.
+
+    Use case: separating the *apelos coletivos* (purple ``"ab47bc"`` placemarks
+    that belong to one collective appeal) from the *apelos individuais* (every
+    other feature).
+
+    Parameters
+    ----------
+    gdf : GeoDataFrame
+        Source features.
+    color : str
+        Color code to match on (e.g. ``'ab47bc'``).
+    color_column : str
+        Column holding the color code (default ``'Color'``).
+
+    Returns
+    -------
+    (GeoDataFrame, GeoDataFrame)
+        ``(matching, others)`` — the features whose color equals ``color`` and
+        the remaining features. Both preserve the input CRS.
+
+    Examples
+    --------
+    >>> coletivos_raw, individuais = geo.split_by_color(apelos, 'ab47bc')
+    """
+    matching = gdf[gdf[color_column] == color]
+    others = gdf[gdf[color_column] != color]
+    return matching, others
+
+
+def aggregate_features_by_color(gdf, color, color_column='Color',
+                                concat_columns=('Link', 'Description'),
+                                sep=' | ', name=None, name_column='Name'):
+    """
+    Collapse every feature matching a color into a single aggregated feature.
+
+    Use case: many individual placemarks share one "Key Color" (e.g. the purple
+    ``"ab47bc"`` apelos) and should be represented on the map as a single
+    grouped point rather than dozens of overlapping ones.
+
+    The returned single-row feature:
+        - geometry: the average point (mean of the matching features'
+          representative points, so it works for any geometry type)
+        - color: kept equal to ``color``
+        - columns listed in ``concat_columns``: their non-empty values are
+          concatenated with ``sep`` (so no links/descriptions are lost)
+        - ``name_column``: set to ``name`` if given, otherwise a default label
+
+    Parameters
+    ----------
+    gdf : GeoDataFrame
+        Source features.
+    color : str
+        Color code to aggregate (e.g. ``'ab47bc'``).
+    color_column : str
+        Column holding the color code (default ``'Color'``).
+    concat_columns : iterable of str
+        Text columns whose values are concatenated into the new feature.
+    sep : str
+        Separator used when concatenating (default ``' | '``).
+    name : str, optional
+        Name for the aggregated feature. If omitted a default label is built
+        from the color and the number of grouped features.
+    name_column : str
+        Column to write ``name`` into (default ``'Name'``).
+
+    Returns
+    -------
+    GeoDataFrame
+        A single-row GeoDataFrame with the aggregated feature, in the input CRS.
+        Empty (same columns) if no feature matches ``color``.
+
+    Examples
+    --------
+    >>> coletivos = geo.aggregate_features_by_color(apelos, 'ab47bc')
+    >>> geo.save_geojson_pretty(coletivos, "processed_data/apelos_coletivos.geojson")
+    """
+    from shapely.geometry import Point
+
+    matching, _ = split_by_color(gdf, color, color_column)
+
+    if matching.empty:
+        print(f"⚠️ No features found with {color_column} == '{color}'. "
+              "Returning an empty GeoDataFrame.")
+        return gdf.iloc[0:0].copy()
+
+    # Average point from representative points (a Point's representative point
+    # is itself, so this is just the mean coordinate for point layers).
+    reps = matching.geometry.representative_point()
+    # Preserve the Z (altitude) coordinate when the source layer is 3D, so the
+    # aggregated point matches the [lon, lat, z] shape of the other features.
+    geoms = matching.geometry
+    if (geoms.geom_type == 'Point').all() and geoms.has_z.all():
+        avg_point = Point(reps.x.mean(), reps.y.mean(), geoms.z.mean())
+    else:
+        avg_point = Point(reps.x.mean(), reps.y.mean())
+
+    # Build the aggregated record, defaulting every column to None.
+    new_row = {col: None for col in gdf.columns}
+    new_row['geometry'] = avg_point
+    new_row[color_column] = color
+    new_row[name_column] = name if name else f"Grupo {color} ({len(matching)} apelos)"
+
+    for col in concat_columns:
+        if col in matching.columns:
+            values = [str(v).strip() for v in matching[col].dropna()
+                      if str(v).strip()]
+            new_row[col] = sep.join(values) if values else None
+
+    new_gdf = gpd.GeoDataFrame([new_row], geometry='geometry', crs=gdf.crs)
+
+    print(f"✅ Aggregated {len(matching)} '{color}' features into 1 feature.")
+    return new_gdf
+
+
+def group_features_by_color(gdf, color, color_column='Color',
+                            concat_columns=('Link', 'Description'),
+                            sep=' | ', name=None, name_column='Name'):
+    """
+    Replace every feature of a color with one aggregated feature, in place.
+
+    Convenience wrapper around :func:`split_by_color` +
+    :func:`aggregate_features_by_color`: it returns the non-matching features
+    plus the single aggregated feature, all in one GeoDataFrame. Use this when
+    you want a single combined output; use the two underlying functions when
+    you want the *individuais* and *coletivos* as separate files.
+
+    Parameters are identical to :func:`aggregate_features_by_color`.
+
+    Returns
+    -------
+    GeoDataFrame
+        The non-matching features plus one aggregated feature, in the same CRS
+        as the input. If no feature matches ``color`` the input is returned
+        unchanged (a copy).
+
+    Examples
+    --------
+    >>> grouped = geo.group_features_by_color(apelos, 'ab47bc')
+    >>> geo.save_geojson_pretty(grouped, "processed_data/apelos_grouped.geojson")
+    """
+    _, others = split_by_color(gdf, color, color_column)
+    group = aggregate_features_by_color(
+        gdf, color, color_column, concat_columns, sep, name, name_column
+    )
+
+    if group.empty:
+        return gdf.copy()
+
+    result = pd.concat([others, group], ignore_index=True)
+    result = gpd.GeoDataFrame(result, geometry='geometry', crs=gdf.crs)
+
+    print(f"✅ Grouped into {len(result)} total features "
+          f"({len(others)} others + 1 aggregated).")
+    return result
 
 
 def get_centroids(gdf, target_crs='EPSG:4326'):
