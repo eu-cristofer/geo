@@ -37,7 +37,7 @@ const LAYERS: LayerConfig[] = [
   {
     id: 'apelos',
     name: 'Apelos (Appeals)',
-    file: 'apelos_clean.geojson',
+    file: 'apelos_clean_tese.geojson',
     type: 'point',
     visible: true,
     color: '#C1272D',
@@ -46,7 +46,7 @@ const LAYERS: LayerConfig[] = [
   {
     id: 'filtro-bairros',
     name: 'Bairros Filtrados (Filtered Neighborhoods)',
-    file: 'filtro_bairros.geojson',
+    file: 'filtro_bairros_tese.geojson',
     type: 'polygon',
     visible: false,
     color: '#E8862E',
