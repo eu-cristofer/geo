@@ -10,7 +10,7 @@ import geopandas as gpd
 from bs4 import BeautifulSoup
 import json
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 def get_kml_colors(kml_path):
     """
@@ -399,6 +399,85 @@ def group_features_by_color(gdf, color, color_column='Color',
 
     print(f"✅ Grouped into {len(result)} total features "
           f"({len(others)} others + 1 aggregated).")
+    return result
+
+
+def group_all_colors_except(gdf, exclude_colors=("fbc02d",), color_column='Color',
+                            color_names=None, concat_columns=('Link',), sep=' | ',
+                            name_column='Name', description_column='Description',
+                            description_template=(
+                                "Grupo {nome} reunindo {n} apelos relativos à "
+                                "desapropriação de imóveis para a abertura da "
+                                "Avenida Presidente Vargas.")):
+    """
+    Collapse every color group into ONE aggregated feature, EXCEPT the colors in
+    ``exclude_colors``, whose features are kept individually (as-is).
+
+    Use case: every "Key Color" except one (the *apelos amarelos*, ``"fbc02d"``)
+    represents a set of appeals that should appear on the map as a single grouped
+    point. The excluded color stays as individual placemarks.
+
+    Builds on :func:`aggregate_features_by_color` (averaged point keeping the Z
+    coordinate, concatenated ``concat_columns``) — once per non-excluded color.
+    Each aggregated feature is then labelled with its Portuguese color name
+    (looked up in ``color_names``) and given an auto-generated description.
+
+    Parameters
+    ----------
+    gdf : GeoDataFrame
+        Source features.
+    exclude_colors : iterable of str
+        Color codes to keep as-is (default ``("fbc02d",)`` — amarelo).
+    color_column : str
+        Column holding the color code (default ``'Color'``).
+    color_names : dict, optional
+        Mapping ``{hex: nome}`` (e.g. ``{"ab47bc": "roxo"}``) used to label the
+        grouped features. Missing colors fall back to the hex code.
+    concat_columns : iterable of str
+        Text columns whose values are concatenated into each grouped feature.
+    sep : str
+        Separator used when concatenating (default ``' | '``).
+    name_column, description_column : str
+        Columns to write the label and description into.
+    description_template : str
+        Format string receiving ``nome`` and ``n`` (the group size).
+
+    Returns
+    -------
+    GeoDataFrame
+        The excluded features unchanged + one aggregated feature per remaining
+        color, in the input CRS.
+
+    Examples
+    --------
+    >>> clean = geo.group_all_colors_except(
+    ...     apelos, exclude_colors=("fbc02d",), color_names=COLOR_NAMES)
+    """
+    color_names = color_names or {}
+
+    excluded = gdf[gdf[color_column].isin(exclude_colors)]
+    rest = gdf[~gdf[color_column].isin(exclude_colors)]
+
+    groups = []
+    for color in rest[color_column].dropna().unique():
+        agg = aggregate_features_by_color(
+            rest, color, color_column, concat_columns, sep
+        )
+        if agg.empty:
+            continue
+        nome = color_names.get(color, color)
+        n = int((rest[color_column] == color).sum())
+        agg.loc[agg.index[0], name_column] = f"Apelos coletivos ({nome})"
+        agg.loc[agg.index[0], description_column] = description_template.format(
+            nome=nome, n=n
+        )
+        groups.append(agg)
+
+    result = pd.concat([excluded, *groups], ignore_index=True)
+    result = gpd.GeoDataFrame(result, geometry='geometry', crs=gdf.crs)
+
+    print(f"✅ Grouped into {len(result)} total features "
+          f"({len(excluded)} kept as-is + {len(groups)} aggregated groups).")
     return result
 
 

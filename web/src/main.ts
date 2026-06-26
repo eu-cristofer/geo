@@ -234,7 +234,14 @@ class ApelosMap {
       source: layer.id,
       filter: ['!', ['has', 'point_count']],
       paint: {
-        'circle-color': layer.color,
+        // Use the per-feature Color from the data (stored as 6-digit hex
+        // without '#'); fall back to the layer color if absent.
+        'circle-color': [
+          'case',
+          ['has', 'Color'],
+          ['concat', '#', ['get', 'Color']],
+          layer.color,
+        ],
         'circle-radius': 8,
         'circle-stroke-width': 2,
         'circle-stroke-color': '#fff',
@@ -252,7 +259,13 @@ class ApelosMap {
       source: layer.id,
       filter: ['all', ['!', ['has', 'point_count']], ['==', ['get', 'Name'], '']],
       paint: {
-        'circle-color': layer.color,
+        // Match the hover halo to the feature's own Color (see points layer).
+        'circle-color': [
+          'case',
+          ['has', 'Color'],
+          ['concat', '#', ['get', 'Color']],
+          layer.color,
+        ],
         'circle-radius': 14,
         'circle-opacity': 0.3,
       },

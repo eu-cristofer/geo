@@ -23,24 +23,6 @@
       "id": "1",
       "type": "Feature",
       "properties": {
-        "Name": "R. Sen. Euzébio, 230",
-        "Description": "Rua Senador Euzebio, 230 - Desapropriação de imóvel em leilão",
-        "Color": "000000",
-        "Link": "https://drive.google.com/file/d/1rEHdw7LUlLHgACLp5FggeCAT7uhR22B3/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.20179672376948,
-          -22.90824323573527,
-          5.664315368314159
-        ]
-      }
-    },
-    {
-      "id": "2",
-      "type": "Feature",
-      "properties": {
         "Name": "R. Sen. Dantas, 24",
         "Description": "Rua Senador Dantas, 24 - Desapropriação - proprietária pede maior indenização",
         "Color": "fbc02d",
@@ -56,7 +38,7 @@
       }
     },
     {
-      "id": "3",
+      "id": "2",
       "type": "Feature",
       "properties": {
         "Name": "R. Chile, 11",
@@ -74,7 +56,7 @@
       }
     },
     {
-      "id": "4",
+      "id": "3",
       "type": "Feature",
       "properties": {
         "Name": "R. Chile, 15",
@@ -92,7 +74,7 @@
       }
     },
     {
-      "id": "5",
+      "id": "4",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 79",
@@ -110,7 +92,7 @@
       }
     },
     {
-      "id": "6",
+      "id": "5",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 17",
@@ -128,7 +110,7 @@
       }
     },
     {
-      "id": "7",
+      "id": "6",
       "type": "Feature",
       "properties": {
         "Name": "R. da Quitanda, 131",
@@ -146,7 +128,7 @@
       }
     },
     {
-      "id": "8",
+      "id": "7",
       "type": "Feature",
       "properties": {
         "Name": "R. General Caldwell, 103",
@@ -164,7 +146,7 @@
       }
     },
     {
-      "id": "9",
+      "id": "8",
       "type": "Feature",
       "properties": {
         "Name": "Av. dos Democráticos, 392",
@@ -182,7 +164,7 @@
       }
     },
     {
-      "id": "10",
+      "id": "9",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 5",
@@ -200,25 +182,7 @@
       }
     },
     {
-      "id": "11",
-      "type": "Feature",
-      "properties": {
-        "Name": "Pç. da República, 197",
-        "Description": "Praça da República, 197 - Pritaneu Militar - desapropriação e cessão à prefeitura para abertura da Av. Pres. Vargas Eurico G. Dutra solicita cessão de terrenos na Rua Santa Luzia. Sugere permuta de imóvel à Praça da República 197, junto à nova Av. Pres. Vargas",
-        "Color": "000000",
-        "Link": "https://drive.google.com/file/d/10ayie0r0j1_2Zi3SAxapy4p5jcw663u2/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.19084138667714,
-          -22.90558898199883,
-          4.897998612090387
-        ]
-      }
-    },
-    {
-      "id": "12",
+      "id": "10",
       "type": "Feature",
       "properties": {
         "Name": "Tv. Dom Manuel, 18-20",
@@ -236,7 +200,7 @@
       }
     },
     {
-      "id": "13",
+      "id": "11",
       "type": "Feature",
       "properties": {
         "Name": "R. São Pedro, 280",
@@ -254,43 +218,7 @@
       }
     },
     {
-      "id": "14",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Senador Euzébio, 65",
-        "Description": "Rua Senador Euzebio, 65 - Joaquim Corrêa da Costa; Rua Visconde de Itaúna, 56 e Rua Senador Euzebio, 51 - Ana Maria dos Santos Guimarães - edital de desapropriação residentes no exterior para abertura da Av. Pres. Vargas",
-        "Color": "2dfbef",
-        "Link": "https://drive.google.com/file/d/14Gd5Fzwyvh0-oapcHcj5dGmRM8f9mJDi/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.19291913908769,
-          -22.90560469464977,
-          4.06583649444912
-        ]
-      }
-    },
-    {
-      "id": "15",
-      "type": "Feature",
-      "properties": {
-        "Name": "Pç. Lopes Trovão",
-        "Description": "Pedido de transferência do Mercado do Peixe da Praça Lopes Trovão entre Av. Tomé de Souza e Rua Uruguaiana para outro local",
-        "Color": "000000",
-        "Link": "https://drive.google.com/file/d/1gNDg6zqk29ayC1snRoa-v1aOxpqInL_7/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18206424425645,
-          -22.9023045715703,
-          3.75353876211121
-        ]
-      }
-    },
-    {
-      "id": "16",
+      "id": "12",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 82",
@@ -308,7 +236,7 @@
       }
     },
     {
-      "id": "17",
+      "id": "13",
       "type": "Feature",
       "properties": {
         "Name": "R. São José, 59",
@@ -326,7 +254,7 @@
       }
     },
     {
-      "id": "18",
+      "id": "14",
       "type": "Feature",
       "properties": {
         "Name": "R. São Pedro, 319",
@@ -344,7 +272,7 @@
       }
     },
     {
-      "id": "19",
+      "id": "15",
       "type": "Feature",
       "properties": {
         "Name": "R. Carmo Neto, 70",
@@ -362,7 +290,7 @@
       }
     },
     {
-      "id": "20",
+      "id": "16",
       "type": "Feature",
       "properties": {
         "Name": "R. Santa Luzia, 576",
@@ -380,79 +308,7 @@
       }
     },
     {
-      "id": "21",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Alfândega, 24-26",
-        "Description": "Banco Borges Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
-        "Color": "1976d2",
-        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17737836447986,
-          -22.90157877487334,
-          2.734514931172607
-        ]
-      }
-    },
-    {
-      "id": "22",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Alfândega, 28",
-        "Description": "Banco Central Brasileiro Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
-        "Color": "1976d2",
-        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17748268503182,
-          -22.90161048656187,
-          2.807028942310972
-        ]
-      }
-    },
-    {
-      "id": "23",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Alfândega, 30",
-        "Description": "Banco do Comércio e Indústria do Rio de Janeiro Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
-        "Color": "1976d2",
-        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17755686166629,
-          -22.90163089396091,
-          2.818021261152255
-        ]
-      }
-    },
-    {
-      "id": "24",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Alfândega, 32",
-        "Description": "Banco Aliança do Rio de Janeiro Apelo coletivo: Rua da Alfândega, 24, 26, 28, 30 e 32 - Desapropriação bancos - carta com sugestões",
-        "Color": "1976d2",
-        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17763345073951,
-          -22.90165477707235,
-          2.852390674485101
-        ]
-      }
-    },
-    {
-      "id": "25",
+      "id": "17",
       "type": "Feature",
       "properties": {
         "Name": "R. do Lavradio, 97",
@@ -470,7 +326,7 @@
       }
     },
     {
-      "id": "26",
+      "id": "18",
       "type": "Feature",
       "properties": {
         "Name": "Pç. da República, 231",
@@ -488,7 +344,7 @@
       }
     },
     {
-      "id": "27",
+      "id": "19",
       "type": "Feature",
       "properties": {
         "Name": "R. Maria Eugênia, 44",
@@ -506,7 +362,7 @@
       }
     },
     {
-      "id": "28",
+      "id": "20",
       "type": "Feature",
       "properties": {
         "Name": "Av. Carlos Peixoto, 44",
@@ -524,205 +380,7 @@
       }
     },
     {
-      "id": "29",
-      "type": "Feature",
-      "properties": {
-        "Name": "Pç. Floriano Peixoto, 85 a 89",
-        "Description": "J. C. Miranda & Cia Apelo coletivo: Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Igreja que ficava ao lado:",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17661823799372,
-          -22.90956296866223,
-          7.061560032181604
-        ]
-      }
-    },
-    {
-      "id": "30",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 9-A",
-        "Description": "Preche & Paschoal Apelo coletivo: Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17671786923967,
-          -22.90941709649175,
-          7.056788799430196
-        ]
-      }
-    },
-    {
-      "id": "31",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 5",
-        "Description": "Gonçalves & Ferreira Apelo coletivo: Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17661317786177,
-          -22.90950644032644,
-          7.056783901917441
-        ]
-      }
-    },
-    {
-      "id": "32",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 9-B",
-        "Description": "Maurício Cruz & Cia Apelo coletivo: Rua 13 de Maio, 5, 9-A e 9-B; Praça Floriano Peixoto, 85 a 89 - Comerciantes solicitam prorrogação para desapropriação Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17677641854561,
-          -22.90936178939741,
-          7.056785760765436
-        ]
-      }
-    },
-    {
-      "id": "33",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 11",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17683972905514,
-          -22.90928686051396,
-          7.056773010539422
-        ]
-      }
-    },
-    {
-      "id": "34",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 13",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17690700103176,
-          -22.90921893935586,
-          7.056787062241963
-        ]
-      }
-    },
-    {
-      "id": "35",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 17",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17696948051463,
-          -22.90914672850544,
-          7.056784975635574
-        ]
-      }
-    },
-    {
-      "id": "36",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 37",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17732980572191,
-          -22.90877504668232,
-          6.907010103487233
-        ]
-      }
-    },
-    {
-      "id": "37",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 44",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17741440198859,
-          -22.90869270307114,
-          6.902247461895548
-        ]
-      }
-    },
-    {
-      "id": "38",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 45",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17747641665476,
-          -22.90860969619348,
-          6.824981788251718
-        ]
-      }
-    },
-    {
-      "id": "39",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. 13 de Maio, 47",
-        "Description": "Inquilinos de prédio da Rua 13 de Maio - números ímpares - apelam a Getúlio Vargas para cessar obras de demolição",
-        "Color": "f57c00",
-        "Link": "https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17756142214671,
-          -22.90854201058336,
-          6.812607062263661
-        ]
-      }
-    },
-    {
-      "id": "40",
+      "id": "21",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 136-142",
@@ -740,7 +398,7 @@
       }
     },
     {
-      "id": "41",
+      "id": "22",
       "type": "Feature",
       "properties": {
         "Name": "Lg. de São Francisco",
@@ -758,25 +416,7 @@
       }
     },
     {
-      "id": "42",
-      "type": "Feature",
-      "properties": {
-        "Name": "Ig. de São Pedro dos Clérigos",
-        "Description": "Carta da Irmandade com sugestões relativas à transferência da Igreja de São Pedro Abaixo-assinado de Manuel Bandeira e outros intelectuais sobre preservação das igrejas na abertura da Pres. Vargas",
-        "Color": "ef5350",
-        "Link": "https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.180111774364,
-          -22.90137649753057,
-          3.148303779314663
-        ]
-      }
-    },
-    {
-      "id": "43",
+      "id": "23",
       "type": "Feature",
       "properties": {
         "Name": "R. Rêgo Barros, 86",
@@ -794,7 +434,7 @@
       }
     },
     {
-      "id": "44",
+      "id": "24",
       "type": "Feature",
       "properties": {
         "Name": "R. São Pedro, 84",
@@ -812,7 +452,7 @@
       }
     },
     {
-      "id": "45",
+      "id": "25",
       "type": "Feature",
       "properties": {
         "Name": "R. da Constituição, 45",
@@ -830,7 +470,7 @@
       }
     },
     {
-      "id": "46",
+      "id": "26",
       "type": "Feature",
       "properties": {
         "Name": "R. da Constituição, 57",
@@ -848,7 +488,7 @@
       }
     },
     {
-      "id": "47",
+      "id": "27",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 11",
@@ -866,43 +506,7 @@
       }
     },
     {
-      "id": "48",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Assembléia, 2 a 8",
-        "Description": "Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação",
-        "Color": "2dc8fb",
-        "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17497832971195,
-          -22.90414977761997,
-          4.085395926820552
-        ]
-      }
-    },
-    {
-      "id": "49",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Misericórdia, 2",
-        "Description": "Rua da Assembleia, 2 a 8 e Rua da Misericordia, 2 - Café Indígena (arrendatários) solicita indenização por desapropriação",
-        "Color": "2dc8fb",
-        "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17480156836973,
-          -22.90400123831913,
-          4.268297593636456
-        ]
-      }
-    },
-    {
-      "id": "50",
+      "id": "28",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 250-250A",
@@ -920,7 +524,7 @@
       }
     },
     {
-      "id": "51",
+      "id": "29",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 274-276",
@@ -938,7 +542,7 @@
       }
     },
     {
-      "id": "52",
+      "id": "30",
       "type": "Feature",
       "properties": {
         "Name": "Praia de São Cristóvão, 270",
@@ -956,97 +560,7 @@
       }
     },
     {
-      "id": "53",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Presidente Vargas, 496 / R. São Pedro, 114",
-        "Description": "A. Bebiano e Cia (S. Pedro, 114) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Otto Frensel - A. Bebianno Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas Muda-se para a Rua Sacadura Cabral, 167.",
-        "Color": "66bb6a",
-        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1805350170911,
-          -22.90138649930442,
-          4.453923260724968
-        ]
-      }
-    },
-    {
-      "id": "54",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Presidente Vargas, 491 / R. General Câmara, 111",
-        "Description": "Santos Carneiro e Cia (Gen. Camara, 111) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas Muda-se para a Rua do Costa, 106 (Rua Alexandre Mackenzie )",
-        "Color": "66bb6a",
-        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18007639596566,
-          -22.90185923616121,
-          4.603933064947485
-        ]
-      }
-    },
-    {
-      "id": "55",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Presidente Vargas, 522 / R. São Pedro, 122",
-        "Description": "Queiroz e Cia (S. Pedro, 122 e 128) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 18",
-        "Color": "66bb6a",
-        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18081913508944,
-          -22.901477748649,
-          5.513709237449715
-        ]
-      }
-    },
-    {
-      "id": "56",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Presidente Vargas, 542 / R. São Pedro 128",
-        "Description": "C. F. Queiroz e Cia (S. Pedro, 122 e 128) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Mudou-se para R. Barão de São Felix, 118",
-        "Color": "66bb6a",
-        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1809904971152,
-          -22.90153260867714,
-          4.86219767643302
-        ]
-      }
-    },
-    {
-      "id": "57",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Presidente Vargas, 528 e 534 / R. São Pedro, 124-126",
-        "Description": "Casa Fracalanza (S. Pedro, 124 e 126) Apelo coletivo: Sindicatos solicitam prazo maior para desapropriação de quatro imóveis em apelo coletivo: A. Bebiano e Cia (S. Pedro, 114); Santos Carneiro e Cia (Gen. Camara, 111); C. F. Queiroz e Cia (S. Pedro, 122 e 128); Casa Fracalanza (S. Pedro, 124 e 126) Apelo coletivo: Associação Comercial do Rio de Janeiro pede para postergar demolições para abertura da Pres. Vargas (haveria outras 38 assinaturas no documento, mas não localizei ainda... Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas Muda-se para a Rua Teófilo Otoni, quadra 8B, Lote 11, de acordo com o PA 3022. Pedido de licença para a construção numero 220.226. Depósito vai para armazém na Rua Gonzaga Bastos, 109.",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1809049982766,
-          -22.90150917227554,
-          5.553777781126112
-        ]
-      }
-    },
-    {
-      "id": "58",
+      "id": "31",
       "type": "Feature",
       "properties": {
         "Name": "R. José Clemente, 67",
@@ -1064,7 +578,7 @@
       }
     },
     {
-      "id": "59",
+      "id": "32",
       "type": "Feature",
       "properties": {
         "Name": "R. São Francisco Xavier, 576",
@@ -1082,7 +596,7 @@
       }
     },
     {
-      "id": "60",
+      "id": "33",
       "type": "Feature",
       "properties": {
         "Name": "R. Miguel Couto, 92",
@@ -1100,43 +614,7 @@
       }
     },
     {
-      "id": "61",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Marechal Trompowsky, 31",
-        "Description": "Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais",
-        "Color": "97ff9c",
-        "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.24600176943541,
-          -22.93608158015527,
-          29.47131667854885
-        ]
-      }
-    },
-    {
-      "id": "62",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Marechal Trompowsky, 32",
-        "Description": "Rua Marechal Trompowsky, 31 e 32 pedem desvio de traçado do prolongamento da Av. Maracanã para evitar demolição de prédios residenciais",
-        "Color": "97ff9c",
-        "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.24571899937542,
-          -22.93612944314873,
-          28.58695834968337
-        ]
-      }
-    },
-    {
-      "id": "63",
+      "id": "34",
       "type": "Feature",
       "properties": {
         "Name": "R. da Passagem , 252",
@@ -1154,7 +632,7 @@
       }
     },
     {
-      "id": "64",
+      "id": "35",
       "type": "Feature",
       "properties": {
         "Name": "R. Primeiro de Março, 88",
@@ -1172,133 +650,7 @@
       }
     },
     {
-      "id": "65",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. General Pedra, 367",
-        "Description": "Rua General Pedra, 367 - fábrica de calçados do turco José Jorge Primo - cidadão faz denúncia sobre alto valor indenizado",
-        "Color": "000000",
-        "Link": "https://drive.google.com/file/d/1_QIIZMlgFcQzGo95JjeSDz-LOalS5j6y/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.20219700345427,
-          -22.90710283367865,
-          3.685969909086246
-        ]
-      }
-    },
-    {
-      "id": "66",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Groairas, 36",
-        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.26717540828842,
-          -22.9150323496042,
-          56.66489229083329
-        ]
-      }
-    },
-    {
-      "id": "67",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Groairas, 29-31",
-        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.26734582500369,
-          -22.91616539146056,
-          97.31989505462245
-        ]
-      }
-    },
-    {
-      "id": "68",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Groairas, 34",
-        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.26717632002582,
-          -22.91513387999879,
-          54.39529416992326
-        ]
-      }
-    },
-    {
-      "id": "69",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Groairas, 38",
-        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.2671743940567,
-          -22.91492144292652,
-          48.50228870646659
-        ]
-      }
-    },
-    {
-      "id": "70",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Leopoldino Bastos, 78",
-        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.26643327408755,
-          -22.91484308179936,
-          27.42282678527473
-        ]
-      }
-    },
-    {
-      "id": "71",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Leopoldino Bastos, 80",
-        "Description": "Rua Groairas, 36 - Paulino de Carvalho e outros requerem material de demolição de casas desapropriadas para abertura da estrada Grajaú-Jacarepaguá",
-        "Color": "26a69a",
-        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.26644887174798,
-          -22.91496494378699,
-          27.01105988277136
-        ]
-      }
-    },
-    {
-      "id": "72",
+      "id": "36",
       "type": "Feature",
       "properties": {
         "Name": "R. Marquês de Sapucaí, 37",
@@ -1316,7 +668,7 @@
       }
     },
     {
-      "id": "73",
+      "id": "37",
       "type": "Feature",
       "properties": {
         "Name": "R. Luiz de Vasconcellos",
@@ -1334,7 +686,7 @@
       }
     },
     {
-      "id": "74",
+      "id": "38",
       "type": "Feature",
       "properties": {
         "Name": "R. Barão de Petrópolis, 280",
@@ -1352,713 +704,11 @@
       }
     },
     {
-      "id": "75",
-      "type": "Feature",
-      "properties": {
-        "Name": "Ig. de Bom Jesus do Calvário",
-        "Description": "Abaixo-assinado de Manuel Bandeira e outros intelectuais sobre preservação das igrejas na abertura da Pres. Vargas",
-        "Color": "ef5350",
-        "Link": "https://drive.google.com/file/d/1fiv7u53gYpP_rbL82bQdb0XaguvG-nJq/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1812668785778,
-          -22.90218058384823,
-          2.992301179302215
-        ]
-      }
-    },
-    {
-      "id": "76",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Uruguaiana, 202",
-        "Description": "O Barbado Ferragens - Rua Uruguaiana, 202 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1815377705742,
-          -22.90169629424028,
-          2.921399416065213
-        ]
-      }
-    },
-    {
-      "id": "77",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Uruguaiana, 204",
-        "Description": "F. Milione - R. Uruguaiana, 204 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18163958518366,
-          -22.901542715188,
-          7.452210352138007
-        ]
-      }
-    },
-    {
-      "id": "78",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Uruguaiana, 208",
-        "Description": "Farmacia Uruguayana - Rua Uruguaiana, 208 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18172979302949,
-          -22.9013746533819,
-          11.23274475626954
-        ]
-      }
-    },
-    {
-      "id": "79",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 63",
-        "Description": "Papelaria Caravella - Rua Miguel Couto, 63 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17973278448051,
-          -22.90201647833691,
-          4.791890665334277
-        ]
-      }
-    },
-    {
-      "id": "80",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Primeiro de Março, 92",
-        "Description": "Salles Pereira Filtros - Rua Primeiro de Março, 92 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17683487557753,
-          -22.90032154154467,
-          2.175445220645571
-        ]
-      }
-    },
-    {
-      "id": "81",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. General Câmara, 115",
-        "Description": "Labofarma - Rua General Câmara, 115 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18029189683065,
-          -22.90191139535025,
-          4.347715050763621
-        ]
-      }
-    },
-    {
-      "id": "82",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. General Câmara, 129",
-        "Description": "Agência Expeditora de Mercadorias LTDA - Rua General Câmara, 129 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18054265587644,
-          -22.90197679655753,
-          4.457739131900227
-        ]
-      }
-    },
-    {
-      "id": "83",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Pedro, 144",
-        "Description": "Alfredo Tomasquim - Rua São Pedro, 144 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18137645475659,
-          -22.90165667782628,
-          3.476062261999526
-        ]
-      }
-    },
-    {
-      "id": "84",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Primeiro de Março, 97",
-        "Description": "Novaes & Cia Ltda / [Albim A. Ferreira] / - Rua Primeiro de Março, 97 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17702178999733,
-          -22.90023397491739,
-          2.748715992292052
-        ]
-      }
-    },
-    {
-      "id": "85",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Pedro, 14",
-        "Description": "Sociedade Importadora Suissa LTDA - R. São Pedro, 14 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17668014412468,
-          -22.90013066137168,
-          2.734528172281616
-        ]
-      }
-    },
-    {
-      "id": "86",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Teófilo Otoni, 17",
-        "Description": "Agência Ultramarina (Umberto Cinelli) - R. Teófilo Otoni, 17 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.1771900130092,
-          -22.89979158758398,
-          3.262859645570815
-        ]
-      }
-    },
-    {
-      "id": "87",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Candelária, 58",
-        "Description": "José Ricardo Gonçalves - R. Candelária, 58",
-        "Color": "303f9f",
-        "Link": null
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17745555868279,
-          -22.9002344403473,
-          2.257656205184828
-        ]
-      }
-    },
-    {
-      "id": "88",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. da Alfândega, 95",
-        "Description": "Buelau & Cia - Rua da Alfândega, 95 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18006142115069,
-          -22.90251336664645,
-          5.202344986321177
-        ]
-      }
-    },
-    {
-      "id": "89",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Candelária, 60",
-        "Description": "Andrade Pinto & C. Ltda - Banqueiros - Rua da Candelária, 60 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17748135311294,
-          -22.90015269772334,
-          2.710599922286137
-        ]
-      }
-    },
-    {
-      "id": "90",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Candelária, 62",
-        "Description": "A. Monteiro & Brandão - Calçados - R. Candelária, 62 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17750440883727,
-          -22.90007317431488,
-          3.062161397753338
-        ]
-      }
-    },
-    {
-      "id": "91",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Primeiro de Março, 80",
-        "Description": "Monitor Mercantil S. A. - Rua Primeiro de Março, 80 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17671207106947,
-          -22.90064296811429,
-          2.235870225162204
-        ]
-      }
-    },
-    {
-      "id": "92",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Primeiro de Março, 105",
-        "Description": "S. Lara - óleos, tintas, eletricidade / Augusto Lemelle - Despachante Aduaneiro / Arthur Brasil - Despachante aduaneiro (1º andar) / Pedro Moacyr Cordeiro (1º andar) - Rua Primeiro de Março, 105 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17707971511302,
-          -22.89999695276057,
-          3.038843878349777
-        ]
-      }
-    },
-    {
-      "id": "93",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Pedro, 90",
-        "Description": "Maciel Dantas - R. São Pedro, 90 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17982936499987,
-          -22.90115873158629,
-          5.414727689513943
-        ]
-      }
-    },
-    {
-      "id": "94",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 97",
-        "Description": "Miguel D. Ajuz - Eletricidade e Rádio - Rua Miguel Couto, 97 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18028492083824,
-          -22.90114904026318,
-          8.002107067957684
-        ]
-      }
-    },
-    {
-      "id": "95",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 99",
-        "Description": "O Bronzeiro - Rua Miguel Couto, 99 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18031115139875,
-          -22.90109026074616,
-          10.20485672007598
-        ]
-      }
-    },
-    {
-      "id": "96",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 94",
-        "Description": "Thomaz C. Teixeira Gomes & Cia. - Rua Miguel Couto, 94 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18030254336318,
-          -22.90097117083439,
-          11.97250718277271
-        ]
-      }
-    },
-    {
-      "id": "97",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 103",
-        "Description": "Sociedade [Etna] Ltda - Rua Miguel Couto, 103 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18039591268961,
-          -22.9009777632877,
-          12.0171466011332
-        ]
-      }
-    },
-    {
-      "id": "98",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 105",
-        "Description": "Toledo, Soares & Cia. Ltda - Rua Miguel Couto, 105",
-        "Color": "303f9f",
-        "Link": null
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18042003540782,
-          -22.90094437116598,
-          12.40104309397402
-        ]
-      }
-    },
-    {
-      "id": "99",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 109",
-        "Description": "Salgado Alves & Cia - Laticínios - Rua Miguel Couto, 109 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18046603592528,
-          -22.90089145334452,
-          12.58872227033627
-        ]
-      }
-    },
-    {
-      "id": "100",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 86",
-        "Description": "Deccache Ribeiro & Freitas - Rua Miguel Couto, 86 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18017009513001,
-          -22.90124614069593,
-          12.42592345892757
-        ]
-      }
-    },
-    {
-      "id": "101",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Pedro, 92",
-        "Description": "Oscar Tavares & Cia - Rua São Pedro, 92 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17989771451671,
-          -22.90118233963339,
-          6.709268182234187
-        ]
-      }
-    },
-    {
-      "id": "102",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Pedro, 88",
-        "Description": "Armando Busseti & Cia - Rua São Pedro, 88 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17973793818022,
-          -22.90112803425509,
-          6.233306316452689
-        ]
-      }
-    },
-    {
-      "id": "103",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Miguel Couto, 95",
-        "Description": "G. Ricardo Dias - Rua Miguel Couto, 95 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.18025538702449,
-          -22.90125604284271,
-          5.296608524822235
-        ]
-      }
-    },
-    {
-      "id": "104",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Pedro, 86",
-        "Description": "Armando Busseti & Cia. - Rua São Pedro, 86 Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17968628088408,
-          -22.9011125913596,
-          6.58031055444636
-        ]
-      }
-    },
-    {
-      "id": "105",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Presidente Vargas, 132",
-        "Description": "Vitalino Ferreira da Costa - Av. Presidente Vargas, 132 ***conferir ponto!*** Apelo coletivo: Firmas pedem para dilatar o prazo para demolições para abertura da Av. Pres. Vargas",
-        "Color": "303f9f",
-        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17752585681614,
-          -22.90040579916346,
-          6.42474793837879
-        ]
-      }
-    },
-    {
-      "id": "106",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Antônio Basílio",
-        "Description": "Abaixo-assinado pede revogação do projeto da Av. dos Trapicheiros na Tijuca",
-        "Color": "8d6e63",
-        "Link": "https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.23756366445915,
-          -22.92665512618015,
-          14.92908245371002
-        ]
-      }
-    },
-    {
-      "id": "107",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Conde de Bonfim",
-        "Description": "Abaixo-assinado pede revogação do projeto da Av. dos Trapicheiros na Tijuca",
-        "Color": "8d6e63",
-        "Link": "https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.23616387885302,
-          -22.92778951347865,
-          19.85408621425796
-        ]
-      }
-    },
-    {
-      "id": "108",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Carlos de Laet",
-        "Description": "",
-        "Color": "8d6e63",
-        "Link": null
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.23665770686915,
-          -22.9269262306803,
-          17.73331236138268
-        ]
-      }
-    },
-    {
-      "id": "109",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Pinto de Figueiredo",
-        "Description": "Abaixo-assinado pede revogação do projeto da Av. dos Trapicheiros na Tijuca",
-        "Color": "8d6e63",
-        "Link": "https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.23544457413595,
-          -22.92539642730302,
-          22.32151107590972
-        ]
-      }
-    },
-    {
-      "id": "110",
-      "type": "Feature",
-      "properties": {
-        "Name": "Av. Maracanã",
-        "Description": "Abaixo-assinado pede revogação do projeto da Av. dos Trapicheiros na Tijuca",
-        "Color": "8d6e63",
-        "Link": "https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.23722509802266,
-          -22.92575531511572,
-          15.7758550189854
-        ]
-      }
-    },
-    {
-      "id": "111",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São José, 9-11",
-        "Description": "S/A Comércio & Indústria Rebello Lourenço (Covibra) - R. São José, 9-11 Associação Comercial do Rio de Janeiro solicita prorrogação de prazo para desapropriação de firmas da Rua São José",
-        "Color": "d219ae",
-        "Link": "https://drive.google.com/file/d/1JVvKP6bdhe7YWB80rAjTuAcoWA8mmfh9/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17455209618841,
-          -22.90472277202561,
-          7.552658159089722
-        ]
-      }
-    },
-    {
-      "id": "112",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São José, 7",
-        "Description": "Alnorma - R. São José, 7 Associação Comercial do Rio de Janeiro solicita prorrogação de prazo para desapropriação de firmas da Rua São José",
-        "Color": "d219ae",
-        "Link": "https://drive.google.com/file/d/1JVvKP6bdhe7YWB80rAjTuAcoWA8mmfh9/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17448212276049,
-          -22.90466591836405,
-          6.414423383094256
-        ]
-      }
-    },
-    {
-      "id": "113",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São José, 19",
-        "Description": "João Barros & Cia - R. São José, 19 Associação Comercial do Rio de Janeiro solicita prorrogação de prazo para desapropriação de firmas da Rua São José",
-        "Color": "d219ae",
-        "Link": "https://drive.google.com/file/d/1JVvKP6bdhe7YWB80rAjTuAcoWA8mmfh9/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17486864906913,
-          -22.90491348254082,
-          7.009624987686118
-        ]
-      }
-    },
-    {
-      "id": "114",
+      "id": "39",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (roxo)",
-        "Description": "Apelo coletivo reunindo 97 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Description": "Grupo roxo reunindo 97 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
         "Color": "ab47bc",
         "Link": "https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing | https://drive.google.com/file/d/1m-4IHYmOZH6Bk485Hh_gue8gU2RKtCQ0/view?usp=sharing"
       },
@@ -2068,6 +718,186 @@
           -43.19099863961304,
           -22.90508924109309,
           3.9736976446706214
+        ]
+      }
+    },
+    {
+      "id": "40",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (azul)",
+        "Description": "Grupo azul reunindo 4 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "1976d2",
+        "Link": "https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing | https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing | https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing | https://drive.google.com/file/d/11-g76OL57DV5X0PoBjd_6iZjy38rB_I-/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.177512840479366,
+          -22.901618733117118,
+          2.802988952280234
+        ]
+      }
+    },
+    {
+      "id": "41",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (laranja)",
+        "Description": "Grupo laranja reunindo 11 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "f57c00",
+        "Link": "https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing | https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing | https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing | https://drive.google.com/file/d/14njzkZRSB7CRyUKG-bVLq3MNERZflAQ7/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing | https://drive.google.com/file/d/1UeR5Mz3QhQP2PiyFkfV-KL_9ODJXZw4q/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17702036006857,
+          -22.90910184361667,
+          6.986282723509982
+        ]
+      }
+    },
+    {
+      "id": "42",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (vermelho)",
+        "Description": "Grupo vermelho reunindo 2 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "ef5350",
+        "Link": "https://drive.google.com/file/d/1YS-Ob0xW4PpTjycNO6EIKwnkDaXQrtEr/view?usp=sharing | https://drive.google.com/file/d/1fiv7u53gYpP_rbL82bQdb0XaguvG-nJq/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1806893264709,
+          -22.9017785406894,
+          3.070302479308439
+        ]
+      }
+    },
+    {
+      "id": "43",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (azul-claro)",
+        "Description": "Grupo azul-claro reunindo 2 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "2dc8fb",
+        "Link": "https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing | https://drive.google.com/file/d/1sCmWE7Ku5J0Md9_xpxre8nWjfxkQcLZV/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.17488994904084,
+          -22.90407550796955,
+          4.1768467602285035
+        ]
+      }
+    },
+    {
+      "id": "44",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (verde)",
+        "Description": "Grupo verde reunindo 5 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "66bb6a",
+        "Link": "https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view | https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view | https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view | https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view | https://drive.google.com/file/d/1_nXVK6Bp7yj-U_ChiFFR2xLm_UMVkzFk/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.1806652087076,
+          -22.901553053013462,
+          4.997508204136261
+        ]
+      }
+    },
+    {
+      "id": "45",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (verde-claro)",
+        "Description": "Grupo verde-claro reunindo 2 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "97ff9c",
+        "Link": "https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing | https://drive.google.com/file/d/1MFtzMWKo3i2uC4DGnecf_a3luR0lUbHY/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.24586038440542,
+          -22.936105511652002,
+          29.02913751411611
+        ]
+      }
+    },
+    {
+      "id": "46",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (verde-azulado)",
+        "Description": "Grupo verde-azulado reunindo 6 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "26a69a",
+        "Link": "https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing | https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing | https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing | https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing | https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing | https://drive.google.com/file/d/1QFnzHp677pHKx34RhBn9MQGO_9mm9P78/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.26695901553503,
+          -22.915176848262735,
+          51.88604281498194
+        ]
+      }
+    },
+    {
+      "id": "47",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (azul-escuro)",
+        "Description": "Grupo azul-escuro reunindo 30 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "303f9f",
+        "Link": "https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing | https://drive.google.com/file/d/1OidsCRpOkNoyQSAMro3ekZzzq4TQvLNG/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.179338517619364,
+          -22.9009926705128,
+          6.146002096044785
+        ]
+      }
+    },
+    {
+      "id": "48",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (marrom)",
+        "Description": "Grupo marrom reunindo 5 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "8d6e63",
+        "Link": "https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing | https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing | https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing | https://drive.google.com/file/d/1RjWp_NZCVsTLeMz9lOJkmOLYkZM1-o0x/view?usp=sharing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.23661098446799,
+          -22.92650452255157,
+          18.122769424849157
+        ]
+      }
+    },
+    {
+      "id": "49",
+      "type": "Feature",
+      "properties": {
+        "Name": "Apelos coletivos (magenta)",
+        "Description": "Grupo magenta reunindo 3 apelos relativos à desapropriação de imóveis para a abertura da Avenida Presidente Vargas.",
+        "Color": "d219ae",
+        "Link": "https://drive.google.com/file/d/1JVvKP6bdhe7YWB80rAjTuAcoWA8mmfh9/view | https://drive.google.com/file/d/1JVvKP6bdhe7YWB80rAjTuAcoWA8mmfh9/view | https://drive.google.com/file/d/1JVvKP6bdhe7YWB80rAjTuAcoWA8mmfh9/view"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.174634289339345,
+          -22.904767390976826,
+          6.992235509956699
         ]
       }
     }

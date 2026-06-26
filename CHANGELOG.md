@@ -4,6 +4,34 @@ All notable changes to the `geoprocess` library and the processing pipeline are
 documented here. Versions follow the `geoprocess` package version in
 `pyproject.toml` / `src/geoprocess/__init__.py`.
 
+## [0.3.0] — 2026-06-26
+
+### Added — `src/geoprocess/__init__.py`
+
+- **`group_all_colors_except(gdf, exclude_colors=("fbc02d",), color_names=None, ...)`**
+  — collapses **every** Key Color into a single aggregated feature **except**
+  the colors listed in `exclude_colors`, which are returned unchanged. Built on
+  top of `split_by_color` + `aggregate_features_by_color`:
+  - one aggregated feature per non-excluded color (average point, preserving Z;
+    `Color` preserved; `Link` concatenated);
+  - `Name` set to `"Apelos coletivos (<nome>)"` and `Description` to an
+    auto-generated phrase, both using the Portuguese color name looked up in
+    `color_names` (falls back to the hex code).
+
+### Changed
+
+- Bumped `geoprocess` version `0.2.0` → `0.3.0` in `src/geoprocess/__init__.py`.
+
+### Pipeline — `02_processing_KML.ipynb`
+
+- Replaced the purple-only "Grouping `ab47bc`" step with **"Grouping all colors
+  except amarelo `fbc02d`"**. A `COLOR_NAMES` hex→Portuguese mapping is now
+  registered in the notebook. Produces a **single output**:
+  - `processed_data/apelos_clean_tese.geojson` — all amarelo `fbc02d` features
+    (as-is) **plus one condensed entry per other color** (13 groups). Replaces
+    the former two-file output (`apelos_tese_clean.geojson` +
+    `apelos_coletivos_roxo.geojson`).
+
 ## [0.2.0] — 2026-06-26
 
 ### Added — `src/geoprocess/__init__.py`
