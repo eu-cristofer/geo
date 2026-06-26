@@ -19,14 +19,53 @@ O projeto é um *pipeline* unidirecional: o dado bruto entra de um lado, passa p
 
 ```mermaid
 flowchart LR
-    A["raw_data/*.kml"] -->|notebooks + geoprocess| B["pre-processed_data/<br/>GeoJSON intermediário"]
-    B -->|notebooks + geoprocess| C["processed_data/<br/>GeoJSON final"]
-    C -->|cp| D["web/public/data/"]
-    D -->|vite build| E["web/dist/"]
-    E -->|GitHub Actions| F["GitHub Pages"]
-    G["src/geoprocess/"] -.importado.-> B
-    G -.importado.-> C
+    A["raw_data/*.kml"] -->|notebooks + geoprocess| B["pre-processed_data/"]
+    B -->|notebooks + geoprocess| C["processed_data/"]
+    C --> D["web/public/data/"]
+    D --> E["web/dist/"]
+    E --> F["GitHub Pages"]
+    G["src/geoprocess/"] -.-> B
+    G -.-> C
 ```
+
+Este primeiro diagrama mostra o fluxo de dados de maneira geral: do arquivo KML de origem até o site publicado. Ele destaca as três pastas de maturidade dos dados e o papel do módulo `src/geoprocess/` como componente reutilizado pelos notebooks. As setas entre `raw_data/*.kml`, `pre-processed_data/` e `processed_data/` agora explicitam que essas transformações são feitas pelos notebooks em conjunto com o módulo `geoprocess`.
+
+### 1.1 Fluxo detalhado do pipeline
+
+```mermaid
+flowchart LR
+    raw["raw_data/*.kml"] --> conv["KML → GeoJSON"]
+    conv --> clean["Limpa textos"]
+    clean --> agg["Agrupa por cor"]
+    agg --> out["processed_data/"]
+    out --> web["web/public/data/"]
+    web --> dist["web/dist/"]
+    dist --> pages["GitHub Pages"]
+```
+
+Este segundo diagrama apresenta as etapas principais do processamento de dados. Cada bloco representa uma transformação aplicada pelo pipeline:
+
+- `KML → GeoJSON`: conversão do KML e extração de cores
+- `Limpa textos`: remoção de HTML e padronização das descrições
+- `Agrupa por cor`: consolidação dos apelos por cor de marcador
+- `processed_data/`: escrita dos artefatos finais
+- `web/public/data/`: cópia para o site
+- `web/dist/`: build da aplicação
+- `GitHub Pages`: publicação final
+
+```mermaid
+sequenceDiagram
+    participant Dev as Dev
+    participant Raw as KML
+    participant Proc as Pipeline
+    participant Web as Site
+
+    Dev->>Raw: exporta KML
+    Raw->>Proc: converte + limpa + agrega
+    Proc->>Web: gera e publica GeoJSON
+```
+
+O diagrama de sequência resume o fluxo humano-técnico em três etapas: o desenvolvedor exporta o KML, o pipeline processa os dados e o site é gerado/publicado.
 
 | Estágio | Entrada | Ferramenta | Saída |
 |---|---|---|---|
