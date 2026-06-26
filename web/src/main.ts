@@ -14,6 +14,11 @@ import type { FeatureCollection } from 'geojson';
 // For production, use environment variables
 const MAPTILER_KEY = import.meta.env.VITE_MAPTILER_KEY || '';
 
+// Single brand color for every feature on the map. This is the dominant
+// yellow used in the original Apelos points (KML "fbc02d"); we now apply it
+// uniformly to points, clusters, and neighborhood polygons.
+const FEATURE_COLOR = '#fbc02d';
+
 // Map configuration
 const MAP_CONFIG = {
   center: [-43.1895, -22.9068] as [number, number], // Rio de Janeiro center
@@ -40,7 +45,7 @@ const LAYERS: LayerConfig[] = [
     file: 'apelos_clean_tese.geojson',
     type: 'point',
     visible: true,
-    color: '#C1272D',
+    color: FEATURE_COLOR,
     category: 'main',
   },
   {
@@ -49,7 +54,7 @@ const LAYERS: LayerConfig[] = [
     file: 'filtro_bairros_tese.geojson',
     type: 'polygon',
     visible: false,
-    color: '#E8862E',
+    color: FEATURE_COLOR,
     category: 'main',
   },
 ];
@@ -183,15 +188,7 @@ class ApelosMap {
       source: layer.id,
       filter: ['has', 'point_count'],
       paint: {
-        'circle-color': [
-          'step',
-          ['get', 'point_count'],
-          '#E8B931',
-          10,
-          '#E8862E',
-          30,
-          layer.color,
-        ],
+        'circle-color': layer.color,
         'circle-radius': [
           'step',
           ['get', 'point_count'],
@@ -234,14 +231,8 @@ class ApelosMap {
       source: layer.id,
       filter: ['!', ['has', 'point_count']],
       paint: {
-        // Use the per-feature Color from the data (stored as 6-digit hex
-        // without '#'); fall back to the layer color if absent.
-        'circle-color': [
-          'case',
-          ['has', 'Color'],
-          ['concat', '#', ['get', 'Color']],
-          layer.color,
-        ],
+        // Uniform brand color for every appeal point (see FEATURE_COLOR).
+        'circle-color': layer.color,
         'circle-radius': 8,
         'circle-stroke-width': 2,
         'circle-stroke-color': '#fff',
@@ -259,13 +250,8 @@ class ApelosMap {
       source: layer.id,
       filter: ['all', ['!', ['has', 'point_count']], ['==', ['get', 'Name'], '']],
       paint: {
-        // Match the hover halo to the feature's own Color (see points layer).
-        'circle-color': [
-          'case',
-          ['has', 'Color'],
-          ['concat', '#', ['get', 'Color']],
-          layer.color,
-        ],
+        // Hover halo matches the uniform feature color (see FEATURE_COLOR).
+        'circle-color': layer.color,
         'circle-radius': 14,
         'circle-opacity': 0.3,
       },
