@@ -84,6 +84,42 @@ const LAYERS: LayerConfig[] = [
   },
 ];
 
+// Georeferenced 1928 aerial montage shown as a "then-and-now" overlay. Rendered
+// as a single MapLibre `image` source/layer; the user picks a visual *version*
+// (color, grayscale, contours, ...) which only swaps the image via
+// ImageSource.updateImage — the geometry never changes. The optimized WebPs live
+// in web/public/historical/ and the four corner coordinates (top-left,
+// top-right, bottom-right, bottom-left, in WGS84) come from
+// `geo.export_raster_overlay_variants` on the source GeoTIFF (SIRGAS 2000 /
+// UTM 23S). See web/public/historical/aero_1928_manifest.json. The variant list
+// is hardcoded here (like BASEMAPS); the manifest is the reproducible record.
+interface OverlayVariant {
+  id: string;
+  label: string;
+  file: string; // resolved against import.meta.env.BASE_URL
+}
+
+const HISTORICAL_OVERLAY = {
+  id: 'aero-1928',
+  label: 'Aerofotografia 1928',
+  variants: [
+    { id: 'original', label: 'Original', file: 'historical/aero_1928_original.webp' },
+    { id: 'grayscale', label: 'Tons de cinza', file: 'historical/aero_1928_grayscale.webp' },
+    { id: 'contrast', label: 'Alto contraste', file: 'historical/aero_1928_contrast.webp' },
+    { id: 'sepia', label: 'Sépia', file: 'historical/aero_1928_sepia.webp' },
+    { id: 'ai', label: 'Ultrarrealista', file: 'historical/aero_1928_ai.webp' },
+  ] as OverlayVariant[],
+  defaultVariant: 'original',
+  coordinates: [
+    [-43.2195087680, -22.8914462977], // top-left
+    [-43.1611640110, -22.8907819360], // top-right
+    [-43.1607946467, -22.9181649059], // bottom-right
+    [-43.2191511080, -22.9188301508], // bottom-left
+  ] as [[number, number], [number, number], [number, number], [number, number]],
+  defaultOpacity: 0.7,
+  visible: false,
+};
+
 class ApelosMap {
   private map!: maplibregl.Map;
   private popup: maplibregl.Popup;
@@ -96,6 +132,14 @@ class ApelosMap {
   private geojsonCache: Map<string, FeatureCollection> = new Map();
   private currentBasemap = DEFAULT_BASEMAP;
   private labelsHidden = false;
+  // 1928 overlay state, tracked so it survives basemap swaps (setStyle).
+  private overlayVisible = HISTORICAL_OVERLAY.visible;
+  private overlayOpacity = HISTORICAL_OVERLAY.defaultOpacity;
+  private currentOverlayVariant = HISTORICAL_OVERLAY.defaultVariant;
+  // Right-side panel docking state (persisted in localStorage).
+  private sidebarSide: 'right' | 'left' =
+    localStorage.getItem('sidebarSide') === 'left' ? 'left' : 'right';
+  private sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
 
   constructor() {
     this.popup = new maplibregl.Popup({
@@ -147,6 +191,9 @@ class ApelosMap {
       this.layerStates.set(layer.id, layer.visible);
     });
 
+    // Set up the dockable / collapsible right-side panel.
+    this.setupSidebarDock();
+
     // Wait for map to load
     this.map.on('load', async () => {
       await this.loadAllLayers();
@@ -185,6 +232,9 @@ class ApelosMap {
   // Adds sources + layers from the in-memory cache onto whatever style is
   // currently loaded. Safe to call again after a basemap swap.
   private addDataLayers(): void {
+    // Add the historical raster first so it sits beneath the appeal points.
+    this.addHistoricalOverlay();
+
     for (const layer of LAYERS) {
       const data = this.geojsonCache.get(layer.id);
       if (!data) continue;
@@ -224,6 +274,79 @@ class ApelosMap {
     }
   }
 
+  // Adds the 1928 aerial as an image source + raster layer. Called once on load;
+  // basemap swaps carry it over via switchBasemap's transformStyle.
+  private overlayVariantUrl(variantId: string): string {
+    const o = HISTORICAL_OVERLAY;
+    const basePath = import.meta.env.BASE_URL || '/';
+    const variant = o.variants.find(v => v.id === variantId) ?? o.variants[0];
+    return `${basePath}${variant.file}`;
+  }
+
+  private addHistoricalOverlay(): void {
+    const o = HISTORICAL_OVERLAY;
+
+    this.map.addSource(o.id, {
+      type: 'image',
+      url: this.overlayVariantUrl(this.currentOverlayVariant),
+      coordinates: o.coordinates,
+    });
+
+    this.map.addLayer({
+      id: `${o.id}-layer`,
+      type: 'raster',
+      source: o.id,
+      paint: {
+        'raster-opacity': this.overlayOpacity,
+        'raster-fade-duration': 0,
+      },
+      layout: {
+        visibility: this.overlayVisible ? 'visible' : 'none',
+      },
+    });
+  }
+
+  private toggleHistoricalOverlay(visible: boolean): void {
+    this.overlayVisible = visible;
+    const id = `${HISTORICAL_OVERLAY.id}-layer`;
+    if (this.map.getLayer(id)) {
+      this.map.setLayoutProperty(id, 'visibility', visible ? 'visible' : 'none');
+    }
+  }
+
+  private setOverlayOpacity(opacity: number): void {
+    this.overlayOpacity = opacity;
+    const id = `${HISTORICAL_OVERLAY.id}-layer`;
+    if (this.map.getLayer(id)) {
+      this.map.setPaintProperty(id, 'raster-opacity', opacity);
+    }
+  }
+
+  // Swaps the 1928 overlay to another visual version. Only the image changes;
+  // the source/layer, its coordinates, opacity, visibility and stacking order are
+  // untouched, and the swap survives a basemap switch (transformStyle carries the
+  // source with its current url).
+  private switchOverlayVariant(variantId: string): void {
+    if (variantId === this.currentOverlayVariant) return;
+    if (!HISTORICAL_OVERLAY.variants.some(v => v.id === variantId)) return;
+
+    this.currentOverlayVariant = variantId;
+    const source = this.map.getSource(HISTORICAL_OVERLAY.id) as
+      maplibregl.ImageSource | undefined;
+    source?.updateImage({ url: this.overlayVariantUrl(variantId) });
+    this.updateOverlayVariantButtons();
+  }
+
+  private updateOverlayVariantButtons(): void {
+    if (!this.layerControlElement) return;
+    this.layerControlElement
+      .querySelectorAll('.overlay-variant-btn')
+      .forEach(btn => {
+        const el = btn as HTMLElement;
+        el.classList.toggle('active', el.dataset.variantId === this.currentOverlayVariant);
+      });
+  }
+
   // Switches the basemap background. setStyle replaces the whole style; the
   // `transformStyle` callback atomically carries our data sources + layers (with
   // their current visibility/paint) into the new basemap, so nothing has to be
@@ -238,23 +361,36 @@ class ApelosMap {
 
     this.currentBasemap = id;
     const dataSourceIds = new Set(LAYERS.map(l => l.id));
+    const overlayId = HISTORICAL_OVERLAY.id;
 
     this.map.setStyle(basemapStyleUrl(bm.mapId), {
       transformStyle: (previous, next) => {
         if (!previous) return next;
 
-        // Carry over our GeoJSON sources (they embed the data + cluster config).
+        // Carry over our GeoJSON sources (they embed the data + cluster config)
+        // and the 1928 image overlay source.
         const sources = { ...next.sources };
         Object.keys(previous.sources).forEach(srcId => {
-          if (dataSourceIds.has(srcId)) sources[srcId] = previous.sources[srcId];
+          if (dataSourceIds.has(srcId) || srcId === overlayId) {
+            sources[srcId] = previous.sources[srcId];
+          }
         });
 
-        // Keep our data layers on top of the new basemap's layers.
+        // Keep the historical overlay beneath the data layers, and both on top of
+        // the new basemap's layers. Carrying the previous layer objects preserves
+        // their current opacity/visibility, so no re-apply is needed.
+        const overlayLayers = previous.layers.filter(
+          l => 'source' in l && l.source === overlayId
+        );
         const dataLayers = previous.layers.filter(
           l => 'source' in l && typeof l.source === 'string' && dataSourceIds.has(l.source)
         );
 
-        return { ...next, sources, layers: [...next.layers, ...dataLayers] };
+        return {
+          ...next,
+          sources,
+          layers: [...next.layers, ...overlayLayers, ...dataLayers],
+        };
       },
     });
 
@@ -457,6 +593,79 @@ class ApelosMap {
     });
   }
 
+  // Wires up the collapsible + side-dockable right panel: an edge handle that
+  // slides the panel open/closed and a header button that moves it to the other
+  // side. State is persisted and the MapLibre canvas is kept filled during the
+  // (CSS-driven) animation.
+  private setupSidebarDock(): void {
+    const app = document.getElementById('app');
+    const header = document.querySelector('.sidebar-header');
+    if (!app || !header) return;
+
+    const chevron = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+           stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+
+    // Edge handle → collapse / expand.
+    const handle = document.createElement('button');
+    handle.className = 'dock-handle';
+    handle.setAttribute('aria-label', 'Recolher ou expandir o painel');
+    handle.title = 'Recolher / expandir painel';
+    handle.innerHTML = chevron;
+    handle.addEventListener('click', () => {
+      this.sidebarCollapsed = !this.sidebarCollapsed;
+      localStorage.setItem('sidebarCollapsed', String(this.sidebarCollapsed));
+      this.applySidebarState();
+      this.animateMapResize();
+    });
+    app.appendChild(handle);
+
+    // Header button → switch dock side (left / right).
+    const sideBtn = document.createElement('button');
+    sideBtn.className = 'dock-side-btn';
+    sideBtn.setAttribute('aria-label', 'Mover o painel para o outro lado');
+    sideBtn.title = 'Mover painel para o outro lado';
+    sideBtn.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round">
+        <polyline points="17 11 21 7 17 3"></polyline>
+        <line x1="21" y1="7" x2="9" y2="7"></line>
+        <polyline points="7 21 3 17 7 13"></polyline>
+        <line x1="3" y1="17" x2="15" y2="17"></line>
+      </svg>`;
+    sideBtn.addEventListener('click', () => {
+      this.sidebarSide = this.sidebarSide === 'right' ? 'left' : 'right';
+      localStorage.setItem('sidebarSide', this.sidebarSide);
+      this.applySidebarState();
+      this.animateMapResize();
+    });
+    header.appendChild(sideBtn);
+
+    this.applySidebarState();
+    // Restored state may differ from the map's initial container size.
+    requestAnimationFrame(() => this.map.resize());
+  }
+
+  private applySidebarState(): void {
+    const app = document.getElementById('app');
+    if (!app) return;
+    app.classList.toggle('dock-left', this.sidebarSide === 'left');
+    app.classList.toggle('sidebar-collapsed', this.sidebarCollapsed);
+  }
+
+  // Keeps the WebGL canvas filling its (animating) container by resizing across
+  // the CSS transition, then once more after it settles.
+  private animateMapResize(durationMs = 380): void {
+    const start = performance.now();
+    const tick = (now: number): void => {
+      this.map.resize();
+      if (now - start < durationMs) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
   private createLayerControl(): void {
     const controlDiv = document.createElement('div');
     controlDiv.className = 'layer-control';
@@ -480,6 +689,24 @@ class ApelosMap {
               <span class="layer-name">${layer.name}</span>
             </label>
           `).join('')}
+        </div>
+        <div class="overlay-section">
+          <label class="layer-item">
+            <input type="checkbox" id="overlay-toggle" ${HISTORICAL_OVERLAY.visible ? 'checked' : ''}>
+            <span class="layer-name">${HISTORICAL_OVERLAY.label}</span>
+          </label>
+          <div class="opacity-control">
+            <label for="overlay-opacity">Opacidade</label>
+            <input type="range" id="overlay-opacity" class="opacity-slider"
+                   min="0" max="100" value="${Math.round(HISTORICAL_OVERLAY.defaultOpacity * 100)}">
+          </div>
+          <div class="overlay-variants">
+            ${HISTORICAL_OVERLAY.variants.map(v => `
+              <button class="overlay-variant-btn ${v.id === this.currentOverlayVariant ? 'active' : ''}"
+                      data-variant-id="${v.id}"
+                      title="${v.label}">${v.label}</button>
+            `).join('')}
+          </div>
         </div>
         <div class="basemap-section">
           <span class="basemap-section-title">Mapa base</span>
@@ -529,13 +756,34 @@ class ApelosMap {
       toggleBtn.setAttribute('aria-expanded', (!isCollapsed).toString());
     });
 
-    // Layer toggle handlers
-    const checkboxes = controlDiv.querySelectorAll('input[type="checkbox"]');
+    // Layer toggle handlers (scoped to data layers; the overlay/labels
+    // checkboxes have their own handlers below).
+    const checkboxes = controlDiv.querySelectorAll('input[type="checkbox"][data-layer-id]');
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', (e) => {
         const target = e.target as HTMLInputElement;
         const layerId = target.dataset.layerId!;
         this.toggleLayer(layerId, target.checked);
+      });
+    });
+
+    // Historical overlay (1928) toggle + opacity handlers
+    const overlayToggle = controlDiv.querySelector('#overlay-toggle') as HTMLInputElement;
+    overlayToggle.addEventListener('change', (e) => {
+      this.toggleHistoricalOverlay((e.target as HTMLInputElement).checked);
+    });
+
+    const overlayOpacity = controlDiv.querySelector('#overlay-opacity') as HTMLInputElement;
+    overlayOpacity.addEventListener('input', (e) => {
+      this.setOverlayOpacity(Number((e.target as HTMLInputElement).value) / 100);
+    });
+
+    // Overlay version switcher handlers
+    const variantBtns = controlDiv.querySelectorAll('.overlay-variant-btn');
+    variantBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const variantId = (e.currentTarget as HTMLElement).dataset.variantId;
+        if (variantId) this.switchOverlayVariant(variantId);
       });
     });
 
@@ -597,7 +845,24 @@ class ApelosMap {
     return [];
   }
 
+  // True when the map container is in (real) fullscreen. Checks the WebKit-
+  // prefixed property too, for Safari / iPadOS.
+  private isMapFullscreen(): boolean {
+    const fsEl = document.fullscreenElement ||
+      (document as unknown as { webkitFullscreenElement?: Element })
+        .webkitFullscreenElement;
+    return !!fsEl && (fsEl === this.map.getContainer() ||
+      this.map.getContainer().contains(fsEl));
+  }
+
   private setupInteractions(): void {
+    // The popup only belongs in fullscreen; remove any leftover one on exit.
+    const onFsChange = (): void => {
+      if (!this.isMapFullscreen()) this.popup.remove();
+    };
+    document.addEventListener('fullscreenchange', onFsChange);
+    document.addEventListener('webkitfullscreenchange', onFsChange);
+
     // Click on cluster to zoom
     this.map.on('click', 'apelos-clusters', async (e) => {
       const features = this.map.queryRenderedFeatures(e.point, {
@@ -633,9 +898,13 @@ class ApelosMap {
       if (!props || feature.geometry?.type !== 'Point') return;
 
       const coordinates = feature.geometry.coordinates.slice() as [number, number];
-      const html = this.createPopupContent(props);
 
-      this.popup.setLngLat(coordinates).setHTML(html).addTo(this.map);
+      // The on-map popup is only needed in fullscreen, where the side panel with
+      // the details isn't visible. Outside fullscreen, the sidebar shows them.
+      if (this.isMapFullscreen()) {
+        const html = this.createPopupContent(props);
+        this.popup.setLngLat(coordinates).setHTML(html).addTo(this.map);
+      }
       this.updateSidebar(props);
     });
 
@@ -817,6 +1086,15 @@ class ApelosMap {
 
   private startDrag(e: MouseEvent | TouchEvent): void {
     if (!this.layerControlElement) return;
+
+    // Don't treat a press on the collapse button (or other interactive control)
+    // as the start of a drag. On iPadOS/iOS Safari, startDrag calls
+    // preventDefault() on touchstart, which suppresses the button's synthetic
+    // click — so without this guard the collapse toggle never fires on touch.
+    const target = e.target as HTMLElement | null;
+    if (target?.closest('.layer-control-toggle, button, input, a, label')) {
+      return;
+    }
 
     this.isDragging = true;
     const rect = this.layerControlElement.getBoundingClientRect();

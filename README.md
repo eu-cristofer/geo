@@ -197,8 +197,8 @@ geo/
 ├── raw_data/                     # Original KML files
 ├── DATA.RIO/                     # Rio de Janeiro base layers
 ├── src/geoprocess/               # Python processing tools
-├── process.ipynb                 # Data processing notebook
-├── apelos.qgz                    # QGIS project
+├── 02_processing_KML.ipynb                 # Data processing notebook
+├── 01_mapeamento_de_apelos.qgz                    # QGIS project
 ├── DEPLOYMENT.md                 # Detailed deployment guide
 └── README.md                     # This file
 ```
@@ -221,7 +221,7 @@ geo/
 pip install -e .
 
 # Open Jupyter notebook
-jupyter notebook process.ipynb
+jupyter notebook 02_processing_KML.ipynb
 ```
 
 ### Web Application
@@ -277,12 +277,12 @@ npm run dev
 
 ### Process New Data
 1. Add KML/GeoJSON to `raw_data/`
-2. Update `process.ipynb`
+2. Update `02_processing_KML.ipynb`
 3. Export to `processed_data/`
 4. Rebuild web application
 
 ### Update QGIS Project
-1. Open `apelos.qgz` in QGIS
+1. Open `01_mapeamento_de_apelos.qgz` in QGIS
 2. Modify layers and styling
 3. Export map or use qgis2web plugin
 
@@ -341,7 +341,7 @@ Contributions welcome! Please:
 ## 📧 Support
 
 For questions or issues:
-- **GitHub Issues**: [Open an issue](https://github.com/yourusername/geo/issues)
+- **GitHub Issues**: [Open an issue](https://github.com/eu-cristofer/geo/issues)
 - **Email**: Contact authors above
 - **Documentation**: See [DEPLOYMENT.md](DEPLOYMENT.md) and [web/README.md](web/README.md)
 
@@ -374,7 +374,7 @@ cd web && vercel --prod
 cd web && docker-compose up -d
 
 # Process data
-jupyter notebook process.ipynb
+jupyter notebook 02_processing_KML.ipynb
 ```
 
 For detailed deployment instructions, see [docs/deployment/deployment-guide.md](docs/deployment/deployment-guide.md).
