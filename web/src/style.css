@@ -14,6 +14,8 @@
   --border-color: #e1e8ed;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --sidebar-width: 380px;
+  --dock-anim: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -26,28 +28,120 @@ body {
   display: flex;
   height: 100vh;
   width: 100vw;
+  position: relative;
+  /* Current occupied sidebar width; drops to 0 when collapsed so the map
+     (flex: 1) grows to fill. The handle rides this same value. */
+  --sb: var(--sidebar-width);
+}
+
+#app.sidebar-collapsed {
+  --sb: 0px;
 }
 
 #map {
   flex: 1;
   position: relative;
+  min-width: 0;
 }
 
 /* Sidebar Styles */
 .sidebar {
-  width: 380px;
+  width: var(--sb);
+  flex: 0 0 auto;
   background: white;
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
   z-index: 1;
   overflow: hidden;
+  transition: width var(--dock-anim);
+}
+
+/* Dock to the left: place the panel before the map in the flex row. */
+#app.dock-left .sidebar {
+  order: -1;
+}
+
+/* Keep the panel's contents at full width so they slide/clip cleanly instead
+   of reflowing while the sidebar width animates to 0. */
+.sidebar-header,
+.info-panel,
+.sidebar-footer {
+  width: var(--sidebar-width);
+}
+
+/* Collapse/dock handle — a rounded tab riding the panel's map-facing edge. */
+.dock-handle {
+  position: absolute;
+  top: 50%;
+  right: var(--sb);
+  transform: translateY(-50%);
+  width: 26px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  transition: right var(--dock-anim), left var(--dock-anim);
+}
+
+#app.dock-left .dock-handle {
+  right: auto;
+  left: var(--sb);
+  border: 1px solid var(--border-color);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}
+
+.dock-handle:hover {
+  background: var(--bg-light);
+}
+
+.dock-handle svg {
+  transition: transform var(--dock-anim);
+}
+
+/* Point the chevron toward where the panel will move on click. */
+#app.sidebar-collapsed:not(.dock-left) .dock-handle svg,
+#app.dock-left:not(.sidebar-collapsed) .dock-handle svg {
+  transform: rotate(180deg);
+}
+
+/* Small "switch side" button placed in the sidebar header. */
+.dock-side-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dock-side-btn:hover {
+  background: rgba(255, 255, 255, 0.32);
 }
 
 .sidebar-header {
   padding: 2rem 1.5rem 1.5rem;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
+  position: relative;
 }
 
 .sidebar-header h1 {
@@ -167,17 +261,65 @@ body {
 @media (max-width: 768px) {
   #app {
     flex-direction: column;
+    --sbh: 40vh; /* occupied panel height; 0 when collapsed */
   }
 
+  #app.sidebar-collapsed {
+    --sbh: 0px;
+  }
+
+  /* Panel docks to the bottom and collapses by height; side docking is
+     desktop-only here. */
   .sidebar {
-    width: 100%;
-    height: 40vh;
+    width: 100% !important;
+    height: var(--sbh);
     order: 2;
+    transition: height var(--dock-anim);
+  }
+
+  #app.dock-left .sidebar {
+    order: 2; /* no left/right on a stacked layout */
+  }
+
+  .sidebar-header,
+  .info-panel,
+  .sidebar-footer {
+    width: 100%;
   }
 
   #map {
-    height: 60vh;
+    flex: 1;
+    height: auto;
     order: 1;
+    min-height: 0;
+  }
+
+  /* Handle rides the top edge of the bottom panel. */
+  .dock-handle,
+  #app.dock-left .dock-handle {
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: var(--sbh);
+    transform: translateX(-50%);
+    width: 64px;
+    height: 26px;
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    transition: bottom var(--dock-anim);
+  }
+
+  .dock-handle svg {
+    transform: rotate(90deg) !important; /* points down: collapse */
+  }
+
+  #app.sidebar-collapsed .dock-handle svg {
+    transform: rotate(-90deg) !important; /* points up: expand */
+  }
+
+  .dock-side-btn {
+    display: none;
   }
 
   .legend {
@@ -251,12 +393,25 @@ body {
     0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
+/* Collapse the content vertically but keep its horizontal footprint, so the
+   panel stays the same width when collapsed as when expanded. */
 .layer-control.collapsed .layer-control-content {
-  display: none;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .layer-control.collapsed .layer-control-toggle svg {
   transform: rotate(-90deg);
+}
+
+/* When collapsed only the header shows, so round all of its corners. */
+.layer-control.collapsed .layer-control-header {
+  border-radius: 12px;
+  border-bottom: none;
 }
 
 .layer-control-header {

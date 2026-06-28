@@ -34,11 +34,6 @@
       "file": "aero_1928_contrast.webp"
     },
     {
-      "id": "contours",
-      "label": "Contornos",
-      "file": "aero_1928_contours.webp"
-    },
-    {
       "id": "sepia",
       "label": "Sépia",
       "file": "aero_1928_sepia.webp"

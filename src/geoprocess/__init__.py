@@ -747,7 +747,7 @@ def reattach_alpha_from(alpha_source_path):
 
 def export_raster_overlay_variants(tif_path, out_dir, base_name='aero_1928',
                                    variants=('original', 'grayscale', 'contrast',
-                                             'contours', 'sepia'),
+                                             'sepia'),
                                    labels=None, manifest_name=None,
                                    max_width=2048, src_crs=None,
                                    dst_crs='EPSG:4326', quality=80):

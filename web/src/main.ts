@@ -106,7 +106,6 @@ const HISTORICAL_OVERLAY = {
     { id: 'original', label: 'Original', file: 'historical/aero_1928_original.webp' },
     { id: 'grayscale', label: 'Tons de cinza', file: 'historical/aero_1928_grayscale.webp' },
     { id: 'contrast', label: 'Alto contraste', file: 'historical/aero_1928_contrast.webp' },
-    { id: 'contours', label: 'Contornos', file: 'historical/aero_1928_contours.webp' },
     { id: 'sepia', label: 'Sépia', file: 'historical/aero_1928_sepia.webp' },
     { id: 'ai', label: 'Ultrarrealista', file: 'historical/aero_1928_ai.webp' },
   ] as OverlayVariant[],
@@ -137,6 +136,10 @@ class ApelosMap {
   private overlayVisible = HISTORICAL_OVERLAY.visible;
   private overlayOpacity = HISTORICAL_OVERLAY.defaultOpacity;
   private currentOverlayVariant = HISTORICAL_OVERLAY.defaultVariant;
+  // Right-side panel docking state (persisted in localStorage).
+  private sidebarSide: 'right' | 'left' =
+    localStorage.getItem('sidebarSide') === 'left' ? 'left' : 'right';
+  private sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
 
   constructor() {
     this.popup = new maplibregl.Popup({
@@ -187,6 +190,9 @@ class ApelosMap {
     LAYERS.forEach(layer => {
       this.layerStates.set(layer.id, layer.visible);
     });
+
+    // Set up the dockable / collapsible right-side panel.
+    this.setupSidebarDock();
 
     // Wait for map to load
     this.map.on('load', async () => {
@@ -587,6 +593,79 @@ class ApelosMap {
     });
   }
 
+  // Wires up the collapsible + side-dockable right panel: an edge handle that
+  // slides the panel open/closed and a header button that moves it to the other
+  // side. State is persisted and the MapLibre canvas is kept filled during the
+  // (CSS-driven) animation.
+  private setupSidebarDock(): void {
+    const app = document.getElementById('app');
+    const header = document.querySelector('.sidebar-header');
+    if (!app || !header) return;
+
+    const chevron = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+           stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+
+    // Edge handle → collapse / expand.
+    const handle = document.createElement('button');
+    handle.className = 'dock-handle';
+    handle.setAttribute('aria-label', 'Recolher ou expandir o painel');
+    handle.title = 'Recolher / expandir painel';
+    handle.innerHTML = chevron;
+    handle.addEventListener('click', () => {
+      this.sidebarCollapsed = !this.sidebarCollapsed;
+      localStorage.setItem('sidebarCollapsed', String(this.sidebarCollapsed));
+      this.applySidebarState();
+      this.animateMapResize();
+    });
+    app.appendChild(handle);
+
+    // Header button → switch dock side (left / right).
+    const sideBtn = document.createElement('button');
+    sideBtn.className = 'dock-side-btn';
+    sideBtn.setAttribute('aria-label', 'Mover o painel para o outro lado');
+    sideBtn.title = 'Mover painel para o outro lado';
+    sideBtn.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round">
+        <polyline points="17 11 21 7 17 3"></polyline>
+        <line x1="21" y1="7" x2="9" y2="7"></line>
+        <polyline points="7 21 3 17 7 13"></polyline>
+        <line x1="3" y1="17" x2="15" y2="17"></line>
+      </svg>`;
+    sideBtn.addEventListener('click', () => {
+      this.sidebarSide = this.sidebarSide === 'right' ? 'left' : 'right';
+      localStorage.setItem('sidebarSide', this.sidebarSide);
+      this.applySidebarState();
+      this.animateMapResize();
+    });
+    header.appendChild(sideBtn);
+
+    this.applySidebarState();
+    // Restored state may differ from the map's initial container size.
+    requestAnimationFrame(() => this.map.resize());
+  }
+
+  private applySidebarState(): void {
+    const app = document.getElementById('app');
+    if (!app) return;
+    app.classList.toggle('dock-left', this.sidebarSide === 'left');
+    app.classList.toggle('sidebar-collapsed', this.sidebarCollapsed);
+  }
+
+  // Keeps the WebGL canvas filling its (animating) container by resizing across
+  // the CSS transition, then once more after it settles.
+  private animateMapResize(durationMs = 380): void {
+    const start = performance.now();
+    const tick = (now: number): void => {
+      this.map.resize();
+      if (now - start < durationMs) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
   private createLayerControl(): void {
     const controlDiv = document.createElement('div');
     controlDiv.className = 'layer-control';
@@ -766,7 +845,24 @@ class ApelosMap {
     return [];
   }
 
+  // True when the map container is in (real) fullscreen. Checks the WebKit-
+  // prefixed property too, for Safari / iPadOS.
+  private isMapFullscreen(): boolean {
+    const fsEl = document.fullscreenElement ||
+      (document as unknown as { webkitFullscreenElement?: Element })
+        .webkitFullscreenElement;
+    return !!fsEl && (fsEl === this.map.getContainer() ||
+      this.map.getContainer().contains(fsEl));
+  }
+
   private setupInteractions(): void {
+    // The popup only belongs in fullscreen; remove any leftover one on exit.
+    const onFsChange = (): void => {
+      if (!this.isMapFullscreen()) this.popup.remove();
+    };
+    document.addEventListener('fullscreenchange', onFsChange);
+    document.addEventListener('webkitfullscreenchange', onFsChange);
+
     // Click on cluster to zoom
     this.map.on('click', 'apelos-clusters', async (e) => {
       const features = this.map.queryRenderedFeatures(e.point, {
@@ -802,9 +898,13 @@ class ApelosMap {
       if (!props || feature.geometry?.type !== 'Point') return;
 
       const coordinates = feature.geometry.coordinates.slice() as [number, number];
-      const html = this.createPopupContent(props);
 
-      this.popup.setLngLat(coordinates).setHTML(html).addTo(this.map);
+      // The on-map popup is only needed in fullscreen, where the side panel with
+      // the details isn't visible. Outside fullscreen, the sidebar shows them.
+      if (this.isMapFullscreen()) {
+        const html = this.createPopupContent(props);
+        this.popup.setLngLat(coordinates).setHTML(html).addTo(this.map);
+      }
       this.updateSidebar(props);
     });
 
@@ -986,6 +1086,15 @@ class ApelosMap {
 
   private startDrag(e: MouseEvent | TouchEvent): void {
     if (!this.layerControlElement) return;
+
+    // Don't treat a press on the collapse button (or other interactive control)
+    // as the start of a drag. On iPadOS/iOS Safari, startDrag calls
+    // preventDefault() on touchstart, which suppresses the button's synthetic
+    // click — so without this guard the collapse toggle never fires on touch.
+    const target = e.target as HTMLElement | null;
+    if (target?.closest('.layer-control-toggle, button, input, a, label')) {
+      return;
+    }
 
     this.isDragging = true;
     const rect = this.layerControlElement.getBoundingClientRect();
