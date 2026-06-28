@@ -441,6 +441,35 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Historical overlay (1928 aerial) */
+.overlay-section {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.75rem;
+}
+
+.opacity-control {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.25rem 0.5rem 0.125rem;
+}
+
+.opacity-control label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.opacity-slider {
+  flex: 1;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
 /* Basemap Switcher */
 .basemap-section {
   padding-top: 0.75rem;

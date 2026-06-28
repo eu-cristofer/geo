@@ -4,6 +4,33 @@ All notable changes to the `geoprocess` library and the processing pipeline are
 documented here. Versions follow the `geoprocess` package version in
 `pyproject.toml` / `src/geoprocess/__init__.py`.
 
+## [0.4.0] — 2026-06-27
+
+### Added — `src/geoprocess/__init__.py`
+
+- **`export_raster_overlay(tif_path, out_image, out_bounds_json=None, max_width=2048, ...)`**
+  — turns a georeferenced GeoTIFF into a web-ready MapLibre `image` overlay.
+  Reads the georeferencing straight from the GeoTIFF tags with **PIL**
+  (`ModelPixelScale` 33550, `ModelTiepoint` 33922, EPSG from the
+  `GeoKeyDirectory` 34735) — no GDAL/rasterio dependency — computes the raster's
+  bounding box, reprojects the four corners to WGS84 with **pyproj**, and writes:
+  - an optimized, downscaled image (WebP by default, preserving the RGBA
+    transparent edges of the 1928 montage);
+  - an optional bounds JSON with the corner coordinates in the order MapLibre
+    expects (`[top-left, top-right, bottom-right, bottom-left]`).
+
+### Changed
+
+- Bumped `geoprocess` version `0.3.0` → `0.4.0` (`pyproject.toml` /
+  `src/geoprocess/__init__.py`); declared `pillow` and `pyproj` dependencies.
+
+### Pipeline — `01_processing_KML.ipynb`
+
+- Added a step exporting the georeferenced 1928 aerial montage
+  (`images/Montagem aero 1928_modified.tif`, SIRGAS 2000 / UTM 23S) to
+  `web/public/historical/aero_1928.webp` (+ `aero_1928_bounds.json`) for the web
+  app's "Aerofotografia 1928" then-and-now overlay.
+
 ## [0.3.0] — 2026-06-26
 
 ### Added — `src/geoprocess/__init__.py`

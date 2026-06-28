@@ -84,6 +84,25 @@ const LAYERS: LayerConfig[] = [
   },
 ];
 
+// Georeferenced 1928 aerial montage shown as a "then-and-now" overlay. Rendered
+// as a MapLibre `image` source: the optimized WebP lives in web/public/ and the
+// four corner coordinates (top-left, top-right, bottom-right, bottom-left, in
+// WGS84) come from `geo.export_raster_overlay` on the source GeoTIFF
+// (SIRGAS 2000 / UTM 23S). See web/public/historical/aero_1928_bounds.json.
+const HISTORICAL_OVERLAY = {
+  id: 'aero-1928',
+  label: 'Aerofotografia 1928',
+  image: 'historical/aero_1928.webp', // resolved against import.meta.env.BASE_URL
+  coordinates: [
+    [-43.2195087680, -22.8914462977], // top-left
+    [-43.1611640110, -22.8907819360], // top-right
+    [-43.1607946467, -22.9181649059], // bottom-right
+    [-43.2191511080, -22.9188301508], // bottom-left
+  ] as [[number, number], [number, number], [number, number], [number, number]],
+  defaultOpacity: 0.7,
+  visible: false,
+};
+
 class ApelosMap {
   private map!: maplibregl.Map;
   private popup: maplibregl.Popup;
@@ -96,6 +115,9 @@ class ApelosMap {
   private geojsonCache: Map<string, FeatureCollection> = new Map();
   private currentBasemap = DEFAULT_BASEMAP;
   private labelsHidden = false;
+  // 1928 overlay state, tracked so it survives basemap swaps (setStyle).
+  private overlayVisible = HISTORICAL_OVERLAY.visible;
+  private overlayOpacity = HISTORICAL_OVERLAY.defaultOpacity;
 
   constructor() {
     this.popup = new maplibregl.Popup({
@@ -185,6 +207,9 @@ class ApelosMap {
   // Adds sources + layers from the in-memory cache onto whatever style is
   // currently loaded. Safe to call again after a basemap swap.
   private addDataLayers(): void {
+    // Add the historical raster first so it sits beneath the appeal points.
+    this.addHistoricalOverlay();
+
     for (const layer of LAYERS) {
       const data = this.geojsonCache.get(layer.id);
       if (!data) continue;
@@ -224,6 +249,48 @@ class ApelosMap {
     }
   }
 
+  // Adds the 1928 aerial as an image source + raster layer. Called once on load;
+  // basemap swaps carry it over via switchBasemap's transformStyle.
+  private addHistoricalOverlay(): void {
+    const o = HISTORICAL_OVERLAY;
+    const basePath = import.meta.env.BASE_URL || '/';
+
+    this.map.addSource(o.id, {
+      type: 'image',
+      url: `${basePath}${o.image}`,
+      coordinates: o.coordinates,
+    });
+
+    this.map.addLayer({
+      id: `${o.id}-layer`,
+      type: 'raster',
+      source: o.id,
+      paint: {
+        'raster-opacity': this.overlayOpacity,
+        'raster-fade-duration': 0,
+      },
+      layout: {
+        visibility: this.overlayVisible ? 'visible' : 'none',
+      },
+    });
+  }
+
+  private toggleHistoricalOverlay(visible: boolean): void {
+    this.overlayVisible = visible;
+    const id = `${HISTORICAL_OVERLAY.id}-layer`;
+    if (this.map.getLayer(id)) {
+      this.map.setLayoutProperty(id, 'visibility', visible ? 'visible' : 'none');
+    }
+  }
+
+  private setOverlayOpacity(opacity: number): void {
+    this.overlayOpacity = opacity;
+    const id = `${HISTORICAL_OVERLAY.id}-layer`;
+    if (this.map.getLayer(id)) {
+      this.map.setPaintProperty(id, 'raster-opacity', opacity);
+    }
+  }
+
   // Switches the basemap background. setStyle replaces the whole style; the
   // `transformStyle` callback atomically carries our data sources + layers (with
   // their current visibility/paint) into the new basemap, so nothing has to be
@@ -238,23 +305,36 @@ class ApelosMap {
 
     this.currentBasemap = id;
     const dataSourceIds = new Set(LAYERS.map(l => l.id));
+    const overlayId = HISTORICAL_OVERLAY.id;
 
     this.map.setStyle(basemapStyleUrl(bm.mapId), {
       transformStyle: (previous, next) => {
         if (!previous) return next;
 
-        // Carry over our GeoJSON sources (they embed the data + cluster config).
+        // Carry over our GeoJSON sources (they embed the data + cluster config)
+        // and the 1928 image overlay source.
         const sources = { ...next.sources };
         Object.keys(previous.sources).forEach(srcId => {
-          if (dataSourceIds.has(srcId)) sources[srcId] = previous.sources[srcId];
+          if (dataSourceIds.has(srcId) || srcId === overlayId) {
+            sources[srcId] = previous.sources[srcId];
+          }
         });
 
-        // Keep our data layers on top of the new basemap's layers.
+        // Keep the historical overlay beneath the data layers, and both on top of
+        // the new basemap's layers. Carrying the previous layer objects preserves
+        // their current opacity/visibility, so no re-apply is needed.
+        const overlayLayers = previous.layers.filter(
+          l => 'source' in l && l.source === overlayId
+        );
         const dataLayers = previous.layers.filter(
           l => 'source' in l && typeof l.source === 'string' && dataSourceIds.has(l.source)
         );
 
-        return { ...next, sources, layers: [...next.layers, ...dataLayers] };
+        return {
+          ...next,
+          sources,
+          layers: [...next.layers, ...overlayLayers, ...dataLayers],
+        };
       },
     });
 
@@ -481,6 +561,17 @@ class ApelosMap {
             </label>
           `).join('')}
         </div>
+        <div class="overlay-section">
+          <label class="layer-item">
+            <input type="checkbox" id="overlay-toggle" ${HISTORICAL_OVERLAY.visible ? 'checked' : ''}>
+            <span class="layer-name">${HISTORICAL_OVERLAY.label}</span>
+          </label>
+          <div class="opacity-control">
+            <label for="overlay-opacity">Opacidade</label>
+            <input type="range" id="overlay-opacity" class="opacity-slider"
+                   min="0" max="100" value="${Math.round(HISTORICAL_OVERLAY.defaultOpacity * 100)}">
+          </div>
+        </div>
         <div class="basemap-section">
           <span class="basemap-section-title">Mapa base</span>
           <div class="basemap-grid">
@@ -529,14 +620,26 @@ class ApelosMap {
       toggleBtn.setAttribute('aria-expanded', (!isCollapsed).toString());
     });
 
-    // Layer toggle handlers
-    const checkboxes = controlDiv.querySelectorAll('input[type="checkbox"]');
+    // Layer toggle handlers (scoped to data layers; the overlay/labels
+    // checkboxes have their own handlers below).
+    const checkboxes = controlDiv.querySelectorAll('input[type="checkbox"][data-layer-id]');
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', (e) => {
         const target = e.target as HTMLInputElement;
         const layerId = target.dataset.layerId!;
         this.toggleLayer(layerId, target.checked);
       });
+    });
+
+    // Historical overlay (1928) toggle + opacity handlers
+    const overlayToggle = controlDiv.querySelector('#overlay-toggle') as HTMLInputElement;
+    overlayToggle.addEventListener('change', (e) => {
+      this.toggleHistoricalOverlay((e.target as HTMLInputElement).checked);
+    });
+
+    const overlayOpacity = controlDiv.querySelector('#overlay-opacity') as HTMLInputElement;
+    overlayOpacity.addEventListener('input', (e) => {
+      this.setOverlayOpacity(Number((e.target as HTMLInputElement).value) / 100);
     });
 
     // Fit to features button handler

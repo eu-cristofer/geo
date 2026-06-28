@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "geoprocess"
-version = "0.3.0"
+version = "0.4.0"
 authors = [
     { name = "Francesca Dalmagro Martinelli", email = "arq.francesca.martinelli@gmail.com" },
     { name = "Cristofer Antoni Souza Costa", email = "cristofercosta@yahoo.com.br" },
@@ -25,6 +25,8 @@ dependencies = [
     "beautifulsoup4",
     "shapely",
     "pandas",
+    "pillow",
+    "pyproj",
 ]
 
 [project.urls]

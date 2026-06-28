@@ -10,7 +10,7 @@ import geopandas as gpd
 from bs4 import BeautifulSoup
 import json
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 def get_kml_colors(kml_path):
     """
@@ -478,6 +478,157 @@ def group_all_colors_except(gdf, exclude_colors=("fbc02d",), color_column='Color
 
     print(f"✅ Grouped into {len(result)} total features "
           f"({len(excluded)} kept as-is + {len(groups)} aggregated groups).")
+    return result
+
+
+def export_raster_overlay(tif_path, out_image, out_bounds_json=None,
+                          max_width=2048, src_crs=None, dst_crs='EPSG:4326',
+                          quality=80):
+    """
+    Turn a georeferenced raster (GeoTIFF) into a web-ready overlay for MapLibre.
+
+    Use case: the 1928 aerial montage (``images/Montagem aero 1928_modified.tif``)
+    is a georeferenced GeoTIFF in SIRGAS 2000 / UTM 23S. The web map renders it as
+    a MapLibre ``image`` source, which needs (a) a lightweight image and (b) the
+    four corner coordinates in WGS84. This helper produces both, reading the
+    georeferencing straight from the GeoTIFF tags with **PIL** (no GDAL/rasterio
+    dependency) and reprojecting the corners with **pyproj**.
+
+    What it does:
+        - reads ``ModelPixelScale`` (tag 33550) and ``ModelTiepoint`` (tag 33922)
+          to compute the raster's bounding box in its source CRS;
+        - reads the source EPSG from the ``GeoKeyDirectory`` (tag 34735) unless
+          ``src_crs`` is given;
+        - reprojects the four corners to ``dst_crs`` (WGS84 by default);
+        - downscales the image to ``max_width`` (preserving aspect + alpha) and
+          saves it (WebP by default — keeps the montage's transparent edges and
+          is far smaller than PNG);
+        - optionally writes ``out_bounds_json`` with the corner coordinates in the
+          order MapLibre expects: ``[top-left, top-right, bottom-right, bottom-left]``.
+
+    Parameters
+    ----------
+    tif_path : str
+        Path to the georeferenced source GeoTIFF.
+    out_image : str
+        Path for the optimized output image (extension picks the format, e.g.
+        ``.webp`` or ``.png``).
+    out_bounds_json : str, optional
+        If given, the corner coordinates are written here as JSON.
+    max_width : int
+        Maximum output width in pixels (default 2048). Larger images are
+        downscaled; smaller ones are left untouched.
+    src_crs : str, optional
+        Source CRS (e.g. ``'EPSG:31983'``). If omitted it is read from the
+        GeoTIFF's GeoKeyDirectory.
+    dst_crs : str
+        Target CRS for the corner coordinates (default ``'EPSG:4326'``).
+    quality : int
+        Quality for lossy formats like WebP (default 80).
+
+    Returns
+    -------
+    dict
+        ``{'coordinates': [[lon, lat], ...], 'src_crs': ..., 'dst_crs': ...,
+        'image': out_image, 'size': [w, h]}`` where ``coordinates`` is the
+        ``[TL, TR, BR, BL]`` corner list.
+
+    Examples
+    --------
+    >>> geo.export_raster_overlay(
+    ...     "images/Montagem aero 1928_modified.tif",
+    ...     "web/public/historical/aero_1928.webp",
+    ...     "web/public/historical/aero_1928_bounds.json")
+    """
+    from PIL import Image
+    from pyproj import Transformer
+
+    # Allow the very large montage to be opened without the decompression-bomb guard.
+    Image.MAX_IMAGE_PIXELS = None
+
+    if not os.path.exists(tif_path):
+        raise FileNotFoundError(f"Error: Input raster not found at '{tif_path}'")
+
+    img = Image.open(tif_path)
+    tags = getattr(img, 'tag_v2', {})
+
+    # --- georeferencing from GeoTIFF tags ---------------------------------
+    pixel_scale = tags.get(33550)   # ModelPixelScale: (sx, sy, sz)
+    tiepoint = tags.get(33922)      # ModelTiepoint: (i, j, k, X, Y, Z)
+    if not pixel_scale or not tiepoint:
+        raise ValueError(
+            f"'{tif_path}' lacks ModelPixelScale/ModelTiepoint GeoTIFF tags; "
+            "cannot derive its bounds.")
+
+    sx, sy = float(pixel_scale[0]), float(pixel_scale[1])
+    # Tiepoint maps raster pixel (i, j) to world (X, Y). For the usual top-left
+    # tiepoint, world-X increases with i and world-Y decreases with j.
+    i0, j0, _, x0, y0, _ = (float(v) for v in tiepoint[:6])
+    w_px, h_px = img.size
+
+    e_min = x0 - i0 * sx
+    e_max = e_min + w_px * sx
+    n_max = y0 + j0 * sy
+    n_min = n_max - h_px * sy
+
+    # Source CRS: explicit arg, else read the projected/geographic EPSG from the
+    # GeoKeyDirectory (flat list of shorts: 4-value header, then 4-tuples of
+    # (KeyID, TIFFTagLocation, Count, Value)).
+    if src_crs is None:
+        gkd = tags.get(34735)
+        epsg = None
+        if gkd:
+            entries = list(gkd)
+            for k in range(4, len(entries) - 3, 4):
+                key_id, tag_loc, _, value = entries[k:k + 4]
+                # 3072 = ProjectedCSTypeGeoKey, 2048 = GeographicTypeGeoKey.
+                if key_id in (3072, 2048) and tag_loc == 0:
+                    epsg = value
+                    break
+        if epsg is None:
+            raise ValueError(
+                f"Could not read a CRS from '{tif_path}'. Pass src_crs explicitly "
+                "(e.g. src_crs='EPSG:31983').")
+        src_crs = f"EPSG:{epsg}"
+
+    # --- reproject the four corners to dst_crs ----------------------------
+    transformer = Transformer.from_crs(src_crs, dst_crs, always_xy=True)
+    corners_src = {
+        'TL': (e_min, n_max), 'TR': (e_max, n_max),
+        'BR': (e_max, n_min), 'BL': (e_min, n_min),
+    }
+    coordinates = [list(transformer.transform(*corners_src[k]))
+                   for k in ('TL', 'TR', 'BR', 'BL')]
+
+    # --- optimized image --------------------------------------------------
+    if img.mode not in ('RGB', 'RGBA'):
+        img = img.convert('RGBA')
+    if w_px > max_width:
+        new_h = round(h_px * max_width / w_px)
+        img = img.resize((max_width, new_h), Image.LANCZOS)
+
+    os.makedirs(os.path.dirname(os.path.abspath(out_image)), exist_ok=True)
+    save_kwargs = {}
+    if os.path.splitext(out_image)[1].lower() == '.webp':
+        save_kwargs = {'quality': quality, 'method': 6}
+    img.save(out_image, **save_kwargs)
+
+    result = {
+        'coordinates': coordinates,
+        'src_crs': src_crs,
+        'dst_crs': dst_crs,
+        'image': out_image,
+        'size': list(img.size),
+    }
+
+    if out_bounds_json:
+        os.makedirs(os.path.dirname(os.path.abspath(out_bounds_json)),
+                    exist_ok=True)
+        with open(out_bounds_json, 'w', encoding='utf-8') as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ Exported overlay '{out_image}' ({img.size[0]}x{img.size[1]}) "
+          f"with corners in {dst_crs}.")
     return result
 
 
