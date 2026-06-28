@@ -1,0 +1,52 @@
+{
+  "coordinates": [
+    [
+      -43.21950876800449,
+      -22.89144629771808
+    ],
+    [
+      -43.161164011008744,
+      -22.890781935976086
+    ],
+    [
+      -43.16079464673094,
+      -22.91816490586766
+    ],
+    [
+      -43.219151108006365,
+      -22.91883015079814
+    ]
+  ],
+  "variants": [
+    {
+      "id": "original",
+      "label": "Original",
+      "file": "aero_1928_original.webp"
+    },
+    {
+      "id": "grayscale",
+      "label": "Tons de cinza",
+      "file": "aero_1928_grayscale.webp"
+    },
+    {
+      "id": "contrast",
+      "label": "Alto contraste",
+      "file": "aero_1928_contrast.webp"
+    },
+    {
+      "id": "contours",
+      "label": "Contornos",
+      "file": "aero_1928_contours.webp"
+    },
+    {
+      "id": "sepia",
+      "label": "Sépia",
+      "file": "aero_1928_sepia.webp"
+    },
+    {
+      "id": "ai",
+      "label": "Ultrarrealista",
+      "file": "aero_1928_ai.webp"
+    }
+  ]
+}

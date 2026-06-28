@@ -85,14 +85,32 @@ const LAYERS: LayerConfig[] = [
 ];
 
 // Georeferenced 1928 aerial montage shown as a "then-and-now" overlay. Rendered
-// as a MapLibre `image` source: the optimized WebP lives in web/public/ and the
-// four corner coordinates (top-left, top-right, bottom-right, bottom-left, in
-// WGS84) come from `geo.export_raster_overlay` on the source GeoTIFF
-// (SIRGAS 2000 / UTM 23S). See web/public/historical/aero_1928_bounds.json.
+// as a single MapLibre `image` source/layer; the user picks a visual *version*
+// (color, grayscale, contours, ...) which only swaps the image via
+// ImageSource.updateImage — the geometry never changes. The optimized WebPs live
+// in web/public/historical/ and the four corner coordinates (top-left,
+// top-right, bottom-right, bottom-left, in WGS84) come from
+// `geo.export_raster_overlay_variants` on the source GeoTIFF (SIRGAS 2000 /
+// UTM 23S). See web/public/historical/aero_1928_manifest.json. The variant list
+// is hardcoded here (like BASEMAPS); the manifest is the reproducible record.
+interface OverlayVariant {
+  id: string;
+  label: string;
+  file: string; // resolved against import.meta.env.BASE_URL
+}
+
 const HISTORICAL_OVERLAY = {
   id: 'aero-1928',
   label: 'Aerofotografia 1928',
-  image: 'historical/aero_1928.webp', // resolved against import.meta.env.BASE_URL
+  variants: [
+    { id: 'original', label: 'Original', file: 'historical/aero_1928_original.webp' },
+    { id: 'grayscale', label: 'Tons de cinza', file: 'historical/aero_1928_grayscale.webp' },
+    { id: 'contrast', label: 'Alto contraste', file: 'historical/aero_1928_contrast.webp' },
+    { id: 'contours', label: 'Contornos', file: 'historical/aero_1928_contours.webp' },
+    { id: 'sepia', label: 'Sépia', file: 'historical/aero_1928_sepia.webp' },
+    { id: 'ai', label: 'Ultrarrealista', file: 'historical/aero_1928_ai.webp' },
+  ] as OverlayVariant[],
+  defaultVariant: 'original',
   coordinates: [
     [-43.2195087680, -22.8914462977], // top-left
     [-43.1611640110, -22.8907819360], // top-right
@@ -118,6 +136,7 @@ class ApelosMap {
   // 1928 overlay state, tracked so it survives basemap swaps (setStyle).
   private overlayVisible = HISTORICAL_OVERLAY.visible;
   private overlayOpacity = HISTORICAL_OVERLAY.defaultOpacity;
+  private currentOverlayVariant = HISTORICAL_OVERLAY.defaultVariant;
 
   constructor() {
     this.popup = new maplibregl.Popup({
@@ -251,13 +270,19 @@ class ApelosMap {
 
   // Adds the 1928 aerial as an image source + raster layer. Called once on load;
   // basemap swaps carry it over via switchBasemap's transformStyle.
-  private addHistoricalOverlay(): void {
+  private overlayVariantUrl(variantId: string): string {
     const o = HISTORICAL_OVERLAY;
     const basePath = import.meta.env.BASE_URL || '/';
+    const variant = o.variants.find(v => v.id === variantId) ?? o.variants[0];
+    return `${basePath}${variant.file}`;
+  }
+
+  private addHistoricalOverlay(): void {
+    const o = HISTORICAL_OVERLAY;
 
     this.map.addSource(o.id, {
       type: 'image',
-      url: `${basePath}${o.image}`,
+      url: this.overlayVariantUrl(this.currentOverlayVariant),
       coordinates: o.coordinates,
     });
 
@@ -289,6 +314,31 @@ class ApelosMap {
     if (this.map.getLayer(id)) {
       this.map.setPaintProperty(id, 'raster-opacity', opacity);
     }
+  }
+
+  // Swaps the 1928 overlay to another visual version. Only the image changes;
+  // the source/layer, its coordinates, opacity, visibility and stacking order are
+  // untouched, and the swap survives a basemap switch (transformStyle carries the
+  // source with its current url).
+  private switchOverlayVariant(variantId: string): void {
+    if (variantId === this.currentOverlayVariant) return;
+    if (!HISTORICAL_OVERLAY.variants.some(v => v.id === variantId)) return;
+
+    this.currentOverlayVariant = variantId;
+    const source = this.map.getSource(HISTORICAL_OVERLAY.id) as
+      maplibregl.ImageSource | undefined;
+    source?.updateImage({ url: this.overlayVariantUrl(variantId) });
+    this.updateOverlayVariantButtons();
+  }
+
+  private updateOverlayVariantButtons(): void {
+    if (!this.layerControlElement) return;
+    this.layerControlElement
+      .querySelectorAll('.overlay-variant-btn')
+      .forEach(btn => {
+        const el = btn as HTMLElement;
+        el.classList.toggle('active', el.dataset.variantId === this.currentOverlayVariant);
+      });
   }
 
   // Switches the basemap background. setStyle replaces the whole style; the
@@ -571,6 +621,13 @@ class ApelosMap {
             <input type="range" id="overlay-opacity" class="opacity-slider"
                    min="0" max="100" value="${Math.round(HISTORICAL_OVERLAY.defaultOpacity * 100)}">
           </div>
+          <div class="overlay-variants">
+            ${HISTORICAL_OVERLAY.variants.map(v => `
+              <button class="overlay-variant-btn ${v.id === this.currentOverlayVariant ? 'active' : ''}"
+                      data-variant-id="${v.id}"
+                      title="${v.label}">${v.label}</button>
+            `).join('')}
+          </div>
         </div>
         <div class="basemap-section">
           <span class="basemap-section-title">Mapa base</span>
@@ -640,6 +697,15 @@ class ApelosMap {
     const overlayOpacity = controlDiv.querySelector('#overlay-opacity') as HTMLInputElement;
     overlayOpacity.addEventListener('input', (e) => {
       this.setOverlayOpacity(Number((e.target as HTMLInputElement).value) / 100);
+    });
+
+    // Overlay version switcher handlers
+    const variantBtns = controlDiv.querySelectorAll('.overlay-variant-btn');
+    variantBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const variantId = (e.currentTarget as HTMLElement).dataset.variantId;
+        if (variantId) this.switchOverlayVariant(variantId);
+      });
     });
 
     // Fit to features button handler

@@ -10,7 +10,7 @@ import geopandas as gpd
 from bs4 import BeautifulSoup
 import json
 
-__version__ = "0.4.0"
+__version__ = "0.5.0"
 
 def get_kml_colors(kml_path):
     """
@@ -483,7 +483,7 @@ def group_all_colors_except(gdf, exclude_colors=("fbc02d",), color_column='Color
 
 def export_raster_overlay(tif_path, out_image, out_bounds_json=None,
                           max_width=2048, src_crs=None, dst_crs='EPSG:4326',
-                          quality=80):
+                          quality=80, process=None, coordinates=None):
     """
     Turn a georeferenced raster (GeoTIFF) into a web-ready overlay for MapLibre.
 
@@ -525,6 +525,14 @@ def export_raster_overlay(tif_path, out_image, out_bounds_json=None,
         Target CRS for the corner coordinates (default ``'EPSG:4326'``).
     quality : int
         Quality for lossy formats like WebP (default 80).
+    process : callable, optional
+        ``Image -> Image`` treatment applied to the (resized) image before saving,
+        e.g. one of :data:`RASTER_TREATMENTS` or :func:`reattach_alpha_from`. Used
+        to produce visual *versions* of the same overlay.
+    coordinates : list, optional
+        Pre-computed ``[TL, TR, BR, BL]`` corner coordinates. When given, the
+        GeoTIFF georeferencing tags are **not** read (use this for inputs without
+        geo tags, such as an AI-restored PNG, reusing the original's corners).
 
     Returns
     -------
@@ -550,55 +558,56 @@ def export_raster_overlay(tif_path, out_image, out_bounds_json=None,
         raise FileNotFoundError(f"Error: Input raster not found at '{tif_path}'")
 
     img = Image.open(tif_path)
-    tags = getattr(img, 'tag_v2', {})
-
-    # --- georeferencing from GeoTIFF tags ---------------------------------
-    pixel_scale = tags.get(33550)   # ModelPixelScale: (sx, sy, sz)
-    tiepoint = tags.get(33922)      # ModelTiepoint: (i, j, k, X, Y, Z)
-    if not pixel_scale or not tiepoint:
-        raise ValueError(
-            f"'{tif_path}' lacks ModelPixelScale/ModelTiepoint GeoTIFF tags; "
-            "cannot derive its bounds.")
-
-    sx, sy = float(pixel_scale[0]), float(pixel_scale[1])
-    # Tiepoint maps raster pixel (i, j) to world (X, Y). For the usual top-left
-    # tiepoint, world-X increases with i and world-Y decreases with j.
-    i0, j0, _, x0, y0, _ = (float(v) for v in tiepoint[:6])
     w_px, h_px = img.size
 
-    e_min = x0 - i0 * sx
-    e_max = e_min + w_px * sx
-    n_max = y0 + j0 * sy
-    n_min = n_max - h_px * sy
-
-    # Source CRS: explicit arg, else read the projected/geographic EPSG from the
-    # GeoKeyDirectory (flat list of shorts: 4-value header, then 4-tuples of
-    # (KeyID, TIFFTagLocation, Count, Value)).
-    if src_crs is None:
-        gkd = tags.get(34735)
-        epsg = None
-        if gkd:
-            entries = list(gkd)
-            for k in range(4, len(entries) - 3, 4):
-                key_id, tag_loc, _, value = entries[k:k + 4]
-                # 3072 = ProjectedCSTypeGeoKey, 2048 = GeographicTypeGeoKey.
-                if key_id in (3072, 2048) and tag_loc == 0:
-                    epsg = value
-                    break
-        if epsg is None:
+    # --- georeferencing from GeoTIFF tags (unless corners were supplied) ---
+    if coordinates is None:
+        tags = getattr(img, 'tag_v2', {})
+        pixel_scale = tags.get(33550)   # ModelPixelScale: (sx, sy, sz)
+        tiepoint = tags.get(33922)      # ModelTiepoint: (i, j, k, X, Y, Z)
+        if not pixel_scale or not tiepoint:
             raise ValueError(
-                f"Could not read a CRS from '{tif_path}'. Pass src_crs explicitly "
-                "(e.g. src_crs='EPSG:31983').")
-        src_crs = f"EPSG:{epsg}"
+                f"'{tif_path}' lacks ModelPixelScale/ModelTiepoint GeoTIFF tags; "
+                "cannot derive its bounds. Pass coordinates=... explicitly.")
 
-    # --- reproject the four corners to dst_crs ----------------------------
-    transformer = Transformer.from_crs(src_crs, dst_crs, always_xy=True)
-    corners_src = {
-        'TL': (e_min, n_max), 'TR': (e_max, n_max),
-        'BR': (e_max, n_min), 'BL': (e_min, n_min),
-    }
-    coordinates = [list(transformer.transform(*corners_src[k]))
-                   for k in ('TL', 'TR', 'BR', 'BL')]
+        sx, sy = float(pixel_scale[0]), float(pixel_scale[1])
+        # Tiepoint maps raster pixel (i, j) to world (X, Y). For the usual top-left
+        # tiepoint, world-X increases with i and world-Y decreases with j.
+        i0, j0, _, x0, y0, _ = (float(v) for v in tiepoint[:6])
+
+        e_min = x0 - i0 * sx
+        e_max = e_min + w_px * sx
+        n_max = y0 + j0 * sy
+        n_min = n_max - h_px * sy
+
+        # Source CRS: explicit arg, else read the projected/geographic EPSG from
+        # the GeoKeyDirectory (flat list of shorts: 4-value header, then 4-tuples
+        # of (KeyID, TIFFTagLocation, Count, Value)).
+        if src_crs is None:
+            gkd = tags.get(34735)
+            epsg = None
+            if gkd:
+                entries = list(gkd)
+                for k in range(4, len(entries) - 3, 4):
+                    key_id, tag_loc, _, value = entries[k:k + 4]
+                    # 3072 = ProjectedCSTypeGeoKey, 2048 = GeographicTypeGeoKey.
+                    if key_id in (3072, 2048) and tag_loc == 0:
+                        epsg = value
+                        break
+            if epsg is None:
+                raise ValueError(
+                    f"Could not read a CRS from '{tif_path}'. Pass src_crs "
+                    "explicitly (e.g. src_crs='EPSG:31983').")
+            src_crs = f"EPSG:{epsg}"
+
+        # --- reproject the four corners to dst_crs ------------------------
+        transformer = Transformer.from_crs(src_crs, dst_crs, always_xy=True)
+        corners_src = {
+            'TL': (e_min, n_max), 'TR': (e_max, n_max),
+            'BR': (e_max, n_min), 'BL': (e_min, n_min),
+        }
+        coordinates = [list(transformer.transform(*corners_src[k]))
+                       for k in ('TL', 'TR', 'BR', 'BL')]
 
     # --- optimized image --------------------------------------------------
     if img.mode not in ('RGB', 'RGBA'):
@@ -606,6 +615,10 @@ def export_raster_overlay(tif_path, out_image, out_bounds_json=None,
     if w_px > max_width:
         new_h = round(h_px * max_width / w_px)
         img = img.resize((max_width, new_h), Image.LANCZOS)
+
+    # Optional visual treatment (grayscale, contours, AI alpha reattach, ...).
+    if process is not None:
+        img = process(img)
 
     os.makedirs(os.path.dirname(os.path.abspath(out_image)), exist_ok=True)
     save_kwargs = {}
@@ -630,6 +643,181 @@ def export_raster_overlay(tif_path, out_image, out_bounds_json=None,
     print(f"✅ Exported overlay '{out_image}' ({img.size[0]}x{img.size[1]}) "
           f"with corners in {dst_crs}.")
     return result
+
+
+# --------------------------------------------------------------------------- #
+# Visual treatments ("versions") for raster overlays
+# --------------------------------------------------------------------------- #
+# Each treatment is an ``Image -> Image`` callable that preserves the source
+# alpha (so the montage's transparent edges survive). Used by
+# :func:`export_raster_overlay_variants` and :func:`export_raster_overlay`'s
+# ``process`` argument to produce several looks of the same georeferenced aerial.
+
+def _reattach_alpha(rgb_img, src_img):
+    """Return ``rgb_img`` as RGB, carrying ``src_img``'s alpha if it has one."""
+    out = rgb_img.convert('RGB')
+    if src_img.mode == 'RGBA':
+        out.putalpha(src_img.split()[3])
+    return out
+
+
+def _treat_grayscale(img):
+    """Neutral black-and-white underlay."""
+    from PIL import ImageOps
+    return _reattach_alpha(ImageOps.grayscale(img.convert('RGB')), img)
+
+
+def _treat_contrast(img):
+    """Auto-contrast + boosted contrast so the old street grid pops."""
+    from PIL import ImageOps, ImageEnhance
+    base = ImageOps.autocontrast(img.convert('RGB'), cutoff=1)
+    base = ImageEnhance.Contrast(base).enhance(1.35)
+    return _reattach_alpha(base, img)
+
+
+def _treat_sepia(img):
+    """Warm archival tone."""
+    from PIL import ImageOps
+    gray = ImageOps.grayscale(img.convert('RGB'))
+    sepia = ImageOps.colorize(gray, black=(40, 22, 8), white=(255, 235, 190))
+    return _reattach_alpha(sepia, img)
+
+
+def _treat_contours(img):
+    """Edge-detection line art: dark lines on transparency so the live map shows
+    through. Edges outside the montage (its alpha border) are suppressed."""
+    from PIL import Image, ImageOps, ImageFilter, ImageChops
+    gray = ImageOps.grayscale(img.convert('RGB'))
+    edges = ImageOps.autocontrast(gray.filter(ImageFilter.FIND_EDGES))
+    if img.mode == 'RGBA':
+        # Drop the edge ring created at the transparent border.
+        edges = ImageChops.multiply(edges, img.split()[3])
+    lines = Image.new('RGB', img.size, (25, 25, 25))  # near-black lines
+    lines.putalpha(edges)  # bright edge => opaque line, flat => transparent
+    return lines
+
+
+# id -> treatment callable. ``'original'`` is intentionally absent (identity).
+RASTER_TREATMENTS = {
+    'grayscale': _treat_grayscale,
+    'contrast': _treat_contrast,
+    'sepia': _treat_sepia,
+    'contours': _treat_contours,
+}
+
+# id -> Portuguese label for the web version switcher (kept bilingual: ids in
+# English for code, labels in Portuguese for the UI).
+RASTER_VARIANT_LABELS = {
+    'original': 'Original',
+    'grayscale': 'Tons de cinza',
+    'contrast': 'Alto contraste',
+    'contours': 'Contornos',
+    'sepia': 'Sépia',
+    'ai': 'Ultrarrealista',
+}
+
+
+def reattach_alpha_from(alpha_source_path):
+    """
+    Build a ``process`` callable that replaces an image's alpha with the alpha of
+    ``alpha_source_path`` (resized to match).
+
+    Use case: an AI-restored aerial (super-resolution output) is RGB without the
+    montage's transparent edges. Reattach the original's alpha so the restored
+    version masks the same way as the others.
+
+    Examples
+    --------
+    >>> geo.export_raster_overlay(
+    ...     "images/aero_1928_ai.png",
+    ...     "web/public/historical/aero_1928_ai.webp",
+    ...     coordinates=corners,
+    ...     process=geo.reattach_alpha_from("images/Montagem aero 1928_modified.tif"))
+    """
+    def _process(img):
+        from PIL import Image
+        Image.MAX_IMAGE_PIXELS = None
+        src = Image.open(alpha_source_path).convert('RGBA')
+        alpha = src.split()[3].resize(img.size, Image.LANCZOS)
+        out = img.convert('RGB')
+        out.putalpha(alpha)
+        return out
+    return _process
+
+
+def export_raster_overlay_variants(tif_path, out_dir, base_name='aero_1928',
+                                   variants=('original', 'grayscale', 'contrast',
+                                             'contours', 'sepia'),
+                                   labels=None, manifest_name=None,
+                                   max_width=2048, src_crs=None,
+                                   dst_crs='EPSG:4326', quality=80):
+    """
+    Generate several visual *versions* of one georeferenced raster + a manifest.
+
+    Runs the georeferencing once (from the source GeoTIFF) and writes one image
+    per variant — ``<out_dir>/<base_name>_<id>.webp`` — applying the matching
+    treatment from :data:`RASTER_TREATMENTS` (``'original'`` = untouched). All
+    versions share the same four WGS84 corners, so the web app can swap the image
+    without touching geometry.
+
+    Parameters
+    ----------
+    tif_path : str
+        Source georeferenced GeoTIFF.
+    out_dir : str
+        Directory for the output images + manifest.
+    base_name : str
+        Filename stem (default ``'aero_1928'``).
+    variants : iterable of str
+        Variant ids to produce. Unknown ids (and ``'original'``) are written
+        untouched. The ``'ai'`` variant is produced separately (see
+        :func:`reattach_alpha_from`) and appended to the manifest by the caller.
+    labels : dict, optional
+        ``{id: label}`` for the manifest (defaults to :data:`RASTER_VARIANT_LABELS`).
+    manifest_name : str, optional
+        Manifest filename (default ``'<base_name>_manifest.json'``).
+    max_width, src_crs, dst_crs, quality
+        Passed through to :func:`export_raster_overlay`.
+
+    Returns
+    -------
+    dict
+        ``{'coordinates': [...], 'variants': [{'id', 'label', 'file'}, ...]}`` —
+        also written to the manifest file.
+
+    Examples
+    --------
+    >>> geo.export_raster_overlay_variants(
+    ...     "images/Montagem aero 1928_modified.tif",
+    ...     "web/public/historical")
+    """
+    labels = labels or RASTER_VARIANT_LABELS
+
+    coordinates = None
+    entries = []
+    for vid in variants:
+        process = RASTER_TREATMENTS.get(vid)  # None for 'original' / unknown
+        out_image = os.path.join(out_dir, f"{base_name}_{vid}.webp")
+        res = export_raster_overlay(
+            tif_path, out_image, max_width=max_width, src_crs=src_crs,
+            dst_crs=dst_crs, quality=quality, process=process,
+            coordinates=coordinates,
+        )
+        # Reuse the corners computed on the first (untreated) pass.
+        coordinates = res['coordinates']
+        entries.append({'id': vid, 'label': labels.get(vid, vid),
+                        'file': os.path.basename(out_image)})
+
+    manifest = {'coordinates': coordinates, 'variants': entries}
+    manifest_path = os.path.join(out_dir, manifest_name or
+                                 f"{base_name}_manifest.json")
+    os.makedirs(os.path.dirname(os.path.abspath(manifest_path)), exist_ok=True)
+    with open(manifest_path, 'w', encoding='utf-8') as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ Exported {len(entries)} overlay versions to '{out_dir}' "
+          f"(+ {os.path.basename(manifest_path)}).")
+    return manifest
 
 
 def get_centroids(gdf, target_crs='EPSG:4326'):

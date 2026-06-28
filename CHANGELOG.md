@@ -4,6 +4,41 @@ All notable changes to the `geoprocess` library and the processing pipeline are
 documented here. Versions follow the `geoprocess` package version in
 `pyproject.toml` / `src/geoprocess/__init__.py`.
 
+## [0.5.0] — 2026-06-28
+
+### Added — `src/geoprocess/__init__.py`
+
+- **Raster overlay "versions"** for the 1928 aerial then-and-now layer:
+  - `RASTER_TREATMENTS` — alpha-preserving `Image -> Image` treatments
+    (`grayscale`, `contrast`, `contours` line-art, `sepia`) built on stdlib PIL
+    (`ImageOps`/`ImageEnhance`/`ImageFilter`/`ImageChops`); `original` = identity.
+  - `RASTER_VARIANT_LABELS` — id → Portuguese UI label.
+  - `reattach_alpha_from(alpha_source_path)` — builds a `process` callable that
+    restores the montage's transparent edges onto an RGB image (used for the
+    AI-restored version, which has no alpha).
+  - `export_raster_overlay_variants(tif_path, out_dir, ...)` — computes the
+    corners once and writes one `<base>_<id>.webp` per variant plus a manifest
+    `{coordinates, variants:[{id,label,file}]}`.
+- **`export_raster_overlay`** gained `process` (treatment applied before save)
+  and `coordinates` (skip GeoTIFF-tag reading; reuse given corners — needed for
+  the AI PNG, which carries no geo tags).
+
+### Changed
+
+- Bumped `geoprocess` version `0.4.0` → `0.5.0` (`pyproject.toml` /
+  `src/geoprocess/__init__.py`).
+
+### Assets — `web/public/historical/`
+
+- Generated the 1928 aerial versions consumed by the web app's overlay version
+  switcher: `aero_1928_{original,grayscale,contrast,contours,sepia,ai}.webp`
+  + `aero_1928_manifest.json`. The five PIL versions come from
+  `geo.export_raster_overlay_variants("images/Montagem aero 1928_modified.tif",
+  "web/public/historical")`. The AI (`ai`, "Ultrarrealista") version is an
+  offline one-off: Real-ESRGAN (x4) on the source aerial, then
+  `geo.export_raster_overlay(..., coordinates=<shared corners>,
+  process=geo.reattach_alpha_from(<source tif>))`.
+
 ## [0.4.0] — 2026-06-27
 
 ### Added — `src/geoprocess/__init__.py`

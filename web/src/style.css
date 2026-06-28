@@ -470,6 +470,41 @@ body {
   accent-color: var(--primary-color);
 }
 
+/* Overlay version switcher (mirrors the basemap button grid) */
+.overlay-variants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.overlay-variant-btn {
+  padding: 0.4rem 0.5rem;
+  background: white;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.overlay-variant-btn:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.overlay-variant-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
 /* Basemap Switcher */
 .basemap-section {
   padding-top: 0.75rem;
