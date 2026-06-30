@@ -38,7 +38,11 @@ const BASEMAPS: Basemap[] = [
   { id: 'light', label: 'Claro', mapId: 'dataviz' }, // clean, data-overlay friendly
   { id: 'dark', label: 'Escuro', mapId: 'dataviz-dark' },
   { id: 'satellite', label: 'Satélite', mapId: 'hybrid' }, // imagery + labels
+  { id: 'satellite-pure', label: 'Satélite limpo', mapId: 'satellite' }, // imagery, no labels — good under 1928 overlay
   { id: 'topo', label: 'Topo', mapId: 'topo-v2' },
+  { id: 'outdoor', label: 'Relevo', mapId: 'outdoor-v2' }, // terrain shading, contours, trails
+  { id: 'osm', label: 'OpenStreetMap', mapId: 'openstreetmap' },
+  { id: 'basic', label: 'Básico', mapId: 'basic-v2' }, // minimal neutral background
   { id: 'toner', label: 'P&B', mapId: 'toner-v2' }, // high-contrast, print
 ];
 
@@ -61,6 +65,16 @@ interface LayerConfig {
   visible: boolean;
   color: string;
   category: 'main' | 'context';
+}
+
+// User-adjustable appearance for a data layer (fill color, border color/width,
+// opacity). All four map onto MapLibre paint properties, so they apply live via
+// setPaintProperty — see paintTargets() / applyLayerStyle().
+interface LayerStyle {
+  color: string;
+  borderColor: string;
+  borderWidth: number;
+  opacity: number;
 }
 
 const LAYERS: LayerConfig[] = [
@@ -124,6 +138,8 @@ class ApelosMap {
   private map!: maplibregl.Map;
   private popup: maplibregl.Popup;
   private layerStates: Map<string, boolean> = new Map();
+  // Per-layer appearance (fill/border/opacity), adjustable from the panel.
+  private layerStyles: Map<string, LayerStyle> = new Map();
   private layerControlElement: HTMLElement | null = null;
   private isDragging = false;
   private dragOffset = { x: 0, y: 0 };
@@ -136,6 +152,18 @@ class ApelosMap {
   private overlayVisible = HISTORICAL_OVERLAY.visible;
   private overlayOpacity = HISTORICAL_OVERLAY.defaultOpacity;
   private currentOverlayVariant = HISTORICAL_OVERLAY.defaultVariant;
+  // 1928 overlay image adjustments (raster paint properties). Defaults are the
+  // MapLibre neutrals, so the initial render is unchanged.
+  private overlayBrightness = 1; // raster-brightness-max (0..1)
+  private overlayContrast = 0; // raster-contrast (-1..1)
+  private overlaySaturation = 0; // raster-saturation (-1..1)
+  private overlayHue = 0; // raster-hue-rotate (degrees)
+  // Apelos clustering ("consolidation") state. These are source-level GeoJSON
+  // options, so changing them requires rebuilding the source + its layers
+  // (see rebuildApelosClustering). Tracked here so they also survive basemap swaps.
+  private clusteringEnabled = true;
+  private clusterRadius = 50;
+  private clusterMaxZoom = 16;
   // Right-side panel docking state (persisted in localStorage).
   private sidebarSide: 'right' | 'left' =
     localStorage.getItem('sidebarSide') === 'left' ? 'left' : 'right';
@@ -186,9 +214,10 @@ class ApelosMap {
     this.map.addControl(new maplibregl.ScaleControl(), 'bottom-right');
     this.map.addControl(new maplibregl.FullscreenControl(), 'top-right');
 
-    // Initialize layer states
+    // Initialize layer states + default appearance
     LAYERS.forEach(layer => {
       this.layerStates.set(layer.id, layer.visible);
+      this.layerStyles.set(layer.id, this.defaultLayerStyle(layer));
     });
 
     // Set up the dockable / collapsible right-side panel.
@@ -244,9 +273,9 @@ class ApelosMap {
         this.map.addSource(layer.id, {
           type: 'geojson',
           data: data,
-          cluster: true,
-          clusterMaxZoom: 16,
-          clusterRadius: 50,
+          cluster: this.clusteringEnabled,
+          clusterMaxZoom: this.clusterMaxZoom,
+          clusterRadius: this.clusterRadius,
         });
         this.addApelosLayers(layer);
       } else if (layer.type === 'point') {
@@ -271,6 +300,10 @@ class ApelosMap {
         });
         this.addLineLayer(layer);
       }
+
+      // Push any user-customized appearance onto the freshly added layers
+      // (also re-applies it after a basemap swap re-runs this method).
+      this.applyLayerStyle(layer.id);
     }
   }
 
@@ -299,6 +332,10 @@ class ApelosMap {
       paint: {
         'raster-opacity': this.overlayOpacity,
         'raster-fade-duration': 0,
+        'raster-brightness-max': this.overlayBrightness,
+        'raster-contrast': this.overlayContrast,
+        'raster-saturation': this.overlaySaturation,
+        'raster-hue-rotate': this.overlayHue,
       },
       layout: {
         visibility: this.overlayVisible ? 'visible' : 'none',
@@ -316,10 +353,36 @@ class ApelosMap {
 
   private setOverlayOpacity(opacity: number): void {
     this.overlayOpacity = opacity;
+    this.setOverlayPaint('raster-opacity', opacity);
+  }
+
+  // Shared helper for the 1928 raster paint adjustments (brightness/contrast/
+  // saturation/hue). Each is a live MapLibre paint property.
+  private setOverlayPaint(prop: string, value: number): void {
     const id = `${HISTORICAL_OVERLAY.id}-layer`;
     if (this.map.getLayer(id)) {
-      this.map.setPaintProperty(id, 'raster-opacity', opacity);
+      this.map.setPaintProperty(id, prop, value);
     }
+  }
+
+  private setOverlayBrightness(value: number): void {
+    this.overlayBrightness = value;
+    this.setOverlayPaint('raster-brightness-max', value);
+  }
+
+  private setOverlayContrast(value: number): void {
+    this.overlayContrast = value;
+    this.setOverlayPaint('raster-contrast', value);
+  }
+
+  private setOverlaySaturation(value: number): void {
+    this.overlaySaturation = value;
+    this.setOverlayPaint('raster-saturation', value);
+  }
+
+  private setOverlayHue(value: number): void {
+    this.overlayHue = value;
+    this.setOverlayPaint('raster-hue-rotate', value);
   }
 
   // Swaps the 1928 overlay to another visual version. Only the image changes;
@@ -528,6 +591,171 @@ class ApelosMap {
     });
   }
 
+  // Re-creates the apelos source + its 4 layers with the current clustering
+  // settings. Needed because cluster/clusterRadius/clusterMaxZoom are
+  // source-level options that can't be mutated after the source is created.
+  // Event handlers bind by layer-ID string, so re-adding the same layer IDs
+  // keeps clicks/hovers working without re-binding.
+  private rebuildApelosClustering(): void {
+    const layer = LAYERS.find(l => l.id === 'apelos');
+    const data = this.geojsonCache.get('apelos');
+    if (!layer || !data || !this.map.getSource('apelos')) return;
+
+    // Tear down the dependent layers first, then the source.
+    this.getLayerIds('apelos').forEach(id => {
+      if (this.map.getLayer(id)) this.map.removeLayer(id);
+    });
+    this.map.removeSource('apelos');
+
+    this.map.addSource('apelos', {
+      type: 'geojson',
+      data: data,
+      cluster: this.clusteringEnabled,
+      clusterMaxZoom: this.clusterMaxZoom,
+      clusterRadius: this.clusterRadius,
+    });
+    this.addApelosLayers(layer);
+
+    // Re-apply the user's current visibility choice (addApelosLayers uses the
+    // static config default, which may differ from the live toggle state).
+    this.toggleLayer('apelos', this.layerStates.get('apelos') ?? layer.visible);
+
+    // The rebuilt layers carry the config-default paint; restore any custom
+    // appearance the user set before the rebuild.
+    this.applyLayerStyle('apelos');
+  }
+
+  // ---- Per-layer appearance (fill / border / opacity) ----------------------
+
+  // Per-type defaults mirroring the hard-coded paint in the add*Layer methods.
+  private defaultLayerStyle(layer: LayerConfig): LayerStyle {
+    switch (layer.type) {
+      case 'polygon':
+        return { color: layer.color, borderColor: layer.color, borderWidth: 2, opacity: 0.2 };
+      case 'line':
+        return { color: layer.color, borderColor: layer.color, borderWidth: 1, opacity: 0.6 };
+      case 'point':
+      default:
+        return { color: layer.color, borderColor: '#ffffff', borderWidth: 2, opacity: 0.9 };
+    }
+  }
+
+  // Maps a layer to the [layerId, paintProperty] tuples each control group drives.
+  private paintTargets(layerId: string): {
+    fill: [string, string][];
+    border: [string, string][];
+    width: [string, string][];
+    opacity: [string, string][];
+  } {
+    const layer = LAYERS.find(l => l.id === layerId);
+    const empty = { fill: [], border: [], width: [], opacity: [] };
+    if (!layer) return empty;
+
+    if (layer.type === 'point') {
+      const circles = layer.id === 'apelos'
+        ? [`${layerId}-clusters`, `${layerId}-points`]
+        : [`${layerId}-points`];
+      const fillCircles = layer.id === 'apelos'
+        ? [`${layerId}-clusters`, `${layerId}-points`, `${layerId}-hover`]
+        : [`${layerId}-points`];
+      return {
+        fill: fillCircles.map(id => [id, 'circle-color']),
+        border: circles.map(id => [id, 'circle-stroke-color']),
+        width: circles.map(id => [id, 'circle-stroke-width']),
+        opacity: circles.map(id => [id, 'circle-opacity']),
+      };
+    }
+    if (layer.type === 'polygon') {
+      return {
+        fill: [[`${layerId}-fill`, 'fill-color']],
+        border: [[`${layerId}-outline`, 'line-color']],
+        width: [[`${layerId}-outline`, 'line-width']],
+        opacity: [[`${layerId}-fill`, 'fill-opacity']],
+      };
+    }
+    // line
+    return {
+      fill: [[`${layerId}-line`, 'line-color']],
+      border: [],
+      width: [[`${layerId}-line`, 'line-width']],
+      opacity: [[`${layerId}-line`, 'line-opacity']],
+    };
+  }
+
+  private setPaint(targets: [string, string][], value: string | number): void {
+    targets.forEach(([id, prop]) => {
+      if (this.map.getLayer(id)) this.map.setPaintProperty(id, prop, value);
+    });
+  }
+
+  // Pushes the stored appearance for a layer onto its paint properties. Safe to
+  // call right after (re)creating the layers.
+  private applyLayerStyle(layerId: string): void {
+    const style = this.layerStyles.get(layerId);
+    if (!style) return;
+    const t = this.paintTargets(layerId);
+    this.setPaint(t.fill, style.color);
+    this.setPaint(t.border, style.borderColor);
+    this.setPaint(t.width, style.borderWidth);
+    this.setPaint(t.opacity, style.opacity);
+  }
+
+  private setLayerColor(layerId: string, color: string): void {
+    const style = this.layerStyles.get(layerId);
+    if (!style) return;
+    style.color = color;
+    this.setPaint(this.paintTargets(layerId).fill, color);
+    // Keep the legend swatch in sync.
+    const swatch = this.layerControlElement
+      ?.querySelector(`.layer-row[data-layer-id="${layerId}"] .layer-color`) as HTMLElement | null;
+    if (swatch) swatch.style.backgroundColor = color;
+  }
+
+  private setLayerBorderColor(layerId: string, color: string): void {
+    const style = this.layerStyles.get(layerId);
+    if (!style) return;
+    style.borderColor = color;
+    this.setPaint(this.paintTargets(layerId).border, color);
+  }
+
+  private setLayerBorderWidth(layerId: string, width: number): void {
+    const style = this.layerStyles.get(layerId);
+    if (!style) return;
+    style.borderWidth = width;
+    this.setPaint(this.paintTargets(layerId).width, width);
+  }
+
+  private setLayerOpacity(layerId: string, opacity: number): void {
+    const style = this.layerStyles.get(layerId);
+    if (!style) return;
+    style.opacity = opacity;
+    this.setPaint(this.paintTargets(layerId).opacity, opacity);
+  }
+
+  // Restores a layer to its config-default appearance and syncs the row's inputs.
+  private resetLayerStyle(layerId: string): void {
+    const layer = LAYERS.find(l => l.id === layerId);
+    if (!layer) return;
+    const def = this.defaultLayerStyle(layer);
+    this.layerStyles.set(layerId, { ...def });
+    this.applyLayerStyle(layerId);
+
+    const row = this.layerControlElement
+      ?.querySelector(`.layer-row[data-layer-id="${layerId}"]`) as HTMLElement | null;
+    if (!row) return;
+    (row.querySelector('.ls-color') as HTMLInputElement).value = def.color;
+    (row.querySelector('.ls-border-color') as HTMLInputElement).value = def.borderColor;
+    const widthInput = row.querySelector('.ls-width') as HTMLInputElement;
+    widthInput.value = String(def.borderWidth);
+    (row.querySelector('.ls-width-val') as HTMLElement).textContent = String(def.borderWidth);
+    const opacityInput = row.querySelector('.ls-opacity') as HTMLInputElement;
+    opacityInput.value = String(Math.round(def.opacity * 100));
+    (row.querySelector('.ls-opacity-val') as HTMLElement).textContent =
+      `${Math.round(def.opacity * 100)}%`;
+    const swatch = row.querySelector('.layer-color') as HTMLElement | null;
+    if (swatch) swatch.style.backgroundColor = def.color;
+  }
+
   private addPointLayer(layer: LayerConfig): void {
     this.map.addLayer({
       id: `${layer.id}-points`,
@@ -680,32 +908,115 @@ class ApelosMap {
       </div>
       <div class="layer-control-content">
         <div class="layer-group">
-          ${LAYERS.map(layer => `
-            <label class="layer-item">
-              <input type="checkbox" 
-                     data-layer-id="${layer.id}" 
-                     ${layer.visible ? 'checked' : ''}>
-              <span class="layer-color" style="background-color: ${layer.color}"></span>
-              <span class="layer-name">${layer.name}</span>
-            </label>
-          `).join('')}
+          ${LAYERS.map(layer => {
+            const s = this.layerStyles.get(layer.id) ?? this.defaultLayerStyle(layer);
+            const opacityPct = Math.round(s.opacity * 100);
+            return `
+            <div class="layer-row" data-layer-id="${layer.id}">
+              <label class="layer-item">
+                <input type="checkbox"
+                       data-layer-id="${layer.id}"
+                       ${layer.visible ? 'checked' : ''}>
+                <span class="layer-color" style="background-color: ${s.color}"></span>
+                <span class="layer-name">${layer.name}</span>
+              </label>
+              <button class="layer-style-toggle" data-layer-id="${layer.id}"
+                      aria-label="Ajustar estilo" title="Ajustar estilo">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </button>
+              <div class="layer-style-panel" data-layer-id="${layer.id}">
+                <div class="opacity-control cluster-control">
+                  <label>Opacidade <span class="ls-opacity-val">${opacityPct}%</span></label>
+                  <input type="range" class="opacity-slider ls-opacity"
+                         min="0" max="100" value="${opacityPct}">
+                </div>
+                <div class="ls-color-row">
+                  <label class="ls-color-field">Cor
+                    <input type="color" class="ls-color" value="${s.color}"></label>
+                  <label class="ls-color-field">Borda
+                    <input type="color" class="ls-border-color" value="${s.borderColor}"></label>
+                </div>
+                <div class="opacity-control cluster-control">
+                  <label>Espessura da borda <span class="ls-width-val">${s.borderWidth}</span></label>
+                  <input type="range" class="opacity-slider ls-width"
+                         min="0" max="8" step="0.5" value="${s.borderWidth}">
+                </div>
+                <button class="ls-reset" data-layer-id="${layer.id}">Restaurar padrão</button>
+              </div>
+            </div>
+          `;
+          }).join('')}
         </div>
         <div class="overlay-section">
-          <label class="layer-item">
-            <input type="checkbox" id="overlay-toggle" ${HISTORICAL_OVERLAY.visible ? 'checked' : ''}>
-            <span class="layer-name">${HISTORICAL_OVERLAY.label}</span>
-          </label>
-          <div class="opacity-control">
-            <label for="overlay-opacity">Opacidade</label>
-            <input type="range" id="overlay-opacity" class="opacity-slider"
-                   min="0" max="100" value="${Math.round(HISTORICAL_OVERLAY.defaultOpacity * 100)}">
+          <div class="overlay-header-row">
+            <label class="layer-item">
+              <input type="checkbox" id="overlay-toggle" ${HISTORICAL_OVERLAY.visible ? 'checked' : ''}>
+              <span class="layer-name">${HISTORICAL_OVERLAY.label}</span>
+            </label>
+            <button class="layer-style-toggle" id="overlay-style-toggle"
+                    aria-label="Ajustar imagem" title="Ajustar imagem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                   stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </button>
           </div>
-          <div class="overlay-variants">
-            ${HISTORICAL_OVERLAY.variants.map(v => `
-              <button class="overlay-variant-btn ${v.id === this.currentOverlayVariant ? 'active' : ''}"
-                      data-variant-id="${v.id}"
-                      title="${v.label}">${v.label}</button>
-            `).join('')}
+          <div class="layer-style-panel" id="overlay-style-panel">
+            <div class="opacity-control cluster-control">
+              <label for="overlay-opacity">Opacidade <span id="overlay-opacity-val">${Math.round(HISTORICAL_OVERLAY.defaultOpacity * 100)}%</span></label>
+              <input type="range" id="overlay-opacity" class="opacity-slider"
+                     min="0" max="100" value="${Math.round(HISTORICAL_OVERLAY.defaultOpacity * 100)}">
+            </div>
+            <div class="overlay-variants">
+              ${HISTORICAL_OVERLAY.variants.map(v => `
+                <button class="overlay-variant-btn ${v.id === this.currentOverlayVariant ? 'active' : ''}"
+                        data-variant-id="${v.id}"
+                        title="${v.label}">${v.label}</button>
+              `).join('')}
+            </div>
+            <div class="opacity-control cluster-control">
+              <label for="overlay-brightness">Brilho <span id="overlay-brightness-val">${Math.round(this.overlayBrightness * 100)}%</span></label>
+              <input type="range" id="overlay-brightness" class="opacity-slider"
+                     min="0" max="100" value="${Math.round(this.overlayBrightness * 100)}">
+            </div>
+            <div class="opacity-control cluster-control">
+              <label for="overlay-contrast">Contraste <span id="overlay-contrast-val">${Math.round(this.overlayContrast * 100)}</span></label>
+              <input type="range" id="overlay-contrast" class="opacity-slider"
+                     min="-100" max="100" value="${Math.round(this.overlayContrast * 100)}">
+            </div>
+            <div class="opacity-control cluster-control">
+              <label for="overlay-saturation">Saturação <span id="overlay-saturation-val">${Math.round(this.overlaySaturation * 100)}</span></label>
+              <input type="range" id="overlay-saturation" class="opacity-slider"
+                     min="-100" max="100" value="${Math.round(this.overlaySaturation * 100)}">
+            </div>
+            <div class="opacity-control cluster-control">
+              <label for="overlay-hue">Matiz <span id="overlay-hue-val">${Math.round(this.overlayHue)}°</span></label>
+              <input type="range" id="overlay-hue" class="opacity-slider"
+                     min="0" max="360" value="${Math.round(this.overlayHue)}">
+            </div>
+          </div>
+        </div>
+        <div class="cluster-section">
+          <label class="layer-item">
+            <input type="checkbox" id="cluster-toggle" ${this.clusteringEnabled ? 'checked' : ''}>
+            <span class="layer-name">Agrupar apelos próximos</span>
+          </label>
+          <div class="opacity-control cluster-control">
+            <label for="cluster-radius">Raio de agrupamento <span id="cluster-radius-value">${this.clusterRadius}</span></label>
+            <input type="range" id="cluster-radius" class="opacity-slider"
+                   min="0" max="100" value="${this.clusterRadius}" ${this.clusteringEnabled ? '' : 'disabled'}>
+          </div>
+          <div class="opacity-control cluster-control">
+            <label for="cluster-maxzoom">Zoom máximo de agrupamento <span id="cluster-maxzoom-value">${this.clusterMaxZoom}</span></label>
+            <input type="range" id="cluster-maxzoom" class="opacity-slider"
+                   min="0" max="18" value="${this.clusterMaxZoom}" ${this.clusteringEnabled ? '' : 'disabled'}>
           </div>
         </div>
         <div class="basemap-section">
@@ -767,15 +1078,71 @@ class ApelosMap {
       });
     });
 
+    // Per-layer appearance controls (opacity / fill color / border / reset).
+    controlDiv.querySelectorAll('.layer-row').forEach(rowEl => {
+      const row = rowEl as HTMLElement;
+      const layerId = row.dataset.layerId!;
+
+      // Expand / collapse the style sub-panel.
+      const styleToggle = row.querySelector('.layer-style-toggle') as HTMLButtonElement;
+      const panel = row.querySelector('.layer-style-panel') as HTMLElement;
+      styleToggle.addEventListener('click', () => {
+        const open = panel.classList.toggle('expanded');
+        styleToggle.classList.toggle('active', open);
+      });
+
+      // Opacity (live label + paint update).
+      const opacity = row.querySelector('.ls-opacity') as HTMLInputElement;
+      const opacityVal = row.querySelector('.ls-opacity-val') as HTMLElement;
+      opacity.addEventListener('input', (e) => {
+        const pct = Number((e.target as HTMLInputElement).value);
+        opacityVal.textContent = `${pct}%`;
+        this.setLayerOpacity(layerId, pct / 100);
+      });
+
+      // Fill + border color.
+      (row.querySelector('.ls-color') as HTMLInputElement).addEventListener('input', (e) => {
+        this.setLayerColor(layerId, (e.target as HTMLInputElement).value);
+      });
+      (row.querySelector('.ls-border-color') as HTMLInputElement).addEventListener('input', (e) => {
+        this.setLayerBorderColor(layerId, (e.target as HTMLInputElement).value);
+      });
+
+      // Border width (live label + paint update).
+      const width = row.querySelector('.ls-width') as HTMLInputElement;
+      const widthVal = row.querySelector('.ls-width-val') as HTMLElement;
+      width.addEventListener('input', (e) => {
+        const w = Number((e.target as HTMLInputElement).value);
+        widthVal.textContent = String(w);
+        this.setLayerBorderWidth(layerId, w);
+      });
+
+      // Reset to config defaults.
+      (row.querySelector('.ls-reset') as HTMLButtonElement).addEventListener('click', () => {
+        this.resetLayerStyle(layerId);
+      });
+    });
+
     // Historical overlay (1928) toggle + opacity handlers
     const overlayToggle = controlDiv.querySelector('#overlay-toggle') as HTMLInputElement;
     overlayToggle.addEventListener('change', (e) => {
       this.toggleHistoricalOverlay((e.target as HTMLInputElement).checked);
     });
 
+    // Expand / collapse the overlay's image-adjustment panel (gear).
+    const overlayStyleToggle = controlDiv.querySelector('#overlay-style-toggle') as HTMLButtonElement;
+    const overlayStylePanel = controlDiv.querySelector('#overlay-style-panel') as HTMLElement;
+    overlayStyleToggle.addEventListener('click', () => {
+      const open = overlayStylePanel.classList.toggle('expanded');
+      overlayStyleToggle.classList.toggle('active', open);
+    });
+
     const overlayOpacity = controlDiv.querySelector('#overlay-opacity') as HTMLInputElement;
+    const overlayOpacityVal = controlDiv.querySelector('#overlay-opacity-val') as HTMLElement;
     overlayOpacity.addEventListener('input', (e) => {
-      this.setOverlayOpacity(Number((e.target as HTMLInputElement).value) / 100);
+      const pct = Number((e.target as HTMLInputElement).value);
+      overlayOpacityVal.textContent = `${pct}%`;
+      this.setOverlayOpacity(pct / 100);
     });
 
     // Overlay version switcher handlers
@@ -785,6 +1152,71 @@ class ApelosMap {
         const variantId = (e.currentTarget as HTMLElement).dataset.variantId;
         if (variantId) this.switchOverlayVariant(variantId);
       });
+    });
+
+    // Overlay image adjustments (brightness / contrast / saturation / hue).
+    const overlayBrightness = controlDiv.querySelector('#overlay-brightness') as HTMLInputElement;
+    const overlayBrightnessVal = controlDiv.querySelector('#overlay-brightness-val') as HTMLElement;
+    overlayBrightness.addEventListener('input', (e) => {
+      const pct = Number((e.target as HTMLInputElement).value);
+      overlayBrightnessVal.textContent = `${pct}%`;
+      this.setOverlayBrightness(pct / 100);
+    });
+
+    const overlayContrast = controlDiv.querySelector('#overlay-contrast') as HTMLInputElement;
+    const overlayContrastVal = controlDiv.querySelector('#overlay-contrast-val') as HTMLElement;
+    overlayContrast.addEventListener('input', (e) => {
+      const v = Number((e.target as HTMLInputElement).value);
+      overlayContrastVal.textContent = String(v);
+      this.setOverlayContrast(v / 100);
+    });
+
+    const overlaySaturation = controlDiv.querySelector('#overlay-saturation') as HTMLInputElement;
+    const overlaySaturationVal = controlDiv.querySelector('#overlay-saturation-val') as HTMLElement;
+    overlaySaturation.addEventListener('input', (e) => {
+      const v = Number((e.target as HTMLInputElement).value);
+      overlaySaturationVal.textContent = String(v);
+      this.setOverlaySaturation(v / 100);
+    });
+
+    const overlayHue = controlDiv.querySelector('#overlay-hue') as HTMLInputElement;
+    const overlayHueVal = controlDiv.querySelector('#overlay-hue-val') as HTMLElement;
+    overlayHue.addEventListener('input', (e) => {
+      const v = Number((e.target as HTMLInputElement).value);
+      overlayHueVal.textContent = `${v}°`;
+      this.setOverlayHue(v);
+    });
+
+    // Apelos clustering ("consolidation") controls.
+    const clusterToggle = controlDiv.querySelector('#cluster-toggle') as HTMLInputElement;
+    const clusterRadius = controlDiv.querySelector('#cluster-radius') as HTMLInputElement;
+    const clusterMaxZoom = controlDiv.querySelector('#cluster-maxzoom') as HTMLInputElement;
+    const clusterRadiusValue = controlDiv.querySelector('#cluster-radius-value') as HTMLElement;
+    const clusterMaxZoomValue = controlDiv.querySelector('#cluster-maxzoom-value') as HTMLElement;
+
+    clusterToggle.addEventListener('change', (e) => {
+      this.clusteringEnabled = (e.target as HTMLInputElement).checked;
+      clusterRadius.disabled = !this.clusteringEnabled;
+      clusterMaxZoom.disabled = !this.clusteringEnabled;
+      this.rebuildApelosClustering();
+    });
+
+    // Update the live value label while dragging (cheap); only rebuild the
+    // source + layers on release ('change') to avoid thrashing on every pixel.
+    clusterRadius.addEventListener('input', (e) => {
+      clusterRadiusValue.textContent = (e.target as HTMLInputElement).value;
+    });
+    clusterRadius.addEventListener('change', (e) => {
+      this.clusterRadius = Number((e.target as HTMLInputElement).value);
+      this.rebuildApelosClustering();
+    });
+
+    clusterMaxZoom.addEventListener('input', (e) => {
+      clusterMaxZoomValue.textContent = (e.target as HTMLInputElement).value;
+    });
+    clusterMaxZoom.addEventListener('change', (e) => {
+      this.clusterMaxZoom = Number((e.target as HTMLInputElement).value);
+      this.rebuildApelosClustering();
     });
 
     // Fit to features button handler
