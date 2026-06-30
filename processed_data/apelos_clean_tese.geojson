@@ -41,42 +41,6 @@
       "id": "2",
       "type": "Feature",
       "properties": {
-        "Name": "R. Chile, 11",
-        "Description": "Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação",
-        "Color": "fbc02d",
-        "Link": "https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17657835908838,
-          -22.90621000796643,
-          0.0
-        ]
-      }
-    },
-    {
-      "id": "3",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Chile, 15",
-        "Description": "Rua Chile, 11 e 15 - Santa Casa de Misericórdia - Desapropriação",
-        "Color": "fbc02d",
-        "Link": "https://drive.google.com/file/d/18bT_5YbwDVtiZDyeMKglAEzuBpN4DNNw/view"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17657426237723,
-          -22.90626538241429,
-          0.0
-        ]
-      }
-    },
-    {
-      "id": "4",
-      "type": "Feature",
-      "properties": {
         "Name": "R. Senador Euzébio, 79",
         "Description": "Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita indenização por mudança devido a abertura da Av. Presidente Vargas Rua Senador Euzebio, 79 - Berco Caracushanski - fábrica de malhas - solicita resolução caso de indenização",
         "Color": "fbc02d",
@@ -92,7 +56,7 @@
       }
     },
     {
-      "id": "5",
+      "id": "3",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 17",
@@ -110,7 +74,7 @@
       }
     },
     {
-      "id": "6",
+      "id": "4",
       "type": "Feature",
       "properties": {
         "Name": "R. da Quitanda, 131",
@@ -128,7 +92,7 @@
       }
     },
     {
-      "id": "7",
+      "id": "5",
       "type": "Feature",
       "properties": {
         "Name": "R. General Caldwell, 103",
@@ -146,7 +110,7 @@
       }
     },
     {
-      "id": "8",
+      "id": "6",
       "type": "Feature",
       "properties": {
         "Name": "Av. dos Democráticos, 392",
@@ -164,7 +128,7 @@
       }
     },
     {
-      "id": "9",
+      "id": "7",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 5",
@@ -182,7 +146,7 @@
       }
     },
     {
-      "id": "10",
+      "id": "8",
       "type": "Feature",
       "properties": {
         "Name": "Tv. Dom Manuel, 18-20",
@@ -200,7 +164,7 @@
       }
     },
     {
-      "id": "11",
+      "id": "9",
       "type": "Feature",
       "properties": {
         "Name": "R. São Pedro, 280",
@@ -218,7 +182,7 @@
       }
     },
     {
-      "id": "12",
+      "id": "10",
       "type": "Feature",
       "properties": {
         "Name": "R. Senador Euzébio, 82",
@@ -236,25 +200,7 @@
       }
     },
     {
-      "id": "13",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São José, 59",
-        "Description": "Rua de S. José, 59 - J. Ribeiro dos Santos - Livraria Jacinto Editora pede para locar o imóvel número 57 a ser demolido",
-        "Color": "fbc02d",
-        "Link": "https://drive.google.com/file/d/1LAz5PvO5iEaI-0HmbLTfMe8HyxQxzqF5/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.17584470942555,
-          -22.90554921122408,
-          6.823783114224282
-        ]
-      }
-    },
-    {
-      "id": "14",
+      "id": "11",
       "type": "Feature",
       "properties": {
         "Name": "R. São Pedro, 319",
@@ -272,7 +218,7 @@
       }
     },
     {
-      "id": "15",
+      "id": "12",
       "type": "Feature",
       "properties": {
         "Name": "R. Carmo Neto, 70",
@@ -290,7 +236,7 @@
       }
     },
     {
-      "id": "16",
+      "id": "13",
       "type": "Feature",
       "properties": {
         "Name": "R. Santa Luzia, 576",
@@ -308,7 +254,7 @@
       }
     },
     {
-      "id": "17",
+      "id": "14",
       "type": "Feature",
       "properties": {
         "Name": "R. do Lavradio, 97",
@@ -326,7 +272,7 @@
       }
     },
     {
-      "id": "18",
+      "id": "15",
       "type": "Feature",
       "properties": {
         "Name": "Pç. da República, 231",
@@ -344,7 +290,7 @@
       }
     },
     {
-      "id": "19",
+      "id": "16",
       "type": "Feature",
       "properties": {
         "Name": "R. Maria Eugênia, 44",
@@ -362,7 +308,7 @@
       }
     },
     {
-      "id": "20",
+      "id": "17",
       "type": "Feature",
       "properties": {
         "Name": "Av. Carlos Peixoto, 44",
@@ -380,7 +326,7 @@
       }
     },
     {
-      "id": "21",
+      "id": "18",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 136-142",
@@ -398,7 +344,7 @@
       }
     },
     {
-      "id": "22",
+      "id": "19",
       "type": "Feature",
       "properties": {
         "Name": "Lg. de São Francisco",
@@ -416,7 +362,7 @@
       }
     },
     {
-      "id": "23",
+      "id": "20",
       "type": "Feature",
       "properties": {
         "Name": "R. Rêgo Barros, 86",
@@ -434,7 +380,7 @@
       }
     },
     {
-      "id": "24",
+      "id": "21",
       "type": "Feature",
       "properties": {
         "Name": "R. São Pedro, 84",
@@ -452,7 +398,7 @@
       }
     },
     {
-      "id": "25",
+      "id": "22",
       "type": "Feature",
       "properties": {
         "Name": "R. da Constituição, 45",
@@ -470,7 +416,7 @@
       }
     },
     {
-      "id": "26",
+      "id": "23",
       "type": "Feature",
       "properties": {
         "Name": "R. da Constituição, 57",
@@ -488,7 +434,7 @@
       }
     },
     {
-      "id": "27",
+      "id": "24",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 11",
@@ -506,7 +452,7 @@
       }
     },
     {
-      "id": "28",
+      "id": "25",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 250-250A",
@@ -524,7 +470,7 @@
       }
     },
     {
-      "id": "29",
+      "id": "26",
       "type": "Feature",
       "properties": {
         "Name": "R. da Alfândega, 274-276",
@@ -542,7 +488,7 @@
       }
     },
     {
-      "id": "30",
+      "id": "27",
       "type": "Feature",
       "properties": {
         "Name": "Praia de São Cristóvão, 270",
@@ -560,7 +506,7 @@
       }
     },
     {
-      "id": "31",
+      "id": "28",
       "type": "Feature",
       "properties": {
         "Name": "R. José Clemente, 67",
@@ -578,25 +524,7 @@
       }
     },
     {
-      "id": "32",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. São Francisco Xavier, 576",
-        "Description": "Rua São Francisco Xavier, 576 - Maria Antonia de Carvalho pedem para não demolir barracão",
-        "Color": "fbc02d",
-        "Link": "https://drive.google.com/file/d/1ZohGr8yT6RhRGTYrWy-QvpdmxouzyHa7/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.23797485090925,
-          -22.91023312507044,
-          12.32122085784202
-        ]
-      }
-    },
-    {
-      "id": "33",
+      "id": "29",
       "type": "Feature",
       "properties": {
         "Name": "R. Miguel Couto, 92",
@@ -614,7 +542,7 @@
       }
     },
     {
-      "id": "34",
+      "id": "30",
       "type": "Feature",
       "properties": {
         "Name": "R. da Passagem , 252",
@@ -632,7 +560,7 @@
       }
     },
     {
-      "id": "35",
+      "id": "31",
       "type": "Feature",
       "properties": {
         "Name": "R. Primeiro de Março, 88",
@@ -650,7 +578,7 @@
       }
     },
     {
-      "id": "36",
+      "id": "32",
       "type": "Feature",
       "properties": {
         "Name": "R. Marquês de Sapucaí, 37",
@@ -668,7 +596,7 @@
       }
     },
     {
-      "id": "37",
+      "id": "33",
       "type": "Feature",
       "properties": {
         "Name": "R. Luiz de Vasconcellos",
@@ -686,25 +614,7 @@
       }
     },
     {
-      "id": "38",
-      "type": "Feature",
-      "properties": {
-        "Name": "R. Barão de Petrópolis, 280",
-        "Description": "Rua Barão de Petrópolis, 280 - Moradores de morro de Santa Tereza apelam a Getúlio Vargas que não sejam despejados (talvez não tenha relação com as intervenções urbanas, ver)",
-        "Color": "fbc02d",
-        "Link": "https://drive.google.com/file/d/1QmhjbGVj-IEn1eFH564ETV9n1XOgNVOP/view?usp=sharing"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -43.20420332898678,
-          -22.92760377641833,
-          25.5518300524253
-        ]
-      }
-    },
-    {
-      "id": "39",
+      "id": "34",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (roxo)",
@@ -722,7 +632,7 @@
       }
     },
     {
-      "id": "40",
+      "id": "35",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (azul)",
@@ -740,7 +650,7 @@
       }
     },
     {
-      "id": "41",
+      "id": "36",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (laranja)",
@@ -758,7 +668,7 @@
       }
     },
     {
-      "id": "42",
+      "id": "37",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (vermelho)",
@@ -776,7 +686,7 @@
       }
     },
     {
-      "id": "43",
+      "id": "38",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (azul-claro)",
@@ -794,7 +704,7 @@
       }
     },
     {
-      "id": "44",
+      "id": "39",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (verde)",
@@ -812,7 +722,7 @@
       }
     },
     {
-      "id": "45",
+      "id": "40",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (verde-claro)",
@@ -830,7 +740,7 @@
       }
     },
     {
-      "id": "46",
+      "id": "41",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (verde-azulado)",
@@ -848,7 +758,7 @@
       }
     },
     {
-      "id": "47",
+      "id": "42",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (azul-escuro)",
@@ -866,7 +776,7 @@
       }
     },
     {
-      "id": "48",
+      "id": "43",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (marrom)",
@@ -884,7 +794,7 @@
       }
     },
     {
-      "id": "49",
+      "id": "44",
       "type": "Feature",
       "properties": {
         "Name": "Apelos coletivos (magenta)",
