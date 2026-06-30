@@ -95,7 +95,8 @@ O diagrama de sequência resume o fluxo humano-técnico em três etapas: o desen
 | Build | Vite | ^5.4.8 | Dev server + bundling (`base: '/geo/'`) |
 | Mapa | MapLibre GL JS | ^4.7.1 | Renderização do mapa interativo |
 | Tiles | pmtiles | ^3.0.7 | Suporte a *tiles* empacotados |
-| Fundos | MapTiler | serviço | Basemaps (chave `VITE_MAPTILER_KEY`) |
+| Fundos | MapTiler | serviço | Basemaps vetoriais **e** glyphs/fontes (chave `VITE_MAPTILER_KEY`) |
+| Fundos (raster) | Esri / CARTO / OpenTopoMap / Stadia·Stamen | serviço | 5 *basemaps* raster alternativos (ver §5.2) |
 | Qualidade | ESLint / terser | ^8.57.0 / ^5.44.0 | Lint e minificação |
 | CI/CD | GitHub Actions | actions @v4 | Build e deploy automáticos |
 | Hospedagem | GitHub Pages | — | Site público |
@@ -152,7 +153,107 @@ Forma de uma feição final:
 
 ## 5. Aplicação web e publicação
 
-A aplicação (`web/src/main.ts`) é uma página única em TypeScript que carrega `/data/*.geojson` (lista `LAYERS`), desenha pontos e polígonos com MapLibre GL JS sobre mapas base (lista `BASEMAPS`: 10 estilos vetoriais MapTiler — Ruas/Claro/Escuro/Satélite/Satélite limpo/Topo/Relevo/OpenStreetMap/Básico/P&B — mais 5 fontes raster de outros provedores — Satélite Esri, CARTO Claro/Escuro, OpenTopoMap e Aquarela/Stamen), e oferece *clustering*, *popups* com link à fonte, troca de basemap e exportação PNG. Cor de identidade única: `#fbc02d` (`FEATURE_COLOR`).
+A aplicação (`web/src/main.ts`) é uma página única em TypeScript que carrega `/data/*.geojson` (lista `LAYERS`), desenha pontos e polígonos com MapLibre GL JS sobre mapas base (lista `BASEMAPS`), e oferece *clustering*, *popups* com link à fonte, troca de *basemap* e exportação PNG. Cor de identidade única: `#fbc02d` (`FEATURE_COLOR`).
+
+### 5.1 Funções do MapTiler no projeto
+
+O MapTiler entra como **serviço externo** (não é uma biblioteca instalada) e cumpre **dois papéis distintos**, ambos autenticados pela mesma chave `VITE_MAPTILER_KEY`:
+
+| Função | Como é usada no código | Endpoint |
+|---|---|---|
+| **Estilos vetoriais** (*basemaps*) | `basemapStyleUrl(mapId)` monta a URL do *style.json* de cada um dos 10 fundos vetoriais | `api.maptiler.com/maps/<slug>/style.json?key=…` |
+| **Glyphs / fontes** | `GLYPHS_URL` fornece os glifos (`Noto Sans Bold`) da camada de rótulos da contagem dos *clusters* — reaproveitado **inclusive pelos *basemaps* raster** (ver `rasterBasemapStyle`), evitando um segundo provedor de fontes | `api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=…` |
+
+Sem a chave, `main.ts` não renderiza o mapa: exibe uma mensagem de erro em página orientando a obter uma chave gratuita em `maptiler.com`.
+
+### 5.2 Origem de cada mapa base
+
+A lista `BASEMAPS` reúne **15 fundos** de duas naturezas: 10 estilos **vetoriais** servidos pelo MapTiler (dependem da chave) e 5 camadas **raster** XYZ de outros provedores — em geral *key-less*, de modo que seguem funcionando independentemente do plano MapTiler e acrescentam variedade visual.
+
+**Estilos vetoriais — MapTiler** (`kind: 'vector'`):
+
+| Rótulo (UI) | `id` | *slug* MapTiler | Observação |
+|---|---|---|---|
+| Ruas | `streets` | `streets-v2` | *basemap* padrão (`DEFAULT_BASEMAP`) |
+| Claro | `light` | `dataviz` | limpo, bom para sobreposição de dados |
+| Escuro | `dark` | `dataviz-dark` | — |
+| Satélite | `satellite` | `hybrid` | imagem aérea + rótulos |
+| Satélite limpo | `satellite-pure` | `satellite` | imagem sem rótulos — ideal sob a sobreposição de 1928 |
+| Topo | `topo` | `topo-v2` | — |
+| Relevo | `outdoor` | `outdoor-v2` | sombreamento de relevo, curvas, trilhas |
+| OpenStreetMap | `osm` | `openstreetmap` | — |
+| Básico | `basic` | `basic-v2` | fundo neutro mínimo |
+| P&B | `toner` | `toner-v2` | alto contraste, impressão |
+
+**Camadas raster — outros provedores** (`kind: 'raster'`):
+
+| Rótulo (UI) | `id` | Origem / provedor | Host dos *tiles* | *maxzoom* |
+|---|---|---|---|---|
+| Satélite Esri | `esri-imagery` | Esri *World Imagery* (Esri, Maxar, Earthstar) | `server.arcgisonline.com/.../World_Imagery` | 19 |
+| CARTO Claro | `carto-light` | CARTO *Positron* (sobre OpenStreetMap) | `basemaps.cartocdn.com/light_all` | 20 |
+| CARTO Escuro | `carto-dark` | CARTO *Dark Matter* (sobre OpenStreetMap) | `basemaps.cartocdn.com/dark_all` | 20 |
+| OpenTopoMap | `opentopo` | OpenTopoMap (OSM + SRTM, CC-BY-SA) | `tile.opentopomap.org` | 17 |
+| Aquarela | `watercolor` | Stamen *Watercolor* via Stadia Maps | `tiles.stadiamaps.com/.../stamen_watercolor` | 16 |
+
+> A atribuição (*attribution*) exigida por cada provedor está codificada junto de cada *basemap* raster em `main.ts`. O fundo **Aquarela** funciona *key-less* em `localhost`; no site publicado requer uma chave `VITE_STADIA_KEY` (registro gratuito em `stadiamaps.com`, com o domínio autorizado) — sem ela, apenas esse fundo deixa de carregar no Pages.
+
+### 5.3 *Map tiles*: o que são e como os fundos raster interagem com o mapa
+
+Um mapa web não é uma imagem única: é montado por **ladrilhos** (*map tiles*), pequenos quadrados de 256×256 px endereçados por três números **`z/x/y`** (zoom, coluna, linha) no esquema **XYZ** (*slippy map*). À medida que o usuário aplica *zoom* ou arrasta o mapa, o MapLibre calcula quais ladrilhos cobrem a janela visível e os requisita **sob demanda** ao provedor, encaixando-os lado a lado. É por isso que as URLs em `BASEMAPS` contêm os marcadores `{z}/{x}/{y}` — são modelos que o MapLibre preenche a cada quadro.
+
+```mermaid
+flowchart LR
+    subgraph Z2["Zoom 2 — 16 tiles"]
+      direction TB
+      g2["grade 4×4"]
+    end
+    subgraph Z3["Zoom 3 — 64 tiles"]
+      direction TB
+      g3["grade 8×8"]
+    end
+    Z2 -->|"+1 zoom = cada tile vira 4"| Z3
+```
+
+Cada incremento de *zoom* subdivide um ladrilho em quatro: quanto mais perto, mais ladrilhos e mais detalhe. Há **duas naturezas** de ladrilho em uso no projeto:
+
+| | Fundos **vetoriais** (MapTiler) | Fundos **raster** (Esri/CARTO/OpenTopoMap/Stadia) |
+|---|---|---|
+| Conteúdo do ladrilho | dados vetoriais (`.pbf`) + um *style.json* | imagem pronta (`.png`/`.jpg`) |
+| Onde é desenhado | renderizado no navegador (cliente) | já vem rasterizado do servidor |
+| Rótulos/estilo | configuráveis (cor, fonte, idioma) | "queimados" na imagem, fixos |
+| Nitidez ao escalar | reprojeta sem perda | borra ao passar do `maxzoom` (*overzoom*) |
+| No código | `kind: 'vector'` → `basemapStyleUrl(slug)` | `kind: 'raster'` → `rasterBasemapStyle(bm)` |
+
+Para os fundos raster, `rasterBasemapStyle` (`main.ts`) embrulha o modelo XYZ do provedor em um *style* MapLibre mínimo: `tileSize` 256 (padrão XYZ; o CARTO usa variantes `@2x` para telas *retina*), `maxzoom` nativo de cada provedor — além dele o MapLibre **superamplia** (*overzoom*) o último ladrilho disponível, daí o limite 16–20 da tabela §5.2 — e reaproveita o `GLYPHS_URL` do MapTiler para que os rótulos dos *clusters* continuem sendo desenhados mesmo sobre um fundo de imagem.
+
+**Como as camadas interagem.** O *basemap* é apenas o piso. Sobre ele o MapLibre empilha, na ordem, a fotografia aérea histórica de **1928** (camada raster própria, inserida primeiro "para ficar sob os pontos") e, no topo, as feições de dados (*apelos* e bairros). A troca de *basemap* (`setStyle`) substitui só o piso; o *overlay* e os dados são re-anexados por cima.
+
+```mermaid
+flowchart TB
+    subgraph Janela["Pilha de renderização (de baixo para cima)"]
+      direction TB
+      base["① Basemap — tiles XYZ vetorial ou raster (BASEMAPS)"]
+      ov["② Sobreposição aérea de 1928 — raster próprio"]
+      data["③ Dados — pontos de apelos + polígonos de bairros (GeoJSON)"]
+      base --> ov --> data
+    end
+    prov(["Provedor de tiles\nMapTiler / Esri / CARTO / OpenTopoMap / Stadia"]) -->|"requisição {z}/{x}/{y} sob demanda"| base
+```
+
+```mermaid
+sequenceDiagram
+    participant U as Usuário
+    participant ML as MapLibre (navegador)
+    participant P as Provedor de tiles
+    U->>ML: zoom / arrasta o mapa
+    ML->>ML: calcula tiles {z}/{x}/{y} visíveis
+    ML->>P: requisita os ladrilhos que faltam
+    P-->>ML: vetorial (.pbf) ou raster (.png/.jpg)
+    ML->>ML: compõe basemap + overlay 1928 + dados
+    ML-->>U: quadro renderizado
+```
+
+O resultado prático: trocar o fundo é trocar **de onde vêm os ladrilhos do piso**, sem tocar nos dados da pesquisa. Fundos raster claros (CARTO Claro, Satélite limpo) servem de base neutra para leitura dos *apelos*; o satélite e a sobreposição de 1928 permitem comparar a malha urbana atual com a anterior à abertura da Avenida Presidente Vargas.
 
 Publicação automática descrita em `.github/workflows/deploy.yml`:
 
@@ -193,6 +294,30 @@ cp processed_data/*.geojson web/public/data/
 ```
 
 > ⚠️ O pipeline ainda **não é totalmente automático**: os notebooks rodam à mão (resta a automação A1/A3/A4). As correções de fiação já foram aplicadas; detalhes e pendências em **[`automacao.md`](automacao.md)**.
+
+---
+
+## 7. Referências (sites)
+
+**Conceitos — *map tiles* e renderização**
+
+- Esquema de ladrilhos XYZ / *slippy map* (OpenStreetMap Wiki): <https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames>
+- Especificação de *vector tiles* (Mapbox Vector Tile): <https://github.com/mapbox/vector-tile-spec>
+- MapLibre GL JS — documentação: <https://maplibre.org/maplibre-gl-js/docs/>
+- MapLibre Style Spec — fontes raster (`sources`, `tileSize`, `maxzoom`): <https://maplibre.org/maplibre-style-spec/sources/>
+
+**Provedores de fundos usados em `BASEMAPS`**
+
+- MapTiler Cloud (estilos vetoriais e fontes/glyphs): <https://www.maptiler.com/cloud/> · *maps* <https://docs.maptiler.com/cloud/api/maps/>
+- Esri *World Imagery* (ArcGIS): <https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9>
+- CARTO *basemaps* (Positron / Dark Matter): <https://carto.com/basemaps>
+- OpenTopoMap: <https://opentopomap.org/about>
+- Stadia Maps — *Stamen Watercolor*: <https://docs.stadiamaps.com/themes/#stamen-watercolor>
+- OpenStreetMap (dados de base de CARTO/OpenTopoMap): <https://www.openstreetmap.org/copyright>
+
+**Pilha do projeto**
+
+- Vite: <https://vitejs.dev/> · GeoPandas: <https://geopandas.org/> · GitHub Pages: <https://docs.github.com/pages>
 
 ---
 
