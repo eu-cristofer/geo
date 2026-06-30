@@ -99,6 +99,14 @@ This interactive map displays historical appeals (apelos) from the Estado Novo p
   - Semi-transparent fill
   - Provides geographic context
 
+#### 🔺 Limite do Município (City Limits)
+- **What it shows:** The administrative boundary of the city of Rio de Janeiro
+- **Default:** Hidden
+- **Features:**
+  - Red outline (distinct from the data layers)
+  - Faint fill, so it doesn't tint the map
+  - Includes the bay islands (Paquetá, Governador, etc.)
+
 ### Toggling Layers
 
 1. Open layer control panel
@@ -111,6 +119,31 @@ This interactive map displays historical appeals (apelos) from the Estado Novo p
 - **Start with Apelos only** - See the main data clearly
 - **Add Bairros** - For geographic context
 - **Turn off layers** - When not needed to reduce clutter
+
+### Base Map ("Mapa base")
+
+In the **"Mapa base"** section of the panel you can switch the background map.
+The selected map is highlighted. Choose whichever best suits your task — clean
+backgrounds (Claro, CARTO Claro, Básico) for reading the data, satellite
+imagery for the terrain, or Aquarela for a historical feel.
+
+| Button | What it shows |
+|--------|---------------|
+| **Ruas** | Standard street map (default) |
+| **Claro** | Clean light map, good for overlays |
+| **Escuro** | Dark theme |
+| **Satélite** | Satellite imagery with labels |
+| **Satélite limpo** | Satellite imagery, no labels (best under the 1928 overlay) |
+| **Topo** | Topographic map |
+| **Relevo** | Terrain shading, contours and trails |
+| **OpenStreetMap** | OpenStreetMap style |
+| **Básico** | Minimal neutral background |
+| **P&B** | High-contrast black & white, good for printing |
+| **Satélite Esri** | Esri high-resolution aerial imagery |
+| **CARTO Claro** | Ultra-clean light map |
+| **CARTO Escuro** | Ultra-clean dark map |
+| **OpenTopoMap** | Topographic map with contour lines and hillshade |
+| **Aquarela** | Vintage hand-painted watercolor style |
 
 ---
 

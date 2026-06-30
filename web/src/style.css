@@ -625,6 +625,123 @@ body {
   accent-color: var(--primary-color);
 }
 
+/* Apelos clustering controls (mirrors the overlay section + opacity sliders) */
+.cluster-section {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.75rem;
+}
+
+/* Labels here are longer than "Opacidade", so stack label over slider and let
+   the label wrap instead of forcing a single cramped row. */
+.cluster-control {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
+}
+
+.cluster-control label {
+  white-space: normal;
+}
+
+.opacity-slider:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+/* Per-layer appearance controls (opacity / color / border) */
+.layer-row,
+.overlay-header-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.layer-row .layer-item {
+  min-width: 0; /* let long names ellipsize instead of pushing the gear off */
+}
+
+.layer-style-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.layer-style-toggle:hover,
+.layer-style-toggle.active {
+  background: var(--border-color);
+  color: var(--primary-color);
+}
+
+.layer-style-panel {
+  display: none;
+  grid-column: 1 / -1;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.layer-style-panel.expanded {
+  display: block;
+}
+
+.ls-color-row {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.ls-color-field {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+}
+
+.ls-color-field input[type='color'] {
+  width: 28px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+.ls-reset {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  background: white;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ls-reset:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
 /* Overlay version switcher (mirrors the basemap button grid) */
 .overlay-variants {
   display: grid;

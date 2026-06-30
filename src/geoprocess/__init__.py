@@ -843,5 +843,69 @@ def get_centroids(gdf, target_crs='EPSG:4326'):
     
     # Convert centroids to target CRS
     centroids_target = centroids_projected.to_crs(target_crs)
-    
+
     return centroids_target
+
+
+def dissolve_boundary(gdf, name=None, target_crs='EPSG:4326', buffer_clean=True,
+                      simplify_m=None, min_area_m2=None):
+    """
+    Dissolve all features of a GeoDataFrame into a single outer boundary polygon.
+
+    Useful for deriving a municipal limit from a neighborhood/quadra layer: the
+    union of every bairro polygon is the city boundary. Internal gaps/slivers
+    between adjacent polygons are optionally healed with a tiny buffer round-trip
+    so the result is a clean single (multi)polygon. The raw union of a detailed
+    bairro layer can carry >100k vertices (too heavy for the web), so pass
+    ``simplify_m`` to thin it and ``min_area_m2`` to drop negligible islands.
+
+    Parameters:
+        gdf (GeoDataFrame): Input polygons (e.g. all bairros).
+        name (str): Optional value for a 'nome' property on the output feature.
+        target_crs (str): CRS of the returned GeoDataFrame (default 'EPSG:4326').
+        buffer_clean (bool): Heal sliver gaps via a small buffer(+/-) in a
+            projected CRS before dissolving (default True).
+        simplify_m (float): Douglas-Peucker tolerance in meters applied to the
+            dissolved geometry (default None = no simplification).
+        min_area_m2 (float): Drop polygon parts smaller than this area in m²
+            (default None = keep all parts, including small islands).
+
+    Returns:
+        GeoDataFrame: One row holding the dissolved boundary, in target_crs.
+
+    Examples:
+        >>> bairros = gpd.read_file("DATA.RIO/Limite_de_Bairros.geojson")
+        >>> limite = geo.dissolve_boundary(bairros, name="Rio de Janeiro",
+        ...                                simplify_m=15, min_area_m2=50_000)
+        >>> geo.save_geojson_pretty(limite, "processed_data/limite_municipio.geojson")
+    """
+    from shapely.geometry import MultiPolygon, Polygon
+
+    # Work in a metric CRS so tolerances are in meters and the union is robust.
+    projected_crs = 'EPSG:3857'  # Web Mercator
+    geom = gdf.to_crs(projected_crs).geometry
+
+    if buffer_clean:
+        # +/- 1 m closes hairline gaps between adjacent polygons without distorting shape.
+        geom = geom.buffer(1.0)
+
+    dissolved = geom.union_all() if hasattr(geom, 'union_all') else geom.unary_union
+
+    if buffer_clean:
+        dissolved = dissolved.buffer(-1.0)
+
+    if min_area_m2:
+        parts = dissolved.geoms if isinstance(dissolved, MultiPolygon) else [dissolved]
+        kept = [p for p in parts if p.area >= min_area_m2]
+        dissolved = MultiPolygon(kept) if len(kept) != 1 else kept[0]
+
+    if simplify_m:
+        dissolved = dissolved.simplify(simplify_m, preserve_topology=True)
+
+    out = gpd.GeoDataFrame(
+        {'nome': [name]} if name is not None else {},
+        geometry=[dissolved],
+        crs=projected_crs,
+    ).to_crs(target_crs)
+
+    return out

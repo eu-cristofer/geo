@@ -152,7 +152,7 @@ Forma de uma feição final:
 
 ## 5. Aplicação web e publicação
 
-A aplicação (`web/src/main.ts`) é uma página única em TypeScript que carrega `/data/*.geojson` (lista `LAYERS`), desenha pontos e polígonos com MapLibre GL JS sobre fundos MapTiler, e oferece *clustering*, *popups* com link à fonte, troca de basemap (Ruas/Claro/Escuro/Satélite/Topo/P&B) e exportação PNG. Cor de identidade única: `#fbc02d` (`FEATURE_COLOR`).
+A aplicação (`web/src/main.ts`) é uma página única em TypeScript que carrega `/data/*.geojson` (lista `LAYERS`), desenha pontos e polígonos com MapLibre GL JS sobre mapas base (lista `BASEMAPS`: 10 estilos vetoriais MapTiler — Ruas/Claro/Escuro/Satélite/Satélite limpo/Topo/Relevo/OpenStreetMap/Básico/P&B — mais 5 fontes raster de outros provedores — Satélite Esri, CARTO Claro/Escuro, OpenTopoMap e Aquarela/Stamen), e oferece *clustering*, *popups* com link à fonte, troca de basemap e exportação PNG. Cor de identidade única: `#fbc02d` (`FEATURE_COLOR`).
 
 Publicação automática descrita em `.github/workflows/deploy.yml`:
 

@@ -165,7 +165,8 @@ docker run -p 8080:80 apelos-map
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `VITE_MAPTILER_KEY` | MapTiler API key for basemap | Yes |
+| `VITE_MAPTILER_KEY` | MapTiler API key for the vector base maps | Yes |
+| `VITE_STADIA_KEY` | Stadia Maps key for the "Aquarela" (Stamen Watercolor) base map. Optional — works key-less on localhost; needed only for the deployed site | No |
 | `VITE_APP_TITLE` | Application title | No |
 | `VITE_APP_DESCRIPTION` | App description | No |
 
