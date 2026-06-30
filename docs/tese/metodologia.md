@@ -255,6 +255,22 @@ sequenceDiagram
 
 O resultado prático: trocar o fundo é trocar **de onde vêm os ladrilhos do piso**, sem tocar nos dados da pesquisa. Fundos raster claros (CARTO Claro, Satélite limpo) servem de base neutra para leitura dos *apelos*; o satélite e a sobreposição de 1928 permitem comparar a malha urbana atual com a anterior à abertura da Avenida Presidente Vargas.
 
+### 5.4 Descrição detalhada do fundo *Escuro* (`dataviz-dark`)
+
+O fundo **Escuro** é um dos dez estilos vetoriais do MapTiler disponíveis na aplicação. Abaixo, sua descrição completa para fins de documentação na tese.
+
+**Identidade técnica.** No código (`web/src/main.ts`, lista `BASEMAPS`) é a entrada `{ id: 'dark', label: 'Escuro', mapId: 'dataviz-dark' }`. Trata-se de um *basemap* **vetorial** (`kind: 'vector'`): o MapLibre obtém a folha de estilo em `https://api.maptiler.com/maps/dataviz-dark/style.json?key=<VITE_MAPTILER_KEY>` (via `basemapStyleUrl`) e renderiza os ladrilhos no próprio navegador. Por ser vetorial e servido pelo MapTiler, **depende da chave** `VITE_MAPTILER_KEY`; sem ela o mapa não carrega.
+
+**Origem e propósito.** Pertence à família **Dataviz** do MapTiler — um conjunto de três estilos (*Dataviz*, *Dataviz Dark* e *Dataviz Color*) projetados não para navegação, mas como **pano de fundo neutro para visualização de dados**. No projeto, `dataviz-dark` é o par escuro do fundo *Claro* (`dataviz`). Como todos os estilos vetoriais do MapTiler, deriva de dados do **OpenStreetMap** processados pelo esquema **OpenMapTiles**, o que lhe dá cobertura global e rótulos toponímicos consistentes.
+
+**Características visuais.** Fundo de tom escuro (quase preto/cinza-azulado), com a hierarquia urbana — vias, quadras, água, áreas verdes — desenhada em **tons dessaturados e de baixo contraste entre si**. O objetivo desse rebaixamento cromático é deliberado: o *basemap* recua visualmente para que **os dados sobrepostos concentrem a atenção**. A tipografia dos rótulos é clara sobre o fundo escuro, mantendo legibilidade sem competir com as feições.
+
+**Por que serve a este projeto.** A cor de identidade dos *apelos* é o amarelo `#fbc02d` (`FEATURE_COLOR`). Sobre o fundo escuro esse amarelo atinge **contraste máximo**, fazendo os pontos e *clusters* "saltarem" da base — efeito mais forte do que sobre fundos claros. Isso torna o *Escuro* especialmente adequado para: (i) **figuras e capturas de tela** da tese, em que se quer destacar a distribuição dos *apelos*; (ii) **exibição em projeção/apresentação** e ambientes de baixa luminosidade; (iii) leitura da densidade espacial dos pontos sem o ruído de um mapa de navegação detalhado.
+
+**Limitações e ressalvas.** O estilo, suas cores e seus rótulos são definidos pelo provedor (MapTiler) — não são editados no repositório; uma mudança de aparência depende de trocar o *slug* ou customizar o estilo no MapTiler Cloud. Por ser vetorial e autenticado, está sujeito à disponibilidade do serviço e aos limites do plano da chave. Sob a **sobreposição aérea de 1928** (camada raster própria), o fundo escuro tende a ser pouco útil, pois a fotografia histórica cobre a base; nesses casos os fundos *Satélite limpo* ou *Claro* costumam funcionar melhor.
+
+> Em síntese: *Escuro* (`dataviz-dark`) é um fundo vetorial do MapTiler da família *Dataviz*, derivado do OpenStreetMap, concebido como base discreta para realçar dados — no projeto, o contraste ideal para o amarelo dos *apelos*.
+
 Publicação automática descrita em `.github/workflows/deploy.yml`:
 
 ```mermaid
