@@ -1,5 +1,5 @@
 // Import MapLibre GL JS for interactive web mapping
-import maplibregl from 'maplibre-gl';
+import maplibregl, { type StyleSpecification } from 'maplibre-gl';
 
 // Import MapLibre GL's default CSS for map styling
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -19,21 +19,52 @@ const MAPTILER_KEY = import.meta.env.VITE_MAPTILER_KEY || '';
 // uniformly to points, clusters, and neighborhood polygons.
 const FEATURE_COLOR = '#fbc02d';
 
+// Boundary color for the municipal limit layer. Deliberately not the brand
+// yellow so the city outline reads as an administrative limit, distinct from the
+// data features (apelos points / filtered bairros).
+const CITY_LIMIT_COLOR = '#d32f2f';
+
+// Optional Stadia Maps key for the Stamen vintage basemaps. Stadia tiles work
+// key-less from localhost and authorized domains; for the deployed GitHub Pages
+// site, register a free key at stadiamaps.com, authorize the domain, and set
+// VITE_STADIA_KEY. Without it the watercolor map still works in local dev.
+const STADIA_KEY = import.meta.env.VITE_STADIA_KEY || '';
+
 // Builds a MapTiler style URL for a given map id, using the shared API key.
 const basemapStyleUrl = (mapId: string): string =>
   `https://api.maptiler.com/maps/${mapId}/style.json?key=${MAPTILER_KEY}`;
 
-// Curated set of professional basemap backgrounds for the switcher. Labels stay
-// in Portuguese per the project's bilingual convention. The `mapId` is the
-// MapTiler style slug. If a slug is unavailable on the account's plan it can be
-// removed without further changes.
-interface Basemap {
+// Glyphs (fonts) for the raster basemaps below. Our data layers include a symbol
+// layer (apelos cluster counts, "Noto Sans Bold") that needs a glyph source;
+// MapTiler's font endpoint provides it and we already require the MapTiler key,
+// so we reuse it rather than introduce a second font provider.
+const GLYPHS_URL = `https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=${MAPTILER_KEY}`;
+
+// A basemap is either a MapTiler vector style (referenced by slug) or a raster
+// XYZ tile source from another provider. The raster ones are (mostly) key-less,
+// so they keep working regardless of the MapTiler plan and add visual variety.
+// Labels stay in Portuguese per the project's bilingual convention.
+interface VectorBasemap {
+  kind?: 'vector';
   id: string;
   label: string;
-  mapId: string;
+  mapId: string; // MapTiler style slug
 }
 
+interface RasterBasemap {
+  kind: 'raster';
+  id: string;
+  label: string;
+  tiles: string[]; // XYZ tile URL templates
+  attribution: string; // required by each provider's terms of use
+  maxzoom?: number; // provider's max native zoom (MapLibre overzooms past it)
+  tileSize?: number; // standard XYZ tiles are 256; MapLibre defaults to 512
+}
+
+type Basemap = VectorBasemap | RasterBasemap;
+
 const BASEMAPS: Basemap[] = [
+  // --- MapTiler vector styles (require VITE_MAPTILER_KEY) ---
   { id: 'streets', label: 'Ruas', mapId: 'streets-v2' }, // current default
   { id: 'light', label: 'Claro', mapId: 'dataviz' }, // clean, data-overlay friendly
   { id: 'dark', label: 'Escuro', mapId: 'dataviz-dark' },
@@ -44,9 +75,79 @@ const BASEMAPS: Basemap[] = [
   { id: 'osm', label: 'OpenStreetMap', mapId: 'openstreetmap' },
   { id: 'basic', label: 'Básico', mapId: 'basic-v2' }, // minimal neutral background
   { id: 'toner', label: 'P&B', mapId: 'toner-v2' }, // high-contrast, print
+
+  // --- Key-less raster basemaps from other providers ---
+  // Esri World Imagery — high-res aerial, often sharper over Rio than MapTiler's.
+  {
+    kind: 'raster',
+    id: 'esri-imagery',
+    label: 'Satélite Esri',
+    tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+    attribution: 'Imagery © Esri, Maxar, Earthstar Geographics, and the GIS User Community',
+    maxzoom: 19,
+  },
+  // CARTO Positron — ultra-clean light basemap, ideal for figures/data overlays.
+  {
+    kind: 'raster',
+    id: 'carto-light',
+    label: 'CARTO Claro',
+    tiles: 'abcd'.split('').map(s => `https://${s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png`),
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxzoom: 20,
+  },
+  // CARTO Dark Matter — clean dark counterpart.
+  {
+    kind: 'raster',
+    id: 'carto-dark',
+    label: 'CARTO Escuro',
+    tiles: 'abcd'.split('').map(s => `https://${s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png`),
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxzoom: 20,
+  },
+  // OpenTopoMap — topographic, with contour lines and hillshade.
+  {
+    kind: 'raster',
+    id: 'opentopo',
+    label: 'OpenTopoMap',
+    tiles: 'abc'.split('').map(s => `https://${s}.tile.opentopomap.org/{z}/{x}/{y}.png`),
+    attribution: 'Map data © OpenStreetMap contributors, SRTM | Style © OpenTopoMap (CC-BY-SA)',
+    maxzoom: 17,
+  },
+  // Stamen Watercolor (via Stadia) — vintage hand-painted look for the historical
+  // theme. Key-less on localhost; see STADIA_KEY note for the deployed site.
+  {
+    kind: 'raster',
+    id: 'watercolor',
+    label: 'Aquarela',
+    tiles: [`https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg${STADIA_KEY ? `?api_key=${STADIA_KEY}` : ''}`],
+    attribution: '© Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors',
+    maxzoom: 16,
+  },
 ];
 
 const DEFAULT_BASEMAP = 'streets';
+
+// Builds a raster MapLibre style for a non-MapTiler basemap. Includes a glyphs
+// URL so our symbol layers (cluster counts) still render after a swap onto it.
+const rasterBasemapStyle = (bm: RasterBasemap): StyleSpecification => ({
+  version: 8,
+  glyphs: GLYPHS_URL,
+  sources: {
+    basemap: {
+      type: 'raster',
+      tiles: bm.tiles,
+      tileSize: bm.tileSize ?? 256,
+      attribution: bm.attribution,
+      maxzoom: bm.maxzoom ?? 19,
+    },
+  },
+  layers: [{ id: 'basemap', type: 'raster', source: 'basemap' }],
+});
+
+// Resolves a basemap to whatever `Map#setStyle` accepts: a MapTiler style URL
+// (vector) or an inline raster StyleSpecification.
+const basemapStyle = (bm: Basemap): string | StyleSpecification =>
+  bm.kind === 'raster' ? rasterBasemapStyle(bm) : basemapStyleUrl(bm.mapId);
 
 // Map configuration
 const MAP_CONFIG = {
@@ -95,6 +196,18 @@ const LAYERS: LayerConfig[] = [
     visible: false,
     color: FEATURE_COLOR,
     category: 'main',
+  },
+  {
+    // Municipal boundary of Rio de Janeiro, dissolved from DATA.RIO bairros via
+    // geo.dissolve_boundary (see processed_data/limite_municipio_tese.geojson).
+    // Distinct red so it reads as an administrative limit, not a data feature.
+    id: 'limite-municipio',
+    name: 'Limite do Município (City Limits)',
+    file: 'limite_municipio_tese.geojson',
+    type: 'polygon',
+    visible: false,
+    color: CITY_LIMIT_COLOR,
+    category: 'context',
   },
 ];
 
@@ -195,7 +308,7 @@ class ApelosMap {
 
     this.map = new maplibregl.Map({
       container: 'map',
-      style: basemapStyleUrl(BASEMAPS.find(b => b.id === DEFAULT_BASEMAP)!.mapId),
+      style: basemapStyle(BASEMAPS.find(b => b.id === DEFAULT_BASEMAP)!),
       center: MAP_CONFIG.center,
       zoom: MAP_CONFIG.zoom,
       pitch: MAP_CONFIG.pitch,
@@ -250,12 +363,9 @@ class ApelosMap {
     // Add the cached data to the current style.
     this.addDataLayers();
 
-    // Fit map to all loaded features.
-    const allFeatures: any[] = [];
-    this.geojsonCache.forEach(data => allFeatures.push(...data.features));
-    if (allFeatures.length > 0) {
-      this.fitMapToFeatures(allFeatures);
-    }
+    // Fit map to the apelos layer (the map's subject) — not every loaded layer,
+    // since the city-limit polygon would expand the bounds to the whole city.
+    this.fitMapToApelos();
   }
 
   // Adds sources + layers from the in-memory cache onto whatever style is
@@ -426,7 +536,7 @@ class ApelosMap {
     const dataSourceIds = new Set(LAYERS.map(l => l.id));
     const overlayId = HISTORICAL_OVERLAY.id;
 
-    this.map.setStyle(basemapStyleUrl(bm.mapId), {
+    this.map.setStyle(basemapStyle(bm), {
       transformStyle: (previous, next) => {
         if (!previous) return next;
 
@@ -629,6 +739,11 @@ class ApelosMap {
 
   // Per-type defaults mirroring the hard-coded paint in the add*Layer methods.
   private defaultLayerStyle(layer: LayerConfig): LayerStyle {
+    // The municipal limit spans the whole city, so a 0.2 fill would tint the
+    // entire view — show it as a prominent outline with a barely-there fill.
+    if (layer.id === 'limite-municipio') {
+      return { color: layer.color, borderColor: layer.color, borderWidth: 3, opacity: 0.05 };
+    }
     switch (layer.type) {
       case 'polygon':
         return { color: layer.color, borderColor: layer.color, borderWidth: 2, opacity: 0.2 };
@@ -1034,7 +1149,7 @@ class ApelosMap {
           </label>
         </div>
         <div class="layer-control-actions">
-          <button id="fit-to-features-btn" class="fit-to-features-btn" title="Ajustar zoom para mostrar todos os dados">
+          <button id="fit-to-features-btn" class="fit-to-features-btn" title="Ajustar zoom para mostrar os apelos">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
@@ -1222,7 +1337,7 @@ class ApelosMap {
     // Fit to features button handler
     const fitToFeaturesBtn = controlDiv.querySelector('#fit-to-features-btn') as HTMLButtonElement;
     fitToFeaturesBtn.addEventListener('click', () => {
-      this.fitMapToAllLoadedFeatures();
+      this.fitMapToApelos();
     });
 
     // Basemap switcher handlers
@@ -1476,24 +1591,16 @@ class ApelosMap {
     return coordinates;
   }
 
-  private fitMapToAllLoadedFeatures(): void {
-    const allFeatures: any[] = [];
-
-    // Collect all features from loaded sources
-    LAYERS.forEach(layer => {
-      const source = this.map.getSource(layer.id) as maplibregl.GeoJSONSource;
-      if (source && source._data) {
-        const data = source._data as FeatureCollection;
-        if (data && data.features) {
-          allFeatures.push(...data.features);
-        }
-      }
-    });
-
-    if (allFeatures.length > 0) {
-      this.fitMapToFeatures(allFeatures);
+  // "Ajustar Zoom" fits the view to the apelos layer only — the appeals are the
+  // subject of the map. Other layers (filtered bairros, and especially the
+  // whole-municipality city limit) would otherwise blow the bounds out to the
+  // entire city. Uses the cached GeoJSON so it works regardless of clustering.
+  private fitMapToApelos(): void {
+    const data = this.geojsonCache.get('apelos');
+    if (data && data.features.length > 0) {
+      this.fitMapToFeatures(data.features);
     } else {
-      console.warn('No features found to fit map to');
+      console.warn('No apelos features found to fit map to');
     }
   }
 

@@ -97,12 +97,15 @@ cp new-data.geojson web/public/data/
 npm run build
 ```
 
-### Change Map Tiles
+### Change / Add Base Maps
 ```typescript
-// src/main.ts - In constructor
-style: 'https://api.maptiler.com/maps/STYLE/style.json?key=${KEY}'
-// Replace STYLE with: streets-v2, outdoor-v2, satellite, etc.
+// src/main.ts - the BASEMAPS array registers every selectable base map.
+// Vector (MapTiler):  { id, label, mapId }
+// Raster (any XYZ):   { kind: 'raster', id, label, tiles, attribution }
+const DEFAULT_BASEMAP = 'streets'; // any registered basemap id
 ```
+See the [basemap registry](../developer-guides/customization.md#base-maps-basemap-registry)
+for the full list (10 MapTiler + 5 raster: Esri, CARTO Claro/Escuro, OpenTopoMap, Aquarela).
 
 ### Modify Popups
 ```typescript

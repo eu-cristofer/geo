@@ -400,21 +400,37 @@ this.map = new maplibregl.Map({
 
 ### Available Map Styles
 
-**MapTiler Styles:**
+Base maps are registered in the `BASEMAPS` array in `web/src/main.ts`. See the
+[basemap registry](../developer-guides/customization.md#base-maps-basemap-registry)
+for the full, authoritative table and how to add one.
+
+**Vector — MapTiler (require `VITE_MAPTILER_KEY`):**
 ```typescript
-const styles = [
-  'streets-v2',    // Default street map
-  'outdoor-v2',    // Outdoor/topographic
-  'satellite',     // Satellite imagery
-  'basic-v2',      // Basic street map
-  'bright-v2',     // Bright theme
-  'dark-v2',       // Dark theme
+const maptilerSlugs = [
+  'streets-v2',    // Ruas (default)
+  'dataviz',       // Claro
+  'dataviz-dark',  // Escuro
+  'hybrid',        // Satélite (imagery + labels)
+  'satellite',     // Satélite limpo (imagery, no labels)
+  'topo-v2',       // Topo
+  'outdoor-v2',    // Relevo
+  'openstreetmap', // OpenStreetMap
+  'basic-v2',      // Básico
+  'toner-v2',      // P&B
 ];
+const styleUrl = `https://api.maptiler.com/maps/${slug}/style.json?key=${MAPTILER_KEY}`;
 ```
 
-**Usage:**
+**Raster — other providers (mostly key-less):**
 ```typescript
-const styleUrl = `https://api.maptiler.com/maps/${styleName}/style.json?key=${MAPTILER_KEY}`;
+// kind: 'raster' entries — built into a MapLibre style by rasterBasemapStyle()
+const rasterBasemaps = [
+  'esri-imagery', // Satélite Esri — Esri World Imagery
+  'carto-light',  // CARTO Claro   — CARTO Positron
+  'carto-dark',   // CARTO Escuro  — CARTO Dark Matter
+  'opentopo',     // OpenTopoMap
+  'watercolor',   // Aquarela      — Stamen Watercolor (via Stadia; optional VITE_STADIA_KEY)
+];
 ```
 
 ### Map Controls

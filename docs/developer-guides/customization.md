@@ -133,6 +133,26 @@ interface LayerConfig {
 }
 ```
 
+### Registered data layers
+
+Defined in the `LAYERS` array in `web/src/main.ts`; each renders a checkbox +
+style controls in the "Camadas do Mapa" panel.
+
+| `id` | Name (UI) | File (`web/public/data/`) | Type | Default |
+|------|-----------|---------------------------|------|---------|
+| `apelos` | Apelos (Appeals) | `apelos_clean_tese.geojson` | point (clustered) | visible |
+| `filtro-bairros` | Bairros Filtrados | `filtro_bairros_tese.geojson` | polygon | hidden |
+| `limite-municipio` | Limite do Município (City Limits) | `limite_municipio_tese.geojson` | polygon | hidden |
+
+> **City Limits provenance:** `limite_municipio_tese.geojson` is the municipal
+> boundary of Rio de Janeiro, derived by dissolving the 166 neighborhood polygons
+> in `DATA.RIO/Limite_de_Bairros.geojson` with `geo.dissolve_boundary(...,
+> simplify_m=15, min_area_m2=50_000)` (drops negligible islets, ~2k vertices,
+> ~225 KB). It uses a distinct red outline (`CITY_LIMIT_COLOR`) and a faint fill so
+> the whole-city polygon reads as a limit rather than tinting the map. Since
+> `DATA.RIO/` is gitignored, the dissolved artifact is committed to
+> `processed_data/` so deploys don't depend on the raw source.
+
 ### Add New Layer
 
 **Step 1: Add GeoJSON Data**
@@ -247,45 +267,84 @@ pitch: 45,                      // Tilted view
 bearing: 180,                   // Rotated view
 ```
 
-### Map Style
+### Base Maps (Basemap Registry)
 
-**Change Base Map Style:**
+All selectable base maps are registered in the `BASEMAPS` array in `web/src/main.ts`.
+The base-map switcher (the "Mapa base" grid in the layer panel) renders one button
+per entry automatically, so adding a basemap is a single edit to that array.
+
+A basemap is one of two shapes (`type Basemap = VectorBasemap | RasterBasemap`):
+
+- **Vector** — a MapTiler style referenced by its slug (`mapId`). Requires
+  `VITE_MAPTILER_KEY`.
+- **Raster** — an XYZ tile source from any provider (`kind: 'raster'`). Mostly
+  key-less. Each must declare `attribution`; `tileSize` defaults to 256 (MapLibre's
+  own default is 512, which would misalign standard XYZ tiles).
+
+#### Registered base maps
+
+**Vector — MapTiler (require `VITE_MAPTILER_KEY`):**
+
+| `id` | Label (UI) | MapTiler slug | Notes |
+|------|------------|---------------|-------|
+| `streets` | Ruas | `streets-v2` | Default |
+| `light` | Claro | `dataviz` | Clean, data-overlay friendly |
+| `dark` | Escuro | `dataviz-dark` | Dark counterpart |
+| `satellite` | Satélite | `hybrid` | Imagery + labels |
+| `satellite-pure` | Satélite limpo | `satellite` | Imagery, no labels — good under the 1928 overlay |
+| `topo` | Topo | `topo-v2` | Topographic |
+| `outdoor` | Relevo | `outdoor-v2` | Terrain shading, contours, trails |
+| `osm` | OpenStreetMap | `openstreetmap` | OSM vector style |
+| `basic` | Básico | `basic-v2` | Minimal neutral background |
+| `toner` | P&B | `toner-v2` | High-contrast, print |
+
+**Raster — other providers (key-less unless noted):**
+
+| `id` | Label (UI) | Provider | Max zoom | Key |
+|------|------------|----------|----------|-----|
+| `esri-imagery` | Satélite Esri | Esri World Imagery | 19 | none |
+| `carto-light` | CARTO Claro | CARTO Positron (retina `@2x`) | 20 | none |
+| `carto-dark` | CARTO Escuro | CARTO Dark Matter (retina `@2x`) | 20 | none |
+| `opentopo` | OpenTopoMap | OpenTopoMap | 17 | none |
+| `watercolor` | Aquarela | Stamen Watercolor (via Stadia Maps) | 16 | optional `VITE_STADIA_KEY` |
+
+> **Aquarela / Stadia note:** Stadia Maps tiles work key-less from `localhost` and
+> authorized domains. For the deployed GitHub Pages site, register a free key at
+> [stadiamaps.com](https://stadiamaps.com), authorize the domain, and set
+> `VITE_STADIA_KEY`. Without it, Aquarela renders in local dev but is blank in
+> production; every other basemap is unaffected.
+
+#### Changing the default
+
 ```typescript
-// In map initialization
-style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${MAPTILER_KEY}`
-
-// Available styles:
-// - streets-v2 (default)
-// - outdoor-v2
-// - satellite
-// - basic-v2
-// - bright-v2
-// - dark-v2
+// web/src/main.ts
+const DEFAULT_BASEMAP = 'streets'; // any registered basemap `id`
 ```
 
-**Custom Map Style:**
-```typescript
-// Use your own MapTiler style
-style: `https://api.maptiler.com/maps/YOUR_STYLE_ID/style.json?key=${MAPTILER_KEY}`
+#### Adding a base map
 
-// Or use OpenStreetMap
-style: {
-  version: 8,
-  sources: {
-    'osm': {
-      type: 'raster',
-      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-      tileSize: 256,
-      attribution: '© OpenStreetMap contributors'
-    }
-  },
-  layers: [{
-    id: 'osm',
-    type: 'raster',
-    source: 'osm'
-  }]
+```typescript
+// web/src/main.ts — append to the BASEMAPS array
+
+// A MapTiler vector style:
+{ id: 'winter', label: 'Inverno', mapId: 'winter-v2' },
+
+// A raster XYZ source from another provider:
+{
+  kind: 'raster',
+  id: 'my-tiles',
+  label: 'Meu Mapa',
+  tiles: ['https://tiles.example.com/{z}/{x}/{y}.png'],
+  attribution: '© Example',
+  maxzoom: 19,   // optional, defaults to 19
+  tileSize: 256, // optional, defaults to 256
 }
 ```
+
+The button, click handler, and base-map swap (which carries the data layers and
+1928 overlay across via `transformStyle`) all work automatically. Raster styles are
+built by `rasterBasemapStyle()`, which injects a `glyphs` URL so the apelos
+cluster-count labels keep rendering after a swap.
 
 ---
 
